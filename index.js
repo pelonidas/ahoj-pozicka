@@ -1,7 +1,11 @@
 const express = require('express');
 const path = require('path');
+const engine = require('ejs-mate');
 const app = express();
 const port = process.env.PORT || 3000;
+
+// use ejs-locals for all ejs templates:
+app.engine('ejs', engine);
 
 //Setting view engine to .ejs
 app.set('view engine', 'ejs');
@@ -14,7 +18,7 @@ app.use(express.urlencoded({extended: true}))
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('home', {title: "Home"})
 });
 
 
