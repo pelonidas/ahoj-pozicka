@@ -1,0 +1,53 @@
+<div class="bg-secondary pt-32 relative">
+    <section class="w-4/5 mx-auto grid grid-cols-2 gap-5 pb-44">
+        <div class="text-white">
+            <h1 class="text-6xl">Uzatvorte bestpôžičku rýchlo a jednoducho online a splňte si vaše želanie!</h1>
+            <h2 class="text-3xl">Jednoducha cesta k peniazom</h2>
+            <p>
+                V bestpôžičke môžete požiadať o pôžičky v rozmedzí od 400 do 20 000 EUR.
+            </p>
+            <a href="" class="border-b-2 border-dRed">Vypocitat</a>
+        </div>
+        <div class="bg-white p-12 rounded drop-shadow-md z-40" id="pozicka-container">
+            <div>
+                <h3 class="text-3xl">Kolko si chcete pozicat</h3>
+                <input type="text" placeholder="15 000€" class="rounded-lg py-2 px-4 border-2 border-secondary block w-full">
+                <input type="range" class="block w-full">
+            </div>
+            <div class="mt-8">
+                <h3 class="text-3xl">Na kolko rokov</h3>
+                <input type="text" placeholder="5 rokov" class="rounded-lg py-2 px-4 border-2 border-secondary block w-full">
+                <input type="range" class="block w-full">
+            </div>
+        </div>
+    </section>
+    <div class="absolute mx-auto" id="yellow-sm">
+        <img src="/images/home-top-yellow-sm.svg" alt="" class="w-4/5">
+    </div>
+</div>
+<div class="relative mb-28">
+    <img src="images/gray-top-home.svg" alt="" class="w-full">
+    <div class="flex absolute" id="reviews-container">
+        <% for (let i = 0; i < 5; i++){ %>
+            <div class="w-80 drop-shadow-md bg-white mr-5 rounded-lg">
+                <div class="flex py-4 pl-5">
+                    <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                    <div class="ml-5">
+                        <h4>* * * * *</h4>
+                        <h5 class="text-sm">Maria Illescas</h5>
+                    </div>
+                </div>
+                <div class="pl-5 pb-5">
+                    <hr>
+                    <div class="w-4/5">
+                        <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
+                            tortor
+                            nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit
+                            molestie.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

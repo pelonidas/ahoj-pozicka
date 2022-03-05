@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const engine = require('ejs-mate');
+const ExpressError = require('./utils/ExpressError')
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -14,13 +15,21 @@ app.set('views', path.join(__dirname, 'views'));
 
 //Middleware for retrieving POST forms
 app.use(express.urlencoded({extended: true}))
-
+//Serving static files
+app.use(express.static(path.join(__dirname, 'public')))
 
 // Home route
 app.get('/', (req, res) => {
     res.render('home', {title: "Home"})
 });
 
+app.get('/refinancovanie', (req, res) => {
+
+})
+// Handling undefined routes
+app.all('*', (req, res, next) => {
+    next(new ExpressError("Page not found", 404))
+})
 
 // Listening to a port
 app.listen(port, () => {
