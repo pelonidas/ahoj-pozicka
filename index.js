@@ -20,10 +20,14 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('home', {title: "Home"})
+    res.render('home', {title: "Pozicky"})
 });
-
+// Refinancovanie route
 app.get('/refinancovanie', (req, res) => {
+    res.render('refinancovanie', {title: "Refinancovanie"})
+})
+
+app.get('/centrala', (req, res) => {
 
 })
 // Handling undefined routes
