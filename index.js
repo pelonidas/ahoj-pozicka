@@ -28,12 +28,16 @@ app.get('/refinancovanie', (req, res) => {
 })
 
 app.get('/centrala', (req, res) => {
+    res.render('centrala', {title: "Centrala"})
+})
 
+app.get('/dofinancovanie', (req, res) => {
+    res.render('dofinancovanie', {title: "Dofinancovanie hypotek"})
 })
 // Handling undefined routes
-app.all('*', (req, res, next) => {
-    next(new ExpressError("Page not found", 404))
-})
+// app.all('*', (req, res, next) => {
+//     next(new ExpressError("Page not found", 404))
+// })
 
 // Listening to a port
 app.listen(port, () => {

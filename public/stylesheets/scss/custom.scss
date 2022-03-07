@@ -45,7 +45,7 @@ html, body {
 }
 
 #calc-ad {
-  width: 78%;
+  width: 74%;
 }
 
 #home-about {
@@ -53,7 +53,7 @@ html, body {
 }
 
 #about-ad {
-  width: 78%;
+  width: 74%;
   padding-bottom: 3.5rem;
 }
 
@@ -138,16 +138,188 @@ html, body {
     }
   }
 }
+
 #footer {
   background-image: url("/images/find-out-bg.svg");
   background-repeat: no-repeat;
   background-position: center 5rem;
+
   #footer-container {
-    width: 78%;
+    width: 74%;
   }
+
   #dp-text {
-    color: rgba(255,255,255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
   }
 }
+
+// Centrala CSS
+
+.no-space {
+  font-size: 0;
+}
+
+#centrala-top {
+  margin-bottom: 7rem;
+
+  #centrala-top-bg1 {
+    height: 13.75rem;
+    background-image: url("/images/centrala-home-bg1.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 68%;
+  }
+
+  #centrala-top-bg2 {
+    height: 100%;
+    background-image: url("/images/centrala-home-bg2.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+
+    img {
+      width: 90%;
+    }
+  }
+}
+
+#centrala-description {
+  margin-bottom: 7rem;
+  #centrala-descrpition-bg1 {
+    height: 100%;
+    background-image: url("/images/centrala-description-bg1.svg");
+    background-repeat: no-repeat;
+    background-size: 12rem;
+    background-position: -1rem center;
+  }
+
+  #centrala-description-bg2 {
+    background-image: url("/images/centrala-description-bg2.svg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 58rem;
+    background-position: center right;
+  }
+}
+
+#centrala-location {
+  height: 100%;
+  background-image: url("/images/map.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  #map-card-bg {
+    height: auto;
+    background-image: url("/images/map-card-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .grid {
+    width: 40%;
+  }
+}
+
+#centrala-personal {
+  margin-top: 7rem;
+  #left-personal {
+    width: 13%;
+    background-image: url("/images/personal-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center left;
+  }
+  #personal-content {
+    width: 74%;
+  }
+  #right-personal {
+    width: 13%;
+    background-image: url("/images/personal-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+  }
+}
+
+#centrala-contact {
+  margin-bottom: 7rem;
+  margin-top: 7rem;
+  background-image: url("/images/centrala-contact-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  #centrala-contact-content {
+    width: 74%;
+  }
+
+  #contact-right {
+    background-image: url("/images/map-card-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+}
+//Dofinancovanie
+#dof-top {
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+}
+
+#ref-top-left {
+  height: 100%;
+  padding-left: 10%;
+}
+
+#ref-top-right {
+  background-image: url("/images/ref-top-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right -4rem top 4rem;
+}
+
+#ref-top-long {
+  height: 200px;
+  background-image: url("/images/find-out-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#dof-white-bg {
+  margin-bottom: 7rem;
+  background-image: url("/images/sub-header-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+}
+
+#dofinancovanie-form {
+  margin-bottom: 7rem;
+  width: 100%;
+  #form-content {
+    #dofinancovanie-person-form{
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("/images/dofinancovanie-person.png");
+      background-position: top right 2rem;
+    }
+    textarea {
+      resize: none;
+    }
+  }
+  #form-right {
+    width: 15%;
+    background-size: contain;
+    background-image: url("/images/dofinancovanie-form-bg2.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  #form-left {
+    width: 15%;
+    background-size: contain;
+    background-image: url("/images/dofinancovanie-form-bg1.svg");
+    background-repeat: no-repeat;
+    background-position: -1rem center;
+  }
+}
+
 
 

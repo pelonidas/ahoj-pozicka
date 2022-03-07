@@ -1,0 +1,112 @@
+<% layout('./layouts/boilerplate') %>
+<section class="bg-secondary pt-16 text-white" id="dof-top">
+    <div class="grid-cols-2 flex items-center">
+        <div id="ref-top-left" class="w-7/12">
+            <h1 class="text-6xl mb-7 w-11/12 border border-black">Uzatvorte bestpôžičku rýchlo a jednoducho online a
+                splňte si vaše želanie!</h1>
+            <h2 class="text-3xl mb-7">Jednoducha cesta k peniazom</h2>
+            <p class="mb-5 w-1/2">
+                V bestpôžičke môžete požiadať o pôžičky v rozmedzí od 400 do 20 000 EUR.
+            </p>
+            <a href="" class="border-b-2 border-dRed">Vypocitat</a>
+        </div>
+        <div id="ref-top-right" class="-mt-24">
+            <div class="flex items-end">
+                <div class="flex flex-col w-2/5 ml-16">
+                    <h4 class="text-3xl">Adrián Kudláč</h4>
+                    <p class="text-sm">
+                        Zodpovený za poskytovanie
+                        dofinancovania hypoték
+                    </p>
+                </div>
+
+                <img src="/images/ref-person.png" alt="" class="w-7/12 -ml-32">
+            </div>
+        </div>
+    </div>
+</section>
+<div id="ref-top-long" class="bg-secondary"></div>
+<div id="dof-white-bg" class="relative">
+    <div class="flex absolute" id="reviews-container">
+        <% for (let i = 0; i < 5; i++){ %>
+            <div class="w-80 drop-shadow-md bg-white mr-5 rounded-lg">
+                <div class="flex py-4 pl-5">
+                    <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                    <div class="ml-5">
+                        <h4>* * * * *</h4>
+                        <h5 class="text-sm">Maria Illescas</h5>
+                    </div>
+                </div>
+                <div class="pl-5 pb-5">
+                    <hr>
+                    <div class="w-4/5">
+                        <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
+                            tortor
+                            nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit
+                            molestie.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+<%- include('./partials/offer') %>
+
+<%- include('./partials/benefits') %>
+
+<%- include('./partials/calcAd') %>
+
+<%- include('./partials/products') %>
+
+<%- include('./partials/reviews') %>
+
+<%- include('./partials/calcAd') %>
+
+<%- include('./partials/faq') %>
+
+<section id="dofinancovanie-form" class="flex">
+    <div id="form-left"></div>
+    <div id="form-content" class="container flex justify-between items-center">
+        <div id="dofinancovanie-person-form" class="border border-black w-1/2">
+            <h2 class="text-5xl w-2/3 mb-12">Požiadajte o ponuku</h2>
+            <h3 class="text-3xl mb-3">Adrián Kudláč</h3>
+            <p class="w-1/2">Zodpovený za poskytovanie dofinancovania hypoték</p>
+            <div class="flex items-center mt-2">
+                <img src="/images/contact-call.svg" alt="" class="w-8">
+                <span class="ml-5 text-xl">+421 918 709 028</span>
+            </div>
+        </div>
+        <div class="w-1/2 bg-white drop-shadow-lg rounded-l-lg flex items-center" id="contact-form">
+            <div class="w-full px-10 py-16">
+                <form action="">
+                    <div class="mb-7">
+                        <label for="name">Meno a priezvisko</label>
+                        <input type="text" id="name" placeholder="Juraj Testulic"
+                               class="rounded-lg py-2 px-4 border-2 border-secondary block w-full">
+                    </div>
+                    <div class="mb-7">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="juraj.testulic@gmail.com"
+                               class="rounded-lg py-2 px-4 border-2 border-secondary block w-full">
+                    </div>
+                    <div class="mb-7">
+                        <label for="email">Mam zaujem o:</label>
+                        <input type="text" id="email" value="Dofinancovanie Hypotéky"
+                               class="rounded-lg py-2 px-4 border-2 border-secondary block w-full">
+                    </div>
+                    <div class="mb-12">
+                        <label for="message">Sprava</label>
+                        <textarea name="" id="message" class="w-full py-2 px-4 border-2 border-secondary rounded-lg"
+                                  placeholder="Dobry den,"></textarea>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="bg-dRed text-white px-14 py-2.5 rounded-md">Odoslat</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="form-right"></div>
+</section>
+
