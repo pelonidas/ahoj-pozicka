@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neviem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/output.css">
+    <link rel="stylesheet" href="/stylesheets/css/custom.css">
+    <script src="https://kit.fontawesome.com/849a1df6c9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class="font-body h-screen bg-secondary flex flex-col">
+<header class="w-4/5 mx-auto pt-16">
+    <nav class="flex items-center">
+        <div>
+            <img src="/images/result.svg" alt="" class="w-28">
+        </div>
+        <ul class="text-white flex mx-auto text-md">
+            <% if (step === 4) { %>
+                <li class="border-b border-primary">Krok 1.</li>
+                <li class="border-b border-primary ml-12">Krok 2.</li>
+                <li class="border-b border-primary ml-12">Krok 3.</li>
+                <li class="border-b border-primary ml-12">Krok 4.</li>
+            <% } %>
+            <% if (step === 3) { %>
+                <li class="border-b border-primary">Krok 1.</li>
+                <li class="border-b border-primary ml-12">Krok 2.</li>
+                <li class="border-b border-primary ml-12">Krok 3.</li>
+                <li class="border-b border-gray ml-12">Krok 4.</li>
+            <% } %>
+            <% if (step === 2){ %>
+                <li class="border-b border-primary">Krok 1.</li>
+                <li class="border-b border-primary ml-12">Krok 2.</li>
+                <li class="border-b border-gray ml-12">Krok 3.</li>
+                <li class="border-b border-gray ml-12">Krok 4.</li>
+            <% } %>
+            <% if (step === 1){ %>
+                <li class="border-b border-primary">Krok 1.</li>
+                <li class="border-b border-gray ml-12">Krok 2.</li>
+                <li class="border-b border-gray ml-12">Krok 3.</li>
+                <li class="border-b border-gray ml-12">Krok 4.</li>
+            <% } %>
+        </ul>
+        <span class="text-white border-2 border-primary py-3 px-12 rounded-lg">0944 766 999</span>
+    </nav>
+</header>
+
+<div class="container mx-auto my-auto">
+    <%- body %>
+</div>
+</body>
+</html>

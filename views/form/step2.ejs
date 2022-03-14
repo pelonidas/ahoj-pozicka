@@ -1,0 +1,30 @@
+<% layout('./layouts/form-boilerplate') %>
+
+<% if (formData.job === 'Zamestnanec' || formData.job === 'Štátny zamestnanec' || formData.job === 'Zamestnanec v zahraničí'){ %>
+    <%- include('../partials/form-partials/step2-employee') %>
+<% } %>
+<% if (formData.job === 'Živnostník / S.R.O.' || formData.job === 'Živnostník bez IČO' || formData.job === 'Opatrovateľ/ka - živnostník - v členskej krajine EÚ'){ %>
+    <%- include('../partials/form-partials/step2-selfEmployed') %>
+<% } %>
+<% if (formData.job === 'Opatrovateľka' || formData.job === 'Starobný dôchodca' || formData.job === 'Výsluhový dôchodca' || formData.job === 'Invalidný dôchodca') {%>
+    <%- include('../partials/form-partials/step2-senior') %>
+<%}%>
+
+
+<script>
+    let radio = document.getElementById("otherIncome");
+    let sideIncome = document.querySelector('#sideIncome');
+    let checked;
+
+    radio.addEventListener('click', () => {
+        sideIncome.classList.toggle('hide');
+
+        if (checked === radio) {
+            radio.checked = false;
+            checked = null;
+        } else {
+            checked = radio;
+        }
+    })
+</script>
+

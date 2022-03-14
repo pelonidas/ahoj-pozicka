@@ -1,0 +1,64 @@
+<% layout('./layouts/form-boilerplate') %>
+<section id="step1-body" class="mt-auto">
+    <div class="grid grid-cols-2 gap-8">
+        <div class="bg-white p-12 rounded-lg">
+            <form action="/form/step-3" method="post">
+                <div class="flex items-center mb-8">
+                    <img src="/images/step4-id.svg" alt="">
+                    <h3 class="ml-4 text-xl">Občiansky preukaz z prednej aj zadnej strany</h3>
+                </div>
+                <div class="flex items-center">
+                    <img src="/images/step4-doc.svg" alt="">
+                    <div class="flex flex-col items-start ml-4">
+                        <h3 class="text-xl">Doklad o prijme</h3>
+                        <p class="text-xs">
+                            Ak dostávate výplatu na účet, stačí mi snímka obrazovky vášho internet bankingu. Inak potrebujem
+                            posledné 3 výplatné pásky a výpis z účtu za posledný mesiac.
+                        </p>
+                    </div>
+                </div>
+                <hr class="my-12">
+                <div class="mb-6">
+                    <h4 class="text-lg mb-3">Občiansky preukaz</h4>
+                    <input type="file">
+                </div>
+                <div class="mb-8">
+                    <h4 class="text-lg mb-3">Občiansky preukaz</h4>
+                    <input type="file">
+                </div>
+                <p class="text-xs mb-2">
+                    Veľkosť súborom:  0 MB / 20 MB
+                </p>
+                <button class="border-2 border-dRed rounded-lg py-1.5 px-7">Odoslať na posúdenie</button>
+            </form>
+        </div>
+        <div class="text-white -mr-20">
+            <h2 class="text-5xl mb-5">Máš záujem o</h2>
+            <p class="mb-7">pôžičku na 3800€<br>
+                s dobou splácania 4 roky <br>
+                a mesačnou splátkou 108,81€ </p>
+            <h3 class="text-4xl mb-2">Osobné údaje</h3>
+            <div class="mb-2">
+                <i class="fa-solid fa-minus"></i> Volam sa <span
+                        class="text-primary"><%= formData.fName %> <%= formData.lName %></span>
+            </div>
+            <div class="mb-2">
+                <i class="fa-solid fa-minus"></i> Moje rodné číslo je <span
+                        class="text-primary"><%= formData.bNumber %></span>
+            </div>
+            <div class="mb-2">
+                <i class="fa-solid fa-minus"></i> Číslo môjho občianskeho preukazu je <span
+                        class="text-primary"><%= formData.id %></span>
+            </div>
+            <div class="mb-7">
+                <i class="fa-solid fa-minus"></i> Možno ma kontaktovať na čísle <span
+                        class="text-primary"><%= formData.phoneNum %></span> alebo emailom <span
+                        class="text-primary"><%= formData.email %> </span>
+            </div>
+            <h3 class="text-4xl mb-2">Finančné údaje</h3>
+            <div>
+                <i class="fa-solid fa-minus"></i> Som <%= formData.job %>
+            </div>
+        </div>
+    </div>
+</section>

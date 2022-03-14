@@ -1,0 +1,68 @@
+<% layout('./layouts/boilerplate') %>
+<div class="bg-secondary h-full">
+    <section class="bg-secondary" id="centrala-top">
+        <div class="mx-auto w-4/5 pt-16 mb-56">
+            <div class="grid grid-cols-7 text-white pb-24">
+                <div class="col-span-3">
+                    <div class="mb-8">
+                        <div class="w-2/3 mb-6">
+                            <h2 class="text-5xl">Kontaktujte tím Bestpôžička</h2>
+                        </div>
+                        <div class="w-5/6">
+                            <p>
+                                Porozprávať sa s nami môžete počas otváracích hodín v pracovné dni. Mimo otváracích hodín nás kontaktujte
+                                prostredníctvom nižšie uvedeného formulára. Uveďte čo najviac podrobností. Pokúsime sa vás kontaktovať hneď v nasledujúci pracovný deň.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="centrala-top-bg1"></div>
+                </div>
+                <div class="col-span-4">
+                    <div id="centrala-top-bg2" class="flex items-center">
+                        <div>
+                            <img src="/images/contact-placeholder.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<section id="contact-section-map" class="text-secondary">
+    <div class="grid grid-cols-2">
+        <div class="grid grid-cols-7 bg-secondary py-16 rounded-r-lg">
+            <div class="col-span-1 " id="contact-map"></div>
+            <div class="col-span-6" >
+                <img src="/images/contact-map.png" alt="" class="w-2/3 ml-auto mr-16">
+            </div>
+        </div>
+        <div class="grid grid-cols-4">
+            <div class="col-span-3 flex flex-col justify-center ml-10">
+                <h2 class="text-5xl mb-3">Kontaktujte nás</h2>
+                <h3 class="text-3xl">Pre viac informácií</h3>
+                <div class="flex items-center mt-10">
+                    <img src="/images/contact-call.svg" alt="" class="w-8">
+                    <span class="ml-7 text-xl">+421 918 709 028</span>
+                </div>
+                <div class="flex items-center mt-5">
+                    <img src="/images/contact-mail.svg" alt="" class="w-8">
+                    <span class="ml-7 text-xl">info@bestpozicky.sk</span>
+                </div>
+                <div class="flex items-center mt-5">
+                    <img src="/images/contact-location.svg" alt="" class="w-8">
+                    <span class="ml-7 text-xl">Fejova 1, 040 01 Kosice</span>
+                </div>
+                <div class="flex mt-10">
+                    <a href="" class="border border-dRed inline py-1 px-8 rounded-lg">Centrala</a>
+                </div>
+
+            </div>
+            <div class="col-span-1" id="contact-right"></div>
+        </div>
+    </div>
+</section>
+<div class="mb-28">
+    <%- include('./partials/personal')%>
+</div>
+
+<%- include('./partials/contactForm')%>

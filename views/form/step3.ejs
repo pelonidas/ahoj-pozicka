@@ -1,0 +1,90 @@
+<% layout('./layouts/form-boilerplate') %>
+<section id="step3-body" class="my-auto pb-28">
+    <div class="w-1/5">
+        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie menej než 8min</p>
+    </div>
+    <div class="grid grid-cols-2 gap-8">
+        <div class="bg-white p-12 rounded-lg">
+            <form action="/form/step-3" method="post">
+                <h4 class="text-xl mb-4">Na akej adrese máte trvalý pobyt?</h4>
+                <div class="mb-6">
+                    <label for="companyName">Ulica a popisné číslo</label>
+                    <input type="text" id="companyName" class="w-full border-2 border-secondary rounded-lg"
+                           placeholder="Štúrová 226" name="street">
+                </div>
+                <div class="grid grid-cols-7 gap-4">
+                    <div class="mb-6 col-span-5">
+                        <label for="city" class="block">Obec</label>
+                        <input type="text" id="city" name="city" class="border-2 border-secondary w-full rounded-lg"
+                               placeholder="Bratislava">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="psc" class="block">PSC</label>
+                        <input type="text" id="psc" name="psc" class="border-2 border-secondary w-full rounded-lg"
+                               placeholder="851 01">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="job">Tvoje pracovne zaradenie</label>
+                    <select name="job" id="job" class="w-full border-2 border-secondary rounded-lg">
+                        <option value="employee">Zamestnanec</option>
+                        <option value="state-employee">Štátny zamestnanec</option>
+                        <option value="foreign-employee">Zamestnanec v zahraničí</option>
+                        <option value="self-employed">Živnostník / S.R.O.</option>
+                        <option value="without-ico">Živnostník bez IČO</option>
+                        <option value="tender-self">Opatrovateľ/ka - živnostník - v členskej krajine EÚ</option>
+                        <option value="tender">Opatrovateľka</option>
+                        <option value="senior">Starobný dôchodca</option>
+                        <option value="retired-senior">Výsluhový dôchodca</option>
+                        <option value="invalid-senior">Invalidný dôchodca</option>
+                        <option value="student">Študent</option>
+                        <option value="maternity">Osoba na materskej dovolenke</option>
+                        <option value="home-person">Osoba v domácnosti</option>
+                        <option value="unemployed">Nezamestnaný</option>
+                    </select>
+                </div>
+                <div class="mb-12">
+                    <input type="checkbox" id="otherAddress" class="rounded">
+                    <label for="otherAddress">Poštu chcem dostávať na inú adresu</label>
+                </div>
+                <h4 class="text-xl mb-4">Na akej adrese máte trvalý pobyt?</h4>
+                <div>
+                    <div class="mb-6">
+                        <label for="companyName">Rodné priezvisko matky</label>
+                        <input type="text" id="companyName" class="w-full border-2 border-secondary rounded-lg"
+                               placeholder="Skúšová" name="companyName">
+                    </div>
+                </div>
+                <button class="border-2 border-dRed rounded-lg py-1 px-12">Dalej</button>
+            </form>
+        </div>
+        <div class="text-white -mr-20">
+            <h2 class="text-5xl mb-5">Máš záujem o</h2>
+            <p class="mb-7">pôžičku na 3800€<br>
+                s dobou splácania 4 roky <br>
+                a mesačnou splátkou 108,81€ </p>
+            <h3 class="text-4xl mb-2">Osobné údaje</h3>
+            <div class="mb-2">
+                <i class="fa-solid fa-minus"></i> Volam sa <span
+                        class="text-primary"><%= formData.fName %> <%= formData.lName %></span>
+            </div>
+            <div class="mb-2">
+                <i class="fa-solid fa-minus"></i> Moje rodné číslo je <span
+                        class="text-primary"><%= formData.bNumber %></span>
+            </div>
+            <div class="mb-2">
+                <i class="fa-solid fa-minus"></i> Číslo môjho občianskeho preukazu je <span
+                        class="text-primary"><%= formData.id %></span>
+            </div>
+            <div class="mb-7">
+                <i class="fa-solid fa-minus"></i> Možno ma kontaktovať na čísle <span
+                        class="text-primary"><%= formData.phoneNum %></span> alebo emailom <span
+                        class="text-primary"><%= formData.email %> </span>
+            </div>
+            <h3 class="text-4xl mb-2">Finančné údaje</h3>
+            <div>
+                <i class="fa-solid fa-minus"></i> Som <%= formData.job %>
+            </div>
+        </div>
+    </div>
+</section>

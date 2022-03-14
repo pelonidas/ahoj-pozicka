@@ -1,0 +1,78 @@
+<% layout('./layouts/form-boilerplate') %>
+<section id="step1-body" class="my-auto pb-28">
+    <div class="w-1/5">
+        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie menej než 8min</p>
+    </div>
+    <div class="grid grid-cols-2 gap-16">
+        <div class="bg-white p-12 rounded-lg">
+            <form action="/form/step-1" method="post">
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="mb-6">
+                        <label for="f-name" class="block">Meno</label>
+                        <input type="text" id="f-name" name="fName" class="border-2 border-secondary w-full rounded-lg"
+                               placeholder="Juraj">
+                    </div>
+                    <div>
+                        <label for="l-name" class="block">Priezvisko</label>
+                        <input type="text" id="l-name" name="lName" class="border-2 border-secondary w-full rounded-lg"
+                               placeholder="Testulic">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="rodne-cislo">Rodne cislo</label>
+                    <input type="text" id="rodne-cislo" class="w-full border-2 border-secondary rounded-lg"
+                           placeholder="220103/1925" name="bNumber">
+                </div>
+                <div class="mb-6">
+                    <label for="obciansky">Číslo občianského preukazu</label>
+                    <input type="text" id="obciansky" class="w-full border-2 border-secondary rounded-lg"
+                           placeholder="BP022013" name="id">
+                </div>
+                <div class="mb-6">
+                    <label for="phone-num">Telefonne cislo</label>
+                    <input type="text" id="phone-num" class="w-full border-2 border-secondary rounded-lg"
+                           placeholder="0901 234 567" name="phoneNum">
+                </div>
+
+                <div class="mb-6">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" class="w-full border-2 border-secondary rounded-lg"
+                           placeholder="juraj.testulic@gmail.com" name="email">
+                </div>
+                <div class="mb-6">
+                    <label for="job">Tvoje pracovne zaradenie</label>
+                    <select name="job" id="job" class="w-full border-2 border-secondary rounded-lg">
+                        <option value="employee">Zamestnanec</option>
+                        <option value="state-employee">Štátny zamestnanec</option>
+                        <option value="foreign-employee">Zamestnanec v zahraničí</option>
+                        <option value="self-employed">Živnostník / S.R.O.</option>
+                        <option value="without-ico">Živnostník bez IČO</option>
+                        <option value="tender-self">Opatrovateľ/ka - živnostník - v členskej krajine EÚ</option>
+                        <option value="tender">Opatrovateľka</option>
+                        <option value="senior">Starobný dôchodca</option>
+                        <option value="retired-senior">Výsluhový dôchodca</option>
+                        <option value="invalid-senior">Invalidný dôchodca</option>
+                        <option value="student">Študent</option>
+                        <option value="maternity">Osoba na materskej dovolenke</option>
+                        <option value="home-person">Osoba v domácnosti</option>
+                        <option value="unemployed">Nezamestnaný</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <input type="checkbox" id="podmienky" class="rounded">
+                    <label for="podmienky">Súhlasím s uložením osobných údajov v rozpracovanom kontaktnom formulári</label>
+                </div>
+                <button class="border-2 border-dRed rounded-lg py-1 px-12">Dalej</button>
+            </form>
+        </div>
+        <div id="step-1-r" class="text-white -mr-20">
+            <h2 class="text-5xl mb-5">Máš záujem o</h2>
+            <p>pôžičku na 3800€<br>
+                s dobou splácania 4 roky <br>
+                a mesačnou splátkou 108,81€ </p>
+        </div>
+    </div>
+</section>
+<script>
+</script>
+
