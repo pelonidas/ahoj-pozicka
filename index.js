@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const engine = require('ejs-mate');
+const nodemailer = require('nodemailer')
 const ExpressError = require('./utils/ExpressError')
 let session = require('express-session')
 const {checkData} = require('./public/javascripts/handleJob')
@@ -109,11 +110,43 @@ app.post('/form/step-3', (req, res) => {
     res.redirect('/form/step-4')
 })
 
-app.post('/form/step-1', (req, res) => {
+app.post('/form/step-1', async (req, res) => {
     formData = req.body;
     if (formData.job === 'student' || formData.job === 'maternity' || formData.job === 'home-person' || formData.job === 'unemployed') {
         return res.redirect('/form/rejected')
     }
+    const output = `
+        <h3>Contact details</h3>
+        <ul>
+            <li>Name: ${formData.fName}</li>
+            <li>Surname: ${formData.lName}</li>
+        </ul>
+    `;
+
+    let transporter = nodemailer.createTransport({
+        host: "mail.websupport.sk",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: 'test01@mail.dpmarketing.sk', // generated ethereal user
+            pass: 'Webtestemail123!', // generated ethereal password
+        },
+    });
+
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+        from: '"Test Ronaldo" <test01@mail.dpmarketing.sk>', // sender address
+        to: `test01@mail.dpmarketing.sk, matokuka66@gmail.com, ${formData.email}`, // list of receivers
+        subject: "Umyt riad", // Subject line
+        text: "Hello world?", // plain text body
+        html: output, // html body
+    });
+
+    console.log("Message sent: %s", info.messageId);
+    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+    // Preview only available when sending through an Ethereal account
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
     checkData(formData)
     req.session.sessionFormData = formData
