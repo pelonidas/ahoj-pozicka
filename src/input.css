@@ -10,6 +10,6 @@
         @apply border-2 border-green-400 hover:border-primary w-full rounded-lg;
     }
     .input-default {
-        @apply border-2 border-secondary hover:border-primary w-full rounded-lg;
+        @apply border-2 border-secondary hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
     }
 }

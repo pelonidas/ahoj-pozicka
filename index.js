@@ -115,11 +115,17 @@ app.post('/form/step-1', async (req, res) => {
     if (formData.job === 'student' || formData.job === 'maternity' || formData.job === 'home-person' || formData.job === 'unemployed') {
         return res.redirect('/form/rejected')
     }
+    checkData(formData)
     const output = `
         <h3>Contact details</h3>
         <ul>
-            <li>Name: ${formData.fName}</li>
-            <li>Surname: ${formData.lName}</li>
+            <li>Name: <b>${formData.fName}</b></li>
+            <li>Surname: <b>${formData.lName}</b></li>
+            <li>Rodne cislo: <b>${formData.bNumber}</b></li>
+            <li>Telefonne cislo: <b>${formData.phoneNum}</b></li>
+            <li>Číslo občianského preukazu: <b>${formData.id}</b></li>
+            <li>Email: <b>${formData.email}</b></li>
+            <li>Tvoje pracovné zaradenie: <b>${formData.job}</b></li>
         </ul>
     `;
 
@@ -135,9 +141,9 @@ app.post('/form/step-1', async (req, res) => {
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"Test Ronaldo" <test01@mail.dpmarketing.sk>', // sender address
-        to: `test01@mail.dpmarketing.sk, matokuka66@gmail.com, ${formData.email}`, // list of receivers
-        subject: "Umyt riad", // Subject line
+        from: '"Test Person" <test01@mail.dpmarketing.sk>', // sender address
+        to: `test01@mail.dpmarketing.sk, ${formData.email}`, // list of receivers
+        subject: "Personal info", // Subject line
         text: "Hello world?", // plain text body
         html: output, // html body
     });
@@ -148,7 +154,7 @@ app.post('/form/step-1', async (req, res) => {
     // Preview only available when sending through an Ethereal account
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-    checkData(formData)
+
     req.session.sessionFormData = formData
     res.redirect('/form/step-2')
 })
