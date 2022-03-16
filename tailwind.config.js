@@ -12,7 +12,8 @@ module.exports = {
             colors: {
                 'primary': '#FCC800',
                 'secondary': '#223146',
-                'dRed': '#ED4036'
+                'dRed': '#ED4036',
+                'orange': '#F9951E'
             },
         },
     },
