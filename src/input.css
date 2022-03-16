@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .input-danger {
+        @apply border-2 border-dRed hover:border-primary w-full rounded-lg;
+    }
+    .input-success {
+        @apply border-2 border-green-400 hover:border-primary w-full rounded-lg;
+    }
+    .input-default {
+        @apply border-2 border-secondary hover:border-primary w-full rounded-lg;
+    }
+}

@@ -3,44 +3,56 @@
     <div class="w-1/5">
         <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie menej než 8min</p>
     </div>
-    <div class="grid grid-cols-2 gap-16">
+    <div class="grid grid-cols-2 gap-16 text-secondary">
         <div class="bg-white p-12 rounded-lg">
-            <form action="/form/step-1" method="post">
+            <form action="/form/step-1" method="post" id="form1">
                 <div class="grid grid-cols-2 gap-6">
                     <div class="mb-6">
                         <label for="f-name" class="block">Meno</label>
-                        <input type="text" id="f-name" name="fName" class="border-2 border-secondary w-full rounded-lg"
+                        <input type="text" id="f-name" name="fName"
+                               class="input-default"
                                placeholder="Juraj">
+                        <small class="text-xs text-dRed"></small>
                     </div>
                     <div>
                         <label for="l-name" class="block">Priezvisko</label>
-                        <input type="text" id="l-name" name="lName" class="border-2 border-secondary w-full rounded-lg"
-                               placeholder="Testulic">
+                        <input type="text" id="l-name" name="lName"
+                               class="border-2 border-secondary w-full rounded-lg hover:border-primary"
+                               placeholder="Testulič">
+                        <small class="text-xs text-dRed "></small>
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label for="rodne-cislo">Rodne cislo</label>
-                    <input type="text" id="rodne-cislo" class="w-full border-2 border-secondary rounded-lg"
+                    <label for="rodne-cislo">Rodné číslo</label>
+                    <input type="text" id="rodne-cislo"
+                           class="w-full border-2 border-secondary rounded-lg hover:border-primary"
                            placeholder="220103/1925" name="bNumber">
+                    <small class="text-xs text-dRed"></small>
                 </div>
                 <div class="mb-6">
                     <label for="obciansky">Číslo občianského preukazu</label>
-                    <input type="text" id="obciansky" class="w-full border-2 border-secondary rounded-lg"
+                    <input type="text" id="obciansky"
+                           class="w-full border-2 border-secondary rounded-lg hover:border-primary"
                            placeholder="BP022013" name="id">
+                    <small class="text-xs text-dRed "></small>
                 </div>
                 <div class="mb-6">
-                    <label for="phone-num">Telefonne cislo</label>
-                    <input type="text" id="phone-num" class="w-full border-2 border-secondary rounded-lg"
+                    <label for="phone-num">Telefónne číslo</label>
+                    <input type="text" id="phone-num"
+                           class="w-full border-2 border-secondary rounded-lg hover:border-primary"
                            placeholder="0901 234 567" name="phoneNum">
+                    <small class="text-xs text-dRed "></small>
                 </div>
 
                 <div class="mb-6">
                     <label for="email">Email</label>
-                    <input type="text" id="email" class="w-full border-2 border-secondary rounded-lg"
+                    <input type="text" id="email"
+                           class="w-full border-2 border-secondary rounded-lg hover:border-primary"
                            placeholder="juraj.testulic@gmail.com" name="email">
+                    <small class="text-xs text-dRed"></small>
                 </div>
                 <div class="mb-6">
-                    <label for="job">Tvoje pracovne zaradenie</label>
+                    <label for="job">Tvoje pracovné zaradenie</label>
                     <select name="job" id="job" class="w-full border-2 border-secondary rounded-lg">
                         <option value="employee">Zamestnanec</option>
                         <option value="state-employee">Štátny zamestnanec</option>
@@ -60,7 +72,8 @@
                 </div>
                 <div class="mb-6">
                     <input type="checkbox" id="podmienky" class="rounded">
-                    <label for="podmienky">Súhlasím s uložením osobných údajov v rozpracovanom kontaktnom formulári</label>
+                    <label for="podmienky">Súhlasím s uložením osobných údajov v rozpracovanom kontaktnom
+                        formulári</label>
                 </div>
                 <button class="border-2 border-dRed rounded-lg py-1 px-12">Dalej</button>
             </form>
@@ -74,5 +87,105 @@
     </div>
 </section>
 <script>
+    const form1 = document.querySelector('#form1')
+    let allLetters = /^[A-Za-z]+$/;
+    let name = document.querySelector('#f-name');
+    let surname = document.querySelector('#l-name')
+    let rodneCislo = document.querySelector('#rodne-cislo')
+    let obciansky = document.querySelector('#obciansky')
+    let phoneNum = document.querySelector('#phone-num')
+    let email = document.querySelector('#email')
+    let checkbox = document.querySelector('#podmienky')
+
+    form1.addEventListener('submit', (e) => {
+
+        let nameValidation = validateInput(name, true)
+        let surnameValidation = validateInput(surname, true)
+        let cisloValidation = validateInput(rodneCislo)
+        let obcianskyValidation = validateInput(obciansky)
+        let phoneNumValidation = validateInput(phoneNum)
+        let emailValidation = validateInput(email)
+
+
+        if (!nameValidation || !surnameValidation || !cisloValidation || !obcianskyValidation || !phoneNumValidation || !emailValidation || !validateCheckbox()){
+            e.preventDefault()
+        }
+    })
+
+    const validateCheckbox = () => {
+        return checkbox.checked;
+    }
+
+    const validateInput = (input, isString = false) => {
+        if (isString) {
+            if (!input.value.trim().match(allLetters)){
+                setErrorFor(input, "Wrong data type")
+                return false
+            } else {
+                setSuccessFor(input)
+            }
+        }
+        if (!input.value.trim()) {
+            setErrorFor(input)
+            return false
+        }
+        else {
+            setSuccessFor(input)
+            return true
+        }
+    }
+
+    // let checkInput = (input, isString = false, e) => {
+    //     if (!input.value) {
+    //         setErrorFor(input)
+    //         hasError = true
+    //         e.preventDefault();
+    //     } else if (isString) {
+    //         if (!input.value.match(allLetters)) {
+    //             setErrorFor(input, "Pole je vyplnene nespravne")
+    //             e.preventDefault()
+    //         } else {
+    //             setSuccessFor(input)
+    //         }
+    //     } else {
+    //         setSuccessFor(input)
+    //     }
+    //
+    //
+    // }
+    //
+    let setErrorFor = (input, msg = "Pole je nevyplnene") => {
+        input.className = 'input-danger'
+        input.nextElementSibling.innerText = msg;
+
+    }
+    //
+    let setSuccessFor = (input) => {
+        input.className = 'input-success'
+        input.nextElementSibling.innerText = ""
+
+    }
+    //
+    // Restricts input for the given textbox to the given inputFilter.
+    function setInputFilter(textbox, inputFilter) {
+        ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
+            textbox.addEventListener(event, function () {
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                } else {
+                    this.value = "";
+                }
+            });
+        });
+    }
+
+    setInputFilter(phoneNum, function (value) {
+        return /^-?\d*$/.test(value);
+    });
 </script>
 
