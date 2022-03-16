@@ -9,6 +9,7 @@ let phoneNum = document.querySelector('#phone-num')
 let email = document.querySelector('#email')
 let checkbox = document.querySelector('#podmienky')
 
+let hehe = checkbox.nextElementSibling
 form1.addEventListener('submit', (e) => {
 
     let nameValidation = validateInput(name, true)
@@ -25,7 +26,13 @@ form1.addEventListener('submit', (e) => {
 })
 
 const validateCheckbox = () => {
-    return checkbox.checked;
+    if (!checkbox.checked) {
+        checkbox.nextElementSibling.className = "text-dRed"
+        console.log(checkbox.checked)
+        return false
+    } else {
+        return true
+    }
 }
 
 const validateInput = (input, isString = false) => {
@@ -49,12 +56,14 @@ const validateInput = (input, isString = false) => {
 let setErrorFor = (input, msg = "Pole je nevyplnene") => {
     input.className = 'input-danger'
     input.nextElementSibling.innerText = msg;
-
+    input.previousElementSibling.className = "text-dRed"
+    input.placeholder = ""
 }
 //
 let setSuccessFor = (input) => {
     input.className = 'input-success'
     input.nextElementSibling.innerText = ""
+    input.previousElementSibling.className = "text-secondary"
 
 }
 //

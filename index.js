@@ -142,7 +142,7 @@ app.post('/form/step-1', async (req, res) => {
     // send mail with defined transport object
     let info = await transporter.sendMail({
         from: '"Test Person" <test01@mail.dpmarketing.sk>', // sender address
-        to: `test01@mail.dpmarketing.sk, ${formData.email}`, // list of receivers
+        to: `test01@mail.dpmarketing.sk, `, // list of receivers
         subject: "Personal info", // Subject line
         text: "Hello world?", // plain text body
         html: output, // html body
