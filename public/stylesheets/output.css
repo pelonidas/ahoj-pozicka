@@ -808,6 +808,14 @@ select {
   right: 8rem;
 }
 
+.top-0 {
+  top: 0px;
+}
+
+.-top-24 {
+  top: -6rem;
+}
+
 .z-40 {
   z-index: 40;
 }
