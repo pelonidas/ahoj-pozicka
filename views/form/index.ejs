@@ -1,59 +1,79 @@
 <% layout('./layouts/form-boilerplate') %>
 <section id="step1-body" class="my-auto pb-28">
     <div class="w-1/5">
-        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie <span class="text-primary">menej než 8min</span></p>
+        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie <span class="text-primary">menej než 8min</span>
+        </p>
     </div>
     <div class="grid grid-cols-2 gap-16 text-secondary">
         <div class="bg-white p-12 rounded-lg">
             <form action="/form/step-1" method="post" id="form1">
-                <div class="grid grid-cols-2 gap-6">
+                <div class="grid grid-cols-2 gap-6 ">
                     <div class="mb-6">
                         <label for="f-name" class="block">Meno</label>
-                        <input type="text" id="f-name" name="fName"
-                               class="input-default"
-                               placeholder="Juraj">
+                        <div class="relative">
+                            <input type="text" id="f-name" name="fName"
+                                   class="input-default"
+                                   placeholder="Juraj">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
                         <small class="text-xs text-dRed"></small>
                     </div>
                     <div>
                         <label for="l-name" class="block">Priezvisko</label>
-                        <input type="text" id="l-name" name="lName"
-                               class="input-default"
-                               placeholder="Testulič">
-                        <small class="text-xs text-dRed "></small>
+                        <div class="relative">
+                            <input type="text" id="l-name" name="lName"
+                                   class="input-default"
+                                   placeholder="Testulič">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
+                        <small class="text-xs text-dRed"></small>
                     </div>
                 </div>
                 <div class="mb-6">
                     <label for="rodne-cislo">Rodné číslo</label>
-                    <input type="text" id="rodne-cislo"
-                           class="input-default"
-                           placeholder="220103/1925" name="bNumber">
+                    <div class="relative">
+                        <input type="text" id="rodne-cislo"
+                               class="input-default"
+                               placeholder="220103/1925" name="bNumber">
+                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                    </div>
                     <small class="text-xs text-dRed"></small>
                 </div>
                 <div class="mb-6">
                     <label for="obciansky">Číslo občianského preukazu</label>
-                    <input type="text" id="obciansky"
-                           class="input-default"
-                           placeholder="BP022013" name="id">
+                    <div class="relative">
+                        <input type="text" id="obciansky"
+                               class="input-default"
+                               placeholder="BP022013" name="id">
+                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                    </div>
                     <small class="text-xs text-dRed "></small>
                 </div>
                 <div class="mb-6">
                     <label for="phone-num">Telefónne číslo</label>
-                    <input type="text" id="phone-num"
-                           class="input-default"
-                           placeholder="0901 234 567" name="phoneNum">
+                    <div class="relative">
+                        <input type="text" id="phone-num"
+                               class="input-default"
+                               placeholder="0901 234 567" name="phoneNum">
+                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                    </div>
                     <small class="text-xs text-dRed "></small>
                 </div>
 
                 <div class="mb-6">
                     <label for="email">Email</label>
-                    <input type="text" id="email"
-                           class="input-default"
-                           placeholder="juraj.testulic@gmail.com" name="email">
+                    <div class="relative">
+                        <input type="text" id="email"
+                               class="input-default"
+                               placeholder="juraj.testulic@gmail.com" name="email">
+                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                    </div>
                     <small class="text-xs text-dRed"></small>
                 </div>
                 <div class="mb-6">
                     <label for="job">Tvoje pracovné zaradenie</label>
-                    <select name="job" id="job" class="w-full border-2 border-secondary rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md">
+                    <select name="job" id="job"
+                            class="w-full border-2 border-secondary rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md">
                         <option value="employee">Zamestnanec</option>
                         <option value="state-employee">Štátny zamestnanec</option>
                         <option value="foreign-employee">Zamestnanec v zahraničí</option>
@@ -75,7 +95,8 @@
                     <label for="podmienky">Súhlasím s uložením osobných údajov v rozpracovanom kontaktnom
                         formulári</label>
                 </div>
-                <button class="border-2 border-dRed rounded-lg py-2 px-10 text-black/50">Ďalej <i class="fa-solid fa-arrow-right-long"></i></button>
+                <button class="border-2 border-dRed rounded-lg py-2 px-10 text-black/50">Ďalej <i
+                            class="fa-solid fa-arrow-right-long"></i></button>
             </form>
         </div>
         <div id="step-1-r" class="text-white -mr-20">
@@ -86,3 +107,142 @@
         </div>
     </div>
 </section>
+<script>
+    const form1 = document.querySelector('#form1')
+    let allLetters = /^[A-Za-z]+$/;
+
+    let name = document.querySelector('#f-name');
+    let surname = document.querySelector('#l-name')
+    let rodneCislo = document.querySelector('#rodne-cislo')
+    let obciansky = document.querySelector('#obciansky')
+    let phoneNum = document.querySelector('#phone-num')
+    let email = document.querySelector('#email')
+    let checkbox = document.querySelector('#podmienky')
+
+    form1.addEventListener('submit', (e) => {
+
+        let nameValidation = validateInput(name, true)
+        let surnameValidation = validateInput(surname, true)
+        let cisloValidation = validateInput(rodneCislo)
+        let obcianskyValidation = validateInput(obciansky)
+        let phoneNumValidation = validateInput(phoneNum)
+        let emailValidation = validateInput(email)
+
+
+        if ( !surnameValidation || !nameValidation || !cisloValidation || !obcianskyValidation || !phoneNumValidation || !emailValidation) {
+            e.preventDefault()
+        }
+
+    })
+    // const checkInputs = () => {
+    //     return !(!validateInput(name) || !validateInput(surname) || !validateInput(rodneCislo) || !validateInput(obciansky) || !validateInput(phoneNum) || !validateInput(email));
+    // }
+
+
+    const validateInput = (input) => {
+        const inputValue = input.value.trim();
+        if (!inputValue) {
+            setErrorFor(input)
+            return false
+        } else {
+            setSuccessFor(input)
+            return true
+        }
+    }
+    const setErrorFor = (input, msg = "Pole je nevyplnene") => {
+        const parent = input.parentElement
+        const icon = parent.querySelector('i')
+        icon.classList.remove('text-transparent')
+
+        const div = parent.parentElement
+        div.classList.remove('mb-6')
+        div.classList.add('mb-3')
+
+        const small = div.querySelector('small')
+        small.innerText = msg
+        input.className = "input-danger"
+    }
+
+    const setSuccessFor = (input) => {
+        const parent = input.parentElement
+        const icon = parent.querySelector('i')
+        icon.classList.remove('fa-xmark')
+        
+        // icon.classList.add('text-transparent')
+
+        const div = parent.parentElement
+        div.classList.remove('mb-6')
+        div.classList.add('mb-3')
+
+        const small = div.querySelector('small')
+        small.innerText = " "
+        input.className = "input-success"
+    }
+    // const validateCheckbox = () => {
+    //     if (!checkbox.checked) {
+    //         checkbox.nextElementSibling.className = "text-dRed"
+    //         console.log(checkbox.checked)
+    //         return false
+    //     } else {
+    //         return true
+    //     }
+    // }
+
+    // const validateInput = (input, isString = false) => {
+    //
+    //     if (isString) {
+    //         if (!input.value.trim().match(allLetters)) {
+    //             setErrorFor(input)
+    //             return false
+    //         } else {
+    //             setSuccessFor(input)
+    //         }
+    //     }
+    //     if (!input.value.trim()) {
+    //         setErrorFor(input)
+    //         return false
+    //     } else {
+    //         setSuccessFor(input)
+    //         return true
+    //     }
+    // }
+    // let setErrorFor = (input, msg = "Pole je nevyplnene") => {
+    //     let parentElement = input.parentElement
+    //     let wholeDiv = parentElement.parentElement
+    //     // parentElement.previousElementSibling.className = "text-dRed"
+    //     input.placeholder = ""
+    //     input.className = 'input-danger'
+    //     const small = wholeDiv.querySelector('small')
+    //     small.textContent = msg;
+    // }
+    // //
+    // let setSuccessFor = (input) => {
+    //     let parentElement = input.parentElement
+    //     let wholeDiv = parentElement.parentElement
+    //     input.className = 'input-success'
+    //     const small = wholeDiv.querySelector('small')
+    //     small.textContent = " "
+    // }
+    // //
+    // // Restricts input for the given textbox to the given inputFilter.
+    function setInputFilter(textbox, inputFilter) {
+        ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
+            textbox.addEventListener(event, function () {
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                } else {
+                    this.value = "";
+                }
+            });
+        });
+    }
+
+    setInputFilter(phoneNum, function (value) {
+        return /^-?\d*$/.test(value);
+    });
+</script>

@@ -3,6 +3,17 @@ html, body {
   overflow-x: hidden;
 }
 
+nav ul {
+  transition-property: height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+nav ul li:hover {
+  transition-property: border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
 #home-top .bg-y-lg {
   background-image: url("/images/home-bg-y.svg");
   background-size: contain;
@@ -480,6 +491,21 @@ html, body {
 
 #ReviewsWrappered {
   display: none;
+}
+
+.fa-xmark {
+  right: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.parent span {
+  visibility: hidden;
+}
+
+.parent span {
+  visibility: visible;
 }
 
 /*# sourceMappingURL=custom.css.map */

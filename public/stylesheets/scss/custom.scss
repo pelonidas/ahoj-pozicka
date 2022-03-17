@@ -4,6 +4,19 @@ html, body {
 }
 
 
+nav {
+  ul {
+    transition-property: height;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    li:hover {
+      transition-property: border;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+}
+
 #home-top {
 
   .bg-y-lg {
@@ -557,8 +570,18 @@ html, body {
   display: none;
 }
 
-// form validation classes
-
-.form-success {
-
+.fa-xmark {
+  right: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
+// form validation classes
+  .parent span {
+    visibility: hidden;
+  }
+  .parent span {
+    visibility: visible;
+  }
+

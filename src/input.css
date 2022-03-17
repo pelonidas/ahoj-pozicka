@@ -13,12 +13,15 @@
         @apply border-2 border-secondary hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
     }
     .offer-hover-orange {
-        @apply border-2 border-orange h-[15rem] flex items-center px-3 rounded-md ml-4 text-orange;
+        @apply border-2 border-orange h-[15rem] flex items-center px-3 rounded-md ml-4 text-orange visible;
     }
     .offer-hover-red {
         @apply border-2 border-dRed h-[15rem] flex items-center px-3 rounded-md text-dRed;
     }
     .offer-hover-yellow {
         @apply border-2 border-primary h-[15rem] flex items-center px-3 rounded-md text-primary ml-4;
+    }
+    .offer-transition {
+        @apply transition ease-in-out delay-150;
     }
 }
