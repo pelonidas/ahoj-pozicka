@@ -1029,6 +1029,22 @@ select {
   margin-left: 0.25rem;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -1707,6 +1723,16 @@ select {
 
 .text-black\/25 {
   color: rgb(0 0 0 / 0.25);
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.decoration-solid {
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
 }
 
 .drop-shadow-lg {
