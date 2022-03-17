@@ -1,30 +1,15 @@
-const form1 = document.querySelector('#form1')
-let allLetters = /^[A-Za-z]+$/;
-
-let name = document.querySelector('#f-name');
-let surname = document.querySelector('#l-name')
-let rodneCislo = document.querySelector('#rodne-cislo')
-let obciansky = document.querySelector('#obciansky')
-let phoneNum = document.querySelector('#phone-num')
-let email = document.querySelector('#email')
-let checkbox = document.querySelector('#podmienky')
-
-form1.addEventListener('submit', (e) => {
-
-    let nameValidation = validateInput(name, true)
-    let surnameValidation = validateInput(surname, true)
-    let cisloValidation = validateInput(rodneCislo)
-    let obcianskyValidation = validateInput(obciansky)
-    let phoneNumValidation = validateInput(phoneNum)
-    let emailValidation = validateInput(email)
-    let checkboxValidation = validateCheckbox()
 
 
-    if (!surnameValidation || !nameValidation || !cisloValidation || !obcianskyValidation || !phoneNumValidation || !emailValidation || !checkboxValidation) {
-        e.preventDefault()
-    }
 
-})
+
+
+
+
+
+if (form2v2) {
+
+}
+
 
 const validateInput = (input) => {
     const inputValue = input.value.trim();
@@ -71,36 +56,4 @@ const setSuccessFor = (input) => {
     small.innerText = " "
     input.className = "input-default"
 }
-const validateCheckbox = () => {
-    if (!checkbox.checked) {
-        checkbox.nextElementSibling.className = "text-dRed"
-        checkbox.classList.add('mr-3')
-        checkbox.classList.remove('border-secondary')
-        checkbox.classList.add('border-dRed')
-        return false
-    } else {
-        checkbox.nextElementSibling.className = "text-secondary"
-        return true
-    }
-}
 
-function setInputFilter(textbox, inputFilter) {
-    ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
-        textbox.addEventListener(event, function () {
-            if (inputFilter(this.value)) {
-                this.oldValue = this.value;
-                this.oldSelectionStart = this.selectionStart;
-                this.oldSelectionEnd = this.selectionEnd;
-            } else if (this.hasOwnProperty("oldValue")) {
-                this.value = this.oldValue;
-                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-            } else {
-                this.value = "";
-            }
-        });
-    });
-}
-
-setInputFilter(phoneNum, function (value) {
-    return /^-?\d*$/.test(value);
-});

@@ -92,69 +92,125 @@ app.get('/form/success', (req, res) => {
 })
 
 app.post('/form/step-2', (req, res) => {
-    const companyData = req.body;
-    formData.companyName = companyData.companyName
-
-    console.log(formData)
+    formData.companyData = req.body
     req.session.sessionFormData = formData;
-
+    console.log(formData)
     res.redirect('/form/step-3')
 })
+app.post('/form/step-4', async (req, res) => {
+    const output = `
+        <h3>Contact details</h3>
+        <ul>
+            <li>Name: <b>${formData.contact.fName}</b></li>
+            <li>Surname: <b>${formData.contact.lName}</b></li>
+            <li>Rodne cislo: <b>${formData.contact.bNumber}</b></li>
+            <li>Telefonne cislo: <b>${formData.contact.phoneNum}</b></li>
+            <li>Číslo občianského preukazu: <b>${formData.contact.id}</b></li>
+            <li>Email: <b>${formData.email}</b></li>
+            <li>Tvoje pracovné zaradenie: <b>${formData.contact.job}</b></li>
+        </ul>
+        <h3>Company data</h3>
+        <ul>
+            <li>Company name: ${formData.companyData.companyName}</li>
+            <li>ICO: ${formData.companyData.ico}</li>
+            <li>Company city: ${formData.companyData.city}</li>
+            <li>PSC: ${formData.companyData.psc}</li>
+            
+            <ul>
+            Last three months:
+               <li>${formData.companyData.january}</li>
+               <li>${formData.companyData.february}</li>
+               <li>${formData.companyData.march}</li>
+            </ul>
+        </ul>
+        <h3>Person data</h3>
+        <ul>
+            <li>Ulica: ${formData.customerData.street}</li>
+            <li>Obec: ${formData.customerData.cityCustomer}</li>
+            <li>PSC: ${formData.customerData.pscCustomer}</li>
+            <li>Typ byvania: ${formData.customerData.living}</li>
+            <li>Rodne priezvisko mamy: ${formData.customerData.motherSurname}</li>
+        </ul>
+    `;
 
+    let transporter = nodemailer.createTransport({
+        host: "mail.websupport.sk",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: 'test01@mail.dpmarketing.sk', // generated ethereal user
+            pass: 'Webtestemail123!', // generated ethereal password
+        },
+    });
+
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+        from: '"Test Person" <test01@mail.dpmarketing.sk>', // sender address
+        to: `test01@mail.dpmarketing.sk, `, // list of receivers
+        subject: "Personal info", // Subject line
+        text: "Hello world?", // plain text body
+        html: output, // html body
+    });
+
+    console.log("Message sent: %s", info.messageId);
+    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+    // Preview only available when sending through an Ethereal account
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    res.redirect('/')
+})
 app.post('/form/step-3', (req, res) => {
-    const personData = req.body
-    formData.street = personData.street;
+    formData.customerData = req.body
 
-    console.log(formData)
     req.session.sessionFormData = formData;
     res.redirect('/form/step-4')
 })
 
 app.post('/form/step-1', async (req, res) => {
-    formData = req.body;
+    formData.contact = req.body;
     if (formData.job === 'student' || formData.job === 'maternity' || formData.job === 'home-person' || formData.job === 'unemployed') {
         return res.redirect('/form/rejected')
     }
     checkData(formData)
-    // const output = `
-    //     <h3>Contact details</h3>
-    //     <ul>
-    //         <li>Name: <b>${formData.fName}</b></li>
-    //         <li>Surname: <b>${formData.lName}</b></li>
-    //         <li>Rodne cislo: <b>${formData.bNumber}</b></li>
-    //         <li>Telefonne cislo: <b>${formData.phoneNum}</b></li>
-    //         <li>Číslo občianského preukazu: <b>${formData.id}</b></li>
-    //         <li>Email: <b>${formData.email}</b></li>
-    //         <li>Tvoje pracovné zaradenie: <b>${formData.job}</b></li>
-    //     </ul>
-    // `;
-    //
-    // let transporter = nodemailer.createTransport({
-    //     host: "mail.websupport.sk",
-    //     port: 587,
-    //     secure: false, // true for 465, false for other ports
-    //     auth: {
-    //         user: 'test01@mail.dpmarketing.sk', // generated ethereal user
-    //         pass: 'Webtestemail123!', // generated ethereal password
-    //     },
-    // });
-    //
-    // // send mail with defined transport object
-    // let info = await transporter.sendMail({
-    //     from: '"Test Person" <test01@mail.dpmarketing.sk>', // sender address
-    //     to: `test01@mail.dpmarketing.sk, `, // list of receivers
-    //     subject: "Personal info", // Subject line
-    //     text: "Hello world?", // plain text body
-    //     html: output, // html body
-    // });
-    //
-    // console.log("Message sent: %s", info.messageId);
-    // // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-    //
-    // // Preview only available when sending through an Ethereal account
-    // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    const output = `
+        <h3>Contact details</h3>
+        <ul>
+            <li>Name: <b>${formData.fName}</b></li>
+            <li>Surname: <b>${formData.lName}</b></li>
+            <li>Rodne cislo: <b>${formData.bNumber}</b></li>
+            <li>Telefonne cislo: <b>${formData.phoneNum}</b></li>
+            <li>Číslo občianského preukazu: <b>${formData.id}</b></li>
+            <li>Email: <b>${formData.email}</b></li>
+            <li>Tvoje pracovné zaradenie: <b>${formData.job}</b></li>
+        </ul>
+    `;
 
+    let transporter = nodemailer.createTransport({
+        host: "mail.websupport.sk",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: 'test01@mail.dpmarketing.sk', // generated ethereal user
+            pass: 'Webtestemail123!', // generated ethereal password
+        },
+    });
 
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+        from: '"Test Person" <test01@mail.dpmarketing.sk>', // sender address
+        to: `test01@mail.dpmarketing.sk, `, // list of receivers
+        subject: "Personal info", // Subject line
+        text: "Hello world?", // plain text body
+        html: output, // html body
+    });
+
+    console.log("Message sent: %s", info.messageId);
+    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+    // Preview only available when sending through an Ethereal account
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+    console.log(formData)
     req.session.sessionFormData = formData
     res.redirect('/form/step-2')
 })

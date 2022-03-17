@@ -5,54 +5,60 @@
     </div>
     <div class="grid grid-cols-2 gap-8">
         <div class="bg-white p-12 rounded-lg">
-            <form action="/form/step-3" method="post">
+            <form action="/form/step-3" method="post" id="form3">
                 <h4 class="text-xl mb-4">Na akej adrese máte trvalý pobyt?</h4>
                 <div class="mb-6">
-                    <label for="companyName">Ulica a popisné číslo</label>
-                    <input type="text" id="companyName" class="w-full border-2 border-secondary rounded-lg"
-                           placeholder="Štúrová 226" name="street">
+                    <label for="street">Ulica a popisné číslo</label>
+                    <div class="relative">
+                        <input type="text" id="street" class="input-default"
+                               placeholder="Štúrová 226" name="street">
+                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                    </div>
+                    <small class="text-xs text-dRed "></small>
                 </div>
                 <div class="grid grid-cols-7 gap-4">
                     <div class="mb-6 col-span-5">
-                        <label for="city" class="block">Obec</label>
-                        <input type="text" id="city" name="city" class="border-2 border-secondary w-full rounded-lg"
-                               placeholder="Bratislava">
+                        <label for="cityCustomer" class="block">Obec</label>
+                        <div class="relative">
+                            <input type="text" id="cityCustomer" name="cityCustomer" class="input-default"
+                                   placeholder="Bratislava">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
+                        <small class="text-xs text-dRed "></small>
                     </div>
                     <div class="col-span-2">
-                        <label for="psc" class="block">PSC</label>
-                        <input type="text" id="psc" name="psc" class="border-2 border-secondary w-full rounded-lg"
-                               placeholder="851 01">
+                        <label for="pscCustomer" class="block">PSČ</label>
+                        <div class="relative">
+                            <input type="text" id="pscCustomer" name="pscCustomer" class="input-default"
+                                   placeholder="851 01">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
+                        <small class="text-xs text-dRed "></small>
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label for="job">Tvoje pracovne zaradenie</label>
-                    <select name="job" id="job" class="w-full border-2 border-secondary rounded-lg">
-                        <option value="employee">Zamestnanec</option>
-                        <option value="state-employee">Štátny zamestnanec</option>
-                        <option value="foreign-employee">Zamestnanec v zahraničí</option>
-                        <option value="self-employed">Živnostník / S.R.O.</option>
-                        <option value="without-ico">Živnostník bez IČO</option>
-                        <option value="tender-self">Opatrovateľ/ka - živnostník - v členskej krajine EÚ</option>
-                        <option value="tender">Opatrovateľka</option>
-                        <option value="senior">Starobný dôchodca</option>
-                        <option value="retired-senior">Výsluhový dôchodca</option>
-                        <option value="invalid-senior">Invalidný dôchodca</option>
-                        <option value="student">Študent</option>
-                        <option value="maternity">Osoba na materskej dovolenke</option>
-                        <option value="home-person">Osoba v domácnosti</option>
-                        <option value="unemployed">Nezamestnaný</option>
+                    <label for="living">Typ bývania</label>
+                    <select name="living" id="living" class="input-default">
+                        <option value="rent">Najom</option>
+                        <option value="house">Dom</option>
+                        <option value="flat">Byt</option>
+
                     </select>
                 </div>
                 <div class="mb-12">
                     <input type="checkbox" id="otherAddress" class="rounded">
                     <label for="otherAddress">Poštu chcem dostávať na inú adresu</label>
                 </div>
-                <h4 class="text-xl mb-4">Na akej adrese máte trvalý pobyt?</h4>
+                <h4 class="text-xl mb-4">Pár detailov na koniec</h4>
                 <div>
                     <div class="mb-6">
-                        <label for="companyName">Rodné priezvisko matky</label>
-                        <input type="text" id="companyName" class="w-full border-2 border-secondary rounded-lg"
-                               placeholder="Skúšová" name="companyName">
+                        <label for="motherSurname">Rodné priezvisko matky</label>
+                        <div class="relative">
+                            <input type="text" id="motherSurname" class="input-default"
+                                   placeholder="Skúšová" name="motherSurname">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
+                        <small class="text-xs text-dRed "></small>
                     </div>
                 </div>
                 <button class="border-2 border-dRed rounded-lg py-1 px-12">Dalej</button>
@@ -66,25 +72,91 @@
             <h3 class="text-4xl mb-2">Osobné údaje</h3>
             <div class="mb-2">
                 <i class="fa-solid fa-minus"></i> Volam sa <span
-                        class="text-primary"><%= formData.fName %> <%= formData.lName %></span>
+                        class="text-primary"><%= formData.contact.fName %> <%= formData.contact.lName %></span>
             </div>
             <div class="mb-2">
                 <i class="fa-solid fa-minus"></i> Moje rodné číslo je <span
-                        class="text-primary"><%= formData.bNumber %></span>
+                        class="text-primary"><%= formData.contact.bNumber %></span>
             </div>
             <div class="mb-2">
                 <i class="fa-solid fa-minus"></i> Číslo môjho občianskeho preukazu je <span
-                        class="text-primary"><%= formData.id %></span>
+                        class="text-primary"><%= formData.contact.id %></span>
             </div>
             <div class="mb-7">
                 <i class="fa-solid fa-minus"></i> Možno ma kontaktovať na čísle <span
-                        class="text-primary"><%= formData.phoneNum %></span> alebo emailom <span
-                        class="text-primary"><%= formData.email %> </span>
+                        class="text-primary"><%= formData.contact.phoneNum %></span> alebo emailom <span
+                        class="text-primary"><%= formData.contact.email %> </span>
             </div>
             <h3 class="text-4xl mb-2">Finančné údaje</h3>
             <div>
-                <i class="fa-solid fa-minus"></i> Som <%= formData.job %>
+                <i class="fa-solid fa-minus"></i> Som <%= formData.contact.job %>
             </div>
+            <span><%= formData.companyData.ico%></span>
         </div>
     </div>
 </section>
+<script>
+    const form3 = document.querySelector('#form3')
+
+    const street = document.querySelector('#street')
+    const customerCity = document.querySelector('#cityCustomer')
+    const pscCustomer = document.querySelector('#pscCustomer')
+    const motherSurname = document.querySelector('#motherSurname')
+
+    form3.addEventListener('submit', (e) => {
+        const streetValidation = validateInput(street)
+        const customerCityValidation = validateInput(customerCity)
+        const pscCustomerValidation = validateInput(pscCustomer)
+        const motherSurnameValidation = validateInput(motherSurname)
+
+        if (!streetValidation || !customerCityValidation || !pscCustomerValidation || !motherSurnameValidation) {
+            e.preventDefault()
+        }
+    })
+
+    const validateInput = (input) => {
+        const inputValue = input.value.trim();
+        if (!inputValue) {
+            setErrorFor(input)
+            return false
+        } else {
+            setSuccessFor(input)
+            return true
+        }
+    }
+    const setErrorFor = (input, msg = "Pole je nevyplnene") => {
+        const parent = input.parentElement
+        const icon = parent.querySelector('i')
+        icon.classList.remove('fa-check')
+        icon.classList.add('fa-xmark')
+        icon.classList.remove('text-transparent')
+        icon.classList.remove('text-green-400')
+        icon.classList.add("text-dRed")
+
+        const div = parent.parentElement
+        div.classList.remove('mb-6')
+        div.classList.add('mb-3')
+
+        const small = div.querySelector('small')
+        small.innerText = msg
+        input.className = "input-danger"
+    }
+
+    const setSuccessFor = (input) => {
+        const parent = input.parentElement
+        const icon = parent.querySelector('i')
+        icon.classList.remove('fa-xmark')
+        icon.classList.add('fa-check')
+        icon.classList.remove('text-transparent')
+        icon.classList.remove('text-dRed')
+        icon.classList.add("text-green-400")
+
+        const div = parent.parentElement
+        div.classList.remove('mb-6')
+        div.classList.add('mb-3')
+
+        const small = div.querySelector('small')
+        small.innerText = " "
+        input.className = "input-default"
+    }
+</script>

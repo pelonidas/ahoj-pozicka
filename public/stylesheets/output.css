@@ -901,6 +901,10 @@ select {
   margin-left: 1.5rem;
 }
 
+.mt-28 {
+  margin-top: 7rem;
+}
+
 .mb-28 {
   margin-bottom: 7rem;
 }
@@ -961,16 +965,24 @@ select {
   margin-top: 0.5rem;
 }
 
-.mt-28 {
-  margin-top: 7rem;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
 
 .mt-14 {
   margin-top: 3.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .-mr-20 {
@@ -1027,18 +1039,6 @@ select {
 
 .ml-1 {
   margin-left: 0.25rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
 }
 
 .mr-3 {
@@ -1143,12 +1143,12 @@ select {
   width: 33.333333%;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
-}
-
 .w-11\/12 {
   width: 91.666667%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .w-\[25rem\] {
@@ -1379,14 +1379,14 @@ select {
   background-color: rgb(34 49 70 / var(--tw-bg-opacity));
 }
 
-.bg-dRed {
-  --tw-bg-opacity: 1;
-  background-color: rgb(237 64 54 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-dRed {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 64 54 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -1549,6 +1549,10 @@ select {
   padding-top: 5rem;
 }
 
+.pb-28 {
+  padding-bottom: 7rem;
+}
+
 .pl-9 {
   padding-left: 2.25rem;
 }
@@ -1575,10 +1579,6 @@ select {
 
 .pb-8 {
   padding-bottom: 2rem;
-}
-
-.pb-28 {
-  padding-bottom: 7rem;
 }
 
 .pl-12 {
@@ -1711,11 +1711,6 @@ select {
   color: rgb(0 0 0 / 0.5);
 }
 
-.text-green-400 {
-  --tw-text-opacity: 1;
-  color: rgb(74 222 128 / var(--tw-text-opacity));
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1727,6 +1722,11 @@ select {
 
 .text-secondary\/50 {
   color: rgb(34 49 70 / 0.5);
+}
+
+.text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1772,24 +1772,24 @@ select {
   border-color: rgb(252 200 0 / var(--tw-border-opacity));
 }
 
-.hover\:bg-dRed:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(237 64 54 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-secondary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 49 70 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(252 200 0 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-dRed:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 64 54 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-secondary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 49 70 / var(--tw-bg-opacity));
 }
 
 .hover\:text-white:hover {

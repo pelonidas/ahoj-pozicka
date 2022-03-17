@@ -7,7 +7,7 @@
         @apply border-2 border-dRed hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
     }
     .input-default {
-        @apply border-2 border-secondary hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
+        @apply border-2 border-secondary hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md ;
     }
     .offer-hover-orange {
         @apply border-2 border-orange h-[15rem] flex items-center px-3 rounded-md ml-4 text-orange visible;
