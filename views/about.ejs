@@ -56,30 +56,33 @@
             </div>
         </div>
     </section>
-    <section id="benefits-section-dark">
-        <div class="container mx-auto text-white">
+    <section id="" class="pb-28">
+        <div id="benefits-section-dark">
+
+
+        <div class="container mx-auto text-white" >
             <div class="flex justify-between mb-6">
-                <div class="border border-primary rounded-lg py-14 px-7 w-1/5 bg-secondary">
-                    <h5 class="text-xl mb-1 text-primary">rýchlosť</h5>
-                    <p class="text-sm text-primary">
+                <div class="border border-primary rounded-lg py-14 px-7 w-1/5 text-primary bg-secondary hover:transition-all hover:bg-primary hover:text-white">
+                    <h5 class="text-xl mb-1">rýchlosť</h5>
+                    <p class="text-sm">
                         Peniaze odosielané účet okamžite po podpise zmluvy.
                     </p>
                 </div>
-                <div class="border border-dRed rounded-lg py-14 px-7 w-1/5 bg-secondary">
-                    <h5 class="text-xl mb-1 text-dRed">flexibilita</h5>
-                    <p class="text-sm text-dRed">
+                <div class="border border-dRed rounded-lg py-14 px-7 w-1/5 bg-secondary text-dRed hover:transition-all hover:bg-dRed hover:text-white">
+                    <h5 class="text-xl mb-1">flexibilita</h5>
+                    <p class="text-sm">
                         Žiadosť vybavíš online alebo osobne na centrále.
                     </p>
                 </div>
-                <div class="border border-white rounded-lg py-14 px-7 w-1/5 bg-secondary">
-                    <h5 class="text-xl mb-1 text-white">ústretovosť</h5>
-                    <p class="text-sm text-white">
+                <div class="border border-white rounded-lg py-14 px-7 w-1/5 bg-secondary text-white hover:transition-all hover:bg-white hover:text-secondary">
+                    <h5 class="text-xl mb-1">ústretovosť</h5>
+                    <p class="text-sm">
                         Náš zákazník náš pán, preto sa vždy snažíme vyhovieť požiadavkám zákazníka.
                     </p>
                 </div>
                 <div class="w-1/3 pl-9">
                     <h2 class="text-6xl mb-4">Benefity</h2>
-                    <p class="text-sm w-4/5">
+                    <p class="text-sm leading-relaxed w-11/12">
                         Komplexné služby, maximálna bezpečnosť, flexibilita a transparentnosť. Či už ste online alebo
                         klasik,
                         bestpôžička si nájde cestu ku každému z Vás.
@@ -87,19 +90,19 @@
                 </div>
             </div>
             <div class="flex justify-end">
-                <div class="border border-white rounded-lg py-14 px-7 bg-secondary text-secondary w-1/5">
-                    <h5 class="text-xl mb-1 text-white">profesionalita</h5>
-                    <p class="text-sm text-white">
+                <div class="border border-white rounded-lg py-14 px-7 bg-secondary w-1/5 text-white hover:transition-all hover:text-secondary hover:bg-white">
+                    <h5 class="text-xl mb-1">profesionalita</h5>
+                    <p class="text-sm">
                         Prácu vykonávame efektívne, zodpovedne dôsledne a s plným nasadením.
                     </p>
                 </div>
-                <div class="border border-primary rounded-lg py-14 px-7 bg-secondary text-primary w-1/5 ml-6">
+                <div class="border border-primary rounded-lg py-14 px-7 bg-secondary text-primary w-1/5 ml-6 hover:transition-all hover:bg-primary hover:text-white">
                     <h5 class="text-xl mb-1">komplexnosť</h5>
                     <p class="text-sm">
                         Komplexné služby v sprostredkovaní finančných služieb pre našich klientov.
                     </p>
                 </div>
-                <div class="border border-dRed rounded-lg py-14 px-7 bg-dRed text-white w-1/5 ml-6">
+                <div class="border border-dRed rounded-lg py-14 px-7 bg-secondary text-dRed w-1/5 ml-6 hover:transition-all hover:bg-dRed hover:text-white">
                     <h5 class="text-xl mb-1">bez poplatkov</h5>
                     <p class="text-sm">
                         Vybavenie, vedenie a predčasné splatenie pôžičky je úplne zadarmo.
@@ -107,10 +110,13 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 </div>
+<div class="mt-28">
+    <%- include('./partials/products') %>
+</div>
 
-<%- include('./partials/products') %>
 
 <%- include('./partials/reviews') %>
 
