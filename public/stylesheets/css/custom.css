@@ -411,7 +411,7 @@ nav ul li:hover {
 
 #step-2-r {
   background-image: url("/images/step2-bg.svg");
-  background-size: contain;
+  background-size: 100%;
   background-position: bottom right;
   background-repeat: no-repeat;
 }
