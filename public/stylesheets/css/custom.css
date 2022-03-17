@@ -500,6 +500,13 @@ nav ul li:hover {
   transform: translateY(-50%);
 }
 
+.fa-check {
+  right: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .parent span {
   visibility: hidden;
 }

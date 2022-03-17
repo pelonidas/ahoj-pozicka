@@ -45,7 +45,7 @@
                         <input type="text" id="obciansky"
                                class="input-default"
                                placeholder="BP022013" name="id">
-                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed icon"></i>
                     </div>
                     <small class="text-xs text-dRed "></small>
                 </div>
@@ -152,7 +152,11 @@
     const setErrorFor = (input, msg = "Pole je nevyplnene") => {
         const parent = input.parentElement
         const icon = parent.querySelector('i')
+        icon.classList.remove('fa-check')
+        icon.classList.add('fa-xmark')
         icon.classList.remove('text-transparent')
+        icon.classList.remove('text-green-400')
+        icon.classList.add("text-dRed")
 
         const div = parent.parentElement
         div.classList.remove('mb-6')
@@ -167,7 +171,10 @@
         const parent = input.parentElement
         const icon = parent.querySelector('i')
         icon.classList.remove('fa-xmark')
-        
+        icon.classList.add('fa-check')
+        icon.classList.remove('text-transparent')
+        icon.classList.remove('text-dRed')
+        icon.classList.add("text-green-400")
         // icon.classList.add('text-transparent')
 
         const div = parent.parentElement
@@ -176,7 +183,7 @@
 
         const small = div.querySelector('small')
         small.innerText = " "
-        input.className = "input-success"
+        input.className = "input-default"
     }
     // const validateCheckbox = () => {
     //     if (!checkbox.checked) {
