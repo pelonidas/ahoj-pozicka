@@ -415,10 +415,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
 }
 
-.hide {
-  display: none;
-}
-
 #rejected-main {
   background-image: url("/images/rejected-bg-y.svg");
   background-size: contain;
@@ -450,13 +446,6 @@ nav ul li:hover {
 }
 #form-success .content {
   width: 90%;
-}
-
-.calcAd2-bg {
-  background-image: url("/images/calcAd2-bg.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 #benefits-section-dark {

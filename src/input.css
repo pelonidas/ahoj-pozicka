@@ -18,7 +18,7 @@
     .offer-hover-yellow {
         @apply border-2 border-primary h-[15rem] flex items-center px-3 rounded-md text-primary ml-4;
     }
-    .offer-transition {
-        @apply transition ease-in-out delay-150;
+    .transition-default {
+        @apply transition ease-in-out duration-200;
     }
 }
