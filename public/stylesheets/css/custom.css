@@ -507,12 +507,9 @@ nav ul li:hover {
   transform: translateY(-50%);
 }
 
-.parent span {
-  visibility: hidden;
-}
-
-.parent span {
-  visibility: visible;
+.offerContainer:hover .offerArrow {
+  transition: opacity ease-in-out 0.2s;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=custom.css.map */

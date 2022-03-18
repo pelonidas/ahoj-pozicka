@@ -583,11 +583,8 @@ nav {
   transform: translateY(-50%);
 }
 
-// form validation classes
-  .parent span {
-    visibility: hidden;
-  }
-  .parent span {
-    visibility: visible;
-  }
-
+//offer hover arrow solution
+.offerContainer:hover .offerArrow{
+  transition: opacity ease-in-out 0.2s;
+  opacity: 1;
+}
