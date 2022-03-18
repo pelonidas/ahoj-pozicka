@@ -91,14 +91,16 @@
                     </select>
                 </div>
                 <div class="mb-6 flex">
-                    <input type="checkbox" id="podmienky" class="border-2 border-secondary rounded mt-1 focus:ring-0 hover:border-primary text-secondary">
+                    <input type="checkbox" id="podmienky"
+                           class="border-2 border-secondary rounded mt-1 focus:ring-0 hover:border-primary text-secondary">
                     <div class="mt-0 ml-3">
                         Súhlasím s uložením <span class="underline decoration-solid">osobných údajov v rozpracovanom kontaktnom
                         formulári</span>
                     </div>
                 </div>
-                <button class="border-2 border-dRed rounded-lg py-2 px-10 text-black/50">Ďalej <i
-                            class="fa-solid fa-arrow-right-long"></i></button>
+                <button class="border-2 border-dRed rounded-lg text-black/50 w-[175px] h-[54px] flex items-center justify-center text-[20px] font-bold">
+                    <span>Ďalej <i class="fa-solid fa-arrow-right-long"></i></span>
+                </button>
             </form>
         </div>
         <div id="step-1-r" class="text-white -mr-20">
@@ -195,6 +197,7 @@
             return true
         }
     }
+
     function setInputFilter(textbox, inputFilter) {
         ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
             textbox.addEventListener(event, function () {
