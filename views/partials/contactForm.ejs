@@ -21,25 +21,25 @@
         </div>
         <div class="bg-secondary rounded-l-lg flex items-center" id="contact-form">
             <div class="bg-white w-2/3 ml-14 px-10 py-16 rounded-lg">
-                <form action="">
+                <form action="/form" method="post">
                     <div class="mb-7">
                         <label for="name">Meno a priezvisko</label>
                         <input type="text" id="name" placeholder="Juraj Testulič"
-                               class="input-default">
+                               class="input-default" name="name">
                     </div>
                     <div class="mb-7">
                         <label for="email">Email</label>
                         <input type="text" id="email" placeholder="juraj.testulic@gmail.com"
-                               class="input-default">
+                               class="input-default" name="email">
                     </div>
                     <div class="mb-7">
                         <label for="phoneNumber">Telefónne číslo</label>
                         <input type="text" id="phoneNumber" placeholder="0901 234 567"
-                               class="input-default">
+                               class="input-default" name="phoneNumber">
                     </div>
                     <div class="mb-12">
                         <label for="message">Správa</label>
-                        <textarea name="" id="message" class="input-default"
+                        <textarea name="message" id="message" class="input-default"
                                   placeholder="Dobrý deň,"></textarea>
                     </div>
                     <div class="flex justify-center">

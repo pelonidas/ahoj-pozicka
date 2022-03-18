@@ -66,30 +66,30 @@
         </div>
         <div class="w-1/2 bg-white drop-shadow-lg rounded-l-lg flex items-center" id="contact-form">
             <div class="w-full px-10 py-16">
-                <form action="">
+                <form action="/form" method="post">
                     <div class="mb-7">
                         <label for="name">Meno a priezvisko</label>
                         <input type="text" id="name" placeholder="Juraj Testulič"
-                               class="input-default">
+                               class="input-default" name="name">
                     </div>
                     <div class="mb-7">
                         <label for="email">Email</label>
                         <input type="text" id="email" placeholder="juraj.testulic@gmail.com"
-                               class="input-default">
+                               class="input-default" name="email">
                     </div>
                     <div class="mb-7">
                         <label for="phoneNumber">Telefónne číslo</label>
                         <input type="text" id="phoneNumber" placeholder="0901 234 567"
-                               class="input-default">
+                               class="input-default" name="phoneNumber">
                     </div>
                     <div class="mb-7">
-                        <label for="email">Mam zaujem o:</label>
-                        <input type="text" id="email" value="Dofinancovanie Hypotéky"
-                               class="input-default">
+                        <label for="interest">Mam zaujem o:</label>
+                        <input type="text" id="interest" value="Dofinancovanie Hypotéky"
+                               class="input-default" name="interest">
                     </div>
                     <div class="mb-12">
                         <label for="message">Sprava</label>
-                        <textarea name="" id="message" class="input-default"
+                        <textarea name="message" id="message" class="input-default"
                                   placeholder="Dobrý deň,"></textarea>
                     </div>
                     <div class="flex justify-center">
