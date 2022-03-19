@@ -1,6 +1,7 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 nav ul {
@@ -75,11 +76,14 @@ nav ul li:hover {
 }
 
 #benefits-section {
-  margin-bottom: 9rem;
-  background-image: url("/images/benefits-bg.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom 1rem center;
+  position: relative;
+  z-index: 2;
+}
+#benefits-section::after {
+  position: absolute;
+  top: 13rem;
+  z-index: -2;
+  content: url("/images/benefits-bg.svg");
 }
 
 #calc-ad-parent {
@@ -206,33 +210,12 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-position: center 5rem;
 }
-#footer #footer-container {
-  width: 74%;
-}
 #footer #dp-text {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .no-space {
   font-size: 0;
-}
-
-#centrala-top #centrala-top-bg1 {
-  height: 13.75rem;
-  background-image: url("/images/centrala-home-bg1.svg");
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 68%;
-}
-#centrala-top #centrala-top-bg2 {
-  height: 100%;
-  background-image: url("/images/centrala-home-bg2.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: contain;
-}
-#centrala-top #centrala-top-bg2 img {
-  width: 90%;
 }
 
 #centrala-description {
@@ -309,7 +292,7 @@ nav ul li:hover {
 
 #dofinancovanie-header .dofinancovanie-right-bg {
   height: 22rem;
-  background-image: url("/images/ref-top-bg.svg");
+  background-image: url("");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top right;
@@ -512,6 +495,7 @@ nav ul li:hover {
   background-image: url("/images/gray-top-home.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 #heroText {
@@ -524,6 +508,42 @@ nav ul li:hover {
   top: 20rem;
   right: 0;
   content: url("/images/bg-y-sm.svg");
+}
+
+#centrala-hero-video {
+  position: relative;
+  z-index: 5;
+}
+#centrala-hero-video::after {
+  z-index: -1;
+  position: absolute;
+  top: -6.5rem;
+  right: -6rem;
+  content: url("/images/centrala-home-bg2.svg");
+}
+
+#centrala-hero-text {
+  position: relative;
+  z-index: 5;
+}
+#centrala-hero-text::after {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  bottom: -7rem;
+  content: url("/images/centrala-home-bg1.svg");
+}
+
+#dofinancovanie-hero-img {
+  position: relative;
+  z-index: 5;
+}
+#dofinancovanie-hero-img::after {
+  z-index: -1;
+  position: absolute;
+  content: url("/images/ref-top-bg.svg");
+  right: -21rem;
+  top: -1rem;
 }
 
 /*# sourceMappingURL=custom.css.map */
