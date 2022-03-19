@@ -1,10 +1,13 @@
 //sliders
 const money_range = document.getElementById("money_range");
 const year_range = document.getElementById("year_range");
-
+let data = ""
 //text fields
 const money_input = document.getElementById("money_input");
 const year_input = document.getElementById("year_input");
+
+//hidden
+const interest = document.querySelector('#interest')
 
 //outputs
 const mes_sum = document.getElementById("mes_sum");
@@ -41,15 +44,18 @@ display();
 
 //displays calculation
 function display() {
-    let ratePercent = 20.27;
+    let ratePercent = 16.56;
     let roundToPlaces = 2;
     let calculatedInterest = calculateInterest(money_val, year_val, ratePercent);
 
-    //https://sk.wikipedia.org/wiki/Zlo%C5%BEen%C3%A9_%C3%BAro%C4%8Denie
+    interest.value = calculatedInterest
     mes_sum.innerHTML = (calculatedInterest / (year_val * 12)).toFixed(roundToPlaces) + "€";
+    data = `${(calculatedInterest / (year_val * 12)).toFixed(roundToPlaces)}`
     urok_sadzba.innerHTML = ratePercent + "%";
     celkove_naklady.innerHTML = (calculatedInterest - money_val).toFixed(roundToPlaces) + "€";
     celkova_suma.innerHTML = calculatedInterest.toFixed(roundToPlaces) + "€";
+    interest.value = data
+    console.log(data)
 }
 
 // Update the current slider value (each time you drag the slider handle)

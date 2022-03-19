@@ -19,12 +19,6 @@ nav {
 
 #home-top {
 
-  .bg-y-lg {
-    background-image: url("/images/home-bg-y.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-  }
 
   .bg-y-sm {
     background-image: url("/images/bg-y-sm.svg");
@@ -577,4 +571,17 @@ nav {
 .offerContainer:hover .offerArrow{
   transition: opacity ease-in-out 0.2s;
   opacity: 1;
+}
+
+#testtt {
+  position: relative;
+  z-index: 1;
+  &::after {
+    z-index: -1;
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    content: url("/images/home-bg-y.svg");
+    background-size: contain;
+  }
 }

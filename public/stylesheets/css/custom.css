@@ -14,12 +14,6 @@ nav ul li:hover {
   transition-timing-function: ease-in-out;
 }
 
-#home-top .bg-y-lg {
-  background-image: url("/images/home-bg-y.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
 #home-top .bg-y-sm {
   background-image: url("/images/bg-y-sm.svg");
   background-repeat: no-repeat;
@@ -498,6 +492,19 @@ nav ul li:hover {
 .offerContainer:hover .offerArrow {
   transition: opacity ease-in-out 0.2s;
   opacity: 1;
+}
+
+#testtt {
+  position: relative;
+  z-index: 1;
+}
+#testtt::after {
+  z-index: -1;
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  content: url("/images/home-bg-y.svg");
+  background-size: contain;
 }
 
 /*# sourceMappingURL=custom.css.map */

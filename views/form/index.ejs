@@ -105,9 +105,9 @@
         </div>
         <div id="step-1-r" class="text-white -mr-20">
             <h2 class="text-5xl mb-5">Máš záujem o</h2>
-            <p>pôžičku na 3800€<br>
-                s dobou splácania 4 roky <br>
-                a mesačnou splátkou 108,81€ </p>
+            <p>pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span><br>
+                s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span> <br>
+                a mesačnou splátkou <span class="text-primary"><%=formData.calcData.interest %> €</span></p>
         </div>
     </div>
 </section>

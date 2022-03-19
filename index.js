@@ -68,7 +68,7 @@ app.get('/form/rejected', (req, res) => {
 })
 
 app.get('/form/step-1', (req, res) => {
-    res.render('form/index', {step: 1})
+    res.render('form/index', {step: 1, formData})
 })
 
 app.get('/test', (req, res) => {
@@ -267,7 +267,11 @@ app.post('/form', async (req, res) => {
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info))
     res.redirect('/')
 })
-
+app.post('/calc', (req, res) => {
+    console.log(req.body)
+    formData.calcData = req.body
+    res.redirect('/form/step-1')
+})
 
 // Handling undefined routes
 // app.all('*', (req, res, next) => {

@@ -7,50 +7,58 @@
             <p class="w-2/3 mb-4">V bestpôžičke môžete požiadať o pôžičky v rozmedzí od 400 do 20 000 EUR.</p>
             <a href="/form/step-1">Vypocitat</a>
         </div>
-        <div class="h-full bg-y-lg w-2/5 ml-auto text-secondary">
-            <div class="home-calc mt-16 bg-white p-12 w-[35rem] relative right-24 z-40 rounded-lg drop-shadow-xl">
-                <div class="mb-8">
-                    <h3 class="mb-2 text-2xl">Koľko si chcete požičať?</h3>
-                    <input type="text" class="px-3 py-2 border-2 border-secondary rounded-lg w-full mb-2"
-                           placeholder="15 000€" id="money_input">
-                    <input type="range" class="w-full styled-slider slider-progress" min="5000" max="50000" value="10000" step="5000" id="money_range">
-                </div>
-                <div class="mb-8">
-                    <h3 class="mb-2 text-2xl">Na koľko rokov?</h3>
-                    <input type="text" class="px-3 py-2 border-2 border-secondary rounded-lg w-full mb-2"
-                           placeholder="5 rokov" id="year_input">
-                    <input type="range" class="w-full styled-slider slider-progress" min="1" max="20" value="5" id="year_range" step="1">
-                </div>
-                <hr class="mb-8">
-                <div class="flex justify-between items-center mb-5">
-                    <h4 class="w-1/2 text-xl">Odhadovaná mesačná suma</h4>
-                    <h2 class="text-3xl" id="mes_sum">389€</h2>
-                </div>
-                <div class="flex justify-between">
-                    <div class="flex flex-col">
-                        <h6 class="text-sm">Úroková sadzba</h6>
-                        <h5 id="urok_sadzba">20,27%</h5>
+        <div class="h-full bg-y-lg w-full max-w-[665px] ml-auto text-secondary" id="testtt">
+            <form action="/calc" method="post">
+                <div class=" mt-16 bg-white p-12 w-[35rem] rounded-lg drop-shadow-xl">
+                    <div class="mb-8">
+                        <h3 class="mb-2 text-2xl">Koľko si chcete požičať?</h3>
+                        <input type="text" class="px-3 py-2 border-2 border-secondary rounded-lg w-full mb-2"
+                               placeholder="15 000€" id="money_input" name="money">
+                        <input type="range" class="w-full styled-slider slider-progress" min="400" max="10000"
+                               value="2000" step="100" id="money_range">
                     </div>
-                    <div class="flex flex-col">
-                        <h6 class="text-sm">Celkové naklady</h6>
-                        <h5 id="celkove_naklady">6 778€</h5>
+                    <div class="mb-8">
+                        <h3 class="mb-2 text-2xl">Na koľko rokov?</h3>
+                        <input type="text" class="px-3 py-2 border-2 border-secondary rounded-lg w-full mb-2"
+                               placeholder="5 rokov" id="year_input" name="years">
+                        <input type="range" class="w-full styled-slider slider-progress" min="1" max="8" value="5"
+                               id="year_range" step="1">
                     </div>
-                    <div class="flex flex-col">
-                        <h6 class="text-sm">Celková suma</h6>
-                        <h5 id="celkova_suma">21 778€</h5>
+                    <hr class="mb-8">
+                    <div class="flex justify-between items-center mb-5">
+                        <h4 class="w-1/2 text-xl">Odhadovaná mesačná suma</h4>
+                        <h2 class="text-3xl" id="mes_sum">389€</h2>
                     </div>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h6 class="text-sm">Úroková sadzba</h6>
+                            <h5 id="urok_sadzba">16.56%</h5>
+                        </div>
+                        <div class="flex flex-col">
+                            <h6 class="text-sm">Celkové naklady</h6>
+                            <h5 id="celkove_naklady">6 778€</h5>
+                        </div>
+                        <div class="flex flex-col">
+                            <h6 class="text-sm">Celková suma</h6>
+                            <h5 id="celkova_suma">21 778€</h5>
+                        </div>
+                    </div>
+                    <hr class="mt-8">
+                    <div class="flex mt-2 text-white">
+                        <input type="hidden" name="interest" id="interest">
+                        <button class="w-full bg-dRed text-center py-6 rounded-md" type="submit" id="testButton">
+                            Požiadajte o pôžičku
+                        </button>
+                    </div>
+                    <p class="text-xs mt-3 text-black/25">
+                        Reprezentatívny príklad:
+                        Celková výška a mena úveru (S): 2 500 €, fixná efektívna úroková sadzba: 16,56 % p. a., výška
+                        mesačnej splátky: 45,27 €, počet splátok (n): 96 mesiacov. Celková čiastka: 4 345,92 €, RPMN
+                        (X):
+                        16,55 %
+                    </p>
                 </div>
-                <hr class="mt-8">
-                <div class="flex mt-2 text-white">
-                    <a href="/form/step-1" class="w-full bg-dRed text-center py-6 rounded-md">Požiadajte o pôžičku</a>
-                </div>
-                <p class="text-xs mt-3 text-black/25">
-                    Reprezentatívny príklad:
-                    Celková výška a mena úveru (S): 2 500 €, fixná efektívna úroková sadzba: 16,55 % p. a., výška
-                    mesačnej splátky: 45,27 €, počet splátok (n): 96 mesiacov. Celková čiastka: 4 345,92 €, RPMN (X):
-                    16,56 %
-                </p>
-            </div>
+            </form>
         </div>
     </section>
 </div>
@@ -72,7 +80,8 @@
                         <div class="pl-5 pb-5">
                             <hr>
                             <div class="w-4/5">
-                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Maecenas
                                     varius
                                     tortor
                                     nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam
@@ -97,7 +106,8 @@
                         <div class="pl-5 pb-5">
                             <hr>
                             <div class="w-4/5">
-                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Maecenas
                                     varius
                                     tortor
                                     nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam
@@ -122,7 +132,8 @@
                         <div class="pl-5 pb-5">
                             <hr>
                             <div class="w-4/5">
-                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Maecenas
                                     varius
                                     tortor
                                     nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam
@@ -147,7 +158,8 @@
                         <div class="pl-5 pb-5">
                             <hr>
                             <div class="w-4/5">
-                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Maecenas
                                     varius
                                     tortor
                                     nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam
@@ -172,7 +184,8 @@
                         <div class="pl-5 pb-5">
                             <hr>
                             <div class="w-4/5">
-                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Maecenas
                                     varius
                                     tortor
                                     nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam
@@ -197,7 +210,8 @@
                         <div class="pl-5 pb-5">
                             <hr>
                             <div class="w-4/5">
-                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Maecenas
                                     varius
                                     tortor
                                     nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam
@@ -222,7 +236,8 @@
                         <div class="pl-5 pb-5">
                             <hr>
                             <div class="w-4/5">
-                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                                <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Maecenas
                                     varius
                                     tortor
                                     nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam
@@ -238,79 +253,4 @@
     </section>
 </div>
 <script src="/javascripts/calculator.js"></script>
-<script>
-    for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
-        e.style.setProperty('--value', e.value);
-        e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-        e.style.setProperty('--max', e.max == '' ? '100' : e.max);
-        e.addEventListener('input', () => e.style.setProperty('--value', e.value));
-    }
-
-    if (document.getElementById('ReviewsWrapper')) {
-        const flavoursContainer = document.getElementById('ReviewsWrapper');
-        const flavoursScrollWidth = flavoursContainer.scrollWidth;
-
-        window.addEventListener('load', () => {
-
-            function reviewTimer() {
-                // clearInterval(interval)
-                interval = self.setInterval(() => {
-                    const first = document.querySelector('#ReviewsWrapper div');
-
-                    if (!isElementInViewport(first)) {
-                        flavoursContainer.appendChild(first);
-                        flavoursContainer.scrollTo(flavoursContainer.scrollLeft - first.offsetWidth, 0);
-                    }
-                    if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-                        flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-                    }
-                }, 10);
-            }
-
-            flavoursContainer.addEventListener("mouseleave", function (event) {
-                function reviewTimer() {
-                    clearInterval(interval)
-                    interval = self.setInterval(() => {
-                        const first = document.querySelector('#ReviewsWrapper div');
-
-                        if (!isElementInViewport(first)) {
-                            flavoursContainer.appendChild(first);
-                            flavoursContainer.scrollTo(flavoursContainer.scrollLeft - first.offsetWidth, 0);
-                        }
-                        if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-                            flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-                        }
-                    }, 10);
-                }
-
-                reviewTimer()
-            }, false);
-            flavoursContainer.addEventListener("mouseover", function (event) {
-                function reviewTimer() {
-                    clearInterval(interval)
-                    interval = self.setInterval(() => {
-                        const first = document.querySelector('#ReviewsWrapper div');
-
-                        if (!isElementInViewport(first)) {
-                            flavoursContainer.appendChild(first);
-                            flavoursContainer.scrollTo(flavoursContainer.scrollLeft - first.offsetWidth, 0);
-                        }
-                        if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-                            flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-                        }
-                    }, 10000000);
-                }
-
-                reviewTimer()
-            }, false);
-
-            reviewTimer()
-
-        });
-
-        function isElementInViewport(el) {
-            var rect = el.getBoundingClientRect();
-            return rect.right > 0;
-        }
-    }
-</script>
+<script src="/javascripts/autoReviews.js"></script>
