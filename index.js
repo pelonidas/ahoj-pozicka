@@ -157,7 +157,7 @@ app.post('/form/step-4', async (req, res) => {
 
     // Preview only available when sending through an Ethereal account
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    res.redirect('/')
+    res.redirect('/form/success')
 })
 app.post('/form/step-3', (req, res) => {
     formData.customerData = req.body
