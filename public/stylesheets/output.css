@@ -1292,6 +1292,12 @@ select {
   cursor: pointer;
 }
 
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
@@ -1466,6 +1472,10 @@ select {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(252 200 0 / var(--tw-bg-opacity));
+}
+
+.bg-none {
+  background-image: none;
 }
 
 .p-12 {
