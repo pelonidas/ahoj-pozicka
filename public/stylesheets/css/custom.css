@@ -500,11 +500,19 @@ nav ul li:hover {
 }
 #testtt::after {
   z-index: -1;
+  height: 300px;
   position: absolute;
-  top: -2rem;
-  right: -2rem;
+  top: 6rem;
+  right: 3rem;
   content: url("/images/home-bg-y.svg");
   background-size: contain;
+}
+
+.calculator-gray-bg {
+  height: 100%;
+  background-image: url("/images/gray-top-home.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=custom.css.map */

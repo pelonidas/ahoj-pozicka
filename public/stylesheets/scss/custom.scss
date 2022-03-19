@@ -9,6 +9,7 @@ nav {
     transition-property: height;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
+
     li:hover {
       transition-property: border;
       transition-duration: 0.2s;
@@ -528,7 +529,6 @@ nav {
 }
 
 
-
 .ReviewsWrapper {
   position: relative;
   max-width: 100vw;
@@ -549,7 +549,6 @@ nav {
 }
 
 
-
 #ReviewsWrappered {
   display: none;
 }
@@ -560,6 +559,7 @@ nav {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .fa-check {
   right: 1rem;
   position: absolute;
@@ -568,7 +568,7 @@ nav {
 }
 
 //offer hover arrow solution
-.offerContainer:hover .offerArrow{
+.offerContainer:hover .offerArrow {
   transition: opacity ease-in-out 0.2s;
   opacity: 1;
 }
@@ -576,12 +576,21 @@ nav {
 #testtt {
   position: relative;
   z-index: 1;
+
   &::after {
     z-index: -1;
+    height: 300px;
     position: absolute;
-    top: -2rem;
-    right: -2rem;
+    top: 6rem;
+    right: 3rem;
     content: url("/images/home-bg-y.svg");
     background-size: contain;
   }
+}
+
+.calculator-gray-bg {
+  height: 100%;
+  background-image: url("/images/gray-top-home.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
