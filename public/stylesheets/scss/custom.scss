@@ -584,7 +584,6 @@ nav {
     top: 6rem;
     right: 3rem;
     content: url("/images/home-bg-y.svg");
-    background-size: contain;
   }
 }
 
@@ -593,4 +592,16 @@ nav {
   background-image: url("/images/gray-top-home.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+#heroText {
+  position: relative;
+  z-index: -2;
+  &::after {
+    z-index: -1;
+    position: absolute;
+    top: 20rem;
+    right: 0;
+    content: url("/images/bg-y-sm.svg");
+  }
 }
