@@ -546,4 +546,32 @@ nav ul li:hover {
   top: -1rem;
 }
 
+#main {
+  background-image: url("/images/dakujeme-gray.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 75%;
+}
+
+.dakujeme {
+  position: relative;
+  z-index: 3;
+}
+.dakujeme::after {
+  z-index: -1;
+  position: absolute;
+  background-image: url("/images/dakujeme-yellow.svg");
+  background-position: center right;
+  height: 100%;
+  width: 10%;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
 /*# sourceMappingURL=custom.css.map */

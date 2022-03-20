@@ -5,7 +5,8 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            "body": "Comfortaa, sans-serif"
+            "body": "Comfortaa, sans-serif",
+            "text": "Avenir Next, sans-serif"
         },
 
         extend: {

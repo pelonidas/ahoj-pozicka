@@ -72,7 +72,7 @@ app.get('/form/step-1', (req, res) => {
 })
 
 app.get('/test', (req, res) => {
-    res.render('test')
+    res.render('form/form-dakujeme')
 })
 
 app.get('/form/step-2', (req, res) => {
@@ -265,7 +265,7 @@ app.post('/form', async (req, res) => {
 
     // Preview only available when sending through an Ethereal account
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info))
-    res.redirect('/')
+    res.redirect('/form/dakujeme')
 })
 app.post('/calc', (req, res) => {
     console.log(req.body)
@@ -273,6 +273,9 @@ app.post('/calc', (req, res) => {
     res.redirect('/form/step-1')
 })
 
+app.get('/form/dakujeme', (req, res) => {
+    res.render('form/form-dakujeme')
+})
 // Handling undefined routes
 // app.all('*', (req, res, next) => {
 //     next(new ExpressError("Page not found", 404))
