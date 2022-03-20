@@ -118,23 +118,31 @@ nav {
 }
 
 #home-about {
-  padding-bottom: 7rem;
-
-  .aboutUs-bg-l {
-    width: 15%;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 14%;
+    position: absolute;
     background-image: url("/images/aboutUs-bg-l.svg");
-    background-size: contain;
     background-repeat: no-repeat;
-    background-position: left -2rem center;
+    background-size: contain;
+    left: -2rem;
+    top: 7rem;
   }
-
-  .aboutUs-bg-r {
-    width: 15%;
+  &::after {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 14%;
+    position: absolute;
     background-image: url("/images/aboutUs-bg-r.svg");
-    background-size: contain;
     background-repeat: no-repeat;
-    background-position: right -2rem center;
-
+    background-size: contain;
+    right: -2rem;
+    top: 7rem;
   }
 }
 

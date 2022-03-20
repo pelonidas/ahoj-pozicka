@@ -816,6 +816,10 @@ select {
   grid-column: span 6 / span 6;
 }
 
+.col-span-7 {
+  grid-column: span 7 / span 7;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1037,6 +1041,10 @@ select {
   margin-left: -4rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1109,6 +1117,14 @@ select {
 
 .h-\[0\.1\%\] {
   height: 0.1%;
+}
+
+.h-\[91px\] {
+  height: 91px;
+}
+
+.h-\[70px\] {
+  height: 70px;
 }
 
 .max-h-\[740px\] {
@@ -1251,6 +1267,14 @@ select {
   width: 100%;
 }
 
+.w-\[65\%\] {
+  width: 65%;
+}
+
+.w-\[70px\] {
+  width: 70px;
+}
+
 .max-w-\[560px\] {
   max-width: 560px;
 }
@@ -1354,6 +1378,10 @@ select {
 
 .grid-cols-9 {
   grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1715,6 +1743,26 @@ select {
   padding-left: 0.75rem;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pr-12 {
+  padding-right: 3rem;
+}
+
+.pr-24 {
+  padding-right: 6rem;
+}
+
+.pr-20 {
+  padding-right: 5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1968,6 +2016,22 @@ select {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.hover\:transition-default:hover {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:rounded-lg:hover {
+  border-radius: 0.5rem;
+}
+
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
 .hover\:border-b:hover {
   border-bottom-width: 1px;
 }
@@ -2000,6 +2064,33 @@ select {
 .hover\:bg-orange:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 149 30 / var(--tw-bg-opacity));
+}
+
+.hover\:p-5:hover {
+  padding: 1.25rem;
+}
+
+.hover\:p-2:hover {
+  padding: 0.5rem;
+}
+
+.hover\:p-3:hover {
+  padding: 0.75rem;
+}
+
+.hover\:py-3:hover {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.hover\:px-5:hover {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.hover\:px-4:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .hover\:text-white:hover {
