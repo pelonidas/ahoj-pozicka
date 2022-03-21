@@ -182,19 +182,27 @@
                 section.classList.toggle('hidden')
                 isPressed = !isPressed
             }
-            isPressed = !isPressed
         })
 
-        container.addEventListener('mouseenter', () => {
-            removeClass(i, 'fa-plus')
-            addClass(i, 'fa-angle-down')
-            i.classList.add('text-primary')
-        })
-        container.addEventListener('mouseleave', () => {
-            i.classList.remove('fa-plus')
-            i.classList.add('fa-plus')
-            i.classList.remove('text-primary')
-        })
+
+            container.addEventListener('mouseenter', () => {
+                removeClass(i, 'fa-plus')
+                addClass(i, 'fa-angle-down')
+                i.classList.add('text-primary')
+            })
+            container.addEventListener('mouseleave', () => {
+                console.log(isPressed)
+                i.classList.remove('fa-angle-down')
+                if (isPressed){
+                    addClass(i, 'fa-minus')
+                } else {
+                    addClass(i, 'fa-plus')
+                }
+                // i.classList.add(currentIcon)
+                i.classList.remove('text-primary')
+            })
+
+
     }
 
     let removeClass = (element, className) => {
