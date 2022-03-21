@@ -602,20 +602,33 @@ nav {
   &::after {
     z-index: -1;
     position: absolute;
-    top: -6.5rem;
-    right: -6rem;
-    content: url("/images/centrala-home-bg2.svg");
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-size: contain;
+    /*content: url("/images/centrala-home-bg2.svg");*/
+    content: '';
+    background-image: url("/images/centrala-home-bg2.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
   }
 }
 #centrala-hero-text {
   position: relative;
-  z-index: 5;
+  z-index: 2;
+
   &::after {
     z-index: -1;
     position: absolute;
     left: 0;
-    bottom: -7rem;
-    content: url("/images/centrala-home-bg1.svg");
+    bottom: 0;
+    content: "";
+    height: 40%;
+    width: 100%;
+    background-image: url("/images/centrala-home-bg1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 #dofinancovanie-hero-img {
