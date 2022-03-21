@@ -247,19 +247,17 @@ nav ul li:hover {
 }
 
 #centrala-location {
-  height: 100%;
   background-image: url("/images/map.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
-#centrala-location #map-card-bg {
-  height: auto;
+#centrala-location #card-background {
+  border: 1px solid black;
   background-image: url("/images/map-card-bg.svg");
   background-repeat: no-repeat;
   background-size: contain;
-}
-#centrala-location .grid {
-  width: 40%;
+  background-position: right center;
 }
 
 #centrala-personal {
