@@ -89,9 +89,16 @@
             </div>
             <h3 class="text-4xl mb-2">Finančné údaje</h3>
             <div>
-                <i class="fa-solid fa-minus"></i> Som <%= formData.contact.job %>
+                <i class="fa-solid fa-minus"></i> Som zamestnaný v <%= formData.companyData.companyName %><br>
+                IČO:<%= formData.companyData.ico %>
             </div>
-            <span><%= formData.companyData.ico%></span>
+            <div>
+                Zamestnaný som na dobu<%= formData.companyData.period %>
+            </div>
+            <div>
+                Môj čistý mesačný príjem za 1.mesiac je <%= formData.companyData.firstMonth %>€, za 2.mesiac
+                je <%= formData.companyData.secondMonth %>, za 3.mesiac je <%= formData.companyData.thirdMonth %>.
+            </div>
         </div>
     </div>
 </section>
