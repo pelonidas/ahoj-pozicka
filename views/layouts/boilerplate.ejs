@@ -34,11 +34,14 @@
     const content = document.querySelector('.nav-content');
 
     icon.addEventListener('click', () => {
-        logo.classList.toggle('hidden')
+        icon.classList.remove('fa-circle-xmark')
+        icon.classList.add('fa-bars')
+        logo.classList.toggle('opacity-0')
         nav.classList.toggle('h-screen')
         content.classList.toggle('hidden')
         body.classList.toggle("overflow-y-hidden")
         html.classList.toggle('overflow-y-hidden')
+
     })
 
 
