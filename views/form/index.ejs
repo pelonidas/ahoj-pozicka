@@ -1,15 +1,14 @@
 <% layout('./layouts/form-boilerplate') %>
 <section id="step1-body" class="my-auto pb-28">
     <div class="w-1/5">
-        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie <span class="text-primary">menej než 8min</span>
-        </p>
+        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
     </div>
     <div class="grid grid-cols-2 gap-16 text-secondary">
         <div class="bg-white p-12 rounded-lg">
             <form action="/form/step-1" method="post" id="form1">
                 <div class="grid grid-cols-2 gap-6 ">
                     <div class="mb-6">
-                        <label for="f-name" class="block">Meno</label>
+                        <label for="f-name" class="block font-bold text-[1rem]">Meno</label>
                         <div class="relative">
                             <input type="text" id="f-name" name="fName"
                                    class="input-default"
@@ -19,7 +18,7 @@
                         <small class="text-xs text-dRed"></small>
                     </div>
                     <div>
-                        <label for="l-name" class="block">Priezvisko</label>
+                        <label for="l-name" class="block font-bold text-[1rem]">Priezvisko</label>
                         <div class="relative">
                             <input type="text" id="l-name" name="lName"
                                    class="input-default"
@@ -30,7 +29,7 @@
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label for="rodne-cislo">Rodné číslo</label>
+                    <label for="rodne-cislo" class="font-bold text-[1rem]">Rodné číslo</label>
                     <div class="relative">
                         <input type="text" id="rodne-cislo"
                                class="input-default"
@@ -40,7 +39,7 @@
                     <small class="text-xs text-dRed"></small>
                 </div>
                 <div class="mb-6">
-                    <label for="obciansky">Číslo občianského preukazu</label>
+                    <label for="obciansky" class="font-bold text-[1rem]">Číslo občianského preukazu</label>
                     <div class="relative">
                         <input type="text" id="obciansky"
                                class="input-default"
@@ -50,7 +49,7 @@
                     <small class="text-xs text-dRed "></small>
                 </div>
                 <div class="mb-6">
-                    <label for="phone-num">Telefónne číslo</label>
+                    <label for="phone-num" class="font-bold text-[1rem]">Telefónne číslo</label>
                     <div class="relative">
                         <input type="text" id="phone-num"
                                class="input-default"
@@ -61,7 +60,7 @@
                 </div>
 
                 <div class="mb-6">
-                    <label for="email">Email</label>
+                    <label for="email" class="font-bold text-[1rem]">Email</label>
                     <div class="relative">
                         <input type="text" id="email"
                                class="input-default"
@@ -71,7 +70,7 @@
                     <small class="text-xs text-dRed"></small>
                 </div>
                 <div class="mb-6">
-                    <label for="job">Tvoje pracovné zaradenie</label>
+                    <label for="job" class="font-bold text-[1rem]">Tvoje pracovné zaradenie</label>
                     <select name="job" id="job"
                             class="w-full border-2 border-secondary rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md">
                         <option value="employee">Zamestnanec</option>
@@ -94,7 +93,7 @@
                     <input type="checkbox" id="podmienky"
                            class="border-2 border-secondary rounded mt-1 focus:ring-0 hover:border-primary text-secondary">
                     <div class="mt-0 ml-3">
-                        Súhlasím s uložením <span class="underline decoration-solid">osobných údajov v rozpracovanom kontaktnom
+                        Súhlasím s uložením <span class="underline decoration-solid font-bold">osobných údajov v rozpracovanom kontaktnom
                         formulári</span>
                     </div>
                 </div>

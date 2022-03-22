@@ -9,14 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/849a1df6c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/stylesheets/output.css">
     <link rel="stylesheet" href="/stylesheets/css/custom.css">
     <link rel="stylesheet" href="/stylesheets/css/rangeInput.css">
-    <script src="https://kit.fontawesome.com/849a1df6c9.js" crossorigin="anonymous"></script>
+
 </head>
 <body class="font-body text-secondary">
 <div class="bg-secondary">
-    <header class="w-full pt-16 max-w-[88%] mx-auto">
+    <header class="w-full pt-6 md:pt-16 max-w-[88%] mx-auto">
         <%- include('../partials/navbar')%>
     </header>
 </div>
@@ -24,4 +25,22 @@
 <%- body %>
 <%- include('../partials/footer')%>
 </body>
+<script>
+    const body = document.querySelector('body');
+    const html = document.querySelector('html');
+    const nav = document.querySelector('nav');
+    const logo = document.querySelector('#logo');
+    const icon = nav.querySelector('i');
+    const content = document.querySelector('.nav-content');
+
+    icon.addEventListener('click', () => {
+        logo.classList.toggle('hidden')
+        nav.classList.toggle('h-screen')
+        content.classList.toggle('hidden')
+        body.classList.add("overflow-y-hidden")
+        html.classList.add('overflow-y-hidden')
+    })
+
+
+</script>
 </html>
