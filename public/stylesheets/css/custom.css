@@ -491,9 +491,12 @@ nav ul li:hover {
   z-index: 1;
 }
 #testtt::after {
+  z-index: -1;
+  height: 300px;
   position: absolute;
   top: 6rem;
   right: 3rem;
+  content: url("/images/home-bg-y.svg");
 }
 
 .calculator-gray-bg {
@@ -513,6 +516,7 @@ nav ul li:hover {
   position: absolute;
   top: 20rem;
   right: 0;
+  content: url("/images/bg-y-sm.svg");
 }
 
 #centrala-hero-video {
