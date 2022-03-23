@@ -1037,6 +1037,14 @@ select {
   margin-bottom: 1.5rem;
 }
 
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+
+.mb-\[2rem\] {
+  margin-bottom: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1275,6 +1283,10 @@ select {
   width: 25%;
 }
 
+.w-\[200px\] {
+  width: 200px;
+}
+
 .min-w-\[25\%\] {
   min-width: 25%;
 }
@@ -1357,6 +1369,14 @@ select {
 
 .max-w-\[85\%\] {
   max-width: 85%;
+}
+
+.max-w-\[95\%\] {
+  max-width: 95%;
+}
+
+.max-w-\[92\%\] {
+  max-width: 92%;
 }
 
 .translate-y-1\/2 {
@@ -1707,6 +1727,16 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-32 {
@@ -2178,6 +2208,10 @@ select {
     margin-right: 1.75rem;
   }
 
+  .md\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2188,6 +2222,10 @@ select {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:grid {
+    display: grid;
   }
 
   .md\:hidden {
@@ -2216,6 +2254,14 @@ select {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .md\:w-\[251px\] {
+    width: 251px;
   }
 
   .md\:max-w-\[66\%\] {
@@ -2264,12 +2310,30 @@ select {
     padding-bottom: 0px;
   }
 
+  .md\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:pt-16 {
     padding-top: 4rem;
   }
 
   .md\:pl-14 {
     padding-left: 3.5rem;
+  }
+
+  .md\:pr-20 {
+    padding-right: 5rem;
+  }
+
+  .md\:pt-28 {
+    padding-top: 7rem;
   }
 
   .md\:text-left {
