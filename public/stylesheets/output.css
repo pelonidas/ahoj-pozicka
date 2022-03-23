@@ -1111,6 +1111,10 @@ select {
   height: 50rem;
 }
 
+.h-\[50px\] {
+  height: 50px;
+}
+
 .max-h-\[170px\] {
   max-height: 170px;
 }
@@ -1251,6 +1255,22 @@ select {
   width: 20rem;
 }
 
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-\[25\%\] {
+  width: 25%;
+}
+
+.min-w-\[25\%\] {
+  min-width: 25%;
+}
+
+.min-w-\[15\%\] {
+  min-width: 15%;
+}
+
 .max-w-\[88\%\] {
   max-width: 88%;
 }
@@ -1305,6 +1325,18 @@ select {
 
 .max-w-\[35\%\] {
   max-width: 35%;
+}
+
+.max-w-\[10\%\] {
+  max-width: 10%;
+}
+
+.max-w-\[33\%\] {
+  max-width: 33%;
+}
+
+.max-w-\[25\%\] {
+  max-width: 25%;
 }
 
 .translate-y-1\/2 {
@@ -1531,6 +1563,10 @@ select {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .py-14 {
@@ -2093,6 +2129,14 @@ select {
     margin-left: 2.5rem;
   }
 
+  .md\:mr-12 {
+    margin-right: 3rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2145,8 +2189,16 @@ select {
     flex-direction: row;
   }
 
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:p-12 {
     padding: 3rem;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:pt-16 {
@@ -2170,8 +2222,16 @@ select {
     line-height: 2.25rem;
   }
 
+  .md\:text-\[35px\] {
+    font-size: 35px;
+  }
+
   .md\:leading-none {
     line-height: 1;
+  }
+
+  .md\:leading-normal {
+    line-height: 1.5;
   }
 }
 
