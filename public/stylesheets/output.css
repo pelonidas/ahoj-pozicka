@@ -1139,6 +1139,10 @@ select {
   height: 100px;
 }
 
+.h-\[86px\] {
+  height: 86px;
+}
+
 .max-h-\[170px\] {
   max-height: 170px;
 }
@@ -2198,6 +2202,11 @@ select {
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .md\:-ml-24 {
