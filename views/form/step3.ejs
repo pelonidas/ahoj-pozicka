@@ -1,7 +1,12 @@
 <% layout('./layouts/form-boilerplate') %>
 <section id="step3-body" class="my-auto pb-28">
-    <div class="w-1/5">
-        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie menej než 8min</p>
+    <div class="md:w-1/5">
+        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
+        <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
+            <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
+            <img src="/images/clock.svg" alt="" class="w-5 mx-2">
+            <p class="text-primary leading-none">8min</p>
+        </div>
     </div>
     <div class="grid grid-cols-2 gap-8">
         <div class="bg-white p-12 rounded-lg">

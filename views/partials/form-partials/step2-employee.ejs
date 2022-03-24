@@ -1,14 +1,20 @@
 <section id="step1-body" class="my-auto pb-28 w-full md:max-w-[85%] ml-auto">
-    <div class="w-1/5">
-        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
+    <div class="md:w-1/5">
+        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span
+                    class="text-primary font-medium">menej než 6min</span></p>
+        <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
+            <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
+            <img src="/images/clock.svg" alt="" class="w-5 mx-2">
+            <p class="text-primary leading-none">6min</p>
+        </div>
     </div>
-    <div class="grid grid-cols-2 gap-8">
-        <div class="bg-white p-12 rounded-lg">
+    <div class="md:grid md:grid-cols-2 md:gap-8">
+        <div class="bg-white p-6 md:p-12 rounded-lg">
             <form action="/form/step-2" method="post" id="form2v1">
                 <div class="mb-6">
                     <label for="companyName" class="text-[1rem] font-bold">Názov spoločnosti</label>
                     <div class="relative">
-                        <input type="text" id="companyName" class="input-default"
+                        <input type="text" id="companyName" class="input-default placeholder-default"
                                placeholder="Firma, s.r.o." name="companyName">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -17,7 +23,7 @@
                 <div class="mb-6">
                     <label for="ico" class="font-bold text-[1rem]">IČO</label>
                     <div class="relative">
-                        <input type="text" id="ico" class="input-default"
+                        <input type="text" id="ico" class="input-default placeholder-default"
                                placeholder="58456734" name="ico">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -26,40 +32,30 @@
                 <div class="mb-6">
                     <label for="companyStreet" class="font-bold text-[1rem]">Ulica a popisné číslo</label>
                     <div class="relative">
-                        <input type="text" id="companyStreet" class="input-default"
+                        <input type="text" id="companyStreet" class="input-default placeholder-default"
                                placeholder="Štúrová 226" name="companyStreet">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
                     <small class="text-xs text-dRed "></small>
                 </div>
-                <div class="grid grid-cols-7 gap-4">
-                    <div class="mb-6 col-span-5">
-                        <label for="city" class="block font-bold text-[1rem]">Obec</label>
-                        <div class="relative">
-                            <input type="text" id="city" name="city" class="input-default"
-                                   placeholder="Bratislava">
-                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
-                        </div>
-                        <small class="text-xs text-dRed "></small>
+                <div class="mb-6">
+                    <label for="city" class="block font-bold text-[1rem]">Obec</label>
+                    <div class="relative">
+                        <input type="text" id="city" name="city" class="input-default placeholder-default"
+                               placeholder="Bratislava">
+                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
-                    <div class="col-span-2">
-                        <label for="psc" class="block font-bold text-[1rem]">PSČ</label>
-                        <div class="relative">
-                            <input type="text" id="psc" name="psc" class="input-default"
-                                   placeholder="851 01">
-                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
-                        </div>
-                        <small class="text-xs text-dRed "></small>
-                    </div>
+                    <small class="text-xs text-dRed "></small>
                 </div>
+                <span class="block font-bold text-[1rem]">Zamestnanie mám na dobu </span>
                 <div class="mb-6 border-2 border-secondary rounded-lg grid grid-cols-2 py-2 px-3">
                     <div>
                         <input type="radio" name="period" id="neurcita">
-                        <label for="neurcita" class="text-[1rem] font-bold">Neurčitú</label>
+                        <label for="neurcita" class="text-[1rem] font-bold text-secondary/30">Neurčitú</label>
                     </div>
                     <div class="border-l pl-3">
                         <input type="radio" name="period" id="urcita">
-                        <label for="urcita" class="font-bold text-[1rem]">Určitú</label>
+                        <label for="urcita" class="text-[1rem] font-bold text-secondary/30">Určitú</label>
                     </div>
                 </div>
                 <div class="mb-6 grid grid-cols-2 gap-4 hidden" id="urcita-content">
@@ -72,13 +68,13 @@
                         <input type="text" id="till" placeholder="04/2024" class="input-default" name>
                     </div>
                 </div>
-                <p>Aký bol tvôj čistý príjem za posledné 3 mesiace</p>
-                <div class="grid grid-cols-9 gap-4 mb-6">
+                <p class="text-[1rem] font-bold">Aký bol tvôj čistý príjem za posledné 3 mesiace</p>
+                <div class="md:grid md:grid-cols-9 md:gap-4 mb-6">
                     <div class="col-span-3">
                         <label for="january" class="block text-xs font-bold">1.mesiac</label>
                         <div class="relative">
                             <input type="text" id="january" name="firstMonth"
-                                   class="input-default"
+                                   class="input-default placeholder-default"
                                    placeholder="1200€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
@@ -88,7 +84,7 @@
                         <label for="february" class="block text-xs font-bold">2.mesiac</label>
                         <div class="relative">
                             <input type="text" id="february" name="secondMonth"
-                                   class="input-default"
+                                   class="input-default placeholder-default"
                                    placeholder="1200€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
@@ -97,19 +93,19 @@
                     <div class="col-span-3">
                         <label for="march" class="block text-xs font-bold">3.mesiac</label>
                         <div class="relative">
-                            <input type="text" id="march" name="thirdMonth" class="input-default"
+                            <input type="text" id="march" name="thirdMonth" class="input-default placeholder-default"
                                    placeholder="1200€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
                         <small class="text-xs text-dRed "></small>
                     </div>
                 </div>
-                <p>Iné príjmy</p>
+                <p class="text-[1rem] font-bold">Iné príjmy</p>
                 <div class="border-2 border-secondary py-2 px-3 rounded-lg mb-6" id="radioDiv">
-                    <div class="grid grid-cols-2">
-                        <div>
+                    <div class="flex flex-col md:grid md:grid-cols-2">
+                        <div class="mb-4 md:mb-0 flex items-center">
                             <input type="radio" id="otherIncome" name="otherIncome" value="iss">
-                            <span class="font-bold">Mám aj iné príjmy</span>
+                            <span class="font-bold ml-2">Mám aj iné príjmy</span>
                         </div>
                         <div>
                             <p class="text-xs text-secondary/50">Ak áno, môže ti to výrazne pomôcť k schváleniu
@@ -126,11 +122,11 @@
                             class="fa-solid fa-arrow-right-long"></i></button>
             </form>
         </div>
-        <div id="step-2-r" class="text-white">
+        <div id="step-2-r" class="text-white hidden md:block">
             <h2 class="text-5xl mb-5">Máš záujem o</h2>
             <p class="text-[1rem]">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span><br>
                 s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span> <br>
-                a mesačnou splátkou <span class="text-primary"><%=formData.calcData.interest %> €</span></p>
+                a mesačnou splátkou <span class="text-primary"><%= formData.calcData.interest %> €</span></p>
             <h3 class="text-4xl mb-2">Osobné údaje</h3>
             <div class="mb-2">
                 <i class="fa-solid fa-minus"></i> Volam sa <span
@@ -151,7 +147,7 @@
             </div>
             <h3 class="text-4xl mb-2">Finančné údaje</h3>
             <div>
-                <i class="fa-solid fa-minus"></i> Som <%= formData.contact.job %>
+                <i class="fa-solid fa-minus"></i> Som<span class="text-primary"> <%= formData.contact.job.toLowerCase() %></span>
             </div>
         </div>
     </div>
