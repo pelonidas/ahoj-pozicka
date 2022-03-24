@@ -24,4 +24,7 @@
     .default-shadow {
         @apply drop-shadow-[9px_35px_50px_rgba(0,0,0,0.20)];
     }
+    .faq-container {
+        @apply flex flex-col bg-white drop-shadow-[9px_10px_50px_rgba(0,0,0,0.10)] px-5 md:px-0 md:pl-9 md:pr-2 md:h-full py-7 md:py-2 rounded-lg mb-8;
+    }
 }
