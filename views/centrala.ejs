@@ -1,43 +1,28 @@
 <% layout('./layouts/boilerplate') %>
-<!--<section class="bg-secondary text-white py-44">-->
-<!--    <div class="w-full max-w-[88%] mx-auto flex justify-between">-->
-<!--        <div class="w-full max-w-[560px]" >-->
-<!--            <div class="w-full max-w-[415px]">-->
-<!--                <h4 class="text-[1.75rem] mb-6 font-light">Sídlime v <span class="text-primary">lokalite:</span></h4>-->
-<!--                <h2 class="text-[4rem] leading-none mb-5">Finančný dom <span class="text-primary font-bold">Košice</span></h2>-->
-<!--                <p class="font-light">Ak preferujete osobný kontakt, pre Vás všetkých je tu naša centrála v Košiciach.</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="w-full max-w-[885px] relative mr-24" id="centrala-hero-video">-->
-<!--            <img src="/images/centrala-top-img.png" alt="">-->
-<!--            <img src="images/play.svg" alt="" class="absolute -bottom-3 -left-3 cursor-pointer">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 <section class="bg-secondary text-white py-20">
-    <div class="w-full max-w-[88%] mx-auto grid grid-cols-5">
-        <div class="  col-span-2" id="centrala-hero-text">
-            <div class="w-2/3">
-                <h4 class="text-[1.75rem] mb-6 font-light">Sídlime v <span class="text-primary">lokalite:</span></h4>
-                <h2 class="text-[4rem] leading-none mb-5">Finančný dom <span
+    <div class="w-full max-w-[92%] mx-auto flex flex-col md:grid grid-cols-5">
+        <div class="col-span-2" id="centrala-hero-text">
+            <div class="md:w-2/3 mb-[4rem]">
+                <h4 class="text-[1.25rem] md:text-[1.75rem] mb-6 font-light">Sídlime v <span class="text-primary">lokalite:</span></h4>
+                <h2 class="text-[2.3rem] md:text-[4rem] leading-none mb-5">Finančný dom <span
                             class="text-primary font-bold">Košice</span></h2>
-                <p class="font-light">Ak preferujete osobný kontakt, pre Vás všetkých je tu naša centrála v
+                <p class="text-[1rem] font-light leading-tight md:leading-normal">Ak preferujete osobný kontakt, pre Vás všetkých je tu naša centrála v
                     Košiciach.</p>
             </div>
         </div>
         <div class="w-full col-span-3">
-            <div class="relative max-w-[1000px] py-24" id="centrala-hero-video">
-                <img src="/images/centrala-top-img.png" alt="" class="max-w-[89%] ml-auto mr-[10%]">
+            <div class="relative md:max-w-[1000px] md:py-24" id="centrala-hero-video">
+                <img src="/images/centrala-top-img.png" alt="" class="md:max-w-[89%] ml-auto mr-[10%]">
             </div>
         </div>
     </div>
 </section>
 <section id="centrala-description">
-    <div class="grid grid-cols-6 flex items-center">
+    <div class=" md:grid grid-cols-6">
         <div class="col-span-2">
             <div class="grid grid-cols-2 flex items-center">
                 <div id="centrala-descrpition-bg1" class="h-[15rem]"></div>
-                <div>
+                <div class="flex flex-col justify-center items-center">
                     <h3 class="text-5xl mb-6">Centrala</h3>
                     <p class="w-11/12">
                         Nadštandardná forma starostlivosti. Náš tím expertov je vám k dispozícii v pracovné dni od 8:00
@@ -56,30 +41,11 @@
         </div>
     </div>
 </section>
-<!--<section id="centrala-location" class="w-full h-[500px]">-->
-<!--    <div class="flex justify-end text-secondary">-->
-<!--        <div class="grid grid-cols-7 bg-white p-16 gap-12 mr-60 rounded-lg">-->
-<!--            <div class="col-span-5">-->
-<!--                <h3 class="text-5xl mb-1">Navštívte nás</h3>-->
-<!--                <h4 class="text-3xl mb-6">Pre viac informacii</h4>-->
-<!--                <div class="flex items-center mb-5">-->
-<!--                    <img src="/images/contact-location.svg" alt="" class="w-[2rem]">-->
-<!--                    <span class="ml-5 text-lg">Fejova 1, 040 01 Košice</span>-->
-<!--                </div>-->
-<!--                <div class="flex items-center">-->
-<!--                    <img src="/images/clock-icon.svg" alt="" class="w-[2rem]">-->
-<!--                    <span class="ml-5 text-lg">Pondelok - Piatok, 8:00 - 17:00</span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div id="map-card-bg" class="col-span-2"></div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<section class="w-full h-[70vh] flex justify-center items-center" id="centrala-location">
-    <div class="bg-white w-[40%] rounded-[10px] p-12 ml-auto"
+<section class="w-full h-[50vh] md:h-[70vh] flex justify-center items-center " id="centrala-location">
+    <div class="bg-white md:w-[40%] rounded-[10px] p-9 md:p-12 md:ml-auto translate-y-3/4 md:translate-y-0"
          id="card-background">
-        <h3 class="text-[4rem] font-medium leading-none">Navštívte nás</h3>
-        <h4 class="text-[2.5rem] mb-4">Pre viac informácií</h4>
+        <h3 class="text-[2.5rem] md:text-[4rem] font-medium leading-none text-center md:text-left">Navštívte nás</h3>
+        <h4 class="text-[1.5rem] md:text-[2.5rem] mb-4 text-center md:text-left">Pre viac informácií</h4>
         <div class="flex items-center mb-3">
             <img src="/images/contact-location.svg" alt="" class="w-[2rem]">
             <span class="ml-5 text-[1.rem] font-bold">Fejova 1, 040 01 Košice</span>
@@ -92,23 +58,23 @@
 </section>
 <%- include('./partials/personal') %>
 <section id="centrala-contact">
-    <div id="centrala-contact-content" class="grid grid-cols-5 bg-white mx-auto p-24 rounded-lg drop-shadow-xl">
-        <div class="col-span-2">
-            <h2 class="text-6xl mb-4">Kontaktujte nás</h2>
-            <p>V pracovné dni od 8:00 do 17:00</p>
+    <div class="w-full max-w-[92%] md:max-w-[75%] flex flex-col md:grid md:grid-cols-5 bg-white mx-auto px-6 py-16 md:py-0 md:px-0 md:p-24 rounded-[10px] drop-shadow-xl">
+        <div class="md:col-span-2">
+            <h2 class="text-[2.25rem] md:text-6xl mb-[1rem] md:mb-4 font-medium text-center md:text-left">Kontaktujte nás</h2>
+            <p class="w-2/3 md:w-full mx-auto text-[1.5rem] text-center md:text-left">V pracovné dni od 8:00 do 17:00</p>
         </div>
         <div class="col-span-2 mx-auto">
             <div class="flex items-center mt-10">
                 <img src="/images/contact-call.svg" alt="" class="w-8">
-                <span class="ml-7 text-xl">+421 918 709 028</span>
+                <span class="ml-5 md:ml-7 text-[1.25rem] font-bold">+421 918 709 028</span>
             </div>
             <div class="flex items-center mt-5">
                 <img src="/images/contact-mail.svg" alt="" class="w-8">
-                <span class="ml-7 text-xl">info@bestpozicky.sk</span>
+                <span class="ml-5 md:ml-7 text-[1.25rem] font-bold">info@bestpozicky.sk</span>
             </div>
             <div class="flex items-center mt-5">
                 <img src="/images/contact-location.svg" alt="" class="w-8">
-                <span class="ml-7 text-xl">Fejova 1, 040 01 Kosice</span>
+                <span class="ml-5 md:ml-7 text-[1.25rem] font-bold">Fejova 1, 040 01 Košice</span>
             </div>
         </div>
         <div class="col-span-1" id="contact-right"></div>

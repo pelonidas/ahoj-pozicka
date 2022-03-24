@@ -280,9 +280,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: contain;
 }
-#centrala-contact #centrala-contact-content {
-  width: 74%;
-}
 #centrala-contact #contact-right {
   background-image: url("/images/map-card-bg.svg");
   background-repeat: no-repeat;
