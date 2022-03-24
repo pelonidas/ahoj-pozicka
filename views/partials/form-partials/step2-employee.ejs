@@ -1,4 +1,4 @@
-<section id="step1-body" class="my-auto pb-28">
+<section id="step1-body" class="my-auto pb-28 w-full md:max-w-[85%] ml-auto">
     <div class="w-1/5">
         <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
     </div>
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-6 hide" id="sideIncome">
+                <div class="mb-6 hidden" id="sideIncome">
                     <label for="sideIncome" class="block font-bold">Vaše vedľajšie príjmy</label>
                     <input type="text" id="sideIncome" class="input-default w-1/3"
                            placeholder="270€" name="sideIncome">
@@ -126,11 +126,11 @@
                             class="fa-solid fa-arrow-right-long"></i></button>
             </form>
         </div>
-        <div id="step-2-r" class="text-white -mr-20">
+        <div id="step-2-r" class="text-white">
             <h2 class="text-5xl mb-5">Máš záujem o</h2>
-            <p class="mb-7">pôžičku na 3800€<br>
-                s dobou splácania 4 roky <br>
-                a mesačnou splátkou 108,81€ </p>
+            <p class="text-[1rem]">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span><br>
+                s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span> <br>
+                a mesačnou splátkou <span class="text-primary"><%=formData.calcData.interest %> €</span></p>
             <h3 class="text-4xl mb-2">Osobné údaje</h3>
             <div class="mb-2">
                 <i class="fa-solid fa-minus"></i> Volam sa <span
@@ -244,5 +244,6 @@
         small.innerText = " "
         input.className = "input-default"
     }
+
 
 </script>
