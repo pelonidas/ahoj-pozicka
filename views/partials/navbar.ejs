@@ -1,10 +1,10 @@
 <nav>
-    <div class="flex flex-col md:flex-row h-full">
+    <div class="flex flex-col md:flex-row md: justify-between h-full">
         <div class="flex justify-between items-center">
             <a href="/"><img src="/images/result.svg" alt="" class="w-28 inline-block md:inline" id="logo"></a>
             <button class="md:hidden"><i class="fa-solid fa-circle-xmark text-white fa-2x"></i></button>
         </div>
-        <div class="flex flex-col md:flex-row hidden md:flex nav-content my-auto">
+        <div class="flex flex-col md:flex-row hidden md:flex nav-content my-auto border">
             <ul class="text-white flex flex-col items-center justify-center md:flex-row text-md">
                 <li class="hover:border-b border-primary mb-6 md:mb-0"><a href="/">Pôžičky</a></li>
                 <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/refinancovanie">Refinancovanie</a></li>
@@ -15,9 +15,13 @@
                 <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/contact">Kontakt</a></li>
             </ul>
             <a href="/#calculator"
-               class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[20px] mx-auto md:mx-0">
+               class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[20px] mx-auto md:mx-0 md:hidden">
                 <span>Chcem si požičať</span>
             </a>
         </div>
+        <a href="/#calculator"
+           class="bg-dRed text-white rounded-lg h-[54px] w-[251px] md:flex justify-center items-center font-bold text-[20px] hidden">
+            <span>Chcem si požičať</span>
+        </a>
     </div>
 </nav>
