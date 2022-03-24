@@ -179,14 +179,27 @@
 
 
             container.addEventListener('mouseenter', () => {
-                i.classList.add('text-primary')
+                addClass(i, 'text-primary')
+                if (i.classList.contains('fa-plus') || i.classList.contains('fa-minus')) {
+                    removeClass(i, 'fa-minus')
+                    removeClass(i, 'fa-plus')
+                }
+                removeClass(i, 'fa-plus')
+                addClass(i, 'fa-angle-down')
                 // removeClass(i, 'fa-plus')
                 // addClass(i, 'fa-angle-down')
                 // i.classList.add('text-primary')
 
             })
             container.addEventListener('mouseleave', () => {
-                i.classList.remove('text-primary')
+                removeClass(i, 'text-primary')
+                removeClass(i, 'fa-angle-down')
+                if (!isPressed) {
+                    addClass(i, 'fa-plus')
+                } else {
+                    addClass(i, 'fa-minus')
+                }
+
                 // console.log(isPressed)
                 // i.classList.remove('fa-angle-down')
                 // if (isPressed){
