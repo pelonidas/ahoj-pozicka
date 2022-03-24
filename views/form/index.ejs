@@ -1,13 +1,20 @@
 <% layout('./layouts/form-boilerplate') %>
-<section id="step1-body" class="my-auto pb-28">
-    <div class="w-1/5">
-        <p class="mb-2 mt-14 text-white">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
+<section class="w-full ml-auto md:max-w-[85%] my-auto pb-28">
+    <div class="md:w-1/5">
+        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
+        <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
+            <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
+            <img src="/images/clock.svg" alt="" class="w-5 mx-2">
+            <p class="text-primary leading-none">8min</p>
+        </div>
+
+
     </div>
-    <div class="grid grid-cols-2 gap-16 text-secondary">
-        <div class="bg-white p-12 rounded-lg">
+    <div class="md:grid grid-cols-2 gap-16 text-secondary">
+        <div class="bg-white p-6 md:p-12 rounded-lg">
             <form action="/form/step-1" method="post" id="form1">
-                <div class="grid grid-cols-2 gap-6 ">
-                    <div class="mb-6">
+                <div class="grid grid-cols-2 md:gap-6 ">
+                    <div class="mb-6 col-span-2 md:col-span-1">
                         <label for="f-name" class="block font-bold text-[1rem]">Meno</label>
                         <div class="relative">
                             <input type="text" id="f-name" name="fName"
@@ -17,7 +24,7 @@
                         </div>
                         <small class="text-xs text-dRed"></small>
                     </div>
-                    <div>
+                    <div class="col-span-2 md:col-span-1 mb-6 md:mb-0">
                         <label for="l-name" class="block font-bold text-[1rem]">Priezvisko</label>
                         <div class="relative">
                             <input type="text" id="l-name" name="lName"
@@ -92,19 +99,19 @@
                 <div class="mb-6 flex">
                     <input type="checkbox" id="podmienky"
                            class="border-2 border-secondary rounded mt-1 focus:ring-0 hover:border-primary text-secondary">
-                    <div class="mt-0 ml-3">
+                    <div class="mt-0 ml-2 md:ml-3">
                         Súhlasím s uložením <span class="underline decoration-solid font-bold">osobných údajov v rozpracovanom kontaktnom
                         formulári</span>
                     </div>
                 </div>
-                <button class="border-2 border-dRed rounded-lg text-black/50 w-[175px] h-[54px] flex items-center justify-center text-[20px] font-bold">
+                <button class="border-2 border-dRed rounded-lg text-black/50 w-[175px] h-[54px] flex items-center justify-center text-[20px] font-bold mx-auto md:mx-0">
                     <span>Ďalej <i class="fa-solid fa-arrow-right-long"></i></span>
                 </button>
             </form>
         </div>
-        <div id="step-1-r" class="text-white -mr-20">
+        <div id="step-1-r" class="text-white hidden md:block">
             <h2 class="text-5xl mb-5">Máš záujem o</h2>
-            <p>pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span><br>
+            <p class="text-[1rem]">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span><br>
                 s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span> <br>
                 a mesačnou splátkou <span class="text-primary"><%=formData.calcData.interest %> €</span></p>
         </div>

@@ -10,49 +10,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
+    <script src="https://kit.fontawesome.com/849a1df6c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/stylesheets/output.css">
     <link rel="stylesheet" href="/stylesheets/css/custom.css">
     <link rel="stylesheet" href="/stylesheets/css/checkboxStyle.css">
-    <script src="https://kit.fontawesome.com/849a1df6c9.js" crossorigin="anonymous"></script>
+
 </head>
 <body class="font-body h-screen bg-secondary flex flex-col">
-<header class="w-4/5 mx-auto pt-16">
-    <nav class="flex items-center">
-        <div>
-            <a href="/"><img src="/images/result.svg" alt="" class="w-28"></a>
+<header class="w-full max-w-[92%] md:max-w-[88%] mx-auto pt-16">
+    <nav class="flex flex-col md:flex-row md:items-center">
+        <div class="flex justify-between items-center">
+            <a href="/"><img src="/images/result.svg" alt="" class="w-20 md:w-28"></a>
+            <i class="fa-solid fa-clock fa-2x md:hidden"></i>
         </div>
-        <ul class="text-white flex mx-auto text-md">
+        <ul class="text-white flex mx-auto text-md w-full max-w-[65%] md:max-w-[50%] md:max-w-full my-[2rem] md:my-0">
             <% if (step === 4) { %>
                 <li class="border-b border-primary">Krok 1.</li>
-                <li class="border-b border-primary ml-12">Krok 2.</li>
-                <li class="border-b border-primary ml-12">Krok 3.</li>
-                <li class="border-b border-primary ml-12">Krok 4.</li>
+                <li class="border-b border-primary ml-4 md:ml-12">Krok 2.</li>
+                <li class="border-b border-primary ml-4 md:ml-12">Krok 3.</li>
+                <li class="border-b border-primary ml-4 md:ml-12">Krok 4.</li>
             <% } %>
             <% if (step === 3) { %>
                 <li class="border-b border-primary">Krok 1.</li>
-                <li class="border-b border-primary ml-12">Krok 2.</li>
-                <li class="border-b border-primary ml-12">Krok 3.</li>
-                <li class="border-b border-gray ml-12">Krok 4.</li>
+                <li class="border-b border-primary ml-4 md:ml-12">Krok 2.</li>
+                <li class="border-b border-primary ml-4 md:ml-12">Krok 3.</li>
+                <li class="border-b border-gray ml-4 md:ml-12">Krok 4.</li>
             <% } %>
             <% if (step === 2){ %>
                 <li class="border-b border-primary">Krok 1.</li>
-                <li class="border-b border-primary ml-12">Krok 2.</li>
-                <li class="border-b border-gray ml-12">Krok 3.</li>
-                <li class="border-b border-gray ml-12">Krok 4.</li>
+                <li class="border-b border-primary ml-4 md:ml-12">Krok 2.</li>
+                <li class="border-b border-gray ml-4 md:ml-12">Krok 3.</li>
+                <li class="border-b border-gray ml-4 md:ml-12">Krok 4.</li>
             <% } %>
             <% if (step === 1){ %>
-                <li class="border-b border-primary">Krok 1.</li>
-                <li class="border-b border-gray ml-12">Krok 2.</li>
-                <li class="border-b border-gray ml-12">Krok 3.</li>
-                <li class="border-b border-gray ml-12">Krok 4.</li>
+                <li class="border-b border-primary w-full max-w-[25%] md:max-w-full text-center">Krok 1.</li>
+                <li class="border-b border-gray ml-4 md:ml-12 w-full max-w-[25%] md:max-w-full text-center">Krok 2.</li>
+                <li class="border-b border-gray ml-4 md:ml-12 w-full max-w-[25%] md:max-w-full text-center">Krok 3.</li>
+                <li class="border-b border-gray ml-4 md:ml-12 w-full max-w-[25%] md:max-w-full text-center">Krok 4.</li>
             <% } %>
         </ul>
-        <div class="w-[251px] h-[54px] border-2 border-primary rounded-lg flex items-center justify-center text-white text-[20px] font-bold">
+        <div class="w-[251px] h-[54px] border-2 border-primary rounded-lg md:flex items-center justify-center text-white text-[20px] font-bold hidden">
             0944 766 999
         </div>
     </nav>
 </header>
-<div class="container mx-auto my-auto">
+<div class="w-full max-w-[92%] md:max-w-[88%] mx-auto my-auto">
     <%- body %>
 </div>
 <!--<script src="/javascripts/formValidator.js"></script>-->
