@@ -1932,6 +1932,18 @@ select {
   font-size: 0.925rem;
 }
 
+.text-\[1\.1rem\] {
+  font-size: 1.1rem;
+}
+
+.text-\[1\.375rem\] {
+  font-size: 1.375rem;
+}
+
+.text-\[0\.8rem\] {
+  font-size: 0.8rem;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -2287,10 +2299,6 @@ select {
 
   .md\:mr-20 {
     margin-right: 5rem;
-  }
-
-  .md\:ml-0 {
-    margin-left: 0px;
   }
 
   .md\:block {
@@ -2687,6 +2695,15 @@ select {
 
   .md\:text-\[1\.125rem\] {
     font-size: 1.125rem;
+  }
+
+  .md\:text-\[1rem\] {
+    font-size: 1rem;
+  }
+
+  .md\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 
   .md\:leading-normal {

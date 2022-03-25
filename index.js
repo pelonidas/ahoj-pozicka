@@ -172,43 +172,43 @@ app.post('/form/step-1', async (req, res) => {
         return res.redirect('/form/rejected')
     }
     checkData(formData)
-    const output = `
-        <h3>Contact details</h3>
-        <ul>
-            <li>Name: <b>${formData.fName}</b></li>
-            <li>Surname: <b>${formData.lName}</b></li>
-            <li>Rodne cislo: <b>${formData.bNumber}</b></li>
-            <li>Telefonne cislo: <b>${formData.phoneNum}</b></li>
-            <li>Číslo občianského preukazu: <b>${formData.id}</b></li>
-            <li>Email: <b>${formData.email}</b></li>
-            <li>Tvoje pracovné zaradenie: <b>${formData.job}</b></li>
-        </ul>
-    `;
-
-    let transporter = nodemailer.createTransport({
-        host: "mail.websupport.sk",
-        port: 587,
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: 'test02@mail.dpmarketing.sk', // generated ethereal user
-            pass: 'Yo9u#q%hv9', // generated ethereal password
-        },
-    });
-
-    // send mail with defined transport object
-    let info = await transporter.sendMail({
-        from: '"Test Person" <test02@mail.dpmarketing.sk>', // sender address
-        to: `test02@mail.dpmarketing.sk, `, // list of receivers
-        subject: "Personal info", // Subject line
-        text: "Hello world?", // plain text body
-        html: output, // html body
-    });
-
-    console.log("Message sent: %s", info.messageId);
-    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-    // Preview only available when sending through an Ethereal account
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    // const output = `
+    //     <h3>Contact details</h3>
+    //     <ul>
+    //         <li>Name: <b>${formData.fName}</b></li>
+    //         <li>Surname: <b>${formData.lName}</b></li>
+    //         <li>Rodne cislo: <b>${formData.bNumber}</b></li>
+    //         <li>Telefonne cislo: <b>${formData.phoneNum}</b></li>
+    //         <li>Číslo občianského preukazu: <b>${formData.id}</b></li>
+    //         <li>Email: <b>${formData.email}</b></li>
+    //         <li>Tvoje pracovné zaradenie: <b>${formData.job}</b></li>
+    //     </ul>
+    // `;
+    //
+    // let transporter = nodemailer.createTransport({
+    //     host: "mail.websupport.sk",
+    //     port: 587,
+    //     secure: false, // true for 465, false for other ports
+    //     auth: {
+    //         user: 'test02@mail.dpmarketing.sk', // generated ethereal user
+    //         pass: 'Yo9u#q%hv9', // generated ethereal password
+    //     },
+    // });
+    //
+    // // send mail with defined transport object
+    // let info = await transporter.sendMail({
+    //     from: '"Test Person" <test02@mail.dpmarketing.sk>', // sender address
+    //     to: `test02@mail.dpmarketing.sk, `, // list of receivers
+    //     subject: "Personal info", // Subject line
+    //     text: "Hello world?", // plain text body
+    //     html: output, // html body
+    // });
+    //
+    // console.log("Message sent: %s", info.messageId);
+    // // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+    //
+    // // Preview only available when sending through an Ethereal account
+    // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
     console.log(formData)
     req.session.sessionFormData = formData
