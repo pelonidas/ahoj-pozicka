@@ -467,8 +467,6 @@ nav {
 
 // form success
 #form-success {
-  height: 60%;
-
   .bg-y {
     width: 10%;
     background-size: contain;
@@ -663,6 +661,10 @@ nav {
     bottom: 0;
     right: 0;
   }
+}
+#businessSince {
+  background: url("/images/calendar.svg") no-repeat scroll center left 7px;
+  padding-left:30px;
 }
 
 

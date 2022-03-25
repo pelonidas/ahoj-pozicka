@@ -28,6 +28,6 @@
         @apply flex flex-col bg-white drop-shadow-[9px_10px_50px_rgba(0,0,0,0.10)] px-5 md:px-0 md:pl-9 md:pr-2 md:h-full py-7 md:py-2 rounded-lg mb-8;
     }
     .placeholder-default {
-        @apply placeholder:text-[1rem] placeholder:text-secondary/30 placeholder:font-bold;
+        @apply placeholder:text-[1rem] placeholder:text-secondary/30 placeholder:font-bold placeholder:leading-none;
     }
 }

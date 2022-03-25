@@ -397,9 +397,6 @@ nav ul li:hover {
   background-position: left center;
 }
 
-#form-success {
-  height: 60%;
-}
 #form-success .bg-y {
   width: 10%;
   background-size: contain;
@@ -575,6 +572,11 @@ nav ul li:hover {
   top: 0;
   bottom: 0;
   right: 0;
+}
+
+#businessSince {
+  background: url("/images/calendar.svg") no-repeat scroll center left 7px;
+  padding-left: 30px;
 }
 
 /*# sourceMappingURL=custom.css.map */
