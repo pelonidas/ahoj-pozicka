@@ -11,9 +11,9 @@ const interest = document.querySelector('#interest')
 
 //outputs
 const mes_sum = document.getElementById("mes_sum");
-const urok_sadzba = document.getElementById("urok_sadzba");
-const celkove_naklady = document.getElementById("celkove_naklady");
-const celkova_suma = document.getElementById("celkova_suma");
+// const urok_sadzba = document.getElementById("urok_sadzba");
+// const celkove_naklady = document.getElementById("celkove_naklady");
+// const celkova_suma = document.getElementById("celkova_suma");
 
 //limit element's value
 const limit = function (value, isMoney) {
@@ -51,9 +51,9 @@ function display() {
     interest.value = calculatedInterest
     mes_sum.innerHTML = (calculatedInterest / (year_val * 12)).toFixed(roundToPlaces) + "€";
     data = `${(calculatedInterest / (year_val * 12)).toFixed(roundToPlaces)}`
-    urok_sadzba.innerHTML = ratePercent + "%";
-    celkove_naklady.innerHTML = (calculatedInterest - money_val).toFixed(roundToPlaces) + "€";
-    celkova_suma.innerHTML = calculatedInterest.toFixed(roundToPlaces) + "€";
+    // urok_sadzba.innerHTML = ratePercent + "%";
+    // celkove_naklady.innerHTML = (calculatedInterest - money_val).toFixed(roundToPlaces) + "€";
+    // celkova_suma.innerHTML = calculatedInterest.toFixed(roundToPlaces) + "€";
     interest.value = data
     console.log(data)
 }
