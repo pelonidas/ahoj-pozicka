@@ -458,7 +458,8 @@ nav ul li:hover {
 
   #heroText {
     position: relative;
-    z-index: -2;
+    z-index: 1;
+    height: 200px;
   }
   #heroText::after {
     z-index: -1;
@@ -466,6 +467,10 @@ nav ul li:hover {
     top: 25rem;
     right: 2rem;
     content: url("/images/bg-y-sm.svg");
+  }
+
+  #card-wrapper {
+    z-index: 2;
   }
 
   #benefits-section {
