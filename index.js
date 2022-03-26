@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer')
 const ExpressError = require('./utils/ExpressError')
 let session = require('express-session')
 const {checkData} = require('./public/javascripts/handleJob')
+const {flatten} = require("express/lib/utils");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -40,11 +41,11 @@ app.use(session(sessionObject))
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('home', {title: "Pozicky"})
+    res.render('home', {title: "Pozicky", isRefinancovanie: false})
 });
 // Refinancovanie route
 app.get('/refinancovanie', (req, res) => {
-    res.render('refinancovanie', {title: "Refinancovanie"})
+    res.render('refinancovanie', {title: "Refinancovanie", isRefinancovanie: true})
 })
 
 app.get('/centrala', (req, res) => {

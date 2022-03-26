@@ -2088,6 +2088,10 @@ select {
   font-size: 0.9rem;
 }
 
+.text-\[1\.35rem\] {
+  font-size: 1.35rem;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -2935,6 +2939,10 @@ select {
 
   .md\:text-\[1rem\] {
     font-size: 1rem;
+  }
+
+  .md\:text-\[2rem\] {
+    font-size: 2rem;
   }
 
   .md\:leading-normal {
