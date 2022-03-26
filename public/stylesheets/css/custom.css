@@ -431,7 +431,7 @@ nav ul li:hover {
   padding-left: 30px;
 }
 
-#testtt {
+#calculator-section {
   z-index: 1;
 }
 
@@ -443,11 +443,11 @@ nav ul li:hover {
 }
 
 @media (min-width: 768px) {
-  #testtt {
+  #calculator-section {
     position: relative;
     z-index: 1;
   }
-  #testtt::after {
+  #calculator-section::after {
     z-index: -1;
     height: 300px;
     position: absolute;
