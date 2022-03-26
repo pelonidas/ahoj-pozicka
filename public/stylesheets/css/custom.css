@@ -147,9 +147,6 @@ nav ul li:hover {
   font-size: 0;
 }
 
-#centrala-description {
-  margin-bottom: 7rem;
-}
 #centrala-description #centrala-descrpition-bg1 {
   background-image: url("/images/centrala-description-bg1.svg");
   background-repeat: no-repeat;
@@ -162,20 +159,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center right;
-}
-
-#centrala-location {
-  background-image: url("/images/map.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-#centrala-location #card-background {
-  border: 1px solid black;
-  background-image: url("/images/map-card-bg.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right center;
 }
 
 #centrala-personal {
@@ -212,14 +195,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-}
-
-#dofinancovanie-header .dofinancovanie-right-bg {
-  height: 22rem;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top right;
 }
 
 #ref-top-long {
@@ -423,35 +398,6 @@ nav ul li:hover {
   background-position: center right;
 }
 
-#centrala-hero-text {
-  position: relative;
-  z-index: 2;
-}
-#centrala-hero-text::after {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  content: "";
-  height: 40%;
-  width: 100%;
-  background-image: url("/images/centrala-home-bg1.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-#dofinancovanie-hero-img {
-  position: relative;
-  z-index: 5;
-}
-#dofinancovanie-hero-img::after {
-  z-index: -1;
-  position: absolute;
-  content: url("/images/ref-top-bg.svg");
-  right: -21rem;
-  top: -1rem;
-}
-
 #main {
   background-image: url("/images/dakujeme-gray.svg");
   background-repeat: no-repeat;
@@ -487,6 +433,13 @@ nav ul li:hover {
 
 #testtt {
   z-index: 1;
+}
+
+#centrala-location {
+  background-image: url("/images/mobile/map.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -575,6 +528,48 @@ nav ul li:hover {
     background-image: url("/images/find-out-bg.svg");
     background-repeat: no-repeat;
     background-position: center 5rem;
+  }
+
+  #centrala-hero-text {
+    position: relative;
+    z-index: 2;
+  }
+  #centrala-hero-text::after {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 40%;
+    width: 100%;
+    background-image: url("/images/centrala-home-bg1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #centrala-location {
+    background-image: url("/images/map.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #centrala-location #card-background {
+    background-image: url("/images/map-card-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+  }
+
+  #dofinancovanie-hero-img {
+    position: relative;
+    z-index: 5;
+  }
+  #dofinancovanie-hero-img::after {
+    z-index: -1;
+    position: absolute;
+    content: url("/images/ref-top-bg.svg");
+    right: -21rem;
+    top: -1rem;
   }
 }
 

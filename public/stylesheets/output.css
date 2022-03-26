@@ -1130,6 +1130,18 @@ select {
   margin-top: 12%;
 }
 
+.mb-\[2\.5rem\] {
+  margin-bottom: 2.5rem;
+}
+
+.mt-\[2\.5rem\] {
+  margin-top: 2.5rem;
+}
+
+.mb-\[3\.5rem\] {
+  margin-bottom: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1368,6 +1380,18 @@ select {
   width: 10.5rem;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-\[82\%\] {
+  width: 82%;
+}
+
+.w-\[85\%\] {
+  width: 85%;
+}
+
 .max-w-\[92\%\] {
   max-width: 92%;
 }
@@ -1422,6 +1446,14 @@ select {
 
 .max-w-\[10\.5rem\] {
   max-width: 10.5rem;
+}
+
+.max-w-\[81\%\] {
+  max-width: 81%;
+}
+
+.max-w-\[82\%\] {
+  max-width: 82%;
 }
 
 .translate-y-3\/4 {
@@ -1678,6 +1710,10 @@ select {
   padding: 0.5rem;
 }
 
+.p-7 {
+  padding: 1.75rem;
+}
+
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -1879,6 +1915,10 @@ select {
   padding-left: 0.75rem;
 }
 
+.pt-\[3\.5rem\] {
+  padding-top: 3.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1893,6 +1933,14 @@ select {
 
 .font-body {
   font-family: Comfortaa, sans-serif;
+}
+
+.font-\[\'\'\] {
+  font-family: '';
+}
+
+.font-\[\'Montserrat\'\] {
+  font-family: 'Montserrat';
 }
 
 .text-\[2\.3rem\] {
@@ -2028,6 +2076,18 @@ select {
   font-size: 1.3rem;
 }
 
+.text-\[2\.225rem\] {
+  font-size: 2.225rem;
+}
+
+.text-\[2\.125rem\] {
+  font-size: 2.125rem;
+}
+
+.text-\[0\.9rem\] {
+  font-size: 0.9rem;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -2117,6 +2177,10 @@ select {
 
 .text-secondary\/30 {
   color: rgb(34 49 70 / 0.3);
+}
+
+.text-white\/50 {
+  color: rgb(255 255 255 / 0.5);
 }
 
 .underline {
@@ -2250,6 +2314,10 @@ select {
     right: 4rem;
   }
 
+  .md\:left-24 {
+    left: 6rem;
+  }
+
   .md\:order-last {
     order: 9999;
   }
@@ -2288,6 +2356,11 @@ select {
   .md\:my-auto {
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  .md\:my-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .md\:mr-16 {
@@ -2388,6 +2461,14 @@ select {
 
   .md\:mr-20 {
     margin-right: 5rem;
+  }
+
+  .md\:mr-4 {
+    margin-right: 1rem;
+  }
+
+  .md\:mb-28 {
+    margin-bottom: 7rem;
   }
 
   .md\:block {
@@ -2518,6 +2599,10 @@ select {
     width: 75%;
   }
 
+  .md\:w-\[25rem\] {
+    width: 25rem;
+  }
+
   .md\:max-w-\[75\%\] {
     max-width: 75%;
   }
@@ -2556,6 +2641,14 @@ select {
 
   .md\:max-w-\[665px\] {
     max-width: 665px;
+  }
+
+  .md\:max-w-\[40\%\] {
+    max-width: 40%;
+  }
+
+  .md\:max-w-\[270px\] {
+    max-width: 270px;
   }
 
   .md\:translate-y-0 {
@@ -2763,6 +2856,18 @@ select {
 
   .md\:pl-5 {
     padding-left: 1.25rem;
+  }
+
+  .md\:pl-\[20\%\] {
+    padding-left: 20%;
+  }
+
+  .md\:pt-9 {
+    padding-top: 2.25rem;
+  }
+
+  .md\:pt-20 {
+    padding-top: 5rem;
   }
 
   .md\:text-left {

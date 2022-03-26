@@ -1,22 +1,22 @@
 <% layout('./layouts/boilerplate') %>
 
-<section id="dofinancovanie-header" class="pt-20 text-white bg-secondary">
-    <div class="grid grid-cols-2">
-        <div class="pl-[20%] mt-auto">
-            <h1 class="text-5xl leading-tight">
-                Uzatvorte <span class="text-primary">bestpôžičku rýchlo a jednoducho online</span> a splňte si vaše
+<section class="pt-[3.5rem] md:pt-20 text-white bg-secondary">
+    <div class="md:grid grid-cols-2 w-full max-w-[92%] md:max-w-full mx-auto md:mx-0">
+        <div class="md:pl-[20%] mt-auto">
+            <h1 class="text-[2.125rem] md:text-5xl leading-tight">
+                Uzatvorte <span class="text-primary font-bold">bestpôžičku rýchlo a jednoducho online</span> a splňte si vaše
                 želanie!
             </h1>
-            <h2 class="text-2xl my-5">Jednoduchá cesta k peniazom</h2>
-            <p class="w-1/2 text-sm mb-2">
-                V bestpôžičke môžete požiadať o pôžičky v rozmedzí od 400 do 20 000 EUR.
+            <h2 class="text-[1.5rem] md:text-2xl my-[2rem] md:my-5 leading-tight md:leading-normal">Jednoduchá cesta k peniazom</h2>
+            <p class="md:w-1/2 text-[0.9rem] md:text-sm mb-2 font-light">
+                V bestpôžičke môžete požiadať o <span class="font-bold">pôžičky v rozmedzí od 400 do 20 000 EUR.</span>
             </p>
-            <a href="" class="text-sm">Zistiť viac</a>
+            <a href="" class="text-sm hidden md:block">Zistiť viac</a>
         </div>
         <div>
             <div class="flex flex-col">
-                <div class="flex pt-9">
-                    <div class="mt-auto w-full max-w-[270px]">
+                <div class="flex md:pt-9">
+                    <div class="mb:auto md:mt-auto w-full md:max-w-[270px]">
                         <h4 class="text-2xl">Adrián Kudláč</h4>
                         <span class="text-sm">
                             Zodpovený za poskytovanie <span class="text-primary">dofinancovania hypoték</span>
@@ -31,7 +31,7 @@
         </div>
     </div>
 </section>
-<div id="ref-top-long" class="bg-secondary"></div>
+<div id="ref-top-long" class="bg-secondary hidden md:block"></div>
 <div class="mt-28">
     <%- include('./partials/offer') %>
 </div>
