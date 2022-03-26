@@ -71,55 +71,8 @@ nav ul li:hover {
   background-position: right -2rem bottom;
 }
 
-#benefits-section {
-  position: relative;
-  z-index: 2;
-}
-#benefits-section::after {
-  position: absolute;
-  top: 13rem;
-  z-index: -2;
-  content: url("/images/benefits-bg.svg");
-}
-
 #calc-ad-parent {
   max-height: 200px;
-}
-
-#calc-ad {
-  background-image: url("/images/calcAd-bg.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
-#home-about {
-  position: relative;
-  z-index: 1;
-}
-#home-about::before {
-  content: "";
-  z-index: -1;
-  height: 100%;
-  width: 14%;
-  position: absolute;
-  background-image: url("/images/aboutUs-bg-l.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  left: -2rem;
-  top: 7rem;
-}
-#home-about::after {
-  content: "";
-  z-index: -1;
-  height: 100%;
-  width: 14%;
-  position: absolute;
-  background-image: url("/images/aboutUs-bg-r.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  right: -2rem;
-  top: 7rem;
 }
 
 #find-out-more-section {
@@ -169,19 +122,6 @@ nav ul li:hover {
   background-position: right;
 }
 
-#faq {
-  margin-top: 7rem;
-  margin-bottom: 7rem;
-}
-#faq #faq-header {
-  height: 170px;
-  width: 100%;
-  background-image: url("/images/faq-top-pasta.svg");
-  background-position: center right;
-  background-repeat: no-repeat;
-  margin-bottom: 3.5rem;
-}
-
 #contact-section {
   margin-bottom: 7rem;
 }
@@ -201,15 +141,6 @@ nav ul li:hover {
 }
 #contact-section #contact-form textarea {
   resize: none;
-}
-
-#footer {
-  background-image: url("/images/find-out-bg.svg");
-  background-repeat: no-repeat;
-  background-position: center 5rem;
-}
-#footer #dp-text {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .no-space {
@@ -582,6 +513,68 @@ nav ul li:hover {
     top: 25rem;
     right: 2rem;
     content: url("/images/bg-y-sm.svg");
+  }
+
+  #benefits-section {
+    position: relative;
+    z-index: 2;
+  }
+  #benefits-section::after {
+    position: absolute;
+    top: 13rem;
+    z-index: -2;
+    content: url("/images/benefits-bg.svg");
+  }
+
+  #calc-ad {
+    background-image: url("/images/calcAd-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  #home-about {
+    position: relative;
+    z-index: 1;
+  }
+  #home-about::before {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 14%;
+    position: absolute;
+    background-image: url("/images/aboutUs-bg-l.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -2rem;
+    top: 7rem;
+  }
+  #home-about::after {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 14%;
+    position: absolute;
+    background-image: url("/images/aboutUs-bg-r.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -2rem;
+    top: 7rem;
+  }
+
+  #faq #faq-header {
+    height: 170px;
+    width: 100%;
+    background-image: url("/images/faq-top-pasta.svg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    margin-bottom: 3.5rem;
+  }
+
+  #footer {
+    background-image: url("/images/find-out-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center 5rem;
   }
 }
 
