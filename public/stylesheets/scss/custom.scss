@@ -548,19 +548,7 @@ nav {
   opacity: 1;
 }
 
-#testtt {
-  position: relative;
-  z-index: 1;
 
-  &::after {
-    z-index: -1;
-    height: 300px;
-    position: absolute;
-    top: 6rem;
-    right: 4rem;
-    content: url("/images/home-bg-y.svg");
-  }
-}
 
 .calculator-gray-bg {
   height: 100%;
@@ -570,18 +558,7 @@ nav {
   background-position: bottom center;
 }
 
-#heroText {
-  position: relative;
-  z-index: -2;
 
-  &::after {
-    z-index: -1;
-    position: absolute;
-    top: 25rem;
-    right: 2rem;
-    content: url("/images/bg-y-sm.svg");
-  }
-}
 
 #centrala-hero-video {
   position: relative;
@@ -667,4 +644,34 @@ nav {
   padding-left:30px;
 }
 
+#testtt {
+  z-index: 1;
+}
 
+@media (min-width: 768px) {
+  #testtt {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      z-index: -1;
+      height: 300px;
+      position: absolute;
+      top: 6rem;
+      right: 4rem;
+      content: url("/images/home-bg-y.svg");
+    }
+  }
+  #heroText {
+    position: relative;
+    z-index: -2;
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      top: 25rem;
+      right: 2rem;
+      content: url("/images/bg-y-sm.svg");
+    }
+  }
+}

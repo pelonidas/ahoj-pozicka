@@ -465,37 +465,12 @@ nav ul li:hover {
   opacity: 1;
 }
 
-#testtt {
-  position: relative;
-  z-index: 1;
-}
-#testtt::after {
-  z-index: -1;
-  height: 300px;
-  position: absolute;
-  top: 6rem;
-  right: 4rem;
-  content: url("/images/home-bg-y.svg");
-}
-
 .calculator-gray-bg {
   height: 100%;
   background-image: url("/images/gray-top-home.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;
-}
-
-#heroText {
-  position: relative;
-  z-index: -2;
-}
-#heroText::after {
-  z-index: -1;
-  position: absolute;
-  top: 25rem;
-  right: 2rem;
-  content: url("/images/bg-y-sm.svg");
 }
 
 #centrala-hero-video {
@@ -577,6 +552,37 @@ nav ul li:hover {
 #businessSince {
   background: url("/images/calendar.svg") no-repeat scroll center left 7px;
   padding-left: 30px;
+}
+
+#testtt {
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  #testtt {
+    position: relative;
+    z-index: 1;
+  }
+  #testtt::after {
+    z-index: -1;
+    height: 300px;
+    position: absolute;
+    top: 6rem;
+    right: 4rem;
+    content: url("/images/home-bg-y.svg");
+  }
+
+  #heroText {
+    position: relative;
+    z-index: -2;
+  }
+  #heroText::after {
+    z-index: -1;
+    position: absolute;
+    top: 25rem;
+    right: 2rem;
+    content: url("/images/bg-y-sm.svg");
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */
