@@ -1,113 +1,78 @@
+//data
+var data = "";
+
 //sliders
-const money_range = document.getElementById("money_range");
-const year_range = document.getElementById("year_range");
-let data = ""
+var money_slide = document.getElementById("money_range"),
+    year_slide = document.getElementById("year_range");
+
 //text fields
-const money_input = document.getElementById("money_input");
-const year_input = document.getElementById("year_input");
+var money_field = document.getElementById("money_input"),
+    year_field = document.getElementById("year_input");
 
 //hidden
-const interest = document.querySelector('#interest')
+var interest = document.querySelector('#interest');
 
 //outputs
-const mes_sum = document.getElementById("mes_sum");
-// const urok_sadzba = document.getElementById("urok_sadzba");
-// const celkove_naklady = document.getElementById("celkove_naklady");
-// const celkova_suma = document.getElementById("celkova_suma");
+var mes_sum = document.getElementById("mes_sum");
 
-//limit element's value
-const limit = function (value, isMoney) {
+const calcMonthlyCost = function (moneyVal, yearVal) {
+    let money = Number(moneyVal);
+    let years = Number(yearVal);
 
-    //element.value = 10 000
-    //element.min = 5 000
-    //element.max = 50 000
+    let moneyMax = Number(money_slide.max);
+    let moneyMin = Number(money_slide.min);
+    let yearMax = Number(year_slide.max);
+    let yearMin = Number(year_slide.min);
 
-    if (isMoney) {
-        return Math.min(Math.max(value, money_range.min), money_range.max);
+    if(isNaN(money) || isNaN(years)){
+        return "";
     }
 
-    return Math.min(Math.max(value, year_range.min), year_range.max);
-}
-
-//calculate interest
-const calculateInterest = function (total, years, ratePercent) {
-    const interestRate = ((ratePercent / 100) + 1);
-    return total * Math.pow(interestRate, years);
-};
-
-//observable values
-let money_val = limit(money_range.value, true);
-let year_val = limit(year_range.value, false);
-
-//display default values
-display();
-
-//displays calculation
-function display() {
-    let ratePercent = 16.56;
-    let roundToPlaces = 2;
-    let calculatedInterest = calculateInterest(money_val, year_val, ratePercent);
-
-    interest.value = calculatedInterest
-    mes_sum.innerHTML = (calculatedInterest / (year_val * 12)).toFixed(roundToPlaces) + "€";
-    data = `${(calculatedInterest / (year_val * 12)).toFixed(roundToPlaces)}`
-    // urok_sadzba.innerHTML = ratePercent + "%";
-    // celkove_naklady.innerHTML = (calculatedInterest - money_val).toFixed(roundToPlaces) + "€";
-    // celkova_suma.innerHTML = calculatedInterest.toFixed(roundToPlaces) + "€";
-    interest.value = data
-    console.log(data)
-}
-
-// Update the current slider value (each time you drag the slider handle)
-money_range.oninput = function () {
-    money_val = limit(this.value, true);
-    display();
-    money_input.value = money_val;
-}
-
-// Update the current slider value (each time you drag the slider handle)
-year_range.oninput = function () {
-    year_val = limit(this.value, false);
-    display();
-    year_input.value = year_val;
-}
-
-money_input.oninput = function () {
-    //secure input isn't null
-    if (this.value) {
-        money_val = limit(this.value, true);
-        display();
-        money_range.value = money_val;
+    if(money > moneyMax || money < moneyMin) {
+        return "";
     }
+
+    if(years > yearMax || years < yearMin){
+        return "";
+    }
+
+    let monthlyCost = money * ((0.1528/12) / (1 - Math.pow((1 / (1 + (0.1528/12))), years*12)));
+    monthlyCost = monthlyCost.toFixed(2);
+
+    data = `${monthlyCost}`;
+    interest.value = data;
+
+    return monthlyCost + " €";
 }
 
-year_input.oninput = function () {
-    //secure input isn't null
-    if (this.value) {
-        year_val = limit(this.value, false);
-        display();
-        year_range.value = year_val;
-    }
+function moneySlideHandler(e) {
+    money_field.value = e.target.value;
+    let moneyVal = e.target.value;
+    let yearVal = year_field.value;
+
+    mes_sum.innerHTML = calcMonthlyCost(moneyVal, yearVal);
 }
 
-money_input.addEventListener("keyup", function (event) {
-    if (event.code === "Enter") {
-        money_input.value = money_range.value;
-    }
-});
+function yearSlideHandler(e) {
+    year_field.value = e.target.value;
+    let moneyVal = money_field.value;
+    let yearVal = e.target.value;
 
-year_input.addEventListener("keyup", function (event) {
-    if (event.code === "Enter") {
-        year_input.value = year_range.value;
-    }
-});
+    mes_sum.innerHTML = calcMonthlyCost(moneyVal, yearVal);
+}
 
-money_input.addEventListener("focusout", function () {
-    money_input.value = money_range.value;
-});
+function moneyInputHandler(e) {
+    let val = e.target.value;
+    console.log(val);
+}
 
-year_input.addEventListener("focusout", function () {
-    year_input.value = year_range.value;
-});
+function yearInputHandler(e) {
+    let val = e.target.value;
+    console.log(val);
+}
 
+money_field.addEventListener('input', moneyInputHandler);
+year_field.addEventListener('input', yearInputHandler);
 
+money_slide.addEventListener('input', moneySlideHandler);
+year_slide.addEventListener('input', yearSlideHandler);
