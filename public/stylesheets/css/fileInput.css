@@ -1,8 +1,0 @@
-input[type=file] {
-    display: none;
-}
-.custom-file-upload {
-    border: 2px rgba(255,255,255,0.5) dashed;
-    cursor: pointer;
-    padding: 1rem;
-}

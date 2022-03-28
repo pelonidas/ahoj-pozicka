@@ -78,11 +78,50 @@ nav ul li:hover {
   max-width: 8rem !important;
 }
 
-#contact-section {
-  position: relative;
-  z-index: 2;
+#reviews-section {
+  background-image: url("/images/review-bg-quote.svg");
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  background-position: center bottom;
+  height: 600px;
+  width: 100%;
+  margin-bottom: 7rem;
 }
-#contact-section textarea {
+#reviews-section #leftSide {
+  height: 100%;
+  width: 18%;
+  background-image: url("/images/reviews-left-pasta.svg");
+  background-size: 13rem;
+  background-repeat: no-repeat;
+  background-position: -20px center;
+}
+#reviews-section #content {
+  padding-right: 15%;
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/reviews-right-pasta.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#contact-section {
+  margin-bottom: 7rem;
+}
+#contact-section #contact-left {
+  width: 100%;
+  height: 700px;
+  background-image: url("/images/reviews-left-pasta.svg");
+  background-size: 13rem;
+  background-repeat: no-repeat;
+  background-position: -20px center;
+}
+#contact-section #contact-form {
+  background-image: url("/images/contact-right-pasta.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto 80%;
+}
+#contact-section #contact-form textarea {
   resize: none;
 }
 
@@ -534,53 +573,6 @@ nav ul li:hover {
     background-position: center right;
     background-repeat: no-repeat;
     margin-bottom: 3.5rem;
-  }
-
-  #reviews-section {
-    position: relative;
-    z-index: 5;
-  }
-  #reviews-section::before {
-    content: "";
-    position: absolute;
-    background-image: url("/images/reviews-left-pasta.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center left;
-    z-index: -1;
-    top: 0;
-    left: -2%;
-    height: 100%;
-    width: 100%;
-  }
-  #reviews-section::after {
-    content: "";
-    position: absolute;
-    background-image: url("/images/reviews-right-pasta.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center right;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-  }
-  #reviews-section #quote {
-    z-index: 2;
-  }
-  #reviews-section #quote::after {
-    content: "";
-    background-image: url("/images/review-bg-quote.svg");
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    z-index: -1;
-    top: 13rem;
-    right: 23rem;
-    height: 60%;
-    width: 50%;
   }
 
   #footer {
