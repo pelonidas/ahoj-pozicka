@@ -107,6 +107,13 @@ nav {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+#contact-section {
+  margin-bottom: 7rem;
+>>>>>>> parent of 571ce39 (margins v1)
 
 #contact-section {
   position: relative;
@@ -118,6 +125,8 @@ nav {
     resize: none;
   }
 }
+
+
 
 
 
@@ -387,6 +396,32 @@ nav {
 }
 
 
+<<<<<<< HEAD
+=======
+  #testButton {
+    height: 84px;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  &::after {
+    z-index: -1;
+    top: -6rem;
+    right: -6rem;
+    width: 695px;
+    position: absolute;
+    content: url("/images/home-bg-y.svg");
+  }
+
+  &::before {
+    content: url("/images/bg-y-sm.svg");
+    position: absolute;
+    left: -13rem;
+    bottom: 15rem;
+  }
+}
+>>>>>>> parent of 571ce39 (margins v1)
 
 .calculator-gray-bg {
   height: 100%;
@@ -397,7 +432,10 @@ nav {
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 571ce39 (margins v1)
 #centrala-hero-video {
   position: relative;
   z-index: 5;
@@ -455,6 +493,7 @@ nav {
   padding-left:30px;
 }
 
+<<<<<<< HEAD
 #calculator-section {
   z-index: 1;
 }
@@ -484,6 +523,22 @@ nav {
     position: relative;
     z-index: 1;
     height: 200px;
+=======
+.hero-h1 {
+  line-height: 72px;
+  max-width: 782px;
+}
+
+.hero-h2 {
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+@media screen and ( min-width: 768px ) {
+  .hero-wrapper {
+    max-width: 1620px;
+  }
+>>>>>>> parent of 571ce39 (margins v1)
 
     &::after {
       z-index: -1;
@@ -693,6 +748,7 @@ nav {
       top: -1rem;
     }
   }
+<<<<<<< HEAD
   #rejected-main {
     background-image: url("/images/rejected-bg-y.svg");
     background-size: contain;
@@ -707,3 +763,6 @@ nav {
     background-position: left center;
   }
 }
+=======
+}
+>>>>>>> parent of 571ce39 (margins v1)

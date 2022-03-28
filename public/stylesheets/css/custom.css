@@ -300,6 +300,37 @@ nav ul li:hover {
   opacity: 1;
 }
 
+<<<<<<< HEAD
+=======
+#calculator {
+  position: relative;
+  z-index: 1;
+}
+
+#calculator #testButton {
+  height: 84px;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#calculator::after {
+  z-index: -1;
+  top: -6rem;
+  right: -6rem;
+  width: 695px;
+  position: absolute;
+  content: url("/images/home-bg-y.svg");
+}
+
+#calculator::before {
+  content: url("/images/bg-y-sm.svg");
+  position: absolute;
+  left: -13rem;
+  bottom: 15rem;
+}
+
+>>>>>>> parent of 571ce39 (margins v1)
 .calculator-gray-bg {
   height: 100%;
   background-image: url("/images/gray-top-home.svg");
@@ -321,7 +352,7 @@ nav ul li:hover {
   right: 0;
   background-size: contain;
   /*content: url("/images/centrala-home-bg2.svg");*/
-  content: "";
+  content: '';
   background-image: url("/images/centrala-home-bg2.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -360,6 +391,7 @@ nav ul li:hover {
   padding-left: 30px;
 }
 
+<<<<<<< HEAD
 #calculator-section {
   z-index: 1;
 }
@@ -411,6 +443,21 @@ nav ul li:hover {
     top: 13rem;
     z-index: -2;
     content: url("/images/benefits-bg.svg");
+=======
+.hero-h1 {
+  line-height: 72px;
+  max-width: 782px;
+}
+
+.hero-h2 {
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-wrapper {
+    max-width: 1620px;
+>>>>>>> parent of 571ce39 (margins v1)
   }
 
   #calc-ad {
