@@ -600,6 +600,7 @@ nav {
       background-image: url("/images/offer-bg-l.svg");
       background-repeat: no-repeat;
       background-position: top center;
+      background-size: contain;
       top: 0;
       left: -2%;
     }
@@ -614,6 +615,7 @@ nav {
       background-image: url("/images/offer-bg-r.svg");
       background-repeat: no-repeat;
       background-position: bottom center;
+      background-size: contain;
       top: 0;
       right: -2%;
     }
