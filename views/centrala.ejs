@@ -1,12 +1,14 @@
 <% layout('./layouts/boilerplate') %>
 <section class="bg-secondary text-white py-20">
-    <div class="w-full max-w-[92%] mx-auto flex flex-col md:grid grid-cols-5">
+    <div class="w-full lg:max-w-[1620px] mx-auto flex flex-col md:grid grid-cols-5">
         <div class="col-span-2" id="centrala-hero-text">
             <div class="md:w-2/3 mb-[4rem]">
-                <h4 class="text-[1.25rem] md:text-[1.75rem] mb-6 font-light">Sídlime v <span class="text-primary">lokalite:</span></h4>
+                <h4 class="text-[1.25rem] md:text-[1.75rem] mb-6 font-light">Sídlime v <span class="text-primary">lokalite:</span>
+                </h4>
                 <h2 class="text-[2.3rem] md:text-[4rem] leading-none mb-5">Finančný dom <span
                             class="text-primary font-bold">Košice</span></h2>
-                <p class="text-[1rem] font-light leading-tight md:leading-normal">Ak preferujete osobný kontakt, pre Vás všetkých je tu naša centrála v
+                <p class="text-[1rem] font-light leading-tight md:leading-normal">Ak preferujete osobný kontakt, pre Vás
+                    všetkých je tu naša centrála v
                     Košiciach.</p>
             </div>
         </div>
@@ -17,51 +19,42 @@
         </div>
     </div>
 </section>
-<section id="centrala-description" class="mb-[3.5rem] md:mb-28">
-    <div class="md:grid grid-cols-6">
-        <div class="col-span-2">
-            <div class="md:grid grid-cols-2 flex items-center">
-                <div id="centrala-descrpition-bg1" class="h-[15rem]"></div>
-                <div class="flex flex-col justify-center items-center">
-                    <h3 class="text-[2.5rem] md:text-5xl mb-[1.5rem] mt-[2.5rem] md:mt-0 md:mb-6 font-medium">Centrála</h3>
-                    <p class="text-[1.125rem] font-text w-full max-w-[85%] md:max-w-11/12 text-center md:text-left mb-[2.5rem] md:mb-0">
-                        Nadštandardná forma starostlivosti. Náš tím expertov je vám k dispozícii <span class="font-bold">v pracovné dni od 8:00
-                        do 17:00.</span> Poskytneme Vám kompletný servis od žiadosti o pôžičku až po jej schválenie. Čo je pre
-                        nás dôležité? Spokojný zákazníci!
-                    </p>
-                </div>
-            </div>
+<section class="container lg:my-28 flex border lg:justify-between">
+    <div class="flex flex-col w-full lg:max-w-[325px] my-auto lg:ml-[5rem]">
+        <h2 class="lg:text-[4rem] font-medium">Centrála</h2>
+        <p class="font-text lg:leading-[28px] lg:text-[1.25rem] mr-5">
+            Nadštandardná forma starostlivosti. Náš tím expertov je vám k dispozícii <span class="font-bold">v pracovné dni od 8:00 do 17:00.</span>
+            Poskytneme Vám kompletný servis od žiadosti o pôžičku až po jej schválenie. Čo je pre nás dôležité? Spokojný
+            zákazníci!
+        </p>
+    </div>
+    <img src="/images/centrala-gallery/img1.png" alt="">
+    <img src="/images/centrala-gallery/img2.png" alt="">
+</section>
+<section class="w-full lg:max-w-[1920px] lg:h-[650px] lg:bg-[url('/images/centrala-mapa/map.png')] mx-auto flex">
+    <div class="bg-white rounded-[10px] w-full lg:max-w-[840px] lg:h-[400px] m-auto lg:mr-[5rem] flex lg:flex-col justify-center lg:pl-[4rem]">
+        <h2 class="lg:text-[4rem] font-medium lg:leading-[72px]">Navštívte nás</h2>
+        <h3 class="lg:text-[2.5rem] lg:leading-[44px] lg:mb-10">Pre viac informácií</h3>
+        <div class="flex font-bold lg:text-[1.5rem] lg:mb-6">
+            <img src="/images/icons/location.svg" alt="">
+            <span class="ml-5">Fejova 1, 040 01 Košice</span>
         </div>
-        <div class="col-span-4 ">
-            <div id="centrala-description-bg2">
-                <div>
-                    <img src="/images/centrala-img1.png" alt="" class="w-[85%] md:w-[25rem] drop-shadow-md relative md:left-24 mx-auto md:mx-0">
-                </div>
-            </div>
+        <div class="flex font-bold lg:text-[1.5rem]">
+            <img src="/images/icons/clock.svg" alt="">
+            <span class="ml-5">Pondelok - Piatok, 8:00 - 17:00</span>
         </div>
     </div>
 </section>
-<section class="w-full h-[50vh] md:h-[70vh] flex justify-center items-center" id="centrala-location">
-    <div class="w-full bg-white max-w-[92%] md:max-w-[40%] rounded-[10px] p-7 md:p-12 md:ml-auto translate-y-3/4 md:translate-y-0 drop-shadow-[9px_10px_50px_rgba(0,0,0,0.10)]"
-         id="card-background">
-        <h3 class="text-[2.5rem] md:text-[4rem] font-medium leading-none text-center md:text-left">Navštívte nás</h3>
-        <h4 class="text-[1.5rem] md:text-[2.5rem] mb-4 text-center md:text-left">Pre viac informácií</h4>
-        <div class="flex items-center mb-3">
-            <img src="/images/contact-location.svg" alt="" class="w-[2rem]">
-            <span class="ml-5 text-[1.rem] font-bold">Fejova 1, 040 01 Košice</span>
-        </div>
-        <div class="flex items-center">
-            <img src="/images/clock-icon.svg" alt="" class="w-[2rem]">
-            <span class="ml-5 text-[1rem] font-bold">Pondelok - Piatok, 8:00 - 17:00</span>
-        </div>
-    </div>
-</section>
+
+
 <%- include('./partials/personal') %>
 <section id="centrala-contact">
     <div class="w-full max-w-[92%] md:max-w-[75%] flex flex-col md:grid md:grid-cols-5 bg-white mx-auto px-6 py-16 md:py-0 md:px-0 md:p-24 rounded-[10px] drop-shadow-xl">
         <div class="md:col-span-2">
-            <h2 class="text-[2.25rem] md:text-6xl mb-[1rem] md:mb-4 font-medium text-center md:text-left">Kontaktujte nás</h2>
-            <p class="w-2/3 md:w-full mx-auto text-[1.5rem] text-center md:text-left">V pracovné dni od 8:00 do 17:00</p>
+            <h2 class="text-[2.25rem] md:text-6xl mb-[1rem] md:mb-4 font-medium text-center md:text-left">Kontaktujte
+                nás</h2>
+            <p class="w-2/3 md:w-full mx-auto text-[1.5rem] text-center md:text-left">V pracovné dni od 8:00 do
+                17:00</p>
         </div>
         <div class="col-span-2 mx-auto">
             <div class="flex items-center mt-10">
