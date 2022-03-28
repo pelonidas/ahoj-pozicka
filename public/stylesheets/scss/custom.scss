@@ -425,7 +425,6 @@ nav {
   opacity: 1;
 }
 
-<<<<<<< HEAD
 #calculator {
   position: relative;
   z-index: 1;
@@ -453,9 +452,6 @@ nav {
     bottom: 15rem;
   }
 }
-=======
-
->>>>>>> refs/remotes/origin/master
 
 .calculator-gray-bg {
   height: 100%;
@@ -465,22 +461,6 @@ nav {
   background-position: bottom center;
 }
 
-<<<<<<< HEAD
-// #heroText {
-//   position: relative;
-//   z-index: 2;
-
-//   &::after {
-//     z-index: -1;
-//     position: absolute;
-//     top: 20rem;
-//     right: 0;
-//     content: url("/images/bg-y-sm.svg");
-//   }
-// }
-=======
-
->>>>>>> refs/remotes/origin/master
 
 #centrala-hero-video {
   position: relative;
@@ -540,7 +520,6 @@ nav {
   padding-left:30px;
 }
 
-<<<<<<< HEAD
 .hero-h1 {
   line-height: 72px;
   max-width: 782px;
@@ -551,208 +530,54 @@ nav {
   color: #FFFFFF;
 }
 
-//test
-=======
-#calculator-section {
-  z-index: 1;
-}
-#centrala-location {
-  background-image: url("/images/mobile/map.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-@media (min-width: 768px) {
-  #calculator-section {
-    position: relative;
-    z-index: 1;
-
-    &::after {
-      z-index: -1;
-      height: 300px;
-      position: absolute;
-      top: 6rem;
-      right: 4rem;
-      content: url("/images/home-bg-y.svg");
-    }
+@media screen and ( min-width: 768px ) {
+  .hero-wrapper {
+    max-width: 1620px;
   }
 
-  #heroText {
-    position: relative;
-    z-index: 1;
-    height: 200px;
-
-    &::after {
-      z-index: -1;
-      position: absolute;
-      top: 25rem;
-      right: 2rem;
-      content: url("/images/bg-y-sm.svg");
-    }
+  #mainHeader {
+    max-width: 1620px;
   }
 
-  #card-wrapper {
-    z-index: 2;
+  #offerWrapper {
+    max-width: 1260px;
   }
 
-  #benefits-section {
-    position: relative;
-    z-index: 2;
-    &::after {
-      position: absolute;
-      top: 13rem;
-      z-index: -2;
-      content: url("/images/benefits-bg.svg");
-    }
+  #benefitsWrapper {
+    max-width: 1260px;
   }
 
   #calc-ad {
-    background-image: url("/images/calcAd-bg.svg");
+    max-width: 1440px;
+  }
+
+  #homeAboutWrapper {
+    max-width: 1260px;
+  }
+
+  #cardsAboutusWrapper {
+    max-width: 1440px;
+  }
+
+  #find-out-more-section {
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
   }
 
-  #home-about {
-    position: relative;
-    z-index: 1;
+  #faqWrapper {
+    max-width: 1260px;
+  }
 
-    &::before {
-      content: "";
-      z-index: -1;
-      height: 100%;
-      width: 14%;
-      position: absolute;
-      background-image: url("/images/aboutUs-bg-l.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      left: -2rem;
-      top: 7rem;
+  #footerWrapper {
+    max-width: 1440px;
+  }
+
+  #homeAboutWrapper {
+    padding: 0 2rem;
+  }
+
+  #calc-ad {
+    & > div {
+      padding: 2rem;
     }
-
-    &::after {
-      content: "";
-      z-index: -1;
-      height: 100%;
-      width: 14%;
-      position: absolute;
-      background-image: url("/images/aboutUs-bg-r.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      right: -2rem;
-      top: 7rem;
-    }
-  }
-
-  #home-card-section {
-    position: relative;
-    z-index: 2;
-
-    &::before {
-
-      width: 15%;
-      height: 100%;
-      z-index: -1;
-      position: absolute;
-      content: "";
-      background-image: url("/images/offer-bg-l.svg");
-      background-repeat: no-repeat;
-      background-position: top center;
-      background-size: contain;
-      top: 0;
-      left: -2%;
-    }
-
-    &::after {
-
-      width: 15%;
-      height: 100%;
-      z-index: -1;
-      position: absolute;
-      content: "";
-      background-image: url("/images/offer-bg-r.svg");
-      background-repeat: no-repeat;
-      background-position: bottom center;
-      background-size: contain;
-      top: 0;
-      right: -2%;
-    }
-  }
-
-  #faq {
-    #faq-header {
-      height: 170px;
-      width: 100%;
-      background-image: url("/images/faq-top-pasta.svg");
-      background-position: center right;
-      background-repeat: no-repeat;
-      margin-bottom: 3.5rem;
-    }
-  }
-
-  #footer {
-    background-image: url("/images/find-out-bg.svg");
-    background-repeat: no-repeat;
-    background-position: center 5rem;
-  }
-
-  #centrala-hero-text {
-    position: relative;
-    z-index: 2;
-
-    &::after {
-      z-index: -1;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      content: "";
-      height: 40%;
-      width: 100%;
-      background-image: url("/images/centrala-home-bg1.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-  }
-
-  #centrala-location {
-    background-image: url("/images/map.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    #card-background {
-      background-image: url("/images/map-card-bg.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: right center;
-    }
-  }
-
-  #dofinancovanie-hero-img {
-    position: relative;
-    z-index: 5;
-
-    &::after {
-      z-index: -1;
-      position: absolute;
-      content: url("/images/ref-top-bg.svg");
-      right: -21rem;
-      top: -1rem;
-    }
-  }
-  #rejected-main {
-    background-image: url("/images/rejected-bg-y.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-  }
-
-  #rejected-right {
-    background-image: url("/images/rejected-bg-g.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
   }
 }
->>>>>>> refs/remotes/origin/master
