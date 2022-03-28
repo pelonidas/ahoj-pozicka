@@ -1109,6 +1109,22 @@ select {
   margin-bottom: 4.5rem;
 }
 
+.ml-\[1rem\] {
+  margin-left: 1rem;
+}
+
+.ml-\[2rem\] {
+  margin-left: 2rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -1319,6 +1335,18 @@ select {
   width: 55%;
 }
 
+.w-min {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.w-max {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .max-w-\[92\%\] {
   max-width: 92%;
 }
@@ -1365,6 +1393,22 @@ select {
 
 .max-w-\[70\%\] {
   max-width: 70%;
+}
+
+.max-w-\[60\%\] {
+  max-width: 60%;
+}
+
+.max-w-\[100px\] {
+  max-width: 100px;
+}
+
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-\[60px\] {
+  max-width: 60px;
 }
 
 .translate-y-3\/4 {
@@ -1458,6 +1502,10 @@ select {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .overflow-y-hidden {
@@ -1611,6 +1659,10 @@ select {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
 }
 
 .px-7 {
@@ -2264,6 +2316,11 @@ select {
     margin-bottom: 0px;
   }
 
+  .md\:mx-\[2rem\] {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .md\:mr-16 {
     margin-right: 4rem;
   }
@@ -2370,6 +2427,14 @@ select {
 
   .md\:ml-24 {
     margin-left: 6rem;
+  }
+
+  .md\:mb-\[9rem\] {
+    margin-bottom: 9rem;
+  }
+
+  .md\:ml-0 {
+    margin-left: 0px;
   }
 
   .md\:block {
@@ -2516,6 +2581,14 @@ select {
     width: 400px;
   }
 
+  .md\:w-\[15\%\] {
+    width: 15%;
+  }
+
+  .md\:w-\[100px\] {
+    width: 100px;
+  }
+
   .md\:max-w-\[75\%\] {
     max-width: 75%;
   }
@@ -2562,6 +2635,18 @@ select {
 
   .md\:max-w-\[665px\] {
     max-width: 665px;
+  }
+
+  .md\:max-w-\[70\%\] {
+    max-width: 70%;
+  }
+
+  .md\:max-w-\[65\%\] {
+    max-width: 65%;
+  }
+
+  .md\:max-w-\[100px\] {
+    max-width: 100px;
   }
 
   .md\:translate-y-0 {
@@ -2728,6 +2813,11 @@ select {
     padding-bottom: 3rem;
   }
 
+  .md\:py-\[2\.5rem\] {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .md\:pb-32 {
     padding-bottom: 8rem;
   }
@@ -2863,12 +2953,24 @@ select {
     font-size: 1rem;
   }
 
+  .md\:text-\[2\.8rem\] {
+    font-size: 2.8rem;
+  }
+
+  .md\:text-\[2\.25rem\] {
+    font-size: 2.25rem;
+  }
+
   .md\:leading-normal {
     line-height: 1.5;
   }
 
   .md\:leading-none {
     line-height: 1;
+  }
+
+  .md\:leading-tight {
+    line-height: 1.25;
   }
 
   .md\:text-secondary {

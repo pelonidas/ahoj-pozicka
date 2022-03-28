@@ -53,24 +53,6 @@ nav ul li:hover {
   min-height: 85px;
 }
 
-#home-card-section {
-  margin-bottom: 9rem;
-}
-#home-card-section .offer-bg-l {
-  width: 14%;
-  background-image: url("/images/offer-bg-l.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left -2rem top;
-}
-#home-card-section .offer-bg-r {
-  width: 14%;
-  background-image: url("/images/offer-bg-r.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right -2rem bottom;
-}
-
 #calc-ad-parent {
   max-height: 200px;
 }
@@ -504,6 +486,35 @@ nav ul li:hover {
     background-size: contain;
     right: -2rem;
     top: 7rem;
+  }
+
+  #home-card-section {
+    position: relative;
+    z-index: 2;
+  }
+  #home-card-section::before {
+    width: 15%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-image: url("/images/offer-bg-l.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    top: 0;
+    left: -2%;
+  }
+  #home-card-section::after {
+    width: 15%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-image: url("/images/offer-bg-r.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    top: 0;
+    right: -2%;
   }
 
   #faq #faq-header {

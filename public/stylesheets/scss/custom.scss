@@ -66,25 +66,7 @@ nav {
 }
 
 
-#home-card-section {
-  margin-bottom: 9rem;
 
-  .offer-bg-l {
-    width: 14%;
-    background-image: url("/images/offer-bg-l.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left -2rem top;
-  }
-
-  .offer-bg-r {
-    width: 14%;
-    background-image: url("/images/offer-bg-r.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right -2rem bottom;
-  }
-}
 
 
 
@@ -601,6 +583,39 @@ nav {
       background-size: contain;
       right: -2rem;
       top: 7rem;
+    }
+  }
+
+  #home-card-section {
+    position: relative;
+    z-index: 2;
+
+    &::before {
+
+      width: 15%;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      content: "";
+      background-image: url("/images/offer-bg-l.svg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      top: 0;
+      left: -2%;
+    }
+
+    &::after {
+
+      width: 15%;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      content: "";
+      background-image: url("/images/offer-bg-r.svg");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      top: 0;
+      right: -2%;
     }
   }
 
