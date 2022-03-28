@@ -548,17 +548,31 @@ nav {
   opacity: 1;
 }
 
-#testtt {
+#calculator {
   position: relative;
   z-index: 1;
 
+  #testButton {
+    height: 84px;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
   &::after {
     z-index: -1;
-    height: 300px;
+    top: -6rem;
+    right: -6rem;
+    width: 695px;
     position: absolute;
-    top: 6rem;
-    right: 3rem;
     content: url("/images/home-bg-y.svg");
+  }
+
+  &::before {
+    content: url("/images/bg-y-sm.svg");
+    position: absolute;
+    left: -13rem;
+    bottom: 15rem;
   }
 }
 
@@ -570,18 +584,18 @@ nav {
   background-position: bottom center;
 }
 
-#heroText {
-  position: relative;
-  z-index: 2;
+// #heroText {
+//   position: relative;
+//   z-index: 2;
 
-  &::after {
-    z-index: -1;
-    position: absolute;
-    top: 20rem;
-    right: 0;
-    content: url("/images/bg-y-sm.svg");
-  }
-}
+//   &::after {
+//     z-index: -1;
+//     position: absolute;
+//     top: 20rem;
+//     right: 0;
+//     content: url("/images/bg-y-sm.svg");
+//   }
+// }
 
 #centrala-hero-video {
   position: relative;
@@ -662,9 +676,18 @@ nav {
     right: 0;
   }
 }
+
 #businessSince {
   background: url("/images/calendar.svg") no-repeat scroll center left 7px;
   padding-left:30px;
 }
 
+.hero-h1 {
+  line-height: 72px;
+  max-width: 782px;
+}
 
+.hero-h2 {
+  font-size: 40px;
+  color: #FFFFFF;
+}
