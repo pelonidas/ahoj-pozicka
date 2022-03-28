@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
     <script src="https://kit.fontawesome.com/849a1df6c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="/stylesheets/output.css">
     <link rel="stylesheet" href="/stylesheets/css/custom.css">
     <link rel="stylesheet" href="/stylesheets/css/checkboxStyle.css">
@@ -58,6 +59,9 @@
 <div class="w-full max-w-[92%] md:max-w-[88%] mx-auto my-auto">
     <%- body %>
 </div>
-<!--<script src="/javascripts/formValidator.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    flatpickr('#businessSince', {})
+</script>
 </body>
 </html>

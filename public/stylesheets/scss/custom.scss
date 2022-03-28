@@ -66,80 +66,17 @@ nav {
 }
 
 
-#home-card-section {
-  margin-bottom: 9rem;
 
-  .offer-bg-l {
-    width: 14%;
-    background-image: url("/images/offer-bg-l.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left -2rem top;
-  }
 
-  .offer-bg-r {
-    width: 14%;
-    background-image: url("/images/offer-bg-r.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right -2rem bottom;
-  }
-}
 
-#benefits-section {
-  position: relative;
-  z-index: 2;
-
-  &::after {
-    position: absolute;
-    top: 13rem;
-    z-index: -2;
-    content: url("/images/benefits-bg.svg");
-  }
-
-}
 
 #calc-ad-parent {
   max-height: 200px;
 }
 
-#calc-ad {
-  background-image: url("/images/calcAd-bg.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
 
-#home-about {
-  position: relative;
-  z-index: 1;
 
-  &::before {
-    content: "";
-    z-index: -1;
-    height: 100%;
-    width: 14%;
-    position: absolute;
-    background-image: url("/images/aboutUs-bg-l.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    left: -2rem;
-    top: 7rem;
-  }
 
-  &::after {
-    content: "";
-    z-index: -1;
-    height: 100%;
-    width: 14%;
-    position: absolute;
-    background-image: url("/images/aboutUs-bg-r.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    right: -2rem;
-    top: 7rem;
-  }
-}
 
 
 #find-out-more-section {
@@ -195,19 +132,7 @@ nav {
   }
 }
 
-#faq {
-  margin-top: 7rem;
-  margin-bottom: 7rem;
 
-  #faq-header {
-    height: 170px;
-    width: 100%;
-    background-image: url("/images/faq-top-pasta.svg");
-    background-position: center right;
-    background-repeat: no-repeat;
-    margin-bottom: 3.5rem;
-  }
-}
 
 #contact-section {
   margin-bottom: 7rem;
@@ -233,16 +158,7 @@ nav {
   }
 }
 
-#footer {
-  background-image: url("/images/find-out-bg.svg");
-  background-repeat: no-repeat;
-  background-position: center 5rem;
 
-
-  #dp-text {
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
 
 // Centrala CSS
 
@@ -252,8 +168,6 @@ nav {
 
 
 #centrala-description {
-  margin-bottom: 7rem;
-
   #centrala-descrpition-bg1 {
     background-image: url("/images/centrala-description-bg1.svg");
     background-repeat: no-repeat;
@@ -270,22 +184,7 @@ nav {
   }
 }
 
-#centrala-location {
-  background-image: url("/images/map.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
-  #card-background {
-    border: 1px solid black;
-    background-image: url("/images/map-card-bg.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-
-  }
-
-}
 
 #centrala-personal {
   margin-top: 7rem;
@@ -330,16 +229,6 @@ nav {
 
 //Dofinancovanie
 
-#dofinancovanie-header {
-  .dofinancovanie-right-bg {
-    height: 22rem;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top right;
-
-  }
-}
 
 #ref-top-long {
   height: 200px;
@@ -451,19 +340,7 @@ nav {
 
 // form rejected
 
-#rejected-main {
-  background-image: url("/images/rejected-bg-y.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
 
-#rejected-right {
-  background-image: url("/images/rejected-bg-g.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
 
 // form success
 #form-success {
@@ -548,6 +425,7 @@ nav {
   opacity: 1;
 }
 
+<<<<<<< HEAD
 #calculator {
   position: relative;
   z-index: 1;
@@ -575,6 +453,9 @@ nav {
     bottom: 15rem;
   }
 }
+=======
+
+>>>>>>> refs/remotes/origin/master
 
 .calculator-gray-bg {
   height: 100%;
@@ -584,6 +465,7 @@ nav {
   background-position: bottom center;
 }
 
+<<<<<<< HEAD
 // #heroText {
 //   position: relative;
 //   z-index: 2;
@@ -596,6 +478,9 @@ nav {
 //     content: url("/images/bg-y-sm.svg");
 //   }
 // }
+=======
+
+>>>>>>> refs/remotes/origin/master
 
 #centrala-hero-video {
   position: relative;
@@ -617,36 +502,9 @@ nav {
   }
 }
 
-#centrala-hero-text {
-  position: relative;
-  z-index: 2;
 
-  &::after {
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    content: "";
-    height: 40%;
-    width: 100%;
-    background-image: url("/images/centrala-home-bg1.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
 
-#dofinancovanie-hero-img {
-  position: relative;
-  z-index: 5;
 
-  &::after {
-    z-index: -1;
-    position: absolute;
-    content: url("/images/ref-top-bg.svg");
-    right: -21rem;
-    top: -1rem;
-  }
-}
 
 #main {
   background-image: url("/images/dakujeme-gray.svg");
@@ -682,6 +540,7 @@ nav {
   padding-left:30px;
 }
 
+<<<<<<< HEAD
 .hero-h1 {
   line-height: 72px;
   max-width: 782px;
@@ -693,3 +552,207 @@ nav {
 }
 
 //test
+=======
+#calculator-section {
+  z-index: 1;
+}
+#centrala-location {
+  background-image: url("/images/mobile/map.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #calculator-section {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      z-index: -1;
+      height: 300px;
+      position: absolute;
+      top: 6rem;
+      right: 4rem;
+      content: url("/images/home-bg-y.svg");
+    }
+  }
+
+  #heroText {
+    position: relative;
+    z-index: 1;
+    height: 200px;
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      top: 25rem;
+      right: 2rem;
+      content: url("/images/bg-y-sm.svg");
+    }
+  }
+
+  #card-wrapper {
+    z-index: 2;
+  }
+
+  #benefits-section {
+    position: relative;
+    z-index: 2;
+    &::after {
+      position: absolute;
+      top: 13rem;
+      z-index: -2;
+      content: url("/images/benefits-bg.svg");
+    }
+  }
+
+  #calc-ad {
+    background-image: url("/images/calcAd-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  #home-about {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      z-index: -1;
+      height: 100%;
+      width: 14%;
+      position: absolute;
+      background-image: url("/images/aboutUs-bg-l.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: -2rem;
+      top: 7rem;
+    }
+
+    &::after {
+      content: "";
+      z-index: -1;
+      height: 100%;
+      width: 14%;
+      position: absolute;
+      background-image: url("/images/aboutUs-bg-r.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: -2rem;
+      top: 7rem;
+    }
+  }
+
+  #home-card-section {
+    position: relative;
+    z-index: 2;
+
+    &::before {
+
+      width: 15%;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      content: "";
+      background-image: url("/images/offer-bg-l.svg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain;
+      top: 0;
+      left: -2%;
+    }
+
+    &::after {
+
+      width: 15%;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      content: "";
+      background-image: url("/images/offer-bg-r.svg");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: contain;
+      top: 0;
+      right: -2%;
+    }
+  }
+
+  #faq {
+    #faq-header {
+      height: 170px;
+      width: 100%;
+      background-image: url("/images/faq-top-pasta.svg");
+      background-position: center right;
+      background-repeat: no-repeat;
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  #footer {
+    background-image: url("/images/find-out-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center 5rem;
+  }
+
+  #centrala-hero-text {
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      height: 40%;
+      width: 100%;
+      background-image: url("/images/centrala-home-bg1.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  #centrala-location {
+    background-image: url("/images/map.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    #card-background {
+      background-image: url("/images/map-card-bg.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+
+  #dofinancovanie-hero-img {
+    position: relative;
+    z-index: 5;
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      content: url("/images/ref-top-bg.svg");
+      right: -21rem;
+      top: -1rem;
+    }
+  }
+  #rejected-main {
+    background-image: url("/images/rejected-bg-y.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  #rejected-right {
+    background-image: url("/images/rejected-bg-g.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
+>>>>>>> refs/remotes/origin/master

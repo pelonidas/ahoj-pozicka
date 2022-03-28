@@ -62,6 +62,7 @@ nav ul li:hover {
   min-height: 85px;
 }
 
+<<<<<<< HEAD
 #home-card-section {
   margin-bottom: 9rem;
 }
@@ -94,10 +95,13 @@ nav ul li:hover {
   content: url("/images/benefits-bg.svg");
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 #calc-ad-parent {
   max-height: 200px;
 }
 
+<<<<<<< HEAD
 #calc-ad {
   background-image: url("/images/calcAd-bg.svg");
   background-size: contain;
@@ -136,6 +140,8 @@ nav ul li:hover {
   top: 7rem;
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 #find-out-more-section {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -187,6 +193,7 @@ nav ul li:hover {
   background-position: right;
 }
 
+<<<<<<< HEAD
 #faq {
   margin-top: 7rem;
   margin-bottom: 7rem;
@@ -201,6 +208,8 @@ nav ul li:hover {
   margin-bottom: 3.5rem;
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 #contact-section {
   margin-bottom: 7rem;
 }
@@ -225,6 +234,7 @@ nav ul li:hover {
   resize: none;
 }
 
+<<<<<<< HEAD
 #footer {
   background-image: url("/images/find-out-bg.svg");
   background-repeat: no-repeat;
@@ -235,14 +245,19 @@ nav ul li:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 .no-space {
   font-size: 0;
 }
 
+<<<<<<< HEAD
 #centrala-description {
   margin-bottom: 7rem;
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 #centrala-description #centrala-descrpition-bg1 {
   background-image: url("/images/centrala-description-bg1.svg");
   background-repeat: no-repeat;
@@ -258,6 +273,7 @@ nav ul li:hover {
   background-position: center right;
 }
 
+<<<<<<< HEAD
 #centrala-location {
   background-image: url("/images/map.svg");
   background-repeat: no-repeat;
@@ -273,6 +289,8 @@ nav ul li:hover {
   background-position: right center;
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 #centrala-personal {
   margin-top: 7rem;
 }
@@ -311,14 +329,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-}
-
-#dofinancovanie-header .dofinancovanie-right-bg {
-  height: 22rem;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top right;
 }
 
 #ref-top-long {
@@ -418,20 +428,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
 }
 
-#rejected-main {
-  background-image: url("/images/rejected-bg-y.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-#rejected-right {
-  background-image: url("/images/rejected-bg-g.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
 #form-success .bg-y {
   width: 10%;
   background-size: contain;
@@ -512,6 +508,7 @@ nav ul li:hover {
   opacity: 1;
 }
 
+<<<<<<< HEAD
 #calculator {
   position: relative;
   z-index: 1;
@@ -540,6 +537,8 @@ nav ul li:hover {
   bottom: 15rem;
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 .calculator-gray-bg {
   height: 100%;
   background-image: url("/images/gray-top-home.svg");
@@ -568,6 +567,7 @@ nav ul li:hover {
   background-position: center right;
 }
 
+<<<<<<< HEAD
 #centrala-hero-text {
   position: relative;
   z-index: 2;
@@ -599,6 +599,8 @@ nav ul li:hover {
   top: -1rem;
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 #main {
   background-image: url("/images/dakujeme-gray.svg");
   background-repeat: no-repeat;
@@ -633,6 +635,7 @@ nav ul li:hover {
   padding-left: 30px;
 }
 
+<<<<<<< HEAD
 .hero-h1 {
   line-height: 72px;
   max-width: 782px;
@@ -643,3 +646,198 @@ nav ul li:hover {
   color: #FFFFFF;
 }
 /*# sourceMappingURL=custom.css.map */
+=======
+#calculator-section {
+  z-index: 1;
+}
+
+#centrala-location {
+  background-image: url("/images/mobile/map.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #calculator-section {
+    position: relative;
+    z-index: 1;
+  }
+  #calculator-section::after {
+    z-index: -1;
+    height: 300px;
+    position: absolute;
+    top: 6rem;
+    right: 4rem;
+    content: url("/images/home-bg-y.svg");
+  }
+
+  #heroText {
+    position: relative;
+    z-index: 1;
+    height: 200px;
+  }
+  #heroText::after {
+    z-index: -1;
+    position: absolute;
+    top: 25rem;
+    right: 2rem;
+    content: url("/images/bg-y-sm.svg");
+  }
+
+  #card-wrapper {
+    z-index: 2;
+  }
+
+  #benefits-section {
+    position: relative;
+    z-index: 2;
+  }
+  #benefits-section::after {
+    position: absolute;
+    top: 13rem;
+    z-index: -2;
+    content: url("/images/benefits-bg.svg");
+  }
+
+  #calc-ad {
+    background-image: url("/images/calcAd-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  #home-about {
+    position: relative;
+    z-index: 1;
+  }
+  #home-about::before {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 14%;
+    position: absolute;
+    background-image: url("/images/aboutUs-bg-l.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -2rem;
+    top: 7rem;
+  }
+  #home-about::after {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 14%;
+    position: absolute;
+    background-image: url("/images/aboutUs-bg-r.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -2rem;
+    top: 7rem;
+  }
+
+  #home-card-section {
+    position: relative;
+    z-index: 2;
+  }
+  #home-card-section::before {
+    width: 15%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-image: url("/images/offer-bg-l.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    top: 0;
+    left: -2%;
+  }
+  #home-card-section::after {
+    width: 15%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-image: url("/images/offer-bg-r.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    top: 0;
+    right: -2%;
+  }
+
+  #faq #faq-header {
+    height: 170px;
+    width: 100%;
+    background-image: url("/images/faq-top-pasta.svg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    margin-bottom: 3.5rem;
+  }
+
+  #footer {
+    background-image: url("/images/find-out-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center 5rem;
+  }
+
+  #centrala-hero-text {
+    position: relative;
+    z-index: 2;
+  }
+  #centrala-hero-text::after {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 40%;
+    width: 100%;
+    background-image: url("/images/centrala-home-bg1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #centrala-location {
+    background-image: url("/images/map.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #centrala-location #card-background {
+    background-image: url("/images/map-card-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+  }
+
+  #dofinancovanie-hero-img {
+    position: relative;
+    z-index: 5;
+  }
+  #dofinancovanie-hero-img::after {
+    z-index: -1;
+    position: absolute;
+    content: url("/images/ref-top-bg.svg");
+    right: -21rem;
+    top: -1rem;
+  }
+
+  #rejected-main {
+    background-image: url("/images/rejected-bg-y.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  #rejected-right {
+    background-image: url("/images/rejected-bg-g.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
+
+/*# sourceMappingURL=custom.css.map */
+>>>>>>> refs/remotes/origin/master
