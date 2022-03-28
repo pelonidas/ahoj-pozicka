@@ -1113,6 +1113,10 @@ select {
   margin-bottom: 4.5rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -1193,6 +1197,10 @@ select {
 
 .h-\[45rem\] {
   height: 45rem;
+}
+
+.h-\[268px\] {
+  height: 268px;
 }
 
 .max-h-\[170px\] {
@@ -1580,6 +1588,11 @@ select {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(252 200 0 / var(--tw-bg-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .bg-none {
@@ -1992,6 +2005,10 @@ select {
 
 .leading-none {
   line-height: 1;
+}
+
+.leading-\[72px\] {
+  line-height: 72px;
 }
 
 .text-white {
@@ -2904,5 +2921,70 @@ select {
 @media (min-width: 1024px) {
   .lg\:ml-8 {
     margin-left: 2rem;
+  }
+
+  .lg\:mr-20 {
+    margin-right: 5rem;
+  }
+
+  .lg\:mb-28 {
+    margin-bottom: 7rem;
+  }
+
+  .lg\:mt-\[2rem\] {
+    margin-top: 2rem;
+  }
+
+  .lg\:mt-\[4rem\] {
+    margin-top: 4rem;
+  }
+
+  .lg\:max-w-\[665px\] {
+    max-width: 665px;
+  }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .lg\:px-11 {
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .lg\:pl-\[4rem\] {
+    padding-left: 4rem;
+  }
+
+  .lg\:text-\[4rem\] {
+    font-size: 4rem;
+  }
+
+  .lg\:text-\[2\.5rem\] {
+    font-size: 2.5rem;
+  }
+
+  .lg\:leading-\[72px\] {
+    line-height: 72px;
+  }
+
+  .lg\:leading-\[44px\] {
+    line-height: 44px;
   }
 }
