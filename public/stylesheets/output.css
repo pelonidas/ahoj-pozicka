@@ -3130,6 +3130,10 @@ select {
     max-width: 400px;
   }
 
+  .lg\:max-w-full {
+    max-width: 100%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
