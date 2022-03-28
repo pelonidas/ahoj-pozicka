@@ -792,6 +792,19 @@ select {
   color: rgb(34 49 70 / 0.3);
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 92%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
 .absolute {
   position: absolute;
 }
@@ -868,6 +881,11 @@ select {
   margin-right: 0.5rem;
 }
 
+.my-\[5rem\] {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -881,16 +899,6 @@ select {
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.my-\[4rem\] {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-.my-\[5rem\] {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .mb-7 {
@@ -1065,10 +1073,6 @@ select {
   margin-right: 6rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1089,8 +1093,8 @@ select {
   margin-right: 1rem;
 }
 
-.mr-12 {
-  margin-right: 3rem;
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .mt-\[10rem\] {
@@ -1107,22 +1111,6 @@ select {
 
 .mb-\[4\.5rem\] {
   margin-bottom: 4.5rem;
-}
-
-.ml-\[1rem\] {
-  margin-left: 1rem;
-}
-
-.ml-\[2rem\] {
-  margin-left: 2rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .block {
@@ -1287,6 +1275,10 @@ select {
   width: 175px;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .w-20 {
   width: 5rem;
 }
@@ -1307,10 +1299,6 @@ select {
   width: 73%;
 }
 
-.w-11\/12 {
-  width: 91.666667%;
-}
-
 .w-24 {
   width: 6rem;
 }
@@ -1323,28 +1311,18 @@ select {
   width: 1.5rem;
 }
 
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[55\%\] {
-  width: 55%;
-}
-
-.w-min {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-
 .w-max {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[55\%\] {
+  width: 55%;
 }
 
 .max-w-\[92\%\] {
@@ -1371,6 +1349,10 @@ select {
   max-width: 10.5rem;
 }
 
+.max-w-\[1620px\] {
+  max-width: 1620px;
+}
+
 .max-w-\[80\%\] {
   max-width: 80%;
 }
@@ -1391,24 +1373,12 @@ select {
   max-width: 35%;
 }
 
-.max-w-\[70\%\] {
-  max-width: 70%;
-}
-
-.max-w-\[60\%\] {
-  max-width: 60%;
-}
-
-.max-w-\[100px\] {
-  max-width: 100px;
-}
-
-.max-w-\[\] {
-  max-width: ;
-}
-
 .max-w-\[60px\] {
   max-width: 60px;
+}
+
+.max-w-\[70\%\] {
+  max-width: 70%;
 }
 
 .translate-y-3\/4 {
@@ -1500,12 +1470,12 @@ select {
   gap: 1.25rem;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .overflow-y-hidden {
@@ -1657,14 +1627,6 @@ select {
   padding: 2rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-9 {
-  padding: 2.25rem;
-}
-
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -1720,9 +1682,9 @@ select {
   padding-bottom: 0.5rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.py-\[2rem\] {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .py-1\.5 {
@@ -1778,11 +1740,6 @@ select {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}
-
-.py-\[2rem\] {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .pt-20 {
@@ -1993,10 +1950,6 @@ select {
   font-size: 2rem;
 }
 
-.text-\[1\.35rem\] {
-  font-size: 1.35rem;
-}
-
 .text-\[1\.75rem\] {
   font-size: 1.75rem;
 }
@@ -2039,14 +1992,6 @@ select {
 
 .leading-none {
   line-height: 1;
-}
-
-.leading-loose {
-  line-height: 2;
-}
-
-.leading-normal {
-  line-height: 1.5;
 }
 
 .text-white {
@@ -2413,6 +2358,14 @@ select {
     margin-left: 1.5rem;
   }
 
+  .md\:mb-\[9rem\] {
+    margin-bottom: 9rem;
+  }
+
+  .md\:ml-0 {
+    margin-left: 0px;
+  }
+
   .md\:mr-8 {
     margin-right: 2rem;
   }
@@ -2427,14 +2380,6 @@ select {
 
   .md\:ml-24 {
     margin-left: 6rem;
-  }
-
-  .md\:mb-\[9rem\] {
-    margin-bottom: 9rem;
-  }
-
-  .md\:ml-0 {
-    margin-left: 0px;
   }
 
   .md\:block {
@@ -2469,12 +2414,12 @@ select {
     height: 66.666667%;
   }
 
-  .md\:h-\[242px\] {
-    height: 242px;
-  }
-
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:h-\[242px\] {
+    height: 242px;
   }
 
   .md\:h-\[70px\] {
@@ -2581,14 +2526,6 @@ select {
     width: 400px;
   }
 
-  .md\:w-\[15\%\] {
-    width: 15%;
-  }
-
-  .md\:w-\[100px\] {
-    width: 100px;
-  }
-
   .md\:max-w-\[75\%\] {
     max-width: 75%;
   }
@@ -2635,14 +2572,6 @@ select {
 
   .md\:max-w-\[665px\] {
     max-width: 665px;
-  }
-
-  .md\:max-w-\[70\%\] {
-    max-width: 70%;
-  }
-
-  .md\:max-w-\[65\%\] {
-    max-width: 65%;
   }
 
   .md\:max-w-\[100px\] {
@@ -2778,6 +2707,11 @@ select {
     padding-bottom: 4rem;
   }
 
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .md\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -2803,19 +2737,14 @@ select {
     padding-bottom: 2.5rem;
   }
 
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
   .md\:py-\[2\.5rem\] {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:pb-32 {
@@ -2874,12 +2803,12 @@ select {
     padding-right: 5rem;
   }
 
-  .md\:pl-14 {
-    padding-left: 3.5rem;
-  }
-
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:align-middle {
+    vertical-align: middle;
   }
 
   .md\:text-5xl {
@@ -2929,16 +2858,16 @@ select {
     line-height: 1rem;
   }
 
-  .md\:text-\[2rem\] {
-    font-size: 2rem;
-  }
-
   .md\:text-\[1\.25rem\] {
     font-size: 1.25rem;
   }
 
-  .md\:text-\[35px\] {
-    font-size: 35px;
+  .md\:text-\[1rem\] {
+    font-size: 1rem;
+  }
+
+  .md\:text-\[2\.25rem\] {
+    font-size: 2.25rem;
   }
 
   .md\:text-\[1\.125rem\] {
@@ -2949,28 +2878,12 @@ select {
     font-size: 1.5rem;
   }
 
-  .md\:text-\[1rem\] {
-    font-size: 1rem;
-  }
-
-  .md\:text-\[2\.8rem\] {
-    font-size: 2.8rem;
-  }
-
-  .md\:text-\[2\.25rem\] {
-    font-size: 2.25rem;
-  }
-
   .md\:leading-normal {
     line-height: 1.5;
   }
 
   .md\:leading-none {
     line-height: 1;
-  }
-
-  .md\:leading-tight {
-    line-height: 1.25;
   }
 
   .md\:text-secondary {

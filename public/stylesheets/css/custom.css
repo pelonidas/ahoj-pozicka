@@ -1,26 +1,18 @@
-html,
-body {
+html, body {
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 nav ul {
-  -webkit-transition-property: height;
   transition-property: height;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
-
 nav ul li:hover {
-  -webkit-transition-property: border;
   transition-property: border;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 #home-top .bg-y-sm {
@@ -29,11 +21,9 @@ nav ul li:hover {
   background-size: 8rem;
   background-position: right bottom;
 }
-
 #home-top .home-calc {
   min-height: 100%;
 }
-
 #home-top .bg-top-g {
   background-image: url("/images/bg-gray.svg");
   background-size: contain;
@@ -78,14 +68,12 @@ nav ul li:hover {
 #products-section {
   margin-bottom: 7rem;
 }
-
 #products-section .products-bg {
   background-image: url("/images/products-red-pasta.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
 }
-
 #products-section #zine {
   max-width: 8rem !important;
 }
@@ -99,7 +87,6 @@ nav ul li:hover {
   width: 100%;
   margin-bottom: 7rem;
 }
-
 #reviews-section #leftSide {
   height: 100%;
   width: 18%;
@@ -108,7 +95,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-position: -20px center;
 }
-
 #reviews-section #content {
   padding-right: 15%;
   height: 100%;
@@ -121,7 +107,6 @@ nav ul li:hover {
 #contact-section {
   margin-bottom: 7rem;
 }
-
 #contact-section #contact-left {
   width: 100%;
   height: 700px;
@@ -130,14 +115,12 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-position: -20px center;
 }
-
 #contact-section #contact-form {
   background-image: url("/images/contact-right-pasta.svg");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: auto 80%;
 }
-
 #contact-section #contact-form textarea {
   resize: none;
 }
@@ -152,7 +135,6 @@ nav ul li:hover {
   background-size: contain;
   background-position: -1rem center;
 }
-
 #centrala-description #centrala-description-bg2 {
   background-image: url("/images/centrala-description-bg2.svg");
   height: 100%;
@@ -164,7 +146,6 @@ nav ul li:hover {
 #centrala-personal {
   margin-top: 7rem;
 }
-
 #centrala-personal #left-personal {
   width: 13%;
   background-image: url("/images/personal-bg.svg");
@@ -172,11 +153,9 @@ nav ul li:hover {
   background-size: contain;
   background-position: center left;
 }
-
 #centrala-personal #personal-content {
   width: 74%;
 }
-
 #centrala-personal #right-personal {
   width: 13%;
   background-image: url("/images/personal-bg.svg");
@@ -193,7 +172,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 #centrala-contact #contact-right {
   background-image: url("/images/map-card-bg.svg");
   background-repeat: no-repeat;
@@ -220,11 +198,9 @@ nav ul li:hover {
   margin-bottom: 7rem;
   width: 100%;
 }
-
 #dofinancovanie-form #form-content textarea {
   resize: none;
 }
-
 #dofinancovanie-form #form-right {
   width: 15%;
   background-size: contain;
@@ -232,7 +208,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-position: right center;
 }
-
 #dofinancovanie-form #form-left {
   width: 15%;
   background-size: contain;
@@ -268,14 +243,12 @@ nav ul li:hover {
 #contact-section-map {
   margin-bottom: 7rem;
 }
-
 #contact-section-map #contact-map {
   background-image: url("/images/contact-map-bg-l.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
 }
-
 #contact-section-map #contact-right {
   width: 100%;
   background-image: url("/images/contact-map-bg-r.svg");
@@ -304,14 +277,12 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-image: url("/images/form-success-ybg.svg");
 }
-
 #form-success .bg-g {
   background-size: contain;
   background-position: center right;
   background-repeat: no-repeat;
   background-image: url("/images/form-success-gbg.svg");
 }
-
 #form-success .content {
   width: 90%;
 }
@@ -336,17 +307,10 @@ nav ul li:hover {
   overflow: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 }
-
 .ReviewsWrapper .review {
   padding-left: 2rem;
   min-width: 22rem;
@@ -360,50 +324,19 @@ nav ul li:hover {
   right: 1rem;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .fa-check {
   right: 1rem;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .offerContainer:hover .offerArrow {
-  -webkit-transition: opacity ease-in-out 0.2s;
   transition: opacity ease-in-out 0.2s;
   opacity: 1;
-}
-
-#calculator {
-  position: relative;
-  z-index: 1;
-}
-
-#calculator #testButton {
-  height: 84px;
-  font-size: 24px;
-  color: #ffffff;
-  text-align: center;
-}
-
-#calculator::after {
-  z-index: -1;
-  top: -6rem;
-  right: -6rem;
-  width: 695px;
-  position: absolute;
-  content: url("/images/home-bg-y.svg");
-}
-
-#calculator::before {
-  content: url("/images/bg-y-sm.svg");
-  position: absolute;
-  left: -13rem;
-  bottom: 15rem;
 }
 
 .calculator-gray-bg {
@@ -418,7 +351,6 @@ nav ul li:hover {
   position: relative;
   z-index: 5;
 }
-
 #centrala-hero-video::after {
   z-index: -1;
   position: absolute;
@@ -445,7 +377,6 @@ nav ul li:hover {
   position: relative;
   z-index: 3;
 }
-
 .dakujeme::after {
   z-index: -1;
   position: absolute;
@@ -468,62 +399,218 @@ nav ul li:hover {
   padding-left: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .hero-wrapper {
-    padding: 0 1rem;
-  }
-  #calculator::before {
-    content: unset;
-  }
-  #calculator::after {
-    content: unset;
-  }
+#calculator-section {
+  z-index: 1;
 }
 
-@media screen and (min-width: 768px) {
-  .hero-h1 {
+#centrala-location {
+  background-image: url("/images/mobile/map.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #calculator-section {
+    position: relative;
+    z-index: 1;
+  }
+  #calculator-section::after {
+    z-index: -1;
+    height: 300px;
+    position: absolute;
+    top: 6rem;
+    right: 4rem;
+    content: url("/images/home-bg-y.svg");
+  }
+
+  #heroText {
+    position: relative;
+    z-index: 1;
+    height: 200px;
+  }
+  #heroText .hero-h1 {
     line-height: 72px;
     max-width: 782px;
   }
-  .hero-h2 {
+  #heroText .hero-h2 {
     font-size: 40px;
-    color: #ffffff;
-  }
-  .hero-wrapper {
-    max-width: 1620px;
-  }
-  #mainHeader {
-    max-width: 1620px;
-  }
-  #offerWrapper {
-    max-width: 1260px;
-  }
-  #benefitsWrapper {
-    max-width: 1260px;
-  }
-  #calc-ad {
-    max-width: 1440px;
-  }
-  #homeAboutWrapper {
-    max-width: 1260px;
-  }
-  #cardsAboutusWrapper {
-    max-width: 1440px;
-  }
-  #find-out-more-section {
-    background-size: contain;
-  }
-  #faqWrapper {
-    max-width: 1260px;
-  }
-  #footerWrapper {
-    max-width: 1440px;
-  }
-  #homeAboutWrapper {
-    padding: 0 2rem;
-  }
-  #calc-ad > div {
-    padding: 2rem;
+    color: #FFFFFF;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  #heroText::after {
+    z-index: -1;
+    position: absolute;
+    top: 25rem;
+    right: 2rem;
+    content: url("/images/bg-y-sm.svg");
+  }
+}
+@media (min-width: 768px) {
+  #heroText #card-wrapper {
+    z-index: 2;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #benefits-section {
+    position: relative;
+    z-index: 2;
+  }
+  #heroText #benefits-section::after {
+    position: absolute;
+    top: 13rem;
+    z-index: -2;
+    content: url("/images/benefits-bg.svg");
+  }
+}
+@media (min-width: 768px) {
+  #heroText #calc-ad {
+    background-image: url("/images/calcAd-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #home-about {
+    position: relative;
+    z-index: 1;
+  }
+  #heroText #home-about::before {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 14%;
+    position: absolute;
+    background-image: url("/images/aboutUs-bg-l.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -2rem;
+    top: 7rem;
+  }
+  #heroText #home-about::after {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 14%;
+    position: absolute;
+    background-image: url("/images/aboutUs-bg-r.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -2rem;
+    top: 7rem;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #home-card-section {
+    position: relative;
+    z-index: 2;
+  }
+  #heroText #home-card-section::before {
+    width: 15%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-image: url("/images/offer-bg-l.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    top: 0;
+    left: -2%;
+  }
+  #heroText #home-card-section::after {
+    width: 15%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-image: url("/images/offer-bg-r.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    top: 0;
+    right: -2%;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #faq #faq-header {
+    height: 170px;
+    width: 100%;
+    background-image: url("/images/faq-top-pasta.svg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    margin-bottom: 3.5rem;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #footer {
+    background-image: url("/images/find-out-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center 5rem;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #centrala-hero-text {
+    position: relative;
+    z-index: 2;
+  }
+  #heroText #centrala-hero-text::after {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 40%;
+    width: 100%;
+    background-image: url("/images/centrala-home-bg1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #centrala-location {
+    background-image: url("/images/map.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #heroText #centrala-location #card-background {
+    background-image: url("/images/map-card-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #dofinancovanie-hero-img {
+    position: relative;
+    z-index: 5;
+  }
+  #heroText #dofinancovanie-hero-img::after {
+    z-index: -1;
+    position: absolute;
+    content: url("/images/ref-top-bg.svg");
+    right: -21rem;
+    top: -1rem;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #rejected-main {
+    background-image: url("/images/rejected-bg-y.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
+@media (min-width: 768px) {
+  #heroText #rejected-right {
+    background-image: url("/images/rejected-bg-g.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
+
 /*# sourceMappingURL=custom.css.map */

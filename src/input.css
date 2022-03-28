@@ -30,4 +30,7 @@
     .placeholder-default {
         @apply placeholder:text-[1rem] placeholder:text-secondary/30 placeholder:font-bold placeholder:leading-none;
     }
+    .container {
+        @apply w-full max-w-[92%] lg:max-w-[1440px] mx-auto;
+    }
 }
