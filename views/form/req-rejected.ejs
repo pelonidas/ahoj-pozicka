@@ -24,19 +24,25 @@
         </div>
     </nav>
 </header>
-<main class="md:h-2/3 w-full max-w-[92%] md:max-w-full md:my-auto text-white mx-auto md:mx-0" id="rejected-main">
-    <div class="flex flex-col md:flex-row h-full">
+<main class="h-full md:h-2/3 w-full max-w-[92%] md:max-w-full md:my-auto text-white mx-auto md:mx-0" id="rejected-main">
+    <div class="flex flex-col justify-between md:flex-row md:h-full">
         <div class="md:grid grid-cols-8 w-full">
             <div class="my-auto col-span-3 ">
-                <h2 class="text-[2.3rem] md:text-5xl md:w-3/4 md:ml-auto md:pl-12">Žiadosť bola zamietnutá</h2>
+                <h2 class="leading-none md:leading-normal text-[2.3rem] md:text-5xl md:w-3/4 md:ml-auto md:pl-12 my-[5rem] text-center md:text-left md:my-0">Žiadosť bola <span class="text-primary">zamietnutá</span></h2>
             </div>
-            <div class="my-auto col-span-5 py-12 w-full" id="rejected-right">
-               <p class="md:py-5 md:border-l-2 md:pl-5 md:w-2/3 text-2xl border-t-2 md:border-t-0">
+            <div class="my-auto col-span-5 md:py-12 w-full" id="rejected-right">
+               <p class="text-[1.25rem] w-11/12 md:w-full text-center md:text-left font-light md:py-5 md:border-l-2 md:pl-5 md:w-2/3 md:text-2xl border-t-2 md:border-t-0 py-[2rem]">
                    Vzhľadom na vami zadané údaje vám momentálne nevieme poskytnúť pôžičku.
                </p>
             </div>
         </div>
+        <div class="md:hidden flex h-[13.75rem] w-full items-center bg-[url('/images/mobile/form-success-background.svg')] bg-contain bg-no-repeat bg-center">
+            <a href="/" class="h-[3.125rem] w-full  max-w-[10.5rem] border-2 border-dRed mx-auto flex items-center justify-center rounded-[10px] text-white">
+                <span>Späť na stránku</span>
+            </a>
+        </div>
     </div>
+
 </main>
 </body>
 </html>
