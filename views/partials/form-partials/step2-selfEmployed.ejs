@@ -1,9 +1,10 @@
 <section id="step1-body" class="my-auto pb-28 w-full md:max-w-[85%] ml-auto">
     <div class="md:w-1/5">
-        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 6min</span></p>
+        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span
+                    class="text-primary font-medium">menej než 6min</span></p>
         <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
             <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
-            <img src="/images/clock.svg" alt="" class="w-5 mx-2">
+            <img src="/images/clock.svg" alt="" class="w-5 mx-2" id="test">
             <p class="text-primary leading-none">6min</p>
         </div>
     </div>
@@ -125,7 +126,7 @@
             <h2 class="text-5xl mb-5">Máš záujem o</h2>
             <p class="text-[1rem]">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span><br>
                 s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span> <br>
-                a mesačnou splátkou <span class="text-primary"><%=formData.calcData.interest %> €</span></p>
+                a mesačnou splátkou <span class="text-primary"><%= formData.calcData.interest %> €</span></p>
             <h3 class="text-4xl mb-2">Osobné údaje</h3>
             <div class="mb-2">
                 <i class="fa-solid fa-minus"></i> Volam sa <span
@@ -152,11 +153,13 @@
     </div>
 </section>
 <script>
+
+
     const form2v2 = document.querySelector('#form2v2')
-    const businessSince = document.querySelector('#businessSince'
-    )
+    const businessSince = document.querySelector('#businessSince')
+    
     form2v2.addEventListener('submit', (e) => {
-        const businessSinceValidation = validateInput(businessSince)
+
         const companyNameValidation = validateInput(companyName)
         const icoValidation = validateInput(ico)
         const companyStreetValidation = validateInput(companyStreet)
@@ -165,7 +168,7 @@
         const januaryValidation = validateInput(january)
         const februaryValidation = validateInput(february)
         const marchValidation = validateInput(march)
-        if (!businessSinceValidation || !companyNameValidation || !companyStreetValidation || !icoValidation || !companyStreetValidation || !cityValidation || !pscValidation || !januaryValidation || !februaryValidation || !marchValidation) {
+        if (!companyNameValidation || !companyStreetValidation || !icoValidation || !companyStreetValidation || !cityValidation || !pscValidation || !januaryValidation || !februaryValidation || !marchValidation) {
             e.preventDefault()
         }
     })
