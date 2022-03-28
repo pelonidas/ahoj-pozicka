@@ -1,6 +1,6 @@
 <% layout('./layouts/boilerplate') %>
 <section class="bg-secondary text-white py-20">
-    <div class="w-full lg:max-w-[1620px] mx-auto flex flex-col md:grid grid-cols-5">
+    <div class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto flex flex-col md:grid grid-cols-5">
         <div class="col-span-2" id="centrala-hero-text">
             <div class="md:w-2/3 mb-[4rem]">
                 <h4 class="text-[1.25rem] md:text-[1.75rem] mb-6 font-light">Sídlime v <span class="text-primary">lokalite:</span>
@@ -19,57 +19,59 @@
         </div>
     </div>
 </section>
-<section class="container lg:my-28 flex border lg:justify-between">
-    <div class="flex flex-col w-full lg:max-w-[325px] my-auto lg:ml-[5rem]">
-        <h2 class="lg:text-[4rem] font-medium">Centrála</h2>
-        <p class="font-text lg:leading-[28px] lg:text-[1.25rem] mr-5">
+<section class="container mb-[3.5rem] lg:my-28 flex flex-col lg:flex-row border lg:justify-between">
+    <div class="flex flex-col lg:max-w-[325px] lg:justify-center lg:ml-[5rem] my-[2.5rem] lg:mb-0">
+        <h2 class="text-center md:text-left text-[2.5rem] lg:text-[4rem] font-medium">Centrála</h2>
+        <p class="text-[1.125rem] text-center md:text-left font-text lg:leading-[28px] lg:text-[1.25rem] mr-5">
             Nadštandardná forma starostlivosti. Náš tím expertov je vám k dispozícii <span class="font-bold">v pracovné dni od 8:00 do 17:00.</span>
             Poskytneme Vám kompletný servis od žiadosti o pôžičku až po jej schválenie. Čo je pre nás dôležité? Spokojný
             zákazníci!
         </p>
     </div>
-    <img src="/images/centrala-gallery/img1.png" alt="">
+    <img src="/images/centrala-gallery/img1.png" alt="" class="mb-[2rem] lg:mb-0">
     <img src="/images/centrala-gallery/img2.png" alt="">
 </section>
-<section class="w-full lg:max-w-[1920px] lg:h-[650px] lg:bg-[url('/images/centrala-mapa/map.png')] mx-auto flex">
-    <div class="bg-white rounded-[10px] w-full lg:max-w-[840px] lg:h-[400px] m-auto lg:mr-[5rem] flex lg:flex-col justify-center lg:pl-[4rem]">
-        <h2 class="lg:text-[4rem] font-medium lg:leading-[72px]">Navštívte nás</h2>
-        <h3 class="lg:text-[2.5rem] lg:leading-[44px] lg:mb-10">Pre viac informácií</h3>
-        <div class="flex font-bold lg:text-[1.5rem] lg:mb-6">
-            <img src="/images/icons/location.svg" alt="">
-            <span class="ml-5">Fejova 1, 040 01 Košice</span>
+<section class="w-full lg:max-w-[1920px] h-[520px] lg:h-[650px] bg-[url('/images/centrala-mapa/map-mobile.png')] md:bg-[url('/images/centrala-mapa/map.png')] mx-auto flex">
+    <div class="bg-white rounded-[10px] w-full max-w-[380px] lg:max-w-[840px] h-[390px] lg:h-[400px] m-auto lg:mr-[5rem] flex flex-col justify-around md:justify-center lg:pl-[4rem] py-[2.5rem] md:py-0">
+        <div>
+            <h2 class="text-center lg:text-left text-[2.5rem] lg:text-[4rem] font-medium leading-[44px] lg:leading-[72px] mb-4 md:mb-0">Navštívte nás</h2>
+            <h3 class="text-center lg:text-left text-[1.5rem] lg:text-[2.5rem] lg:leading-[44px] lg:mb-10">Pre viac informácií</h3>
         </div>
-        <div class="flex font-bold lg:text-[1.5rem]">
-            <img src="/images/icons/clock.svg" alt="">
-            <span class="ml-5">Pondelok - Piatok, 8:00 - 17:00</span>
+        <div>
+            <div class="w-full max-w-[335px] mx-auto flex font-bold lg:text-[1.5rem] mb-4 lg:mb-6">
+                <img src="/images/icons/location.svg" alt="">
+                <span class="ml-5 text-[1rem]">Fejova 1, 040 01 Košice</span>
+            </div>
+            <div class="w-full max-w-[335px] mx-auto flex font-bold lg:text-[1.5rem]">
+                <img src="/images/icons/clock.svg" alt="">
+                <span class="ml-5 text-[1rem]">Pondelok - Piatok, 8:00 - 17:00</span>
+            </div>
         </div>
+        <img src="/images/centrala-mapa/map-card-bg.svg" alt="" class="w-full max-w-[290px] md:hidden mx-auto">
     </div>
 </section>
-
-
 <%- include('./partials/personal') %>
-<section id="centrala-contact">
-    <div class="w-full max-w-[92%] md:max-w-[75%] flex flex-col md:grid md:grid-cols-5 bg-white mx-auto px-6 py-16 md:py-0 md:px-0 md:p-24 rounded-[10px] drop-shadow-xl">
-        <div class="md:col-span-2">
-            <h2 class="text-[2.25rem] md:text-6xl mb-[1rem] md:mb-4 font-medium text-center md:text-left">Kontaktujte
-                nás</h2>
-            <p class="w-2/3 md:w-full mx-auto text-[1.5rem] text-center md:text-left">V pracovné dni od 8:00 do
-                17:00</p>
-        </div>
-        <div class="col-span-2 mx-auto">
-            <div class="flex items-center mt-10">
-                <img src="/images/contact-call.svg" alt="" class="w-8">
-                <span class="ml-5 md:ml-7 text-[1.25rem] font-bold">+421 918 709 028</span>
-            </div>
-            <div class="flex items-center mt-5">
-                <img src="/images/contact-mail.svg" alt="" class="w-8">
-                <span class="ml-5 md:ml-7 text-[1.25rem] font-bold">info@bestpozicky.sk</span>
-            </div>
-            <div class="flex items-center mt-5">
-                <img src="/images/contact-location.svg" alt="" class="w-8">
-                <span class="ml-5 md:ml-7 text-[1.25rem] font-bold">Fejova 1, 040 01 Košice</span>
-            </div>
-        </div>
-        <div class="col-span-1" id="contact-right"></div>
+<section class="container flex lg:justify-between border lg:px-[5rem] bg-white rounded-[10px] lg:py-[4rem] lg:my-28 lg:drop-shadow-[9px_10px_50px_rgba(0,0,0,0.20)]">
+    <div class="w-full lg:max-w-[400px] my-auto">
+        <h2 class="lg:text-[4rem] lg:leading-[72px]">Kontaktujte nás</h2>
+        <p class="lg:text-[1.5rem]">V pracovné dni od 8:00 do 17:00</p>
     </div>
+    <div class="w-full lg:max-w-[400px] my-auto">
+        <div class="flex lg:mb-4">
+            <img src="/images/icons/call.svg" alt=""  class="w-full max-w-[45px] lg:mr-6">
+            <h5 class="font-bold lg:text-[1.75rem]">+421 918 709 028</h5>
+        </div>
+        <div class="flex lg:mb-4">
+            <img src="/images/icons/mail.svg" alt="" class="w-full max-w-[45px] lg:mr-6">
+            <h5 class="font-bold lg:text-[1.75rem]">info@bestpozicky.sk</h5>
+        </div>
+        <div class="flex">
+            <img src="/images/icons/location.svg" alt="" class="w-full max-w-[45px] lg:mr-6">
+            <h5 class="font-bold lg:text-[1.75rem]">Fejova 1, 040 01 Košice</h5>
+        </div>
+    </div>
+    <img src="/images/centrala-contact/bg.svg" alt="" class="w-full max-w-[165px]">
 </section>
+<!--background: #FFFFFF;
+box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.20);
+border-radius: 10px;-->

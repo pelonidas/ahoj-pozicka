@@ -164,21 +164,6 @@ nav ul li:hover {
   background-position: center right;
 }
 
-#centrala-contact {
-  margin-bottom: 7rem;
-  margin-top: 7rem;
-  background-image: url("/images/centrala-contact-bg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-#centrala-contact #contact-right {
-  background-image: url("/images/map-card-bg.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-}
-
 #ref-top-long {
   height: 200px;
   background-image: url("/images/find-out-bg.svg");
