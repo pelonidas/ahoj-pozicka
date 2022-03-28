@@ -358,19 +358,7 @@ nav {
 
 // form rejected
 
-#rejected-main {
-  background-image: url("/images/rejected-bg-y.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
 
-#rejected-right {
-  background-image: url("/images/rejected-bg-g.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
 
 // form success
 #form-success {
@@ -676,5 +664,18 @@ nav {
       right: -21rem;
       top: -1rem;
     }
+  }
+  #rejected-main {
+    background-image: url("/images/rejected-bg-y.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  #rejected-right {
+    background-image: url("/images/rejected-bg-g.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
   }
 }

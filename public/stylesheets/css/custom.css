@@ -289,20 +289,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
 }
 
-#rejected-main {
-  background-image: url("/images/rejected-bg-y.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-#rejected-right {
-  background-image: url("/images/rejected-bg-g.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
 #form-success .bg-y {
   width: 10%;
   background-size: contain;
@@ -575,6 +561,20 @@ nav ul li:hover {
     content: url("/images/ref-top-bg.svg");
     right: -21rem;
     top: -1rem;
+  }
+
+  #rejected-main {
+    background-image: url("/images/rejected-bg-y.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  #rejected-right {
+    background-image: url("/images/rejected-bg-g.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
   }
 }
 
