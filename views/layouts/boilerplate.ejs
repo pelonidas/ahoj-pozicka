@@ -35,10 +35,16 @@
     const logo = document.querySelector('#logo');
     const icon = nav.querySelector('i');
     const content = document.querySelector('.nav-content');
-
+    let isClicked = false;
     icon.addEventListener('click', () => {
-        icon.classList.remove('fa-circle-xmark')
-        icon.classList.add('fa-bars')
+        isClicked = !isClicked;
+        if (isClicked) {
+            icon.classList.add('fa-x')
+            icon.classList.remove('fa-bars')
+        } else {
+            icon.classList.remove('fa-x')
+            icon.classList.add('fa-bars')
+        }
         logo.classList.toggle('opacity-0')
         nav.classList.toggle('h-screen')
         content.classList.toggle('hidden')
