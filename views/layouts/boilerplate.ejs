@@ -36,16 +36,7 @@
     const logo = document.querySelector('#logo');
     const button = document.querySelectorAll('.btn');
 
-    // let isClicked = false;
-    // icon.addEventListener('click', () => {
-    //     isClicked = !isClicked;
-    //     if (isClicked) {
-    //         icon.classList.add('fa-x')
-    //         icon.classList.remove('fa-bars')
-    //     } else {
-    //         icon.classList.remove('fa-x')
-    //         icon.classList.add('fa-bars')
-    //     }
+
     for (const buttonElement of button) {
         buttonElement.addEventListener('click', () => {
             content.classList.toggle('invisible')
@@ -59,13 +50,6 @@
             html.classList.toggle('overflow-y-hidden')
         })
     }
-
-
-        // logo.classList.toggle('opacity-0')
-        // nav.classList.toggle('h-screen')
-        // content.classList.toggle('hidden')
-        // body.classList.toggle("overflow-y-hidden")
-        // html.classList.toggle('overflow-y-hidden')
 
 </script>
 </html>

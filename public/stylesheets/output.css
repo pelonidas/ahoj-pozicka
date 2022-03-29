@@ -806,9 +806,13 @@ select {
 }
 
 .form-container {
-  margin-left: auto;
   width: 100%;
-  max-width: 92%;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    margin-left: auto;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -845,10 +849,6 @@ select {
   top: -5rem;
 }
 
-.left-12 {
-  left: 3rem;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -859,6 +859,10 @@ select {
 
 .right-0 {
   right: 0px;
+}
+
+.left-12 {
+  left: 3rem;
 }
 
 .z-40 {
@@ -1143,10 +1147,6 @@ select {
   margin-bottom: 4.5rem;
 }
 
-.mr-\[4\%\] {
-  margin-right: 4%;
-}
-
 .block {
   display: block;
 }
@@ -1419,21 +1419,16 @@ select {
   max-width: 35%;
 }
 
+.max-w-\[230px\] {
+  max-width: 230px;
+}
+
 .max-w-\[60px\] {
   max-width: 60px;
 }
 
 .max-w-\[90px\] {
   max-width: 90px;
-}
-
-.max-w-\[230px\] {
-  max-width: 230px;
-}
-
-.translate-x-0 {
-  --tw-translate-x: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .translate-x-full {
@@ -1511,10 +1506,6 @@ select {
 
 .gap-24 {
   gap: 6rem;
-}
-
-.gap-16 {
-  gap: 4rem;
 }
 
 .gap-4 {
@@ -1790,6 +1781,11 @@ select {
   padding-bottom: 1.5rem;
 }
 
+.px-\[4\%\] {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1798,11 +1794,6 @@ select {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}
-
-.px-\[4\%\] {
-  padding-left: 4%;
-  padding-right: 4%;
 }
 
 .pt-20 {
@@ -2664,6 +2655,10 @@ select {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:gap-16 {
+    gap: 4rem;
   }
 
   .md\:gap-6 {
