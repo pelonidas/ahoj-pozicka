@@ -1,7 +1,7 @@
 <% layout('./layouts/boilerplate') %>
 <div class="bg-secondary">
     <section id="about-top" class="bg-secondary md:pb-32">
-        <div class="w-full max-w-[92%] md:max-w-[75%] mx-auto text-white">
+        <div class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto text-white">
             <div class="flex flex-col md:flex-row items-center pt-20">
                 <div class="md:w-1/2">
                     <h1 class="text-[2.3rem] md:text-5xl mb-7 leading-tight "><span
@@ -28,14 +28,14 @@
         <%- include('./partials/ad-cards') %>
     </section>
     <section id="about-who" class="bg-secondary mb-[4rem] md:mb-[7rem]">
-        <div class="w-full max-w-[92%] md:max-w-[75%] mx-auto flex flex-col md:flex-row">
+        <div class="container flex flex-col md:flex-row">
             <div class="md:w-1/2">
                 <img src="/images/who.png" alt="" class="w-full">
             </div>
-            <div class="flex flex-col md:w-1/2 justify-center text-white order-first md:order-last mb-[2rem] md:mb-0">
-                <h3 class="text-center md:text-left text-[2.25rem] md:text-3xl mb-[1.25rem] md:mb-3 md:w-3/5 text-left md:mx-auto">
+            <div class="flex flex-col md:w-1/2 justify-center lg:items-end text-white order-first md:order-last mb-[2rem] md:mb-0 border">
+                <h3 class="text-center md:text-left text-[2.25rem] lg:text-[2.35rem] md:text-3xl mb-[1.25rem] md:mb-3 md:w-3/5 text-left lg:pr-[5rem] w-full lg:max-w-[430px]">
                     Pre koho tu sme?</h3>
-                <p class="text-center md:text-left text-[1.125rem] md:text-sm md:w-3/5 md:mx-auto font-text">
+                <p class="text-center md:text-left text-[1.125rem] lg:text-[1.25rem] lg:leading-[28px] md:text-sm w-full lg:max-w-[430px] lg:pr-[5rem] font-text">
                     Pre každého kto si potrebuje požičať, má rád nadštandardný servis a preferuje jednoduchú cestu k
                     peniazom prostredníctvom bestpôžičky. Ku každému klientovi pristupujeme individuálne, náš vzťah je
                     založený na vzájomnej dôvere a diskrétnosti.
@@ -44,14 +44,15 @@
         </div>
     </section>
     <section id="about-what" class="bg-secondary mb-[4rem] md:mb-[7rem]">
-        <div class="w-full max-w-[92%] md:max-w-[75%] mx-auto flex flex-col md:flex-row">
-            <div class="flex flex-col md:w-1/2 justify-center text-white order-first md:order-last mb-[2rem] md:mb-0">
-                <h3 class="text-center md:text-left text-[2.25rem] md:text-3xl mb-[1.25rem] md:mb-3 md:w-3/5 text-left md:mx-auto">
-                    Pre koho tu sme?</h3>
-                <p class="font-text text-center md:text-left text-[1.125rem] md:text-sm md:w-3/5 md:mx-auto font-text">
-                    Pre každého kto si potrebuje požičať, má rád nadštandardný servis a preferuje jednoduchú cestu k
-                    peniazom prostredníctvom bestpôžičky. Ku každému klientovi pristupujeme individuálne, náš vzťah je
-                    založený na vzájomnej dôvere a diskrétnosti.
+        <div class="container flex flex-col md:flex-row">
+            <div class="flex flex-col justify-center md:w-1/2 text-white order-first mb-[2rem] md:mb-0 border lg:pl-[5rem]">
+                <h3 class="text-center md:text-left text-[2.25rem] lg:text-[2.35rem] md:text-3xl mb-[1.25rem] md:mb-3 md:w-3/5 text-left w-full lg:max-w-[430px]">
+                    Čo ponúkame?</h3>
+                <p class="font-text text-center md:text-left text-[1.125rem] lg:text-[1.25rem] lg:leading-[28px] w-full lg:max-w-[430px] md:text-sm md:w-3/5 font-text">
+                    Ponúkame Vám jednoduchú a rýchlu pôžičku, kompletné poradenstvo pri vybavovaní refinančných úverov a
+                    dofinancovanie hypoték. Odporúčania, rady a tipy ako si jednoducho a rýchlo požičať. Niekoľkoročné
+                    skúsenosti, excelentný servis, exkluzívne riešenia, a moderný prístup k získaniu
+                    jednoduchej bestpôžicky.
                 </p>
             </div>
             <div class="md:w-1/2">
