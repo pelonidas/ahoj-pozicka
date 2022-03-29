@@ -31,26 +31,41 @@
 <script>
     const body = document.querySelector('body');
     const html = document.querySelector('html');
-    const nav = document.querySelector('nav');
-    const logo = document.querySelector('#logo');
-    const icon = nav.querySelector('i');
+    const nav = document.querySelector('nav')
     const content = document.querySelector('.nav-content');
-    let isClicked = false;
-    icon.addEventListener('click', () => {
-        isClicked = !isClicked;
-        if (isClicked) {
-            icon.classList.add('fa-x')
-            icon.classList.remove('fa-bars')
-        } else {
-            icon.classList.remove('fa-x')
-            icon.classList.add('fa-bars')
-        }
-        logo.classList.toggle('opacity-0')
-        nav.classList.toggle('h-screen')
-        content.classList.toggle('hidden')
-        body.classList.toggle("overflow-y-hidden")
-        html.classList.toggle('overflow-y-hidden')
+    const logo = document.querySelector('#logo');
+    const button = document.querySelectorAll('.btn');
 
-    })
+    // let isClicked = false;
+    // icon.addEventListener('click', () => {
+    //     isClicked = !isClicked;
+    //     if (isClicked) {
+    //         icon.classList.add('fa-x')
+    //         icon.classList.remove('fa-bars')
+    //     } else {
+    //         icon.classList.remove('fa-x')
+    //         icon.classList.add('fa-bars')
+    //     }
+    for (const buttonElement of button) {
+        buttonElement.addEventListener('click', () => {
+            content.classList.toggle('invisible')
+            content.classList.toggle('translate-x-full')
+            content.classList.add('transition')
+            content.classList.add('ease-in-out')
+            content.classList.add('duration-200')
+            console.log('hehe')
+            nav.classList.toggle('h-screen')
+
+        })
+    }
+
+    body.classList.toggle('overflow-y-hidden')
+    html.classList.toggle('overflow-y-hidden')
+        // logo.classList.toggle('opacity-0')
+        // nav.classList.toggle('h-screen')
+        // content.classList.toggle('hidden')
+        // body.classList.toggle("overflow-y-hidden")
+        // html.classList.toggle('overflow-y-hidden')
+
 </script>
 </html>

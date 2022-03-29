@@ -2,20 +2,26 @@
     <div class="flex flex-col md:flex-row md: justify-between h-full">
         <div class="flex justify-between items-center">
             <a href="/"><img src="/images/result.svg" alt="" class="w-28 inline-block md:inline" id="logo"></a>
-            <button class="md:hidden"><i class="fa-solid fa-bars text-white fa-2x"></i></button>
+            <button class="md:hidden btn"><i class="fa-solid fa-bars text-white fa-2x"></i></button>
         </div>
-        <div class="flex flex-col md:flex-row hidden md:flex nav-content my-auto">
-            <ul class="text-white flex flex-col items-center justify-center md:flex-row text-md">
-                <li class="hover:border-b border-primary mb-6 md:mb-0"><a href="/">Pôžičky</a></li>
-                <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/refinancovanie">Refinancovanie</a></li>
-                <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/centrala">Centrála</a></li>
-                <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/dofinancovanie">Dofinancovanie hypoték</a>
+        <div class="flex flex-col md:flex-row transition ease-in-out duration-200 translate-x-full md:translate-x-0 fixed md:relative top-0 left-0 bottom-0 right-0 invisible md:visible md:flex my-auto nav-content bg-secondary ">
+            <div class="flex justify-between items-center pt-6 px-[4%] md:hidden">
+                <div class="pointer-events-none">
+                    <a href="/"><img src="/images/result.svg" alt="" class="w-28 inline-block invisible pointer-events-none" id="logo"></a>
+                </div>
+                <button class="md:hidden btn"><i class="fa-solid fa-bars text-white fa-2x"></i></button>
+            </div>
+            <ul class="text-white flex flex-col items-center justify-center md:flex-row text-md mt-auto w-full max-w-[230px] md:max-w-full mx-auto md:mx-0">
+                <li class="hover:border-b border-primary mb-6 md:mb-0 text-center md:text-left text-[1.5rem] font-medium"><a href="/">Pôžičky</a></li>
+                <li class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] font-medium hover:border-b border-primary"><a href="/refinancovanie">Refinancovanie</a></li>
+                <li class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] font-medium hover:border-b border-primary"><a href="/centrala">Centrála</a></li>
+                <li class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] font-medium hover:border-b border-primary"><a href="/dofinancovanie">Dofinancovanie hypoték</a>
                 </li>
-                <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/about">O best pôžičke</a></li>
-                <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/contact">Kontakt</a></li>
+                <li class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] font-medium hover:border-b border-primary"><a href="/about">O best pôžičke</a></li>
+                <li class="lg:ml-8 text-center md:text-left text-[1.5rem] font-medium hover:border-b border-primary"><a href="/contact">Kontakt</a></li>
             </ul>
             <a href="/#calculator"
-               class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[20px] mx-auto md:mx-0 md:hidden">
+               class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[20px] mx-auto md:mx-0 md:hidden my-[3.5rem]">
                 <span>Chcem si požičať</span>
             </a>
         </div>
@@ -25,3 +31,20 @@
         </a>
     </div>
 </nav>
+<!--<div class="fixed invisible translate-x-full h-screen top-0 left-0 right-0 bottom-0 bg-dRed test transition ease-in-out duration-200 flex">-->
+<!--    <button class="md:hidden btn"><i class="fa-solid fa-bars text-white fa-2x"></i></button>-->
+<!--    <div class="mt-auto">-->
+<!--        <ul class="flex flex-col">-->
+<!--            <li class="hover:border-b border-primary mb-6 md:mb-0"><a href="/">Pôžičky</a></li>-->
+<!--            <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/refinancovanie">Refinancovanie</a></li>-->
+<!--            <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/centrala">Centrála</a></li>-->
+<!--            <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/dofinancovanie">Dofinancovanie hypoték</a>-->
+<!--            </li>-->
+<!--            <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/about">O best pôžičke</a></li>-->
+<!--            <li class="lg:ml-8 mb-6 md:mb-0 hover:border-b border-primary"><a href="/contact">Kontakt</a></li>-->
+<!--        </ul>-->
+<!--        <button>kokot</button>-->
+<!--    </div>-->
+
+
+<!--</div>-->
