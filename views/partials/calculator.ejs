@@ -1,5 +1,5 @@
 <div class="bg-secondary pt-16 relative">
-    <section class="w-full max-w-[1620px] md:flex md:align-middle md:mt-16 mx-auto mt-0">
+    <section class="w-full max-w-[92%] lg:max-w-[1620px] md:flex md:align-middle md:mt-16 mx-auto mt-0">
         <div class="text-white w-full md:max-w-[66%] md:h-full bg-y-sm md:mt-16" id="heroText">
             <h1 class="hero-h1 text-[2rem] md:text-[4rem] mb-6 leading-tight md:leading-none font-bold">Uzatvorte <span
                         class="text-primary">bestpôžičku rýchlo a jednoducho online </span>a
@@ -12,49 +12,98 @@
                 <i class="fa-solid fa-angle-down fa-1x text-dRed md:hidden"></i>
             </a>
         </div>
-        <div class="w-full md:max-w-[665px] ml-auto text-secondary md:h-full md:max-h-[940px] mr-24 z-40 mt-16" id="calculator">
-            <form action="/calc" method="post">
-                <div class="bg-white p-8 md:p-12 rounded-lg default-shadow ">
-                    <div class="mb-8">
-                        <h3 class="mb-2 text-[2rem] font-bold">Koľko si chcete požičať?</h3>
-                        <input type="text" class="input-default"
-                               placeholder="15 000€" id="money_input" name="money">
-                        <input type="range" class="w-full styled-slider slider-progress" min="400" max="10000"
-                               value="2000" step="100" id="money_range">
+        <div class="w-full md:max-w-[665px] ml-auto text-secondary md:h-full md:max-h-[940px] mr-24 z-40 mt-16"
+             id="calculator">
+            <% if (!isRefinancovanie) { %>
+                <form action="/calc" method="post">
+                    <div class="bg-white p-8 md:p-12 rounded-lg default-shadow ">
+                        <div class="mb-8">
+                            <h3 class="mb-2 text-[2rem] font-bold">Koľko si chcete požičať?</h3>
+                            <input type="text" class="input-default"
+                                   placeholder="15 000€" id="money_input" name="money">
+                            <input type="range" class="w-full styled-slider slider-progress" min="400" max="10000"
+                                   value="2000" step="100" id="money_range">
+                        </div>
+                        <div class="mb-8">
+                            <h3 class="mb-2 text-[2rem] font-bold">Na koľko rokov?</h3>
+                            <input type="text" class="input-default"
+                                   placeholder="5 rokov" id="year_input" name="years">
+                            <input type="range" class="w-full styled-slider slider-progress" min="1" max="8" value="5"
+                                   id="year_range" step="1">
+                        </div>
+                        <hr class="mb-8">
+                        <div class="flex justify-between items-center mb-5">
+                            <h4 class="w-1/2 text-xl font-bold">Odhadovaná mesačná suma</h4>
+                            <h2 class="text-3xl font-bold" id="mes_sum">389€</h2>
+                        </div>
+                        <div>
+                            <p class="font-bold text-xl">Vybavte si rýchlu <span class="text-dRed">pôžičku</span> už
+                                dnes a <span class="text-dRed">bez poplatkov</span></p>
+                        </div>
+                        <hr class="mt-8">
+                        <div class="flex mt-2 text-white">
+                            <input type="hidden" name="interest" id="interest">
+                            <button class="w-full bg-dRed text-center py-6 rounded-md" type="submit" id="testButton">
+                                Požiadajte o pôžičku
+                            </button>
+                        </div>
+                        <p class="text-xs mt-3 text-black/25">
+                            Reprezentatívny príklad:<br>
+                            Celková výška a mena úveru (S): 2 500 €, fixná efektívna úroková sadzba: 16,56 % p. a.,
+                            výška
+                            mesačnej splátky: 45,27 €, počet splátok (n): 96 mesiacov. Celková čiastka: 4 345,92 €, RPMN
+                            (X):
+                            16,55 %
+                        </p>
                     </div>
-                    <div class="mb-8">
-                        <h3 class="mb-2 text-[2rem] font-bold">Na koľko rokov?</h3>
-                        <input type="text" class="input-default"
-                               placeholder="5 rokov" id="year_input" name="years">
-                        <input type="range" class="w-full styled-slider slider-progress" min="1" max="8" value="5"
-                               id="year_range" step="1">
-                    </div>
-                    <hr class="mb-8">
-                    <div class="flex justify-between items-center mb-5">
-                        <h4 class="w-1/2 text-xl font-bold">Odhadovaná mesačná suma</h4>
-                        <h2 class="text-3xl font-bold" id="mes_sum">389€</h2>
-                    </div>
-                    <div>
-                        <p class="font-bold text-xl">Vybavte si rýchlu <span class="text-dRed">pôžičku</span> už dnes a <span class="text-dRed">bez poplatkov</span></p>
-                    </div>
-                    <hr class="mt-8">
-                    <div class="flex mt-2 text-white">
-                        <input type="hidden" name="interest" id="interest">
-                        <button class="w-full bg-dRed text-center py-6 rounded-md" type="submit" id="testButton">
-                            Požiadajte o pôžičku
-                        </button>
-                    </div>
-                    <p class="text-xs mt-3 text-black/25">
-                        Reprezentatívny príklad:<br>
-                        Celková výška a mena úveru (S): 2 500 €, fixná efektívna úroková sadzba: 16,56 % p. a., výška
-                        mesačnej splátky: 45,27 €, počet splátok (n): 96 mesiacov. Celková čiastka: 4 345,92 €, RPMN
-                        (X):
-                        16,55 %
-                    </p>
-                </div>
-                
-            </section>
-    
+                </form>
+            <% } else { %>
+                    <form action="/calc" method="post">
+                        <div class="bg-white p-8 md:p-12 rounded-lg default-shadow ">
+                            <div class="mb-8">
+                                <h3 class="mb-2 text-[2rem] font-bold">Koľko chcete refinancovať?</h3>
+                                <input type="text" class="input-default"
+                                       placeholder="15 000€" id="money_input" name="money">
+                                <input type="range" class="w-full styled-slider slider-progress" min="400" max="20000"
+                                       value="2000" step="100" id="money_range">
+                            </div>
+                            <div class="mb-8">
+                                <h3 class="mb-2 text-[2rem] font-bold">Na koľko rokov?</h3>
+                                <input type="text" class="input-default"
+                                       placeholder="5 rokov" id="year_input" name="years">
+                                <input type="range" class="w-full styled-slider slider-progress" min="1" max="8" value="5"
+                                       id="year_range" step="1">
+                            </div>
+                            <hr class="mb-8">
+                            <div class="flex justify-between items-center mb-5">
+                                <h4 class="w-1/2 text-xl font-bold">Odhadovaná mesačná suma</h4>
+                                <h2 class="text-3xl font-bold" id="mes_sum">389€</h2>
+                            </div>
+                            <div>
+                                <p class="font-bold text-xl">Vybavte si rýchlu <span class="text-dRed">pôžičku</span> už
+                                    dnes a <span class="text-dRed">bez poplatkov</span></p>
+                            </div>
+                            <hr class="mt-8">
+                            <div class="flex mt-2 text-white">
+                                <input type="hidden" name="interest" id="interest">
+                                <button class="w-full bg-dRed text-center py-6 rounded-md" type="submit" id="testButton">
+                                    Požiadajte o pôžičku
+                                </button>
+                            </div>
+                            <p class="text-xs mt-3 text-black/25">
+                                Reprezentatívny príklad:<br>
+                                Celková výška a mena úveru (S): 2 500 €, fixná efektívna úroková sadzba: 16,56 % p. a.,
+                                výška
+                                mesačnej splátky: 45,27 €, počet splátok (n): 96 mesiacov. Celková čiastka: 4 345,92 €, RPMN
+                                (X):
+                                16,55 %
+                            </p>
+                        </div>
+                    </form>
+            <% } %>
+        </div>
+    </section>
+
     <div class="hidden md:block w-full z-10 -mt-36 bg-white">
         <div class="calculator-gray-bg">
             <section class="relative -top-20" id="card-wrapper">
