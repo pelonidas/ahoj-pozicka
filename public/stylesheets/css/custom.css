@@ -121,9 +121,6 @@ nav ul li:hover {
   background-position: center right;
   background-size: auto 80%;
 }
-#contact-section #contact-form textarea {
-  resize: none;
-}
 
 .no-space {
   font-size: 0;
@@ -206,23 +203,6 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
-}
-
-#contact-section-map {
-  margin-bottom: 7rem;
-}
-#contact-section-map #contact-map {
-  background-image: url("/images/contact-map-bg-l.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left center;
-}
-#contact-section-map #contact-right {
-  width: 100%;
-  background-image: url("/images/contact-map-bg-r.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right -1.5rem center;
 }
 
 #step-1-r {

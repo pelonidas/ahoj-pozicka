@@ -33,4 +33,7 @@
     .container {
         @apply w-full max-w-[92%] lg:max-w-[1440px] mx-auto;
     }
+    .form-container {
+        @apply w-full max-w-[92%] lg:max-w-[1440px] ml-auto;
+    }
 }

@@ -151,9 +151,6 @@ nav {
     background-position: center right;
     background-size: auto 80%;
 
-    textarea {
-      resize: none;
-    }
   }
 }
 
@@ -285,25 +282,7 @@ nav {
 //}
 
 //contact
-#contact-section-map {
-  margin-bottom: 7rem;
 
-  #contact-map {
-    background-image: url("/images/contact-map-bg-l.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left center;
-  }
-
-  #contact-right {
-    width: 100%;
-    background-image: url("/images/contact-map-bg-r.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right -1.5rem center;
-  }
-
-}
 
 //Forms
 

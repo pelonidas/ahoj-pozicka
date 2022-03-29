@@ -1,7 +1,7 @@
 <% layout('./layouts/boilerplate') %>
 <div class="bg-secondary h-full mb-[7rem] md:mb-0">
     <section class="bg-secondary" id="centrala-top">
-        <div class="mx-auto w-full max-w-[92%] md:max-w-[75%] pt-16 md:mb-56 pb-[3.5rem]">
+        <div class="mx-auto w-full max-w-[92%] lg:max-w-[1620px] pt-16 lg:mb-56 lg:pb-[3.5rem]">
             <div class="flex flex-col md:grid md:grid-cols-7 text-white md:pb-24">
                 <div class="col-span-3">
                     <div class="mb-8">
@@ -15,12 +15,11 @@
                             </p>
                         </div>
                     </div>
-                    <div id="centrala-top-bg1"></div>
                 </div>
                 <div class="col-span-4">
-                    <div id="centrala-top-bg2" class="flex items-center">
-                        <div>
-                            <img src="/images/contact-placeholder.png" alt="">
+                    <div class="flex items-center">
+                        <div class="ml-auto">
+                            <img src="/images/contact-placeholder.png" alt="" class="w-full lg:max-w-[880px]">
                         </div>
                     </div>
                 </div>
@@ -28,38 +27,24 @@
         </div>
     </section>
 </div>
-<section id="contact-section-map" class="text-secondary">
-    <div class="flex flex-col md:grid grid-cols-2">
-        <div class="md:grid grid-cols-7 bg-secondary md:py-16 rounded-b-lg md:rounded-r-lg">
-            <div class="col-span-1 " id="contact-map"></div>
-            <div class="col-span-6 mx-auto w-full max-w-[92%] md:max-w-full md:mx-0 pb-[2rem] md:pb-0">
-                <img src="/images/contact-map.png" alt="" class="md:w-2/3 md:ml-auto md:mr-16">
-            </div>
+<section class="container md:grid grid-cols-2 border lg:mb-[7rem] gap-24">
+    <div class="border">
+        <img src="/images/kontakt-kontaktujte/map.png" alt="" class="w-full max-w-[666px]">
+    </div>
+    <div class="border my-auto">
+        <h2 class="text-[2.5rem] text-center md:text-left leading-[44px] font-medium lg:text-[4rem] lg:leading-[72px] mb-[1rem] md:mb-0">Kontaktujte nás</h2>
+        <h3 class="text-[1.75rem] lg:text-[2.5rem] text-center md:text-left lg:leading-[44px]">Pre viac informácií</h3>
+        <div class="flex items-center mt-[2rem] lg:mt-10 w-[73%] mx-auto md:w-full md:mx-0">
+            <img src="/images/contact-call.svg" alt="" class="w-8 md:w-10">
+            <span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold">+421 918 709 028</span>
         </div>
-        <div class="md:grid grid-cols-4 order-first md:order-last bg-secondary md:bg-white text-white md:text-secondary">
-            <div class="col-span-3 flex flex-col justify-center md:ml-10 py-[2.5rem]">
-                <h2 class="text-center md:text-left text-[2.5rem] md:text-5xl mb-[1rem] md:mb-3 font-medium">Kontaktujte nás</h2>
-                <h3 class="text-[1.5rem] text-center md:text-left md:text-3xl">Pre viac informácií</h3>
-                <div class="flex items-center mt-[2rem] md:mt-10 mx-auto md:mx-0 w-2/3 md:w-full">
-                    <img src="/images/contact-call.svg" alt="" class="w-8 bg-white">
-                    <span class="ml-4 md:ml-7 text-[1.25rem] md:text-xl font-bold">+421 918 709 028</span>
-                </div>
-                <div class="flex items-center mt-5 mx-auto w-2/3 md:mx-0 md:w-full">
-                    <img src="/images/contact-mail.svg" alt="" class="bg-white w-8">
-                    <span class="ml-4 md:ml-7 text-[1.25rem] md:text-xl font-bold">info@bestpozicky.sk</span>
-                </div>
-                <div class="flex items-center mt-5 mx-auto md:mx-0 w-2/3 md:w-full ">
-                    <img src="/images/contact-location.svg" alt="" class="w-8">
-                    <span class="ml-4 md:ml-7 text-[1.25rem] md:text-xl font-bold">Fejova 1, 040 01 Kosice</span>
-                </div>
-                <div class="flex mt-[2rem] md:mt-10">
-                    <a href="" class="border-2 border-dRed rounded-lg h-[45px] w-[192px] flex justify-center items-center text-[18px] font-bold mx-auto md:mx-0">
-                        <span>Centrála</span>
-                    </a>
-                </div>
-
-            </div>
-            <div class="md:col-span-1" id="contact-right"></div>
+        <div class="flex items-center mt-[1rem] lg:mt-5 w-[73%] mx-auto md:w-full md:mx-0">
+            <img src="/images/contact-mail.svg" alt="" class="w-8 md:w-10">
+            <span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold">info@bestpozicky.sk</span>
+        </div>
+        <div class="flex items-center mt-[1rem] lg:mt-5 w-[73%] mx-auto md:w-full md:mx-0 mb-[1rem] md:mb-0">
+            <img src="/images/contact-location.svg" alt="" class="w-8 md:w-10">
+            <span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold">Fejova 1, 040 01 Košice</span>
         </div>
     </div>
 </section>
