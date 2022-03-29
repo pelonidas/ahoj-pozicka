@@ -1993,6 +1993,10 @@ select {
   line-height: 44px;
 }
 
+.leading-\[36px\] {
+  line-height: 36px;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2887,6 +2891,14 @@ select {
     margin-right: 5rem;
   }
 
+  .lg\:mb-1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:h-\[650px\] {
     height: 650px;
   }
@@ -3017,6 +3029,10 @@ select {
     font-size: 1.125rem;
   }
 
+  .lg\:text-\[3\.5rem\] {
+    font-size: 3.5rem;
+  }
+
   .lg\:leading-\[28px\] {
     line-height: 28px;
   }
@@ -3027,6 +3043,10 @@ select {
 
   .lg\:leading-\[44px\] {
     line-height: 44px;
+  }
+
+  .lg\:leading-\[61px\] {
+    line-height: 61px;
   }
 
   .lg\:drop-shadow-\[9px_10px_50px_rgba\(0\2c 0\2c 0\2c 0\.20\)\] {
