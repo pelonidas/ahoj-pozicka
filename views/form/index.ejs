@@ -1,7 +1,7 @@
 <% layout('./layouts/form-boilerplate') %>
 <section class="form-container my-auto pb-28">
     <div class="md:w-1/5">
-        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
+        <p class="form-label">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
         <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
             <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
             <img src="/images/clock.svg" alt="" class="w-5 mx-2">
@@ -13,7 +13,7 @@
             <form action="/form/step-1" method="post" id="form1">
                 <div class="grid grid-cols-2 md:gap-6 ">
                     <div class="mb-6 col-span-2 md:col-span-1">
-                        <label for="f-name" class="label-default">Meno <span class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span> </label>
+                        <label for="f-name" class="label-default">Meno</label>
                         <div class="relative">
                             <input type="text" id="f-name" name="fName"
                                    class="input-default"
@@ -108,10 +108,12 @@
             </form>
         </div>
         <div id="step-1-r" class="text-white hidden md:block">
-            <h2 class="lg:text-[3.5rem] mb-5 lg:leading-[61px]">Máš záujem o</h2>
-            <span class="lg:text-[1.75rem] lg:block leading-[36px] lg:mb-1">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span></span>
-            <span class="lg:text-[1.75rem] lg:block leading-[36px] lg:mb-1">s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span></span>
-            <span class="lg:text-[1.75rem] lg:block leading-[36px]">a mesačnou splátkou <span class="text-primary"><%= formData.calcData.interest %> €</span></span>
+            <h2 class="form-heading1 ">Máš záujem o</h2>
+            <div class="w-full md:max-w-[420px]">
+                <span class="lg:text-[1.7rem] lg:block leading-[36px] lg:mb-1">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span></span>
+                <span class="lg:text-[1.7rem] lg:block leading-[36px] lg:mb-1">s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span></span>
+                <span class="lg:text-[1.7rem] lg:block leading-[36px]">a mesačnou splátkou <span class="text-primary"><%= formData.calcData.interest %> €</span></span>
+            </div>
         </div>
     </div>
 </section>

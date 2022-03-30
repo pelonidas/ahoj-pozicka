@@ -39,4 +39,10 @@
     .label-default {
         @apply font-bold text-[1rem] md:text-[1.125rem] md:leading-[20px] flex md:mb-2;
     }
+    .form-label {
+        @apply md:mb-3 mt-14 text-white hidden md:block md:text-[1.25rem] leading-[23px];
+    }
+    .form-heading1 {
+        @apply md:text-[4rem] md:leading-[61px] md:mb-5;
+    }
 }
