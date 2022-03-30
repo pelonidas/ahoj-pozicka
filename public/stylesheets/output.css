@@ -2549,6 +2549,10 @@ select {
     margin-right: 0.75rem;
   }
 
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2819,6 +2823,14 @@ select {
     gap: 1rem;
   }
 
+  .md\:gap-20 {
+    gap: 5rem;
+  }
+
+  .md\:gap-24 {
+    gap: 6rem;
+  }
+
   .md\:border-0 {
     border-width: 0px;
   }
@@ -3039,6 +3051,10 @@ select {
 
   .md\:text-\[2\.5rem\] {
     font-size: 2.5rem;
+  }
+
+  .md\:text-\[0\.875rem\] {
+    font-size: 0.875rem;
   }
 
   .md\:leading-normal {

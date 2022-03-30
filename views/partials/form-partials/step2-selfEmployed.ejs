@@ -1,6 +1,6 @@
 <section id="step1-body" class="pb-28 form-container">
     <div class="md:w-1/5">
-        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span
+        <p class="form-label">Vyplnenie údajov vám zaberie <span
                     class="text-primary font-medium">menej než 6min</span></p>
         <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
             <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
@@ -8,7 +8,7 @@
             <p class="text-primary leading-none">6min</p>
         </div>
     </div>
-    <div class="md:grid md:grid-cols-2 md:gap-8">
+    <div class="md:grid md:grid-cols-2 md:gap-24">
         <div class="bg-white p-6 md:p-12 rounded-lg">
             <form action="/form/step-2" method="post" id="form2v2">
                 <div class="mb-6">
@@ -61,7 +61,7 @@
                 <div class="mb-6">
                     <label for="businessSince" class="label-default">Podnikám od<span class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
                     <div class="relative">
-                        <input type="text" id="businessSince" class="input-default w-[55%] md:w-1/3 placeholder-default"
+                        <input type="text" id="businessSince" class="input-default w-[55%] md:w-1/3 placeholder-default calendar"
                                placeholder="01/2021" name="businessSince">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -122,32 +122,54 @@
                 </button>
             </form>
         </div>
-        <div id="step-2-r" class="text-white hidden md:block">
-            <h2 class="text-5xl mb-5">Máš záujem o</h2>
-            <p class="text-[1rem]">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span><br>
-                s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span> <br>
-                a mesačnou splátkou <span class="text-primary"><%= formData.calcData.interest %> €</span></p>
-            <h3 class="text-4xl mb-2">Osobné údaje</h3>
-            <div class="mb-2">
-                <i class="fa-solid fa-minus"></i> Volam sa <span
-                        class="text-primary"><%= formData.contact.fName %> <%= formData.contact.lName %></span>
+        <div class="text-white h-[45rem] md:block hidden">
+            <h2 class="form-heading1 ">Máš záujem o</h2>
+            <div class="w-full md:max-w-[420px] md:mb-[2rem]">
+                <span class="lg:text-[1.7rem] lg:block leading-[36px]">pôžičku na <span
+                            class="text-primary"><%= formData.calcData.money %> €</span></span>
+                <span class="lg:text-[1.7rem] lg:block leading-[36px]">s dobou splácania <span
+                            class="text-primary"><%= formData.calcData.years %> roky</span></span>
+                <span class="lg:text-[1.7rem] lg:block leading-[36px]">a mesačnou splátkou <span
+                            class="text-primary"><%= formData.calcData.interest %> €</span></span>
             </div>
-            <div class="mb-2">
-                <i class="fa-solid fa-minus"></i> Moje rodné číslo je <span
-                        class="text-primary"><%= formData.contact.bNumber %></span>
-            </div>
-            <div class="mb-2">
-                <i class="fa-solid fa-minus"></i> Číslo môjho občianskeho preukazu je <span
-                        class="text-primary"><%= formData.contact.id %></span>
-            </div>
-            <div class="mb-7">
-                <i class="fa-solid fa-minus"></i> Možno ma kontaktovať na čísle <span
-                        class="text-primary"><%= formData.contact.phoneNum %></span>, alebo emailom <span
-                        class="text-primary"><%= formData.contact.email %> </span>
-            </div>
-            <h3 class="text-4xl mb-2">Finančné údaje</h3>
-            <div>
-                <i class="fa-solid fa-minus"></i> Som <%= formData.contact.job %>
+            <h3 class="md:text-[2.5rem] mb-4">Osobné údaje</h3>
+            <div class="md:text-[1.25rem] ">
+                <div class="mb-2 flex items-center">
+                    <i class="fa-solid fa-minus md:mr-3"></i>
+                    <div>
+                        Volám sa <span
+                                class="text-primary"> <%= formData.contact.fName %> <%= formData.contact.lName %></span>
+                    </div>
+                </div>
+                <div class="mb-2 flex items-center">
+                    <i class="fa-solid fa-minus md:mr-3"></i>
+                    <div>
+                        Moje rodné číslo je <span
+                                class="text-primary"><%= formData.contact.bNumber %></span>
+                    </div>
+                </div>
+                <div class="mb-2 flex w-full md:max-w-[330px]">
+                    <i class="fa-solid fa-minus md:pt-1 md:mr-3"></i>
+                    <div class="md:leading-[31px]">
+                        Číslo môjho občianskeho preukazu je <span
+                                class="text-primary"><%= formData.contact.id %></span>
+                    </div>
+                </div>
+                <div class="flex md:leading-[31px] w-full md:max-w-[495px] md:mb-[2rem]">
+                    <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                    <div>
+                        Možno ma kontaktovať na čísle <span
+                                class="text-primary"><%= formData.contact.phoneNum %></span>, alebo emailom <span
+                                class="text-primary"><%= formData.contact.email %> </span>
+                    </div>
+                </div>
+                <h3 class="md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
+                <div class="flex md:items-center">
+                    <i class="fa-solid fa-minus md:mr-3"></i>
+                    <div class="md:text-[1.25rem] md:leading-[31px]">
+                        Som <span class="text-primary"><%= formData.contact.job %></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
