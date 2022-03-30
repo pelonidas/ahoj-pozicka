@@ -24,19 +24,19 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
     let yearMax = Number(year_slide.max);
     let yearMin = Number(year_slide.min);
 
-    if(isNaN(money) || isNaN(years)){
+    if (isNaN(money) || isNaN(years)) {
         return "";
     }
 
-    if(money > moneyMax || money < moneyMin) {
+    if (money > moneyMax || money < moneyMin) {
         return "";
     }
 
-    if(years > yearMax || years < yearMin){
+    if (years > yearMax || years < yearMin) {
         return "";
     }
 
-    let monthlyCost = money * ((0.1528/12) / (1 - Math.pow((1 / (1 + (0.1528/12))), years*12)));
+    let monthlyCost = money * ((0.1528 / 12) / (1 - Math.pow((1 / (1 + (0.1528 / 12))), years * 12)));
     monthlyCost = monthlyCost.toFixed(2);
 
     data = `${monthlyCost}`;
@@ -47,28 +47,44 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
 
 function moneySlideHandler(e) {
     money_field.value = e.target.value;
-    let moneyVal = e.target.value;
-    let yearVal = year_field.value;
-
-    mes_sum.innerHTML = calcMonthlyCost(moneyVal, yearVal);
+    doCalc();
 }
 
 function yearSlideHandler(e) {
     year_field.value = e.target.value;
-    let moneyVal = money_field.value;
-    let yearVal = e.target.value;
-
-    mes_sum.innerHTML = calcMonthlyCost(moneyVal, yearVal);
+    doCalc();
 }
 
 function moneyInputHandler(e) {
     let val = e.target.value;
-    console.log(val);
+
+    if (val) {
+        if (!isNaN(val)) {
+            val = Math.floor(Number(val));
+            money_slide.value = val;
+            money_slide.style.setProperty('--value', String(val));
+            doCalc();
+        }
+    }
 }
 
 function yearInputHandler(e) {
     let val = e.target.value;
-    console.log(val);
+
+    if (val) {
+        if (!isNaN(val)) {
+            val = Math.floor(Number(val));
+            year_slide.value = val;
+            year_slide.style.setProperty('--value', String(val));
+            doCalc();
+        }
+    }
+}
+
+function doCalc(){
+    let moneyVal = money_slide.value;
+    let yearVal = year_slide.value;
+    mes_sum.innerHTML = calcMonthlyCost(moneyVal, yearVal);
 }
 
 money_field.addEventListener('input', moneyInputHandler);
