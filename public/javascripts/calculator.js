@@ -36,7 +36,7 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
         return "";
     }
 
-    let monthlyCost = money * ((0.1528 / 12) / (1 - Math.pow((1 / (1 + (0.1528 / 12))), years * 12)));
+    let monthlyCost = money * ((0.1656 / 12) / (1 - Math.pow((1 / (1 + (0.1656 / 12))), years * 12)));
     monthlyCost = monthlyCost.toFixed(2);
 
     data = `${monthlyCost}`;
@@ -60,7 +60,8 @@ function moneyInputHandler(e) {
 
     if (val) {
         if (!isNaN(val)) {
-            val = Math.floor(Number(val));
+            val = Number(val);
+            val = Math.ceil(val/100)*100;
             money_slide.value = val;
             money_slide.style.setProperty('--value', String(val));
             doCalc();
@@ -73,7 +74,8 @@ function yearInputHandler(e) {
 
     if (val) {
         if (!isNaN(val)) {
-            val = Math.floor(Number(val));
+            val = Number(val);
+            val = Math.ceil(val);
             year_slide.value = val;
             year_slide.style.setProperty('--value', String(val));
             doCalc();

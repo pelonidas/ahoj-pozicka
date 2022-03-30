@@ -385,22 +385,9 @@ nav ul li:hover {
     font-size: 40px;
     color: #FFFFFF;
   }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  #heroText::after {
-    z-index: -1;
-    position: absolute;
-    top: 25rem;
-    right: 2rem;
-    content: url("/images/bg-y-sm.svg");
-  }
-}
-@media (min-width: 768px) {
   #heroText #card-wrapper {
     z-index: 2;
   }
-}
-@media (min-width: 768px) {
   #heroText #benefits-section {
     position: relative;
     z-index: 2;
@@ -411,16 +398,12 @@ nav ul li:hover {
     z-index: -2;
     content: url("/images/benefits-bg.svg");
   }
-}
-@media (min-width: 768px) {
   #heroText #calc-ad {
     background-image: url("/images/calcAd-bg.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;
   }
-}
-@media (min-width: 768px) {
   #heroText #home-about {
     position: relative;
     z-index: 1;
@@ -449,8 +432,6 @@ nav ul li:hover {
     right: -2rem;
     top: 7rem;
   }
-}
-@media (min-width: 768px) {
   #heroText #home-card-section {
     position: relative;
     z-index: 2;
@@ -481,8 +462,6 @@ nav ul li:hover {
     top: 0;
     right: -2%;
   }
-}
-@media (min-width: 768px) {
   #heroText #faq #faq-header {
     height: 170px;
     width: 100%;
@@ -491,15 +470,11 @@ nav ul li:hover {
     background-repeat: no-repeat;
     margin-bottom: 3.5rem;
   }
-}
-@media (min-width: 768px) {
   #heroText #footer {
     background-image: url("/images/find-out-bg.svg");
     background-repeat: no-repeat;
     background-position: center 5rem;
   }
-}
-@media (min-width: 768px) {
   #heroText #centrala-hero-text {
     position: relative;
     z-index: 2;
@@ -516,8 +491,6 @@ nav ul li:hover {
     background-repeat: no-repeat;
     background-size: contain;
   }
-}
-@media (min-width: 768px) {
   #heroText #centrala-location {
     background-image: url("/images/map.svg");
     background-repeat: no-repeat;
@@ -530,8 +503,6 @@ nav ul li:hover {
     background-size: contain;
     background-position: right center;
   }
-}
-@media (min-width: 768px) {
   #heroText #dofinancovanie-hero-img {
     position: relative;
     z-index: 5;
@@ -543,16 +514,12 @@ nav ul li:hover {
     right: -21rem;
     top: -1rem;
   }
-}
-@media (min-width: 768px) {
   #heroText #rejected-main {
     background-image: url("/images/rejected-bg-y.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
   }
-}
-@media (min-width: 768px) {
   #heroText #rejected-right {
     background-image: url("/images/rejected-bg-g.svg");
     background-size: contain;
