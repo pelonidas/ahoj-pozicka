@@ -36,7 +36,7 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
         return "";
     }
 
-    let monthlyCost = money * ((0.1528 / 12) / (1 - Math.pow((1 / (1 + (0.1528 / 12))), years * 12)));
+    let monthlyCost = money * ((0.1656 / 12) / (1 - Math.pow((1 / (1 + (0.1656 / 12))), years * 12)));
     monthlyCost = monthlyCost.toFixed(2);
 
     data = `${monthlyCost}`;

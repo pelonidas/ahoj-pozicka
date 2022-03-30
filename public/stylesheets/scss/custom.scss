@@ -521,18 +521,17 @@ nav {
   color: #FFFFFF;
 }
 
-@media screen and ( min-width: 768px ) {
+// @media screen and ( min-width: 768px ) {
 
 
-
-    &::after {
-      z-index: -1;
-      position: absolute;
-      top: 25rem;
-      right: 2rem;
-      content: url("/images/bg-y-sm.svg");
-    }
-  }
+//     &::after {
+//       z-index: -1;
+//       position: absolute;
+//       top: 25rem;
+//       right: 2rem;
+//       content: url("/images/bg-y-sm.svg");
+//     }
+//   }
 
   #card-wrapper {
     z-index: 2;

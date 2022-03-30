@@ -5,14 +5,21 @@ html, body {
 }
 
 nav ul {
+  -webkit-transition-property: height;
   transition-property: height;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
+
 nav ul li:hover {
+  -webkit-transition-property: border;
   transition-property: border;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 #home-top .bg-y-sm {
@@ -21,9 +28,11 @@ nav ul li:hover {
   background-size: 8rem;
   background-position: right bottom;
 }
+
 #home-top .home-calc {
   min-height: 100%;
 }
+
 #home-top .bg-top-g {
   background-image: url("/images/bg-gray.svg");
   background-size: contain;
@@ -68,12 +77,14 @@ nav ul li:hover {
 #products-section {
   margin-bottom: 7rem;
 }
+
 #products-section .products-bg {
   background-image: url("/images/products-red-pasta.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
 }
+
 #products-section #zine {
   max-width: 8rem !important;
 }
@@ -87,6 +98,7 @@ nav ul li:hover {
   width: 100%;
   margin-bottom: 7rem;
 }
+
 #reviews-section #leftSide {
   height: 100%;
   width: 18%;
@@ -95,6 +107,7 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-position: -20px center;
 }
+
 #reviews-section #content {
   padding-right: 15%;
   height: 100%;
@@ -107,6 +120,7 @@ nav ul li:hover {
 #contact-section {
   margin-bottom: 7rem;
 }
+
 #contact-section #contact-left {
   width: 100%;
   height: 700px;
@@ -115,6 +129,7 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-position: -20px center;
 }
+
 #contact-section #contact-form {
   background-image: url("/images/contact-right-pasta.svg");
   background-repeat: no-repeat;
@@ -132,6 +147,7 @@ nav ul li:hover {
   background-size: contain;
   background-position: -1rem center;
 }
+
 #centrala-description #centrala-description-bg2 {
   background-image: url("/images/centrala-description-bg2.svg");
   height: 100%;
@@ -143,6 +159,7 @@ nav ul li:hover {
 #centrala-personal {
   margin-top: 7rem;
 }
+
 #centrala-personal #left-personal {
   width: 13%;
   background-image: url("/images/personal-bg.svg");
@@ -150,9 +167,11 @@ nav ul li:hover {
   background-size: contain;
   background-position: center left;
 }
+
 #centrala-personal #personal-content {
   width: 74%;
 }
+
 #centrala-personal #right-personal {
   width: 13%;
   background-image: url("/images/personal-bg.svg");
@@ -180,9 +199,11 @@ nav ul li:hover {
   margin-bottom: 7rem;
   width: 100%;
 }
+
 #dofinancovanie-form #form-content textarea {
   resize: none;
 }
+
 #dofinancovanie-form #form-right {
   width: 15%;
   background-size: contain;
@@ -190,6 +211,7 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-position: right center;
 }
+
 #dofinancovanie-form #form-left {
   width: 15%;
   background-size: contain;
@@ -225,12 +247,14 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-image: url("/images/form-success-ybg.svg");
 }
+
 #form-success .bg-g {
   background-size: contain;
   background-position: center right;
   background-repeat: no-repeat;
   background-image: url("/images/form-success-gbg.svg");
 }
+
 #form-success .content {
   width: 90%;
 }
@@ -255,10 +279,17 @@ nav ul li:hover {
   overflow: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .ReviewsWrapper .review {
   padding-left: 2rem;
   min-width: 22rem;
@@ -272,17 +303,20 @@ nav ul li:hover {
   right: 1rem;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .fa-check {
   right: 1rem;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .offerContainer:hover .offerArrow {
+  -webkit-transition: opacity ease-in-out 0.2s;
   transition: opacity ease-in-out 0.2s;
   opacity: 1;
 }
@@ -299,6 +333,7 @@ nav ul li:hover {
   position: relative;
   z-index: 5;
 }
+
 #centrala-hero-video::after {
   z-index: -1;
   position: absolute;
@@ -308,7 +343,7 @@ nav ul li:hover {
   right: 0;
   background-size: contain;
   /*content: url("/images/centrala-home-bg2.svg");*/
-  content: "";
+  content: '';
   background-image: url("/images/centrala-home-bg2.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -325,6 +360,7 @@ nav ul li:hover {
   position: relative;
   z-index: 3;
 }
+
 .dakujeme::after {
   z-index: -1;
   position: absolute;
@@ -371,7 +407,6 @@ nav ul li:hover {
     right: 4rem;
     content: url("/images/home-bg-y.svg");
   }
-
   #heroText {
     position: relative;
     z-index: 1;
@@ -385,22 +420,9 @@ nav ul li:hover {
     font-size: 40px;
     color: #FFFFFF;
   }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  #heroText::after {
-    z-index: -1;
-    position: absolute;
-    top: 25rem;
-    right: 2rem;
-    content: url("/images/bg-y-sm.svg");
-  }
-}
-@media (min-width: 768px) {
   #heroText #card-wrapper {
     z-index: 2;
   }
-}
-@media (min-width: 768px) {
   #heroText #benefits-section {
     position: relative;
     z-index: 2;
@@ -411,16 +433,12 @@ nav ul li:hover {
     z-index: -2;
     content: url("/images/benefits-bg.svg");
   }
-}
-@media (min-width: 768px) {
   #heroText #calc-ad {
     background-image: url("/images/calcAd-bg.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;
   }
-}
-@media (min-width: 768px) {
   #heroText #home-about {
     position: relative;
     z-index: 1;
@@ -449,8 +467,6 @@ nav ul li:hover {
     right: -2rem;
     top: 7rem;
   }
-}
-@media (min-width: 768px) {
   #heroText #home-card-section {
     position: relative;
     z-index: 2;
@@ -481,8 +497,6 @@ nav ul li:hover {
     top: 0;
     right: -2%;
   }
-}
-@media (min-width: 768px) {
   #heroText #faq #faq-header {
     height: 170px;
     width: 100%;
@@ -491,15 +505,11 @@ nav ul li:hover {
     background-repeat: no-repeat;
     margin-bottom: 3.5rem;
   }
-}
-@media (min-width: 768px) {
   #heroText #footer {
     background-image: url("/images/find-out-bg.svg");
     background-repeat: no-repeat;
     background-position: center 5rem;
   }
-}
-@media (min-width: 768px) {
   #heroText #centrala-hero-text {
     position: relative;
     z-index: 2;
@@ -516,8 +526,6 @@ nav ul li:hover {
     background-repeat: no-repeat;
     background-size: contain;
   }
-}
-@media (min-width: 768px) {
   #heroText #centrala-location {
     background-image: url("/images/map.svg");
     background-repeat: no-repeat;
@@ -530,8 +538,6 @@ nav ul li:hover {
     background-size: contain;
     background-position: right center;
   }
-}
-@media (min-width: 768px) {
   #heroText #dofinancovanie-hero-img {
     position: relative;
     z-index: 5;
@@ -543,16 +549,12 @@ nav ul li:hover {
     right: -21rem;
     top: -1rem;
   }
-}
-@media (min-width: 768px) {
   #heroText #rejected-main {
     background-image: url("/images/rejected-bg-y.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
   }
-}
-@media (min-width: 768px) {
   #heroText #rejected-right {
     background-image: url("/images/rejected-bg-g.svg");
     background-size: contain;
@@ -560,13 +562,15 @@ nav ul li:hover {
     background-position: left center;
   }
 }
+
 .custom-stroke {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%2322314642' stroke-width='4' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
   border-radius: 10px;
 }
+
 .custom-stroke:hover {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23FCC800FF' stroke-width='4' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+  -webkit-transition: background-image 0.2s ease-in-out;
   transition: background-image 0.2s ease-in-out;
 }
-
 /*# sourceMappingURL=custom.css.map */
