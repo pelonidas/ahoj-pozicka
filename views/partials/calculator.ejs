@@ -1,53 +1,53 @@
-<div class="bg-secondary pt-16 relative">
-    <section class="w-full max-w-[92%] lg:max-w-[1620px] md:flex md:align-middle md:mt-16 mx-auto mt-0">
+<div class="bg-secondary pt-[3.5rem] md:pt-16 relative">
+    <section class="md:w-full lg:max-w-[1620px] md:flex md:align-middle md:mt-16 mx-[1rem] md:mx-auto mt-0">
         <div class="text-white w-full md:max-w-[66%] md:h-full bg-y-sm md:mt-16" id="heroText">
-            <h1 class="hero-h1 text-[2rem] md:text-[4rem] mb-6 leading-tight md:leading-none font-bold">Uzatvorte <span
+            <h1 class="hero-h1 text-[37px] md:text-[4rem] mb-6 leading-tight md:leading-none font-bold">Uzatvorte <span
                         class="text-primary">bestpôžičku rýchlo a jednoducho online </span>a
                 splňte si vaše želanie!</h1>
-            <h2 class="hero-h2 text-[1.5rem] md:text-3xl mb-6">Jednoducha cesta k peniazom</h2>
-            <p class="md:w-2/3 mb-4 font-[0.85rem] font-light">V bestpôžičke môžete požiadať o <span class="font-bold">pôžičky v rozmedzí od 400 do 20 000 EUR.</span>
+            <h2 class="hero-h2 text-[1.5rem] md:text-3xl mb-6 leading-[27px] max-w-[220px]">Jednoducha cesta k peniazom</h2>
+            <p class="md:w-2/3 mb-[2rem] font-[1rem] font-light">V bestpôžičke môžete požiadať o <span class="font-bold">pôžičky v rozmedzí od 400 do 20 000 EUR.</span>
             </p>
             <a href="/#calculator" class="text-center md:text-left flex flex-col md:block">
                 Vypočítať
-                <i class="fa-solid fa-angle-down fa-1x text-dRed md:hidden"></i>
+                <i class="fa-solid text-[1.25rem] fa-angle-down fa-1x text-dRed md:hidden"></i>
             </a>
         </div>
-        <div class="w-full md:max-w-[665px] ml-auto text-secondary md:h-full md:max-h-[940px] mr-24 z-40 mt-16"
+        <div class="mt-[-570px] translate-y-[602px] mb-[640px] w-full md:max-w-[665px] ml-auto text-secondary md:h-full md:max-h-[940px] z-40"
              id="calculator">
             <% if (!isRefinancovanie) { %>
                 <form action="/calc" method="post">
-                    <div class="bg-white p-8 md:p-12 rounded-lg default-shadow ">
+                    <div class="bg-white px-[1.5rem] py-[2.5rem] md:p-12 rounded-lg default-shadow ">
                         <div class="mb-8">
-                            <h3 class="mb-2 text-[2rem] font-bold">Koľko si chcete požičať?</h3>
+                            <h3 class="mb-[1rem] text-[1.5rem] font-bold">Koľko si chcete požičať?</h3>
                             <input type="text" class="input-default"
                                    placeholder="15 000€" id="money_input" name="money">
-                            <input type="range" class="w-full styled-slider slider-progress" min="400" max="10000"
+                            <input type="range" class="w-full styled-slider slider-progress mt-[1rem]" min="400" max="10000"
                                    value="2000" step="100" id="money_range">
                         </div>
                         <div class="mb-8">
-                            <h3 class="mb-2 text-[2rem] font-bold">Na koľko rokov?</h3>
+                            <h3 class="mb-[1rem] text-[1.5rem] font-bold">Na koľko rokov?</h3>
                             <input type="text" class="input-default"
                                    placeholder="5 rokov" id="year_input" name="years">
-                            <input type="range" class="w-full styled-slider slider-progress" min="1" max="8" value="5"
+                            <input type="range" class="w-full styled-slider slider-progress mt-[1rem]" min="1" max="8" value="5"
                                    id="year_range" step="1">
                         </div>
                         <hr class="mb-8">
                         <div class="flex justify-between items-center mb-5">
-                            <h4 class="w-1/2 text-xl font-bold">Odhadovaná mesačná suma</h4>
-                            <h2 class="text-3xl font-bold" id="mes_sum">389€</h2>
+                            <h4 class="max-w-[160px] text-[1.25rem] font-bold">Odhadovaná mesačná suma</h4>
+                            <h2 class="text-[2rem] font-bold" id="mes_sum">389€</h2>
                         </div>
                         <div>
-                            <p class="font-bold text-xl">Vybavte si rýchlu <span class="text-dRed">pôžičku</span> už
+                            <p class="font-bold text-[1.25rem]">Vybavte si rýchlu <span class="text-dRed">pôžičku</span> už
                                 dnes a <span class="text-dRed">bez poplatkov</span></p>
                         </div>
                         <hr class="mt-8">
-                        <div class="flex mt-2 text-white">
+                        <div class="flex mt-[1rem] text-white">
                             <input type="hidden" name="interest" id="interest">
-                            <button class="w-full bg-dRed text-center py-6 rounded-md" type="submit" id="testButton">
+                            <button class="w-full bg-dRed text-center h-[3.5rem] rounded-md" type="submit" id="testButton">
                                 Požiadajte o pôžičku
                             </button>
                         </div>
-                        <p class="text-xs mt-3 text-black/25">
+                        <p class="text-[0.75rem] mt-[1rem] text-black/25">
                             Reprezentatívny príklad:<br>
                             Celková výška a mena úveru (S): 2 500 €, fixná efektívna úroková sadzba: 16,56 % p. a.,
                             výška
