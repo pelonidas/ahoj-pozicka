@@ -919,6 +919,18 @@ select {
   left: 3rem;
 }
 
+.left-40 {
+  left: 10rem;
+}
+
+.left-32 {
+  left: 8rem;
+}
+
+.left-36 {
+  left: 9rem;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -2411,6 +2423,22 @@ select {
 
   .md\:-left-36 {
     left: -9rem;
+  }
+
+  .md\:top-0 {
+    top: 0px;
+  }
+
+  .md\:-left-20 {
+    left: -5rem;
+  }
+
+  .md\:-left-52 {
+    left: -13rem;
+  }
+
+  .md\:top-20 {
+    top: 5rem;
   }
 
   .md\:order-last {
