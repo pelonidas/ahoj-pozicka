@@ -14,7 +14,7 @@
                 <div class="mb-6">
                     <label for="companyName" class="label-default">Názov spoločnosti</label>
                     <div class="relative">
-                        <input type="text" id="companyName" class="input-default placeholder-default"
+                        <input type="text" id="companyName" class="input-default placeholder-default validate"
                                placeholder="Firma, s.r.o." name="companyName">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -23,7 +23,7 @@
                 <div class="mb-6">
                     <label for="ico" class="label-default">IČO</label>
                     <div class="relative">
-                        <input type="text" id="ico" class="input-default placeholder-default"
+                        <input type="text" id="ico" class="input-default placeholder-default validate"
                                placeholder="58456734" name="ico">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -32,7 +32,7 @@
                 <div class="mb-6">
                     <label for="companyStreet" class="label-default">Ulica a popisné číslo</label>
                     <div class="relative">
-                        <input type="text" id="companyStreet" class="input-default placeholder-default"
+                        <input type="text" id="companyStreet" class="input-default placeholder-default validate"
                                placeholder="Štúrová 226" name="companyStreet">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -41,7 +41,7 @@
                 <div class="mb-6">
                     <label for="city" class="label-default">Obec</label>
                     <div class="relative">
-                        <input type="text" id="city" name="city" class="input-default placeholder-default"
+                        <input type="text" id="city" name="city" class="input-default placeholder-default validate"
                                placeholder="Bratislava">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -72,29 +72,29 @@
                 <p class="label-default">Aký bol tvôj čistý príjem za posledné 3 mesiace</p>
                 <div class="md:grid md:grid-cols-9 md:gap-4 mb-6">
                     <div class="col-span-3">
-                        <label for="january" class="md:text-[0.875rem] font-bold md:mb-2">1.mesiac</label>
+                        <label for="firstMonth" class="md:text-[0.875rem] font-bold md:mb-2">1.mesiac</label>
                         <div class="relative">
-                            <input type="text" id="january" name="firstMonth"
-                                   class="input-default placeholder-default"
+                            <input type="text" id="firstMonth" name="firstMonth"
+                                   class="input-default placeholder-default validate"
                                    placeholder="1200€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
                         <small class="text-xs text-dRed "></small>
                     </div>
                     <div class="col-span-3">
-                        <label for="february" class="md:text-[0.875rem] font-bold md:mb-2">2.mesiac</label>
+                        <label for="secondMonth" class="md:text-[0.875rem] font-bold md:mb-2">2.mesiac</label>
                         <div class="relative">
-                            <input type="text" id="february" name="secondMonth"
-                                   class="input-default placeholder-default"
+                            <input type="text" id="secondMonth" name="secondMonth"
+                                   class="input-default placeholder-default validate"
                                    placeholder="1200€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
                         <small class="text-xs text-dRed "></small>
                     </div>
                     <div class="col-span-3">
-                        <label for="march" class="md:text-[0.875rem] font-bold md:mb-2">3.mesiac</label>
+                        <label for="thirdMonth" class="md:text-[0.875rem] font-bold md:mb-2">3.mesiac</label>
                         <div class="relative">
-                            <input type="text" id="march" name="thirdMonth" class="input-default placeholder-default"
+                            <input type="text" id="thirdMonth" name="thirdMonth" class="input-default placeholder-default validate"
                                    placeholder="1200€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
@@ -177,94 +177,3 @@
         </div>
     </div>
 </section>
-<script>
-
-    let radioUrcita = document.querySelector('#urcita');
-    let radioNeurcita = document.querySelector('#neurcita')
-    let content = document.querySelector('#urcita-content')
-
-    const form2v1 = document.querySelector('#form2v1')
-    const companyName = document.querySelector('#companyName')
-    const ico = document.querySelector('#ico')
-    const companyStreet = document.querySelector('#companyStreet')
-    const city = document.querySelector('#city')
-    const psc = document.querySelector('#psc')
-    const january = document.querySelector('#january')
-    const february = document.querySelector('#february')
-    const march = document.querySelector('#march')
-
-    radioUrcita.addEventListener('click', () => {
-        content.classList.toggle('hidden')
-        if (!radioUrcita.checked) {
-            content.classList.add('hidden')
-        }
-    })
-
-    radioNeurcita.addEventListener('click', () => {
-        if (radioNeurcita.checked) {
-            content.classList.add('hidden')
-        }
-    })
-
-    form2v1.addEventListener('submit', (e) => {
-        const companyNameValidation = validateInput(companyName)
-        const icoValidation = validateInput(ico)
-        const companyStreetValidation = validateInput(companyStreet)
-        const cityValidation = validateInput(city)
-        const pscValidation = validateInput(psc)
-        const januaryValidation = validateInput(january)
-        const februaryValidation = validateInput(february)
-        const marchValidation = validateInput(march)
-        if (!companyStreetValidation || !icoValidation || !companyStreetValidation || !cityValidation || !pscValidation || !januaryValidation || !februaryValidation || !marchValidation) {
-            e.preventDefault()
-        }
-
-    })
-    const validateInput = (input) => {
-        const inputValue = input.value.trim();
-        if (!inputValue) {
-            setErrorFor(input)
-            return false
-        } else {
-            setSuccessFor(input)
-            return true
-        }
-    }
-    const setErrorFor = (input, msg = "Pole je nevyplnene") => {
-        const parent = input.parentElement
-        const icon = parent.querySelector('i')
-        icon.classList.remove('fa-check')
-        icon.classList.add('fa-xmark')
-        icon.classList.remove('text-transparent')
-        icon.classList.remove('text-green-400')
-        icon.classList.add("text-dRed")
-
-        const div = parent.parentElement
-        div.classList.remove('mb-6')
-        div.classList.add('mb-3')
-
-        const small = div.querySelector('small')
-        small.innerText = msg
-        input.className = "input-danger"
-    }
-
-    const setSuccessFor = (input) => {
-        const parent = input.parentElement
-        const icon = parent.querySelector('i')
-        icon.classList.remove('fa-xmark')
-        icon.classList.add('fa-check')
-        icon.classList.remove('text-transparent')
-        icon.classList.remove('text-dRed')
-        icon.classList.add("text-green-400")
-
-        const div = parent.parentElement
-        div.classList.remove('mb-6')
-        div.classList.add('mb-3')
-
-        const small = div.querySelector('small')
-        small.innerText = " "
-        input.className = "input-default"
-    }
-
-
-</script>
