@@ -36,11 +36,17 @@
     const container = content.parentElement
     const logo = document.querySelector('#logo');
     const hamburger = document.querySelector('.nav-hamburger')
+    const pozicat = document.querySelector('#pozicat-button')
 
     hamburger.addEventListener('click', () => {
         content.classList.toggle('translate-x-full')
         body.classList.toggle('overflow-y-hidden')
         html.classList.toggle('overflow-y-hidden')
+    })
+    pozicat.addEventListener('click', () => {
+        content.classList.toggle('translate-x-full')
+        body.classList.remove('overflow-y-hidden')
+        html.classList.remove('overflow-y-hidden')
     })
     // const button = document.querySelectorAll('.nav-btn');
     //
