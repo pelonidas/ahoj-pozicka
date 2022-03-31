@@ -536,4 +536,14 @@ nav ul li:hover {
   transition: background-image 0.2s ease-in-out;
 }
 
+@media (max-width: 640px) {
+  .active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 /*# sourceMappingURL=custom.css.map */
