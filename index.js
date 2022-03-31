@@ -162,8 +162,6 @@ app.post('/form/step-4', async (req, res) => {
 })
 app.post('/form/step-3', (req, res) => {
     formData.customerData = req.body
-
-    req.session.sessionFormData = formData;
     res.redirect('/form/step-4')
 })
 
