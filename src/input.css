@@ -34,7 +34,7 @@
         @apply w-full max-w-[92%] lg:max-w-[1440px] mx-auto;
     }
     .form-container {
-        @apply w-full lg:max-w-[1440px] md:ml-auto;
+        @apply w-full lg:max-w-[1440px] md:ml-auto h-screen;
     }
     .label-default {
         @apply font-bold text-[1rem] md:text-[1.125rem] md:leading-[20px] flex md:mb-2;
