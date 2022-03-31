@@ -43,6 +43,6 @@
         @apply md:mb-3 mt-14 text-white hidden md:block md:text-[1.25rem] leading-[23px];
     }
     .form-heading1 {
-        @apply md:text-[4rem] md:leading-[61px] md:mb-5;
+        @apply text-[2rem] md:text-[4rem] md:leading-[61px] md:mb-5;
     }
 }

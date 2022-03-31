@@ -1,5 +1,5 @@
 <% layout('./layouts/form-boilerplate') %>
-<section class="form-container my-auto pb-28">
+<section class="form-container my-auto md:pb-28">
     <div class="md:w-1/5">
         <p class="form-label">Vyplnenie údajov vám zaberie <span class="text-primary font-medium">menej než 8min</span></p>
         <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
@@ -8,8 +8,8 @@
             <p class="text-primary leading-none">8min</p>
         </div>
     </div>
-    <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary border h-full">
-        <div class="bg-white p-6 md:p-12 rounded-lg">
+    <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary mb-[5rem] md:mb-0 md:h-full ">
+        <div class="bg-white p-6 md:p-12 rounded-lg ">
             <form action="/form/step-1" method="post" id="form1">
                 <div class="grid grid-cols-2 md:gap-6 ">
                     <div class="mb-6 col-span-2 md:col-span-1">
@@ -106,19 +106,23 @@
                 </button>
             </form>
         </div>
-        <div class="test translate-y-[270px] md:translate-y-0 md:flex text-white bg-secondary bottomNav transition ease-in-out duration-200">
-            <div class="bg-gray-400 md:hidden z-10 buttonContainer ">
-                <div class="flex flex-col mt-auto">
-                    <img src="/images/icons/mobile-up.svg" alt="" class="mx-auto cursor-pointer" id="button">
-                    <span class="mx-auto font-light leading-[17px] text-[1.125rem]">Tebou vyplnené údaje</span>
+        <div class="test translate-y-[190px] md:translate-y-0 md:flex text-white bottomNav transition ease-in-out duration-200">
+            <div class="md:hidden buttonContainer">
+                <div class="bg-transparent">
+                    <img src="/images/icons/mobile-up.svg" alt="" class="w-full max-w-[59px] mx-auto cursor-pointer translate-y-[70%] " id="button">
+                </div>
+                <div class="flex flex-col h-[54px] rounded-t-[10px] bg-secondary">
+                    <div class="m-auto z-40">
+                        <span class="font-light leading-[17px] text-[1.125rem]">Tebou vyplnené údaje</span>
+                    </div>
                 </div>
             </div>
-            <div class="h-[270px] md:h-full transition ease-in-out duration-200">
-                <h2 class="form-heading1 ">Máš záujem o</h2>
-                <div class="w-full md:max-w-[420px]">
-                    <span class="lg:text-[1.7rem] lg:block leading-[36px] lg:mb-1">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span></span>
-                    <span class="lg:text-[1.7rem] lg:block leading-[36px] lg:mb-1">s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span></span>
-                    <span class="lg:text-[1.7rem] lg:block leading-[36px]">a mesačnou splátkou <span class="text-primary"><%= formData.calcData.interest %> €</span></span>
+            <div class="h-[190px] md:h-full transition ease-in-out duration-200 bg-secondary">
+                <h2 class="form-heading1 w-[335px] md:w-full mx-auto md:mx-0">Máš záujem o</h2>
+                <div class="w-full max-w-[335px] md:max-w-[420px] flex flex-col mx-auto md:mx-0">
+                    <span class="text-[1.125rem] md:text-[1.7rem] md:block leading-[22px] md:leading-[36px] lg:mb-1">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span></span>
+                    <span class="text-[1.125rem] md:text-[1.7rem] md:block leading-[22px] md:leading-[36px] lg:mb-1">s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span></span>
+                    <span class="text-[1.125rem] md:text-[1.7rem] md:block leading-[22px] md:leading-[36px]">a mesačnou splátkou <span class="text-primary"><%= formData.calcData.interest %> €</span></span>
                 </div>
             </div>
 
@@ -126,20 +130,12 @@
     </div>
 </section>
 <script>
-    const button = document.querySelector('#button')
-    const bottomNav = document.querySelector('.bottomNav')
+    const buttonStep1 = document.querySelector('#button')
+    const bottomNavStep1 = document.querySelector('.bottomNav')
     const buttonContainer = document.querySelector('.buttonContainer')
-    button.addEventListener('click', () => {
-        bottomNav.classList.toggle('translate-y-[270px]')
+    buttonStep1.addEventListener('click', () => {
+        bottomNavStep1.classList.toggle('translate-y-[190px]')
     })
-    // button.addEventListener('click', () => {
-    //     bottomNav.classList.toggle('translate-y-full')
-    //     buttonContainer.classList.toggle('fixed')
-    //     buttonContainer.classList.toggle('bottom-0')
-    //     buttonContainer.classList.toggle('left-0')
-    //     buttonContainer.classList.toggle('right-0')
-    //     console.log('hey')
-    // })
 
 
     const form1 = document.querySelector('#form1')
