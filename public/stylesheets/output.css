@@ -927,6 +927,10 @@ select {
   z-index: 10;
 }
 
+.z-\[-2\] {
+  z-index: -2;
+}
+
 .order-first {
   order: -9999;
 }
@@ -1210,10 +1214,6 @@ select {
   margin-bottom: 4.5rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .block {
   display: block;
 }
@@ -1304,8 +1304,26 @@ select {
   height: 45rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[15rem\] {
+  height: 15rem;
+}
+
+.h-\[5rem\] {
+  height: 5rem;
+}
+
 .max-h-\[170px\] {
   max-height: 170px;
+}
+
+.min-h-min {
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
 }
 
 .w-full {
@@ -1618,6 +1636,14 @@ select {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .overflow-y-hidden {
@@ -2537,20 +2563,12 @@ select {
     margin-left: 5rem;
   }
 
-  .md\:mb-7 {
-    margin-bottom: 1.75rem;
-  }
-
   .md\:mb-\[2rem\] {
     margin-bottom: 2rem;
   }
 
   .md\:mr-3 {
     margin-right: 0.75rem;
-  }
-
-  .md\:mb-5 {
-    margin-bottom: 1.25rem;
   }
 
   .md\:block {
@@ -2741,12 +2759,12 @@ select {
     max-width: 100px;
   }
 
-  .md\:max-w-\[495px\] {
-    max-width: 495px;
-  }
-
   .md\:max-w-\[330px\] {
     max-width: 330px;
+  }
+
+  .md\:max-w-\[495px\] {
+    max-width: 495px;
   }
 
   .md\:translate-y-1\/2 {
@@ -2807,28 +2825,16 @@ select {
     justify-content: space-between;
   }
 
-  .md\:gap-16 {
-    gap: 4rem;
+  .md\:gap-24 {
+    gap: 6rem;
   }
 
   .md\:gap-6 {
     gap: 1.5rem;
   }
 
-  .md\:gap-8 {
-    gap: 2rem;
-  }
-
   .md\:gap-4 {
     gap: 1rem;
-  }
-
-  .md\:gap-20 {
-    gap: 5rem;
-  }
-
-  .md\:gap-24 {
-    gap: 6rem;
   }
 
   .md\:border-0 {
@@ -2970,10 +2976,6 @@ select {
     padding-top: 0px;
   }
 
-  .md\:pt-2 {
-    padding-top: 0.5rem;
-  }
-
   .md\:pt-1 {
     padding-top: 0.25rem;
   }
@@ -3049,12 +3051,12 @@ select {
     font-size: 1.5rem;
   }
 
-  .md\:text-\[2\.5rem\] {
-    font-size: 2.5rem;
-  }
-
   .md\:text-\[0\.875rem\] {
     font-size: 0.875rem;
+  }
+
+  .md\:text-\[2\.5rem\] {
+    font-size: 2.5rem;
   }
 
   .md\:leading-normal {
@@ -3073,12 +3075,12 @@ select {
     line-height: 1;
   }
 
-  .md\:leading-\[44px\] {
-    line-height: 44px;
-  }
-
   .md\:leading-\[31px\] {
     line-height: 31px;
+  }
+
+  .md\:leading-\[44px\] {
+    line-height: 44px;
   }
 
   .md\:hover\:border-2:hover {
