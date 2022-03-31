@@ -1,18 +1,20 @@
 <% layout('./layouts/form-boilerplate') %>
 <section class="mt-auto form-container lg:py-[9rem]">
-    <div class="md:grid grid-cols-2 gap-8 text-secondary">
+    <div class="md:grid grid-cols-2 md:gap-24 text-secondary">
         <div class="bg-white p-6 md:p-12 rounded-lg">
             <form action="/form/step-4" method="post">
                 <div class="flex items-center mb-8">
                     <img src="/images/step4-id.svg" alt="">
-                    <h3 class="ml-4 text-[1.25rem] md:text-xl font-bold leading-tight">Občiansky preukaz z prednej aj zadnej strany</h3>
+                    <h3 class="ml-4 text-[1.25rem] md:text-xl font-bold leading-tight">Občiansky preukaz z prednej aj
+                        zadnej strany</h3>
                 </div>
                 <div class="flex items-center">
                     <img src="/images/step4-doc.svg" alt="">
                     <div class="flex flex-col items-start ml-4">
                         <h3 class="text-[1.25rem] font-bold md:text-xl">Doklad o príjme</h3>
                         <p class="text-[0.8rem] md:text-xs text-secondary/50">
-                            Ak dostávate výplatu na účet, stačí mi snímka obrazovky vášho internet bankingu. Inak potrebujem
+                            Ak dostávate výplatu na účet, stačí mi snímka obrazovky vášho internet bankingu. Inak
+                            potrebujem
                             posledné 3 výplatné pásky a výpis z účtu za posledný mesiac.
                         </p>
                     </div>
@@ -20,7 +22,8 @@
                 <hr class="my-12">
                 <div class="mb-6">
                     <h4 class="text-[1.25rem] font-bold mb-3">Občiansky preukaz</h4>
-                    <label for="obciansky" class=" flex cursor-pointer lg:h-[90px] lg:w-[160px] rounded-[10px] custom-stroke">
+                    <label for="obciansky"
+                           class=" flex cursor-pointer lg:h-[90px] lg:w-[160px] rounded-[10px] custom-stroke">
                         <span class="flex m-auto items-center">
                             <img src="/images/icons/rounded-plus.svg" alt="" class="w-full lg:max-w-[25px]">
                             <span class="flex flex-col lg:ml-2">
@@ -33,7 +36,8 @@
                 </div>
                 <div class="mb-8">
                     <h4 class="text-[1.25rem] font-bold mb-3">Doklady o príjme</h4>
-                    <label for="doklady" class=" flex cursor-pointer lg:h-[90px] lg:w-[160px] rounded-[10px] custom-stroke">
+                    <label for="doklady"
+                           class=" flex cursor-pointer lg:h-[90px] lg:w-[160px] rounded-[10px] custom-stroke">
                         <span class="flex m-auto items-center">
                             <img src="/images/icons/rounded-plus.svg" alt="" class="w-full lg:max-w-[25px]">
                             <span class="flex flex-col lg:ml-2">
@@ -45,37 +49,88 @@
                     <input type="file" id="doklady" class="hidden">
                 </div>
                 <p class="text-xs mb-2 font-medium text-secondary/50">
-                    Veľkosť súborom:  0 MB / 20 MB
+                    Veľkosť súborom: 0 MB / 20 MB
                 </p>
                 <button class="border-2 border-dRed rounded-lg py-1.5 px-7">Odoslať na posúdenie</button>
             </form>
         </div>
-        <div class="text-white -mr-20 hidden md:block">
-            <h2 class="text-5xl mb-5">Máš záujem o</h2>
-            <p class="text-[1rem]">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span><br>
-                s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span> <br>
-                a mesačnou splátkou <span class="text-primary"><%=formData.calcData.interest %> €</span></p>
-            <h3 class="text-4xl mb-2">Osobné údaje</h3>
-            <div class="mb-2">
-                <i class="fa-solid fa-minus"></i> Volam sa <span
-                        class="text-primary"><%= formData.fName %> <%= formData.lName %></span>
+        <div class="text-white h-[45rem] md:block hidden">
+            <h2 class="form-heading1 ">Máš záujem o</h2>
+            <div class="w-full md:max-w-[420px] md:mb-[2rem]">
+                <span class="lg:text-[1.7rem] lg:block leading-[36px]">pôžičku na <span
+                            class="text-primary"><%= formData.calcData.money %> €</span></span>
+                <span class="lg:text-[1.7rem] lg:block leading-[36px]">s dobou splácania <span
+                            class="text-primary"><%= formData.calcData.years %> roky</span></span>
+                <span class="lg:text-[1.7rem] lg:block leading-[36px]">a mesačnou splátkou <span
+                            class="text-primary"><%= formData.calcData.interest %> €</span></span>
             </div>
-            <div class="mb-2">
-                <i class="fa-solid fa-minus"></i> Moje rodné číslo je <span
-                        class="text-primary"><%= formData.bNumber %></span>
-            </div>
-            <div class="mb-2">
-                <i class="fa-solid fa-minus"></i> Číslo môjho občianskeho preukazu je <span
-                        class="text-primary"><%= formData.id %></span>
-            </div>
-            <div class="mb-7">
-                <i class="fa-solid fa-minus"></i> Možno ma kontaktovať na čísle <span
-                        class="text-primary"><%= formData.phoneNum %></span> alebo emailom <span
-                        class="text-primary"><%= formData.email %> </span>
-            </div>
-            <h3 class="text-4xl mb-2">Finančné údaje</h3>
-            <div>
-                <i class="fa-solid fa-minus"></i> Som <%= formData.job %>
+            <h3 class="md:text-[2.5rem] mb-4">Osobné údaje</h3>
+            <div class="md:text-[1.25rem] ">
+                <div class="mb-2 flex items-center">
+                    <i class="fa-solid fa-minus md:mr-3"></i>
+                    <div>
+                        Volám sa <span
+                                class="text-primary"> <%= formData.contact.fName %> <%= formData.contact.lName %></span>
+                    </div>
+                </div>
+                <div class="mb-2 flex items-center">
+                    <i class="fa-solid fa-minus md:mr-3"></i>
+                    <div>
+                        Moje rodné číslo je <span
+                                class="text-primary"><%= formData.contact.bNumber %></span>
+                    </div>
+                </div>
+                <div class="mb-2 flex w-full md:max-w-[330px]">
+                    <i class="fa-solid fa-minus md:pt-1 md:mr-3"></i>
+                    <div class="md:leading-[31px]">
+                        Číslo môjho občianskeho preukazu je <span
+                                class="text-primary"><%= formData.contact.id %></span>
+                    </div>
+                </div>
+                <div class="flex md:leading-[31px] w-full md:max-w-[495px] md:mb-[2rem]">
+                    <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                    <div>
+                        Možno ma kontaktovať na čísle <span
+                                class="text-primary"><%= formData.contact.phoneNum %></span>, alebo emailom <span
+                                class="text-primary"><%= formData.contact.email %> </span>
+                    </div>
+                </div>
+                <h3 class="md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
+                <div class="flex md:mb-2">
+                    <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                    <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[315px]">
+                        Som zamestnaný v <span class="text-primary"><%= formData.companyData.companyName %></span>
+                        IČO: <span class="text-primary"><%= formData.companyData.ico %></span>
+                    </div>
+                </div>
+                <div class="flex md:mb-2">
+                    <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                    <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[340px]">
+                        Zamestnaný som na <span class="text-primary">dobu <%= formData.companyData.period %></span>
+                        od <span class="text-primary"><%= formData.companyData.from %></span>
+                        do <span class="text-primary"><%= formData.companyData.till %></span>
+                    </div>
+                </div>
+                <div class="flex md:mb-[2rem]">
+                    <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                    <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[480px]">
+                        Môj čistý mesačný príjem za 1.mesiac je <span
+                                class="text-primary"><%= formData.companyData.firstMonth %>€</span>,
+                        za 2.mesiac je <span class="text-primary"><%= formData.companyData.secondMonth %>€</span>, za
+                        3.mesiac je <span class="text-primary"><%= formData.companyData.thirdMonth %>€</span>.
+                    </div>
+                </div>
+                <h3 class="md:text-[2.5rem] mb-4 md:leading-[44px] w-full md:max-w-[370px]">Doplňujúce osobné údaje</h3>
+                <div class="flex md:mb-2">
+                    <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                    <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[490px]">
+                        Trvalý pobyt mám na adrese <span
+                                class="text-primary"><%= formData.customerData.personStreet %>,</span> <span
+                                class="text-primary"><%= formData.customerData.cityCustomer %></span> <span
+                                class="text-primary"><%= formData.customerData.pscCustomer %></span>. Bývam
+                        v <%= formData.customerData.living %>.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
