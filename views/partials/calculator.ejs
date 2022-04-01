@@ -19,15 +19,29 @@
                     <div class="bg-white px-[1.5rem] py-[2.5rem] md:p-12 rounded-lg default-shadow ">
                         <div class="mb-8">
                             <h3 class="mb-[1rem] text-[1.5rem] font-bold">Koľko si chcete požičať?</h3>
-                            <input type="text" class="input-default"
-                                   placeholder="15 000€" id="money_input" name="money">
+                            <div class="relative">
+                                <input type="text" id="money_input" name="money"
+                                       class="input-default placeholder-default validate"
+                                       placeholder="15 000€">
+                                <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                            </div>
+                            <small class="text-xs text-dRed "></small>
+<!--                            <input type="text" class="input-default placeholder-default validate"-->
+<!--                                   placeholder="15 000€" id="money_input" name="money">-->
                             <input type="range" class="w-full styled-slider slider-progress mt-[1rem]" min="400" max="10000"
                                    value="2000" step="100" id="money_range">
                         </div>
                         <div class="mb-8">
                             <h3 class="mb-[1rem] text-[1.5rem] font-bold">Na koľko rokov?</h3>
-                            <input type="text" class="input-default"
-                                   placeholder="5 rokov" id="year_input" name="years">
+                            <div class="relative">
+                                <input type="text" id="year_input" name="years"
+                                       class="input-default placeholder-default validate"
+                                       placeholder="5 rokov">
+                                <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                            </div>
+                            <small class="text-xs text-dRed "></small>
+<!--                            <input type="text" class="input-default"-->
+<!--                                   placeholder="5 rokov" id="year_input" name="years">-->
                             <input type="range" class="w-full styled-slider slider-progress mt-[1rem]" min="1" max="8" value="5"
                                    id="year_range" step="1">
                         </div>
@@ -304,5 +318,4 @@
     </div>
 </div>
 
-<script src="/javascripts/calculator.js"></script>
-<script src="/javascripts/autoReviews.js"></script>
+
