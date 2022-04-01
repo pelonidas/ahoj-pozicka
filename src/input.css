@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-    .input-danger {
-        @apply border-2 border-dRed hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
-    }
+
     .input-default {
         @apply border-2 border-secondary hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md ;
     }
@@ -43,6 +41,9 @@
         @apply md:mb-3 mt-14 text-white hidden md:block md:text-[1.25rem] leading-[23px];
     }
     .form-heading1 {
-        @apply text-[2rem] md:text-[4rem] md:leading-[61px] md:mb-5;
+        @apply text-[2rem] md:text-[4rem] md:leading-[61px] mb-[16px] md:mb-5;
+    }
+    .bottom-nav {
+        @apply md:translate-y-0 md:flex text-white transition ease-in-out duration-200;
     }
 }

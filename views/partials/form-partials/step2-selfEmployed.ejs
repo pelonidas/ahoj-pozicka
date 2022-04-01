@@ -49,7 +49,8 @@
                         <small class="text-xs text-dRed "></small>
                     </div>
                     <div class="col-span-3 md:col-span-2">
-                        <label for="psc" class="label-default">PSČ<span class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
+                        <label for="psc" class="label-default">PSČ<span
+                                    class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
                         <div class="relative">
                             <input type="text" id="psc" name="psc" class="input-default placeholder-default"
                                    placeholder="851 01">
@@ -59,9 +60,11 @@
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label for="businessSince" class="label-default">Podnikám od<span class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
+                    <label for="businessSince" class="label-default">Podnikám od<span
+                                class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
                     <div class="relative">
-                        <input type="text" id="businessSince" class="input-default w-[55%] md:w-1/3 placeholder-default calendar"
+                        <input type="text" id="businessSince"
+                               class="input-default w-[55%] md:w-1/3 placeholder-default calendar"
                                placeholder="01/2021" name="businessSince">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -92,14 +95,17 @@
                     <div class="col-span-3">
                         <label for="thirdMonth" class="block text-xs mb-1">3.mesiac</label>
                         <div class="relative">
-                            <input type="text" id="thirdMonth" name="thirdMonth" class="input-default placeholder-default validate"
+                            <input type="text" id="thirdMonth" name="thirdMonth"
+                                   class="input-default placeholder-default validate"
                                    placeholder="1200€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
                         <small class="text-xs text-dRed "></small>
                     </div>
                 </div>
-                <p class="label-default">Iné príjmy<span class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span> </p>
+                <p class="label-default">Iné príjmy<span
+                            class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span>
+                </p>
                 <div class="border-2 border-secondary py-2 px-3 rounded-lg mb-6" id="radioDiv">
                     <div class="flex flex-col md:grid md:grid-cols-2">
                         <div class="mb-4 md:mb-0 flex items-center">
@@ -122,52 +128,85 @@
                 </button>
             </form>
         </div>
-        <div class="text-white h-[45rem] md:block hidden">
-            <h2 class="form-heading1 ">Máš záujem o</h2>
-            <div class="w-full md:max-w-[420px] md:mb-[2rem]">
+        <!--        <div class="translate-y-[190px] md:translate-y-0 md:flex text-white bottom-nav-container transition ease-in-out duration-200">-->
+        <!--            <div class="md:hidden buttonContainer">-->
+        <!--                <div class="bg-transparent">-->
+        <!--                    <img src="/images/icons/mobile-up.svg" alt="" class="w-full max-w-[59px] mx-auto cursor-pointer translate-y-[70%] bottom-nav-button">-->
+        <!--                </div>-->
+        <!--                <div class="flex flex-col h-[54px] rounded-t-[10px] bg-secondary">-->
+        <!--                    <div class="m-auto z-40">-->
+        <!--                        <span class="font-light leading-[17px] text-[1.125rem]">Tebou vyplnené údaje</span>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="h-[190px] md:h-full transition ease-in-out duration-200 bg-secondary">-->
+        <!--                <h2 class="form-heading1 w-[335px] md:w-full mx-auto md:mx-0">Máš záujem o</h2>-->
+        <!--                <div class="w-full max-w-[335px] md:max-w-[420px] flex flex-col mx-auto md:mx-0">-->
+        <!--                    <span class="text-[1.125rem] md:text-[1.7rem] md:block leading-[22px] md:leading-[36px] lg:mb-1">pôžičku na <span class="text-primary"><%= formData.calcData.money %> €</span></span>-->
+        <!--                    <span class="text-[1.125rem] md:text-[1.7rem] md:block leading-[22px] md:leading-[36px] lg:mb-1">s dobou splácania <span class="text-primary"><%= formData.calcData.years %> roky</span></span>-->
+        <!--                    <span class="text-[1.125rem] md:text-[1.7rem] md:block leading-[22px] md:leading-[36px]">a mesačnou splátkou <span class="text-primary"><%= formData.calcData.interest %> €</span></span>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <div class="translate-y-[550px] bottom-nav bottom-nav-fixed bottom-nav-container md:h-[45rem]">
+            <div class="md:hidden buttonContainer">
+                <div class="bg-transparent">
+                    <img src="/images/icons/mobile-up.svg" alt=""
+                         class="w-full max-w-[59px] mx-auto cursor-pointer translate-y-[70%] bottom-nav-button">
+                </div>
+                <div class="flex flex-col h-[54px] rounded-t-[10px] bg-secondary">
+                    <div class="m-auto z-40">
+                        <span class="font-light leading-[17px] text-[1.125rem]">Tebou vyplnené údaje</span>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[550px] md:h-full bg-secondary">
+                <h2 class="form-heading1 ">Máš záujem o</h2>
+                <div class="w-full md:max-w-[420px] md:mb-[2rem]">
                 <span class="lg:text-[1.7rem] lg:block leading-[36px]">pôžičku na <span
                             class="text-primary"><%= formData.calcData.money %> €</span></span>
-                <span class="lg:text-[1.7rem] lg:block leading-[36px]">s dobou splácania <span
-                            class="text-primary"><%= formData.calcData.years %> roky</span></span>
-                <span class="lg:text-[1.7rem] lg:block leading-[36px]">a mesačnou splátkou <span
-                            class="text-primary"><%= formData.calcData.interest %> €</span></span>
-            </div>
-            <h3 class="md:text-[2.5rem] mb-4">Osobné údaje</h3>
-            <div class="md:text-[1.25rem] ">
-                <div class="mb-2 flex items-center">
-                    <i class="fa-solid fa-minus md:mr-3"></i>
-                    <div>
-                        Volám sa <span
-                                class="text-primary"> <%= formData.contact.fName %> <%= formData.contact.lName %></span>
-                    </div>
+                    <span class="lg:text-[1.7rem] lg:block leading-[36px]">s dobou splácania <span
+                                class="text-primary"><%= formData.calcData.years %> roky</span></span>
+                    <span class="lg:text-[1.7rem] lg:block leading-[36px]">a mesačnou splátkou <span
+                                class="text-primary"><%= formData.calcData.interest %> €</span></span>
                 </div>
-                <div class="mb-2 flex items-center">
-                    <i class="fa-solid fa-minus md:mr-3"></i>
-                    <div>
-                        Moje rodné číslo je <span
-                                class="text-primary"><%= formData.contact.bNumber %></span>
+                <h3 class="md:text-[2.5rem] mb-4">Osobné údaje</h3>
+                <div class="md:text-[1.25rem] ">
+                    <div class="mb-2 flex items-center">
+                        <i class="fa-solid fa-minus md:mr-3"></i>
+                        <div>
+                            Volám sa <span
+                                    class="text-primary"> <%= formData.contact.fName %> <%= formData.contact.lName %></span>
+                        </div>
                     </div>
-                </div>
-                <div class="mb-2 flex w-full md:max-w-[330px]">
-                    <i class="fa-solid fa-minus md:pt-1 md:mr-3"></i>
-                    <div class="md:leading-[31px]">
-                        Číslo môjho občianskeho preukazu je <span
-                                class="text-primary"><%= formData.contact.id %></span>
+                    <div class="mb-2 flex items-center">
+                        <i class="fa-solid fa-minus md:mr-3"></i>
+                        <div>
+                            Moje rodné číslo je <span
+                                    class="text-primary"><%= formData.contact.bNumber %></span>
+                        </div>
                     </div>
-                </div>
-                <div class="flex md:leading-[31px] w-full md:max-w-[495px] md:mb-[2rem]">
-                    <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
-                    <div>
-                        Možno ma kontaktovať na čísle <span
-                                class="text-primary"><%= formData.contact.phoneNum %></span>, alebo emailom <span
-                                class="text-primary"><%= formData.contact.email %> </span>
+                    <div class="mb-2 flex w-full md:max-w-[330px]">
+                        <i class="fa-solid fa-minus md:pt-1 md:mr-3"></i>
+                        <div class="md:leading-[31px]">
+                            Číslo môjho občianskeho preukazu je <span
+                                    class="text-primary"><%= formData.contact.id %></span>
+                        </div>
                     </div>
-                </div>
-                <h3 class="md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
-                <div class="flex md:items-center">
-                    <i class="fa-solid fa-minus md:mr-3"></i>
-                    <div class="md:text-[1.25rem] md:leading-[31px]">
-                        Som <span class="text-primary"><%= formData.contact.job %></span>
+                    <div class="flex md:leading-[31px] w-full md:max-w-[495px] md:mb-[2rem]">
+                        <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                        <div>
+                            Možno ma kontaktovať na čísle <span
+                                    class="text-primary"><%= formData.contact.phoneNum %></span>, alebo emailom <span
+                                    class="text-primary"><%= formData.contact.email %> </span>
+                        </div>
+                    </div>
+                    <h3 class="md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
+                    <div class="flex md:items-center">
+                        <i class="fa-solid fa-minus md:mr-3"></i>
+                        <div class="md:text-[1.25rem] md:leading-[31px]">
+                            Som <span class="text-primary"><%= formData.contact.job %></span>
+                        </div>
                     </div>
                 </div>
             </div>
