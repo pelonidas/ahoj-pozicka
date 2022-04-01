@@ -14,7 +14,8 @@ module.exports = {
                 'primary': '#FCC800',
                 'secondary': '#223146',
                 'dRed': '#ED4036',
-                'orange': '#F9951E'
+                'orange': '#F9951E',
+                'green': '#43BD12'
             },
         },
     },
