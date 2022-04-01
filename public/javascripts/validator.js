@@ -5,6 +5,7 @@
 //inputs
 let checkbox = document.querySelector('#podmienky')
 const inputs = document.querySelectorAll('.validate');
+const numOnly = document.querySelectorAll('.num-only')
 //forms
 const forms = document.querySelectorAll('form')
 
@@ -104,6 +105,8 @@ function setInputFilter(textbox, inputFilter) {
     });
 }
 
-setInputFilter(phoneNum, function (value) {
-    return /^-?\d*$/.test(value);
-});
+for (const numOnlyElement of numOnly) {
+    setInputFilter(numOnlyElement, function (value) {
+        return /^-?\d*$/.test(value);
+    });
+}

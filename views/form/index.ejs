@@ -57,7 +57,7 @@
                     <label for="phone-num" class="label-default">Telefónne číslo</label>
                     <div class="relative">
                         <input type="text" id="phone-num"
-                               class="input-default placeholder-default validate"
+                               class="input-default placeholder-default validate num-only"
                                placeholder="0901 234 567" name="phoneNum">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -130,10 +130,10 @@
     </div>
 </section>
 <script>
-    const buttonStep1 = document.querySelector('#button')
-    const bottomNavStep1 = document.querySelector('.bottomNav')
+    const button = document.querySelector('#button')
+    const bottomNav = document.querySelector('.bottomNav')
     const buttonContainer = document.querySelector('.buttonContainer')
-    buttonStep1.addEventListener('click', () => {
-        bottomNavStep1.classList.toggle('translate-y-[190px]')
+    button.addEventListener('click', () => {
+        bottomNav.classList.toggle('translate-y-[190px]')
     })
 </script>
