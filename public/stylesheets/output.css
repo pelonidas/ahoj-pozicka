@@ -1129,6 +1129,10 @@ select {
   margin-bottom: 9rem;
 }
 
+.mt-\[10\.5rem\] {
+  margin-top: 10.5rem;
+}
+
 .mb-9 {
   margin-bottom: 2.25rem;
 }
@@ -1171,6 +1175,10 @@ select {
 
 .mb-\[4\.5rem\] {
   margin-bottom: 4.5rem;
+}
+
+.mb-\[\] {
+  margin-bottom: ;
 }
 
 .block {
@@ -1767,6 +1775,10 @@ select {
   padding: 1.5rem;
 }
 
+.p-\[2\.5rem\] {
+  padding: 2.5rem;
+}
+
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -1882,6 +1894,16 @@ select {
   padding-right: 0.75rem;
 }
 
+.px-\[\] {
+  padding-left: ;
+  padding-right: ;
+}
+
+.px-\[2\.5rem\] {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -1940,6 +1962,18 @@ select {
 
 .pl-3 {
   padding-left: 0.75rem;
+}
+
+.pb-\[\] {
+  padding-bottom: ;
+}
+
+.pb-\[5rem\] {
+  padding-bottom: 5rem;
+}
+
+.pb-\[2rem\] {
+  padding-bottom: 2rem;
 }
 
 .text-left {
@@ -2083,6 +2117,10 @@ select {
 
 .text-\[0\.875rem\] {
   font-size: 0.875rem;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
 }
 
 .font-light {
@@ -2576,6 +2614,10 @@ select {
     height: 760px;
   }
 
+  .md\:h-\[220px\] {
+    height: 220px;
+  }
+
   .md\:max-h-\[940px\] {
     max-height: 940px;
   }
@@ -2738,6 +2780,10 @@ select {
 
   .md\:max-w-\[100px\] {
     max-width: 100px;
+  }
+
+  .md\:max-w-\[77\%\] {
+    max-width: 77%;
   }
 
   .md\:translate-y-1\/2 {
