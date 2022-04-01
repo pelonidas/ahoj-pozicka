@@ -20,18 +20,34 @@ for (const form of forms) {
                 e.preventDefault()
             }
         }
-
-        let checkboxValidation = validateCheckbox()
-        if (!checkboxValidation){
-            e.preventDefault()
+        if (checkbox){
+            let checkboxValidation = validateCheckbox()
+            if (!checkboxValidation){
+                e.preventDefault()
+            }
         }
     })
 }
-
+//.input-danger {
+//         @apply border-2 border-dRed hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
+//     }
 const validateInput = (input) => {
     const inputValue = input.value.trim();
     if (!inputValue) {
-        setErrorFor(input)
+        input.className = ''
+        input.classList.add('border-2', 'border-dRed', 'hover:border-primary', 'w-full', 'rounded-lg', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md');
+        const parentInput = input.parentElement;
+        const icon = parentInput.querySelector('i');
+
+        icon.classList.remove('fa-check', 'text-transparent', 'text-green-400')
+        icon.classList.add('fa-xmark', 'text-dRed')
+
+        const div = parentInput.parentElement
+        div.classList.remove('mb-6')
+        div.classList.add('mb-3')
+
+        const small = div.querySelector('small')
+        small.innerText = "Pole je povinné."
         return false
     } else {
         setSuccessFor(input)
@@ -40,12 +56,14 @@ const validateInput = (input) => {
 }
 
 const setErrorFor = (input, msg = "Pole je nevyplnene") => {
-    const parent = input.parentElement
-    const icon = parent.querySelector('i')
-    icon.classList.remove('fa-check')
+    // input.className = ''
+    // input.classList.add('input-danger')
+    // const parent = input.parentElement
+    // const icon = parent.querySelector('i')
+    // icon.classList.remove('fa-check')
     icon.classList.add('fa-xmark')
-    icon.classList.remove('text-transparent')
-    icon.classList.remove('text-green-400')
+    // icon.classList.remove('text-transparent')
+    // icon.classList.remove('text-green-400')
     icon.classList.add("text-dRed")
 
     const div = parent.parentElement
@@ -54,10 +72,10 @@ const setErrorFor = (input, msg = "Pole je nevyplnene") => {
 
     const small = div.querySelector('small')
     small.innerText = msg
-    input.className = "input-danger"
 }
 
 const setSuccessFor = (input) => {
+    input.className = "input-default"
     const parent = input.parentElement
     const icon = parent.querySelector('i')
     icon.classList.remove('fa-xmark')
@@ -72,7 +90,7 @@ const setSuccessFor = (input) => {
 
     const small = div.querySelector('small')
     small.innerText = " "
-    input.className = "input-default"
+
 }
 
 const validateCheckbox = () => {
