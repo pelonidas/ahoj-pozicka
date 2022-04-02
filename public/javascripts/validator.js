@@ -33,13 +33,15 @@ for (const form of forms) {
 //     }
 const validateInput = (input) => {
     const inputValue = input.value.trim();
+
+    //TODO refactor this shit
     if (!inputValue) {
         input.className = ''
         input.classList.add('border-2', 'border-dRed', 'hover:border-primary', 'w-full', 'rounded-lg', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md');
         const parentInput = input.parentElement;
         const icon = parentInput.querySelector('i');
 
-        icon.classList.remove('fa-check', 'text-transparent', 'text-green-400')
+        icon.classList.remove('fa-check', 'text-transparent')
         icon.classList.add('fa-xmark', 'text-dRed')
 
         const div = parentInput.parentElement
@@ -55,34 +57,18 @@ const validateInput = (input) => {
     }
 }
 
-const setErrorFor = (input, msg = "Pole je nevyplnene") => {
-    // input.className = ''
-    // input.classList.add('input-danger')
-    // const parent = input.parentElement
-    // const icon = parent.querySelector('i')
-    // icon.classList.remove('fa-check')
-    icon.classList.add('fa-xmark')
-    // icon.classList.remove('text-transparent')
-    // icon.classList.remove('text-green-400')
-    icon.classList.add("text-dRed")
+const setErrorFor = (input, msg = "Pole je povinné.") => {
 
-    const div = parent.parentElement
-    div.classList.remove('mb-6')
-    div.classList.add('mb-3')
-
-    const small = div.querySelector('small')
-    small.innerText = msg
 }
 
 const setSuccessFor = (input) => {
-    input.className = "input-default"
+    input.className = ""
+    input.classList.add('border-2', 'border-secondary', 'hover:border-primary', 'w-full', 'rounded-lg', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md')
     const parent = input.parentElement
     const icon = parent.querySelector('i')
-    icon.classList.remove('fa-xmark')
-    icon.classList.add('fa-check')
-    icon.classList.remove('text-transparent')
-    icon.classList.remove('text-dRed')
-    icon.classList.add("text-green-400")
+    icon.classList.remove('fa-xmark', 'text-transparent', 'text-dRed')
+    icon.classList.add( 'fa-check', 'text-green-400')
+
 
     const div = parent.parentElement
     div.classList.remove('mb-6')
