@@ -706,4 +706,36 @@ nav ul li:hover {
   top: 0;
   right: -60px;
 }
+
+#mobile-nav-wrapper {
+  position: relative;
+}
+
+#mobile-nav-wrapper::before {
+  content: url("/images/mobile/mobile-nav-bg.svg");
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.faq-container {
+  margin-bottom: 1rem;
+}
+
+#contactForm {
+  position: relative;
+  padding: 1rem 0;
+}
+
+#contactForm::before {
+  content: '';
+  background: #1D3047;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: -30px;
+  right: -30px;
+}
 /*# sourceMappingURL=custom.css.map */
