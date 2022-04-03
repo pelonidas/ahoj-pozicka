@@ -94,10 +94,9 @@
                     </select>
                 </div>
                 <div class="mb-6 flex">
-                        <label for="" class="test">
-                            <input type="checkbox" id="">
-                            <span class="checkmark"></span>
-                        </label>
+                    <div class="h-[24px] w-full max-w-[24px] border-2 rounded-[5px] border-secondary cursor-pointer flex checkbox-container">
+                        <img src="/images/icons/check.svg" alt="" class="ml-1 checkbox-check invisible w-[24px]">
+                    </div>
                     <div class="mt-0 ml-2 md:ml-3 ">
                         Súhlasím s uložením <span class="underline decoration-solid font-bold">osobných údajov v rozpracovanom kontaktnom
                         formulári</span>
@@ -112,7 +111,7 @@
         <div class="translate-y-[190px] bottom-nav bottom-nav-fixed bottom-nav-container">
             <div class="md:hidden buttonContainer">
                 <div class="bg-transparent">
-                    <img src="/images/icons/mobile-up.svg" alt="" class="w-full max-w-[59px] mx-auto cursor-pointer translate-y-[70%] bottom-nav-button">
+                    <img src="/images/icons/mobile-up.svg" alt="" class="w-full max-w-[59px] mx-auto cursor-pointer translate-y-[70%] bottom-nav-button ">
                 </div>
                 <div class="flex flex-col h-[54px] rounded-t-[10px] bg-secondary">
                     <div class="m-auto z-40">
@@ -131,3 +130,16 @@
         </div>
     </div>
 </section>
+<script>
+    const checkboxContainers = document.querySelectorAll('.checkbox-container')
+    const checkboxes = document.querySelectorAll('.checkbox-check')
+
+    for (const container of checkboxContainers) {
+        container.addEventListener('click', () => {
+            console.log('hey')
+            for (const checkbox of checkboxes) {
+                checkbox.classList.toggle('invisible')
+            }
+        })
+    }
+</script>

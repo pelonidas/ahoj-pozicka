@@ -28,9 +28,7 @@ for (const form of forms) {
         }
     })
 }
-//.input-danger {
-//         @apply border-2 border-dRed hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
-//     }
+
 const validateInput = (input) => {
     const inputValue = input.value.trim();
 
