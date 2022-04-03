@@ -10,7 +10,7 @@
     </div>
     <div class="md:grid md:grid-cols-2 md:gap-24">
         <div class="bg-white p-6 md:p-12 rounded-lg text-secondary">
-            <form action="/form/step-2" method="post" id="form2v1">
+            <form action="/form/step-2" method="post">
                 <div class="mb-6">
                     <label for="companyName" class="label-default">Názov spoločnosti</label>
                     <div class="relative">
@@ -69,8 +69,9 @@
 
                 <%- include('other-income.ejs') %>
 
-                <button class="border-2 border-dRed rounded-lg py-2 px-10 text-black/50">Ďalej <i
-                            class="fa-solid fa-arrow-right-long"></i></button>
+                <button class="border-2 border-dRed rounded-[10px] text-black/50 w-full max-w-[150px] max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0">
+                    <span>Ďalej <i class="fa-solid fa-arrow-right-long"></i></span>
+                </button>
             </form>
         </div>
         <div class="translate-y-[560px] md:translate-y-0 bottom-nav bottom-nav-fixed bottom-nav-container md:h-[45rem]">

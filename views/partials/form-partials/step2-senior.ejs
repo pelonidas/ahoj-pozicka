@@ -10,17 +10,17 @@
     </div>
     <div class="md:grid md:grid-cols-2 md:gap-24">
         <div class="bg-white p-6 md:p-12 rounded-lg h-min">
-            <form action="/form/step-2" method="post" id="form-2v3">
+            <form action="/form/step-2" method="post">
                 <%- include('last-three-months.ejs') %>
 
                 <%- include('other-income.ejs') %>
 
-                <button class="border-2 border-dRed rounded-lg text-black/50 w-[175px] h-[54px] flex items-center justify-center text-[20px] font-bold mx-auto md:mx-0">
+                <button class="border-2 border-dRed rounded-[10px] text-black/50 w-full max-w-[150px] max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0">
                     <span>Ďalej <i class="fa-solid fa-arrow-right-long"></i></span>
                 </button>
             </form>
         </div>
-        <div class="translate-y-[560px] bottom-nav bottom-nav-fixed bottom-nav-container md:h-[45rem]">
+        <div class="translate-y-[560px] md:translate-y-0 bottom-nav bottom-nav-fixed bottom-nav-container md:h-[45rem]">
             <div class="md:hidden buttonContainer">
                 <div class="bg-transparent">
                     <img src="/images/icons/mobile-up.svg" alt=""
