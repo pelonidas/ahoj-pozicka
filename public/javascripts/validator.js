@@ -20,50 +20,41 @@ for (const form of forms) {
     form.addEventListener('submit', (e) => {
         for (const input of inputs) {
             let validatedInput = validateInput(input)
-            if (!validatedInput){
+            if (!validatedInput ){
                 e.preventDefault()
             }
         }
-        if (!isChecked) {
-            e.preventDefault();
-            console.log('pica')
+
+        for (const checkboxContainer of checkboxContainers) {
+            if (!isChecked) {
+                e.preventDefault()
+            }
+            validateCheckbox(checkboxContainer)
         }
-        // if (checkbox){
-        //     let checkboxValidation = validateCheckbox()
-        //     if (!checkboxValidation){
-        //         e.preventDefault()
-        //     }
-        // }
     })
 }
-//.input-danger {
-//         @apply border-2 border-dRed hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
-//     }
-
 for (const checkboxContainer of checkboxContainers) {
+    const checkbox = checkboxContainer.querySelector('.checkbox-check');
     checkboxContainer.addEventListener('click', () => {
         isChecked = !isChecked;
-        for (const checkbox of checkboxes) {
-            checkbox.classList.toggle('invisible')
-        }
+        checkbox.classList.toggle('invisible')
     })
 }
 
-
-// const validateCheckbox = () => {
-//     if (!checkbox.checked) {
-//         checkbox.nextElementSibling.className = "text-dRed"
-//         checkbox.classList.add('mr-3')
-//         checkbox.classList.remove('border-secondary')
-//         checkbox.classList.add('border-dRed')
-//         return false
-//     } else {
-//         checkbox.nextElementSibling.className = "text-secondary"
-//         return true
-//     }
-// }
-
-
+const validateCheckbox = (checkbox) => {
+   console.log(checkbox.nextElementSibling)
+    let sibling = checkbox.nextElementSibling;
+    if (!isChecked) {
+        checkbox.classList.remove('border-secondary')
+        checkbox.classList.add('border-dRed')
+        sibling.classList.add('text-dRed')
+    } else {
+        checkbox.classList.remove('border-dRed')
+        checkbox.classList.add('border-secondary')
+        sibling.classList.remove('text-dRed')
+        sibling.classList.add('text-secondary')
+    }
+}
 
 const validateInput = (input) => {
     const inputValue = input.value.trim();
