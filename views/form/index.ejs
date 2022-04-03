@@ -58,7 +58,7 @@
                     <div class="relative">
                         <input type="text" id="phone-num"
                                class="input-default placeholder-default validate num-only"
-                               placeholder="0901 234 567" name="phoneNum">
+                               placeholder="0901 234 567" name="phoneNum" maxlength="10">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
                     <small class="text-xs text-dRed "></small>
@@ -94,13 +94,16 @@
                     </select>
                 </div>
                 <div class="mb-6 flex">
-                    <input type="checkbox" id="podmienky"
-                           class="border-2 border-secondary rounded mt-1 focus:ring-0 hover:border-primary text-secondary">
-                    <div class="mt-0 ml-2 md:ml-3">
+                        <label for="" class="test">
+                            <input type="checkbox" id="">
+                            <span class="checkmark"></span>
+                        </label>
+                    <div class="mt-0 ml-2 md:ml-3 ">
                         Súhlasím s uložením <span class="underline decoration-solid font-bold">osobných údajov v rozpracovanom kontaktnom
                         formulári</span>
                     </div>
                 </div>
+
                 <button class="border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0">
                     <span>Ďalej <i class="fa-solid fa-arrow-right-long"></i></span>
                 </button>

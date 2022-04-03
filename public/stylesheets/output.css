@@ -1527,6 +1527,10 @@ select {
   max-width: 25px;
 }
 
+.max-w-\[300px\] {
+  max-width: 300px;
+}
+
 .translate-y-\[190px\] {
   --tw-translate-y: 190px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1590,6 +1594,10 @@ select {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-start {
