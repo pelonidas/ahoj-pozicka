@@ -2,8 +2,12 @@
 // Use validateCheckbox() to validate checkbox (needs to be reworked so it can be more reusable)
 // Use setInputFilter() to disable number typing - example at the end of the code
 
+
+const checkboxes = document.querySelectorAll('.checkbox-check')
+const checkboxContainers = document.querySelectorAll('.checkbox-container')
+let isChecked = false;
+
 //inputs
-let checkbox = document.querySelector('#podmienky')
 const inputs = document.querySelectorAll('.validate');
 const numOnly = document.querySelectorAll('.num-only')
 //forms
@@ -20,14 +24,46 @@ for (const form of forms) {
                 e.preventDefault()
             }
         }
-        if (checkbox){
-            let checkboxValidation = validateCheckbox()
-            if (!checkboxValidation){
-                e.preventDefault()
-            }
+        if (!isChecked) {
+            e.preventDefault();
+            console.log('pica')
+        }
+        // if (checkbox){
+        //     let checkboxValidation = validateCheckbox()
+        //     if (!checkboxValidation){
+        //         e.preventDefault()
+        //     }
+        // }
+    })
+}
+//.input-danger {
+//         @apply border-2 border-dRed hover:border-primary w-full rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md;
+//     }
+
+for (const checkboxContainer of checkboxContainers) {
+    checkboxContainer.addEventListener('click', () => {
+        isChecked = !isChecked;
+        for (const checkbox of checkboxes) {
+            checkbox.classList.toggle('invisible')
         }
     })
 }
+
+
+// const validateCheckbox = () => {
+//     if (!checkbox.checked) {
+//         checkbox.nextElementSibling.className = "text-dRed"
+//         checkbox.classList.add('mr-3')
+//         checkbox.classList.remove('border-secondary')
+//         checkbox.classList.add('border-dRed')
+//         return false
+//     } else {
+//         checkbox.nextElementSibling.className = "text-secondary"
+//         return true
+//     }
+// }
+
+
 
 const validateInput = (input) => {
     const inputValue = input.value.trim();
@@ -75,19 +111,6 @@ const setSuccessFor = (input) => {
     const small = div.querySelector('small')
     small.innerText = " "
 
-}
-
-const validateCheckbox = () => {
-    if (!checkbox.checked) {
-        checkbox.nextElementSibling.className = "text-dRed"
-        checkbox.classList.add('mr-3')
-        checkbox.classList.remove('border-secondary')
-        checkbox.classList.add('border-dRed')
-        return false
-    } else {
-        checkbox.nextElementSibling.className = "text-secondary"
-        return true
-    }
 }
 
 function setInputFilter(textbox, inputFilter) {
