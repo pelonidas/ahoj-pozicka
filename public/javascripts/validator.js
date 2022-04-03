@@ -82,9 +82,9 @@ const validateInput = (input) => {
     }
 }
 
-const setErrorFor = (input, msg = "Pole je povinné.") => {
-
-}
+// const setErrorFor = (input, msg = "Pole je povinné.") => {
+//
+// }
 
 const setSuccessFor = (input) => {
     input.className = ""
