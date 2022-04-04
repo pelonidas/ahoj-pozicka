@@ -39,6 +39,12 @@ for (const checkboxContainer of checkboxContainers) {
         isChecked = !isChecked;
         checkbox.classList.toggle('invisible')
     })
+
+    checkboxContainer.addEventListener('mouseenter', () => {
+        console.log('hey')
+        checkboxContainer.classList.remove('border-secondary')
+        checkboxContainer.classList.add('border-primary')
+    })
 }
 
 const validateCheckbox = (checkbox) => {

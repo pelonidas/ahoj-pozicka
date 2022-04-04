@@ -1211,10 +1211,6 @@ select {
   margin-top: 1.25rem;
 }
 
-.block {
-  display: block;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -1688,10 +1684,6 @@ select {
   border-radius: 5px;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-\[8px\] {
   border-radius: 8px;
 }
@@ -1745,10 +1737,6 @@ select {
   border-top-width: 1px;
 }
 
-.border-l {
-  border-left-width: 1px;
-}
-
 .border-r-0 {
   border-right-width: 0px;
 }
@@ -1759,6 +1747,10 @@ select {
 
 .border-l-0 {
   border-left-width: 0px;
+}
+
+.border-l {
+  border-left-width: 1px;
 }
 
 .border-primary {
@@ -2598,6 +2590,10 @@ select {
     margin-left: 0.75rem;
   }
 
+  .md\:ml-4 {
+    margin-left: 1rem;
+  }
+
   .md\:mb-\[2rem\] {
     margin-bottom: 2rem;
   }
@@ -2891,13 +2887,13 @@ select {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .md\:translate-x-0 {
-    --tw-translate-x: 0px;
+  .md\:translate-y-0 {
+    --tw-translate-y: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .md\:translate-y-0 {
-    --tw-translate-y: 0px;
+  .md\:translate-x-0 {
+    --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -3166,12 +3162,12 @@ select {
     line-height: 1.75rem;
   }
 
-  .md\:text-\[2\.5rem\] {
-    font-size: 2.5rem;
-  }
-
   .md\:text-\[1\.25rem\] {
     font-size: 1.25rem;
+  }
+
+  .md\:text-\[2\.5rem\] {
+    font-size: 2.5rem;
   }
 
   .md\:text-xs {
@@ -3191,12 +3187,12 @@ select {
     font-size: 1.5rem;
   }
 
-  .md\:text-\[0\.875rem\] {
-    font-size: 0.875rem;
-  }
-
   .md\:text-\[0\.75rem\] {
     font-size: 0.75rem;
+  }
+
+  .md\:text-\[0\.875rem\] {
+    font-size: 0.875rem;
   }
 
   .md\:leading-normal {
@@ -3211,16 +3207,16 @@ select {
     line-height: 20px;
   }
 
+  .md\:leading-\[23px\] {
+    line-height: 23px;
+  }
+
   .md\:leading-\[31px\] {
     line-height: 31px;
   }
 
   .md\:leading-\[44px\] {
     line-height: 44px;
-  }
-
-  .md\:leading-\[23px\] {
-    line-height: 23px;
   }
 
   .md\:leading-none {
