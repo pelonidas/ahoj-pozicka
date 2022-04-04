@@ -7,6 +7,8 @@ const checkboxes = document.querySelectorAll('.checkbox-check')
 const checkboxContainers = document.querySelectorAll('.checkbox-container')
 let isChecked = false;
 
+const postContainer = document.querySelector('#post-container')
+
 //inputs
 const inputs = document.querySelectorAll('.validate');
 const numOnly = document.querySelectorAll('.num-only')
@@ -26,7 +28,7 @@ for (const form of forms) {
         }
 
         for (const checkboxContainer of checkboxContainers) {
-            if (!isChecked) {
+            if (!isChecked && checkboxContainer.classList.contains('checkbox-validate')) {
                 e.preventDefault()
             }
             validateCheckbox(checkboxContainer)
@@ -38,27 +40,31 @@ for (const checkboxContainer of checkboxContainers) {
     checkboxContainer.addEventListener('click', () => {
         isChecked = !isChecked;
         checkbox.classList.toggle('invisible')
-    })
+        if (postContainer) {
+            if (isChecked) {
+                postContainer.classList.toggle('hidden')
+            } else {
+                postContainer.classList.add('hidden')
+            }
+        }
 
-    checkboxContainer.addEventListener('mouseenter', () => {
-        console.log('hey')
-        checkboxContainer.classList.remove('border-secondary')
-        checkboxContainer.classList.add('border-primary')
     })
 }
 
 const validateCheckbox = (checkbox) => {
-   console.log(checkbox.nextElementSibling)
+   console.log(checkbox.classList.contains('checkbox-validate'))
     let sibling = checkbox.nextElementSibling;
-    if (!isChecked) {
-        checkbox.classList.remove('border-secondary')
-        checkbox.classList.add('border-dRed')
-        sibling.classList.add('text-dRed')
-    } else {
-        checkbox.classList.remove('border-dRed')
-        checkbox.classList.add('border-secondary')
-        sibling.classList.remove('text-dRed')
-        sibling.classList.add('text-secondary')
+    if (checkbox.classList.contains('checkbox-validate')) {
+        if (!isChecked) {
+            checkbox.classList.remove('border-secondary')
+            checkbox.classList.add('border-dRed')
+            sibling.classList.add('text-dRed')
+        } else {
+            checkbox.classList.remove('border-dRed')
+            checkbox.classList.add('border-secondary')
+            sibling.classList.remove('text-dRed')
+            sibling.classList.add('text-secondary')
+        }
     }
 }
 

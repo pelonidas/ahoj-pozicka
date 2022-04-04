@@ -1211,6 +1211,10 @@ select {
   margin-top: 1.25rem;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -2193,6 +2197,14 @@ select {
   font-size: 0.875rem;
 }
 
+.text-\[0\.925rem\] {
+  font-size: 0.925rem;
+}
+
+.text-\[0\.85rem\] {
+  font-size: 0.85rem;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -2648,6 +2660,10 @@ select {
 
   .md\:mb-1 {
     margin-bottom: 0.25rem;
+  }
+
+  .md\:ml-1 {
+    margin-left: 0.25rem;
   }
 
   .md\:block {
