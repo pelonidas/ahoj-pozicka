@@ -1233,6 +1233,10 @@ select {
   margin-bottom: 8rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1333,6 +1337,10 @@ select {
 
 .h-\[250px\] {
   height: 250px;
+}
+
+.h-\[490px\] {
+  height: 490px;
 }
 
 .max-h-\[170px\] {
@@ -1711,6 +1719,10 @@ select {
   gap: 0.75rem;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .overflow-y-hidden {
   overflow-y: hidden;
 }
@@ -2087,6 +2099,10 @@ select {
 
 .pb-\[1rem\] {
   padding-bottom: 1rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .text-left {
@@ -2766,6 +2782,10 @@ select {
 
   .md\:h-\[268px\] {
     height: 268px;
+  }
+
+  .md\:h-\[1060px\] {
+    height: 1060px;
   }
 
   .md\:max-h-\[940px\] {
