@@ -68,7 +68,7 @@
                     <div class="mb-6">
                         <label for="postStreet" class="label-default">Ulica a popisné číslo</label>
                         <div class="relative">
-                            <input type="text" id="postStreet" class="input-default placeholder-default validate"
+                            <input type="text" id="postStreet" class="input-default placeholder-default"
                                    placeholder="Štúrová 226" name="postStreet">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
@@ -79,7 +79,7 @@
                             <label for="postCity" class="label-default">Obec</label>
                             <div class="relative">
                                 <input type="text" id="postCity" name="postCity"
-                                       class="input-default placeholder-default validate"
+                                       class="input-default placeholder-default"
                                        placeholder="Bratislava">
                                 <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                             </div>
@@ -112,7 +112,8 @@
                         <small class="text-xs text-dRed "></small>
                     </div>
                 </div>
-                <button class="submit-button border-2 border-dRed rounded-lg text-black/50 w-[175px] h-[54px] flex items-center justify-center text-[20px] font-bold mx-auto md:mx-0" disabled>
+                <button class="submit-button border-2 border-dRed rounded-lg text-black/50 w-[175px] h-[54px] flex items-center justify-center text-[20px] font-bold mx-auto md:mx-0"
+                        disabled>
                     <span>Ďalej <i class="fa-solid fa-arrow-right-long"></i></span>
                 </button>
             </form>
@@ -130,21 +131,21 @@
                 </div>
             </div>
             <div class="h-[560px] md:h-full bg-secondary">
-                <div class="pt-[1.5rem] md:pt-0 w-full max-w-[80%] md:max-w-full mx-auto border-t md:border-0 border-white/20 flex flex-col justify-center ">
+                <div class="overflow-y-auto pt-[1.5rem] md:pt-0 w-full max-w-[80%] md:max-w-full h-[490px] mx-auto border-t md:border-0 border-white/20 flex flex-col">
                     <h2 class="form-heading1 ">Máš záujem o</h2>
-                    <div class="w-full md:max-w-[420px] md:mb-[2rem]">
-                <span class="lg:text-[1.7rem] lg:block leading-[36px]">pôžičku na <span
-                            class="text-primary"><%= formData.calcData.money %>
+                    <div class="w-full md:max-w-[420px] mb-[1.5rem] md:mb-[2rem]">
+                    <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">pôžičku na <span
+                                class="text-primary"><%= formData.calcData.money %>
                         €</span></span>
-                        <span class="lg:text-[1.7rem] lg:block leading-[36px]">s dobou splácania <span
+                        <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">s dobou splácania <span
                                     class="text-primary"><%= formData.calcData.years %>roky</span></span>
-                        <span class="lg:text-[1.7rem] lg:block leading-[36px]">a mesačnou splátkou <span
+                        <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">a mesačnou splátkou <span
                                     class="text-primary"><%= formData.calcData.interest %>€</span></span>
                     </div>
-                    <h3 class="md:text-[2.5rem] mb-4">Osobné údaje</h3>
+                    <h3 class="text-[2rem] md:text-[2.5rem] mb-4">Osobné údaje</h3>
                     <div class="md:text-[1.25rem] ">
                         <div class="mb-2 flex items-center">
-                            <i class="fa-solid fa-minus md:mr-3"></i>
+                            <i class="fa-solid fa-minus mr-2 md:mr-3"></i>
                             <div>
                                 Volám sa <span
                                         class="text-primary"> <%= formData.contact.fName %>
@@ -152,7 +153,7 @@
                             </div>
                         </div>
                         <div class="mb-2 flex items-center">
-                            <i class="fa-solid fa-minus md:mr-3"></i>
+                            <i class="fa-solid fa-minus mr-2 md:mr-3"></i>
                             <div>
                                 Moje rodné číslo je <span
                                         class="text-primary"><%= formData.contact.bNumber %>
@@ -160,15 +161,15 @@
                             </div>
                         </div>
                         <div class="mb-2 flex w-full md:max-w-[330px]">
-                            <i class="fa-solid fa-minus md:pt-1 md:mr-3"></i>
+                            <i class="fa-solid fa-minus pt-1 mr-2 md:mr-3"></i>
                             <div class="md:leading-[31px]">
                                 Číslo môjho občianskeho preukazu je <span
                                         class="text-primary"><%= formData.contact.id %>
                                 </span>
                             </div>
                         </div>
-                        <div class="flex md:leading-[31px] w-full md:max-w-[495px] md:mb-[2rem]">
-                            <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                        <div class="flex md:leading-[31px] w-full md:max-w-[495px] mb-[1.5rem] md:mb-[2rem]">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
                             <div>
                                 Možno ma kontaktovať na čísle <span
                                         class="text-primary"><%= formData.contact.phoneNum %>
@@ -176,9 +177,9 @@
                                 <span class="text-primary"><%= formData.contact.email %></span>
                             </div>
                         </div>
-                        <h3 class="md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
+                        <h3 class="text-[2rem] md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
                         <div class="flex md:mb-2">
-                            <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
                             <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[315px]">
                                 Som zamestnaný v <span
                                         class="text-primary"><%= formData.companyData.companyName %>
@@ -188,7 +189,7 @@
                             </div>
                         </div>
                         <div class="flex md:mb-2">
-                            <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
                             <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[340px]">
                                 Zamestnaný som na <span
                                         class="text-primary">dobu <%= formData.companyData.period %></span>
@@ -199,7 +200,7 @@
                             </div>
                         </div>
                         <div class="flex md:mb-2">
-                            <i class="fa-solid fa-minus md:mr-3 md:pt-1"></i>
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
                             <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[480px]">
                                 Môj čistý mesačný príjem za 1.mesiac je <span
                                         class="text-primary"><%= formData.companyData.firstMonth %>€</span>,
