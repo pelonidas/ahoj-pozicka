@@ -7,7 +7,9 @@ const checkboxes = document.querySelectorAll('.checkbox-check')
 const checkboxContainers = document.querySelectorAll('.checkbox-container')
 let isChecked = false;
 
-const postContainer = document.querySelector('#post-container')
+
+const submitButtons = document.querySelectorAll('.submit-button');
+const postContainer = document.querySelector('#post-container');
 
 //inputs
 const inputs = document.querySelectorAll('.validate');
@@ -19,6 +21,26 @@ let allLetters = /^[A-Za-z]+$/;
 
 
 for (const form of forms) {
+    form.addEventListener('change', () => {
+        let isEmpty = false;
+        for (const input of inputs) {
+            if (!input.value && input.classList.contains('validate')) {
+                isEmpty = true;
+            }
+        }
+        for (const submitButton of submitButtons) {
+            if (!isEmpty) {
+                submitButton.classList.remove('border-2', 'text-black/50')
+                submitButton.classList.add('bg-dRed', 'text-white')
+                submitButton.disabled = false
+            } else {
+                submitButton.classList.remove('bg-dRed', 'text-white')
+                submitButton.classList.add('border-2', 'text-black/50')
+                submitButton.disabled = true
+            }
+        }
+
+    })
     form.addEventListener('submit', (e) => {
         for (const input of inputs) {
             let validatedInput = validateInput(input)

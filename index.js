@@ -72,10 +72,6 @@ app.get('/form/step-1', (req, res) => {
     res.render('form/index', {step: 1, formData})
 })
 
-app.get('/test', (req, res) => {
-    res.render('form/form-dakujeme')
-})
-
 app.get('/form/step-2', (req, res) => {
     res.render('form/step2', {step: 2, formData})
 })

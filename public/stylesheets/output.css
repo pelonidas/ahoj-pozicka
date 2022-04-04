@@ -940,6 +940,10 @@ select {
   order: -9999;
 }
 
+.order-2 {
+  order: 2;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
