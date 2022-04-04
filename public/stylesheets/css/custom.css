@@ -396,7 +396,7 @@ nav ul li:hover {
   background-size: cover;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #calculator-section {
     position: relative;
     z-index: 1;
@@ -704,17 +704,18 @@ nav ul li:hover {
   right: -60px;
 }
 
-#mobile-nav-wrapper {
-  position: relative;
-}
-
-#mobile-nav-wrapper::before {
-  content: url("/images/mobile/mobile-nav-bg.svg");
-  position: absolute;
-  top: 6rem;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+@media screen and (max-width: 1280px) {
+  #mobile-nav-wrapper {
+    position: relative;
+  }
+  #mobile-nav-wrapper::before {
+    content: url("/images/mobile/mobile-nav-bg.svg");
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
 }
 
 .faq-container {

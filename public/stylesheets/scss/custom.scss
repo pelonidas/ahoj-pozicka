@@ -447,7 +447,7 @@ nav {
   background-size: cover;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #calculator-section {
     position: relative;
     z-index: 1;
@@ -476,17 +476,6 @@ nav {
       font-size: 40px;
       color: #ffffff;
     }
-
-    // @media screen and ( min-width: 768px ) {
-
-    //     &::after {
-    //       z-index: -1;
-    //       position: absolute;
-    //       top: 25rem;
-    //       right: 2rem;
-    //       content: url("/images/bg-y-sm.svg");
-    //     }
-    //   }
 
     #card-wrapper {
       z-index: 2;
@@ -789,16 +778,18 @@ nav {
   }
 }
 
-#mobile-nav-wrapper {
-  position: relative;
+@media screen and (max-width: 1280px) {
+  #mobile-nav-wrapper {
+    position: relative;
 
-  &::before {
-    content: url("/images/mobile/mobile-nav-bg.svg");
-    position: absolute;
+    &::before {
+      content: url("/images/mobile/mobile-nav-bg.svg");
+      position: absolute;
 
-    top: 6rem;
-    left: 50%;
-    transform: translate(-50%);
+      top: 6rem;
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 }
 
@@ -824,7 +815,7 @@ nav {
   }
 
   &::after {
-    content: url('/images/mobile/mobile-contactform-bg.svg');
+    content: url("/images/mobile/mobile-contactform-bg.svg");
     position: absolute;
     bottom: -40px;
     left: 50%;
