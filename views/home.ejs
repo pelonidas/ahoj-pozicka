@@ -2,6 +2,47 @@
 
 
 <%- include('./partials/calculator')%>
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-navigators">
+        <div class="swiper-pagination"></div>
+    
+        <div class="swiper-arrows">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </divc>
+
+</div>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
 
 <%- include('./partials/offer')%>
 
@@ -12,7 +53,7 @@
 
 
 <!-- <div class="pt-28 bg-secondary"> -->
-    <%- include('./partials/aboutUs')%>
+<%- include('./partials/aboutUs')%>
 <!-- </div> -->
 <%- include('./partials/ad-cards')%>
 <section class="bg-secondary text-white md:pb-[3.5rem]">
@@ -33,5 +74,3 @@
 <%- include('./partials/faq')%>
 
 <%- include('./partials/contactForm')%>
-
-

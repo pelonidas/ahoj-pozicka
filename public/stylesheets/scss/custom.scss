@@ -652,7 +652,6 @@ nav {
   }
 
   #home-card-section {
-
     &::before {
       content: unset;
     }
@@ -728,7 +727,7 @@ nav {
   position: relative;
 
   &::before {
-    content: url('/images/mobile/mobile-benefits-bg.svg');
+    content: url("/images/mobile/mobile-benefits-bg.svg");
     position: absolute;
     top: 166px;
     bottom: 0;
@@ -738,7 +737,7 @@ nav {
   }
 
   &::after {
-    content: url('/images/mobile/mobile-benefits-bg.svg');
+    content: url("/images/mobile/mobile-benefits-bg.svg");
     position: absolute;
     top: 166px;
     bottom: 0;
@@ -755,7 +754,7 @@ nav {
   z-index: 2;
 
   &::before {
-    content: url('/images/mobile/mobile-cta-bg.svg');
+    content: url("/images/mobile/mobile-cta-bg.svg");
     position: absolute;
     bottom: 0;
     left: 0;
@@ -763,7 +762,7 @@ nav {
   }
 
   &::after {
-    content: url('/images/mobile/mobile-cta-bg.svg');
+    content: url("/images/mobile/mobile-cta-bg.svg");
     position: absolute;
     top: 0;
     right: 0;
@@ -778,14 +777,14 @@ nav {
   position: relative;
 
   &::before {
-    content: url('/images/mobile/mobile-aboutus-bg.svg');
+    content: url("/images/mobile/mobile-aboutus-bg.svg");
     position: absolute;
     top: 0;
     left: -60px;
   }
 
   &::after {
-    content: url('/images/mobile/mobile-aboutus-bg.svg');
+    content: url("/images/mobile/mobile-aboutus-bg.svg");
     position: absolute;
     top: 0;
     right: -60px;
@@ -796,7 +795,7 @@ nav {
   position: relative;
 
   &::before {
-    content: url('/images/mobile/mobile-nav-bg.svg');
+    content: url("/images/mobile/mobile-nav-bg.svg");
     position: absolute;
 
     top: 6rem;
@@ -814,13 +813,39 @@ nav {
   padding: 1rem 0;
 
   &::before {
-    content: '';
-    background: #1D3047;
+    content: "";
+    background: #1d3047;
     position: absolute;
     z-index: -1;
 
     bottom: 0;
     left: -30px;
     right: -30px;
+  }
+}
+
+.swiper-navigators {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .swiper-pagination {
+    width: unset !important;
+  }
+
+  .swiper-pagination {
+    position: static;
+  }
+}
+
+.swiper-arrows {
+  display: flex;
+  div {
+    position: static;
+
+    &::after {
+      width: 10px;
+      margin: 1rem;
+    }
   }
 }
