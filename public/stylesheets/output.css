@@ -1472,6 +1472,10 @@ select {
   width: 55%;
 }
 
+.w-\[370px\] {
+  width: 370px;
+}
+
 .max-w-\[92\%\] {
   max-width: 92%;
 }
@@ -1582,6 +1586,10 @@ select {
 
 .max-w-\[175px\] {
   max-width: 175px;
+}
+
+.max-w-\[370px\] {
+  max-width: 370px;
 }
 
 .translate-y-1\/2 {
