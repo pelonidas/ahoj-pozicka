@@ -1,3 +1,7 @@
+:root {
+  --swiper-theme-color: #ED4036;
+}
+
 html,
 body {
   max-width: 100%;
@@ -822,6 +826,26 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   margin-bottom: 1rem;
   display: block;
   margin-top: -10px;
+}
+
+.swiper-button-next {
+  content: "";
+  background-image: url("/images/icons/next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-next {
+  content: "";
+  background-image: url("/images/icons/next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-button-next::after {
+  display: none;
 }
 
 /*# sourceMappingURL=custom.css.map */
