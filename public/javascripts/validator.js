@@ -21,7 +21,7 @@ let allLetters = /^[A-Za-z]+$/;
 
 
 for (const form of forms) {
-    form.addEventListener('change', () => {
+    form.addEventListener('input', () => {
         let isEmpty = false;
         for (const input of inputs) {
             if (!input.value && input.classList.contains('validate')) {
@@ -74,7 +74,7 @@ for (const checkboxContainer of checkboxContainers) {
 }
 
 const validateCheckbox = (checkbox) => {
-   console.log(checkbox.classList.contains('checkbox-validate'))
+    console.log(checkbox.classList.contains('checkbox-validate'))
     let sibling = checkbox.nextElementSibling;
     if (checkbox.classList.contains('checkbox-validate')) {
         if (!isChecked) {

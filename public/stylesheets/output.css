@@ -2105,6 +2105,10 @@ select {
   padding-top: 0.25rem;
 }
 
+.pl-\[2rem\] {
+  padding-left: 2rem;
+}
+
 .text-left {
   text-align: left;
 }

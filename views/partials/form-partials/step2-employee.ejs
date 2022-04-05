@@ -23,7 +23,7 @@
                 <div class="mb-6">
                     <label for="ico" class="label-default">IČO</label>
                     <div class="relative">
-                        <input type="text" id="ico" class="input-default placeholder-default validate"
+                        <input type="text" id="ico" class="input-default placeholder-default validate num-only"
                                placeholder="58456734" name="ico">
                         <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                     </div>
@@ -54,12 +54,12 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label for="from" class="hidden md:block md:text-[0.875rem] font-bold md:mb-2">V zamestnaní od<span class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
-                            <input type="text" id="from" placeholder="01/2021" class="input-default placeholder-default calendar"
+                            <input type="text" id="from" placeholder="01/2021" class="input-default placeholder-default calendar pl-[2rem]"
                                    name="from">
                         </div>
                         <div>
                             <label for="till" class="hidden md:block md:text-[0.875rem] font-bold md:mb-2">V zamestnaní do<span class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
-                            <input type="text" id="till" placeholder="04/2024" class="input-default placeholder-default calendar" name="till">
+                            <input type="text" id="till" placeholder="04/2024" class="input-default placeholder-default calendar pl-[2rem]" name="till">
                         </div>
                     </div>
 
@@ -69,7 +69,7 @@
 
                 <%- include('other-income.ejs') %>
 
-                <button class="border-2 border-dRed rounded-[10px] text-black/50 w-full max-w-[150px] max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0">
+                <button class="submit-button border-2 border-dRed rounded-[10px] text-black/50 w-full max-w-[150px] max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0">
                     <span>Ďalej <i class="fa-solid fa-arrow-right-long"></i></span>
                 </button>
             </form>
