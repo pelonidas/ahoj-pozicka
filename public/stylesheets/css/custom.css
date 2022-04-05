@@ -76,6 +76,14 @@ nav ul li:hover {
   background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+  #find-out-more-section {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    background-size: contain;
+  }
+}
+
 #products-section {
   margin-bottom: 7rem;
 }
@@ -612,11 +620,25 @@ nav ul li:hover {
   top: 0;
 }
 
+@media screen and (min-width: 768px) {
+  #home-card-section::before {
+    content: url("/images/offer-bg-left.svg");
+  }
+}
+
 #home-card-section::after {
   content: url("/images/mobile/mobile-offer-bg.svg");
   position: absolute;
   right: -40px;
   top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #home-card-section::after {
+    content: url("/images/offer-bg-left.svg");
+    bottom: 0;
+    top: unset;
+  }
 }
 
 #home-card-section > .container {
@@ -631,6 +653,12 @@ nav ul li:hover {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  #home-card-section > .container::after {
+    content: "";
+  }
 }
 
 #benefits-section {
@@ -659,6 +687,23 @@ nav ul li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  #benefits-section {
+    position: relative;
+  }
+  #benefits-section::before {
+    content: url("/images/benefits-bg.svg");
+    top: unset;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  #benefits-section::after {
+    content: unset;
+  }
 }
 
 #calc-ad {
@@ -697,11 +742,23 @@ nav ul li:hover {
   left: -60px;
 }
 
+@media screen and (min-width: 768px) {
+  #aboutusBg::before {
+    content: unset;
+  }
+}
+
 #aboutusBg::after {
   content: url("/images/mobile/mobile-aboutus-bg.svg");
   position: absolute;
   top: 0;
   right: -60px;
+}
+
+@media screen and (min-width: 768px) {
+  #aboutusBg::after {
+    content: unset;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -803,6 +860,12 @@ nav ul li:hover {
   border-radius: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  #productsBg::before {
+    content: unset;
+  }
+}
+
 #productsBgTwo {
   position: relative;
 }
@@ -814,6 +877,12 @@ nav ul li:hover {
   right: -50px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  #productsBgTwo::after {
+    content: unset;
+  }
 }
 
 #reviewsQuote {
@@ -871,14 +940,14 @@ nav ul li:hover {
     content: url("/images/desktop-hero-calculatorbg-left.svg");
     position: absolute;
     left: -210px;
-    bottom: 320px;
+    bottom: 240px;
     z-index: -1;
   }
   #calculator::after {
     content: url("/images/desktop-hero-calculatorbg-right.svg");
     position: absolute;
-    top: -90px;
-    right: -90px;
+    top: -110px;
+    right: -100px;
     z-index: -1;
   }
 }
@@ -887,24 +956,31 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   border-radius: 20px;
 }
 
-#money_input, #year_input {
-  font-size: 24px;
-  padding-bottom: 6px;
+@media screen and (max-width: 768px) {
+  #money_input,
+  #year_input {
+    font-size: 24px;
+    padding-bottom: 6px;
+  }
 }
 
-#money_input::-webkit-input-placeholder, #year_input::-webkit-input-placeholder {
-  font-size: 24px;
-}
-
-#money_input:-ms-input-placeholder, #year_input:-ms-input-placeholder {
-  font-size: 24px;
-}
-
-#money_input::-ms-input-placeholder, #year_input::-ms-input-placeholder {
+#money_input::-webkit-input-placeholder,
+#year_input::-webkit-input-placeholder {
   font-size: 24px;
 }
 
-#money_input::placeholder, #year_input::placeholder {
+#money_input:-ms-input-placeholder,
+#year_input:-ms-input-placeholder {
+  font-size: 24px;
+}
+
+#money_input::-ms-input-placeholder,
+#year_input::-ms-input-placeholder {
+  font-size: 24px;
+}
+
+#money_input::placeholder,
+#year_input::placeholder {
   font-size: 24px;
 }
 
@@ -914,5 +990,152 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   margin-bottom: 1rem;
   display: block;
   margin-top: -10px;
+}
+
+@media screen and (min-width: 768px) {
+  #offerContentWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #home-about {
+    position: relative;
+  }
+  #home-about > div::before {
+    content: url("/images/aboutus-bg.svg");
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  #home-about > div::after {
+    content: url("/images/aboutus-bg.svg");
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  #productsWrapper {
+    position: relative;
+  }
+  #productsWrapper::after {
+    content: url("/images/products-bg.svg");
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  #productsBg::before {
+    content: "";
+    position: absolute;
+    left: -2060px;
+    bottom: 0px;
+    right: 0;
+    top: 0;
+    width: unset;
+    height: unset;
+    background: #ffffff;
+    -webkit-box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  #reviewsQuote::before {
+    bottom: 0;
+    left: -230px;
+    top: unset;
+    width: 320px;
+    height: 195px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #reviewsWrapper {
+    position: relative;
+  }
+  #reviewsWrapper::before {
+    content: url("/images/reviews-bg-left.svg");
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  #reviewsWrapper::after {
+    content: url("/images/reviws-bg-right.svg");
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: -1;
+  }
+  #faq-header::before {
+    bottom: unset;
+    right: 0;
+    left: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  #faq-header {
+    padding: 3rem 0;
+    margin-bottom: 3.5rem;
+  }
+  #contactForm::before {
+    bottom: 0;
+    left: 0;
+    right: -2420px;
+  }
+  #contactForm {
+    padding: 0;
+  }
+  #contactForm::after {
+    content: unset;
+  }
+  #contactFormWrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #contactFormWrapper::after {
+    position: absolute;
+    content: url("/images/contact-form-bg-right.svg");
+    right: -240px;
+    left: unset;
+    bottom: unset;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    top: 50%;
+  }
+  #contactFormWrapper input, #contactFormWrapper textarea {
+    font-size: 20px;
+  }
+  #contactFormWrapper input::-webkit-input-placeholder, #contactFormWrapper textarea::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  #contactFormWrapper input:-ms-input-placeholder, #contactFormWrapper textarea:-ms-input-placeholder {
+    font-size: 20px;
+  }
+  #contactFormWrapper input::-ms-input-placeholder, #contactFormWrapper textarea::-ms-input-placeholder {
+    font-size: 20px;
+  }
+  #contactFormWrapper input::placeholder, #contactFormWrapper textarea::placeholder {
+    font-size: 20px;
+  }
+  #contactFormWrapper input {
+    height: 52px;
+  }
 }
 /*# sourceMappingURL=custom.css.map */

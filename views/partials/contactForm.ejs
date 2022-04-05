@@ -1,42 +1,42 @@
-<section class="container md:grid grid-cols-2 mb-[3.5rem] lg:mb-28">
-    <div class="lg:mt-[5rem] lg:pl-[5rem] border">
-        <h2 class="text-[2.5rem] text-center md:text-left leading-[44px] font-medium lg:text-[4rem] lg:leading-[72px] mb-[1rem] md:mb-0">Kontaktujte nás</h2>
-        <h3 class="text-[1.75rem] lg:text-[2.5rem] text-center md:text-left lg:leading-[44px]">Pre viac informácií</h3>
-        <div class="flex items-center mt-[2rem] lg:mt-10 w-[73%] mx-auto md:w-full md:mx-0">
+<section id="contactFormWrapper" class="container md:grid grid-cols-2 mb-[3.5rem] md:mb-28">
+    <div class="md:mt-[5rem] md:pl-[5rem] border md:mr-[4rem]">
+        <h2 class="text-[2.5rem] text-center md:text-left leading-[44px] font-medium md:text-[4rem] md:leading-[72px] mb-[1rem] md:mb-0">Kontaktujte nás</h2>
+        <h3 class="text-[1.75rem] md:text-[2.5rem] text-center md:text-left md:leading-[44px]">Pre viac informácií</h3>
+        <div class="flex items-center mt-[2rem] md:mt-10 w-[73%] mx-auto md:w-full md:mx-0">
             <img src="/images/contact-call.svg" alt="" class="w-8 md:w-10">
             <span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold">+421 918 709 028</span>
         </div>
-        <div class="flex items-center mt-[1rem] lg:mt-5 w-[73%] mx-auto md:w-full md:mx-0">
+        <div class="flex items-center mt-[1rem] md:mt-5 w-[73%] mx-auto md:w-full md:mx-0">
             <img src="/images/contact-mail.svg" alt="" class="w-8 md:w-10">
             <span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold">info@bestpozicky.sk</span>
         </div>
-        <div class="flex items-center mt-[1rem] lg:mt-5 w-[73%] mx-auto md:w-full md:mx-0 mb-[1rem] md:mb-0">
+        <div class="flex items-center mt-[1rem] md:mt-5 w-[73%] mx-auto md:w-full md:mx-0 mb-[1rem] md:mb-0">
             <img src="/images/contact-location.svg" alt="" class="w-8 md:w-10">
             <span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold">Fejova 1, 040 01 Košice</span>
         </div>
     </div>
-    <div id="contactForm" class="md:bg-gray-400 pt-[1rem] md:pt-0">
-        <div class="bg-white w-full lg:max-w-[665px] rounded-[10px] ml-auto p-7 lg:p-16 border">
+    <div id="contactForm" class="pt-[1rem] md:pt-0">
+        <div class="bg-white w-full md:max-w-[665px] rounded-[10px] ml-auto p-7 md:p-16 border md:m-[5.5rem] md:pt-[94px]">
             <form action="/form" method="post">
                 <div class="mb-[1.5rem]">
-                    <label for="name" class="font-bold text-[1rem] md:text-[1.25rem]">Meno a priezvisko</label>
+                    <label for="name" class="font-bold text-[1rem] md:text-[1.25rem] md:mb-[0.5rem] md:inline-block">Meno a priezvisko</label>
                     <input type="text" id="name" placeholder="Juraj Testulič"
                            class="input-default" name="name">
                 </div>
-                <div class="mb-7">
-                    <label for="email" class="font-bold text-[1rem] md:text-[1.25rem]">Email</label>
+                <div class="mb-7 md:mt-[1.5rem]">
+                    <label for="email" class="font-bold text-[1rem] md:text-[1.25rem] md:mb-[0.5rem] md:inline-block">Email</label>
                     <input type="text" id="email" placeholder="juraj.testulic@gmail.com"
                            class="input-default" name="email">
                 </div>
-                <div class="mb-7">
-                    <label for="phoneNumber" class="font-bold text-[1rem] md:text-[1.25rem]">Telefónne číslo</label>
+                <div class="mb-7 md:mt-[1.5rem]">
+                    <label for="phoneNumber" class="font-bold text-[1rem] md:text-[1.25rem] md:mb-[0.5rem] md:inline-block">Telefónne číslo</label>
                     <input type="text" id="phoneNumber" placeholder="0901 234 567"
                            class="input-default" name="phoneNumber">
                 </div>
-                <div class="mb-12">
-                    <label for="message" class="font-bold text-[1rem] md:text-[1.25rem]">Správa</label>
+                <div class="mb-12 md:mt-[1.5rem]">
+                    <label for="message" class="font-bold text-[1rem] md:text-[1.25rem] md:mb-[0.5rem] md:inline-block">Správa</label>
                     <textarea name="message" id="message" class="input-default resize-none"
-                              placeholder="Dobrý deň,"></textarea>
+                              placeholder="Dobrý deň,..." rows="3"></textarea>
                 </div>
                 <div class="flex justify-center">
                     <button class="bg-dRed text-white rounded-lg w-[251px] h-[54px] flex items-center justify-center text-[20px] font-bold">
