@@ -1,5 +1,5 @@
 :root {
-  --swiper-theme-color: #ED4036;
+  --swiper-theme-color: #ed4036;
 }
 
 html,
@@ -76,6 +76,12 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    background-size: contain;
+  }
 }
 
 #products-section {
@@ -488,6 +494,7 @@ nav {
     #benefits-section {
       position: relative;
       z-index: 2;
+
       &::after {
         position: absolute;
         top: 13rem;
@@ -693,6 +700,10 @@ nav {
     position: absolute;
     left: -40px;
     top: 0;
+
+    @media screen and (min-width: 768px) {
+      content: url("/images/offer-bg-left.svg");
+    }
   }
 
   &::after {
@@ -700,6 +711,12 @@ nav {
     position: absolute;
     right: -40px;
     top: 0;
+
+    @media screen and (min-width: 768px) {
+      content: url("/images/offer-bg-left.svg");
+      bottom: 0;
+      top: unset;
+    }
   }
 
   & > .container {
@@ -712,6 +729,10 @@ nav {
       left: 50%;
       transform: translateX(-50%);
       z-index: -1;
+
+      @media screen and (min-width: 768px) {
+        content: "";
+      }
     }
   }
 }
@@ -737,6 +758,24 @@ nav {
     right: -40px;
     z-index: -1;
     display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #benefits-section {
+    position: relative;
+
+    &::before {
+      content: url("/images/benefits-bg.svg");
+      top: unset;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: unset;
+    }
   }
 }
 
@@ -772,6 +811,10 @@ nav {
     position: absolute;
     top: 0;
     left: -60px;
+
+    @media screen and (min-width: 768px) {
+      content: unset;
+    }
   }
 
   &::after {
@@ -779,6 +822,10 @@ nav {
     position: absolute;
     top: 0;
     right: -60px;
+
+    @media screen and (min-width: 768px) {
+      content: unset;
+    }
   }
 }
 
@@ -812,14 +859,14 @@ nav {
     z-index: -2;
 
     bottom: -4rem;
-    left: -17px;
-    right: -17px;
+    left: -378px;
+    right: -378px;
     top: 0;
     border-radius: 10px;
   }
 
   &::after {
-    content: url("/images/mobile/mobile-contactform-bg.svg");
+    // content: url("/images/mobile/mobile-contactform-bg.svg");
     position: absolute;
     bottom: -40px;
     left: 50%;
@@ -871,6 +918,10 @@ nav {
     background: #fff;
     box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+      content: unset;
+    }
   }
 }
 
@@ -883,6 +934,10 @@ nav {
     top: 50%;
     right: -50px;
     transform: translateY(-50%);
+
+    @media screen and (min-width: 768px) {
+      content: unset;
+    }
   }
 }
 
@@ -941,15 +996,15 @@ nav {
       content: url("/images/desktop-hero-calculatorbg-left.svg");
       position: absolute;
       left: -210px;
-      bottom: 320px;
+      bottom: 240px;
       z-index: -1;
     }
 
     &::after {
       content: url("/images/desktop-hero-calculatorbg-right.svg");
       position: absolute;
-      top: -90px;
-      right: -90px;
+      top: -110px;
+      right: -100px;
       z-index: -1;
     }
   }
@@ -959,10 +1014,16 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   border-radius: 20px;
 }
 
-#money_input, #year_input {
-  font-size: 24px;
-  padding-bottom: 6px;
+@media screen and (max-width: 768px) {
+  #money_input,
+  #year_input {
+    font-size: 24px;
+    padding-bottom: 6px;
+  }
+}
 
+#money_input,
+#year_input {
   &::placeholder {
     font-size: 24px;
   }
@@ -975,22 +1036,237 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   display: block;
   margin-top: -10px;
 }
-.swiper-button-next {
-  content: '';
-  background-image: url("/images/icons/next.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  &::after {
-    content: '';
+
+@media screen and (min-width: 768px) {
+  #offerContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #home-about {
+    position: relative;
+
+    & > div {
+      &::before {
+        content: url("/images/aboutus-bg.svg");
+        position: absolute;
+
+        left: -20px;
+        top: 50%;
+        transform: translateY(-20%);
+      }
+
+      &::after {
+        content: url("/images/aboutus-bg.svg");
+        position: absolute;
+
+        right: -20px;
+        top: 50%;
+        transform: translateY(-20%);
+      }
+    }
+  }
+
+  #productsWrapper {
+    position: relative;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   bottom: 0;
+    //   width: 200px;
+
+    //   background: #ffffff;
+    //   box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.1);
+    //   border-radius: 10px;
+    // }
+
+    &::after {
+      content: url("/images/products-bg.svg");
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  #productsBg {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2060px;
+      bottom: 0px;
+      right: 0;
+      top: 0;
+      width: unset;
+      height: unset;
+      background: #ffffff;
+      box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transform: unset;
+    }
+  }
+
+  #reviewsQuote::before {
+    bottom: 0;
+    left: -230px;
+    top: unset;
+    width: 320px;
+    height: 195px;
+    display: flex;
+  }
+
+  #reviewsWrapper {
+    position: relative;
+
+    &::before {
+      content: url("/images/reviews-bg-left.svg");
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: url("/images/reviws-bg-right.svg");
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+
+  #faq-header::before {
+    bottom: unset;
+    right: 0;
+    left: unset;
+    transform: unset;
+  }
+
+  #faq-header {
+    padding: 3rem 0;
+    margin-bottom: 3.5rem;
+  }
+
+  #contactForm::before {
+    bottom: 0;
+    left: 0;
+    right: -2420px;
+  }
+
+  #contactForm {
+    padding: 0;
+
+    &::after {
+      content: unset;
+    }
+  }
+
+  #contactFormContainer {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: url("/images/contact-form-bg-right.svg");
+      right: 0;
+      left: unset;
+      bottom: unset;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+
+    &::before {
+      content: url("/images/contact-form-bg-left.svg");
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  #contactFormWrapper {
+    position: relative;
+
+    display: flex;
+
+    input,
+    textarea {
+      font-size: 20px;
+
+      &::placeholder {
+        font-size: 20px;
+      }
+    }
+
+    input {
+      height: 52px;
+    }
   }
 }
 
-.swiper-button-prev {
-  content: '';
-  background-image: url("/images/icons/back.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  &::after {
-    display: none;
+@media screen and (max-width: 768px) {
+  #contactFormContainer {
+    position: relative;
+
+    &::before {
+      content: url("/images/mobile/mobile-contactform-bg-left.svg");
+      position: absolute;
+      left: -20px;
+      top: 80px;
+    }
+
+    &::after {
+      content: url("/images/mobile/mobile-contactform-bg-right.svg");
+      position: absolute;
+      right: -20px;
+      top: 80px;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #topNavBar {
+    a {
+      position: relative;
+    }
+
+    li {
+      &:hover {
+        border: none;
+      }
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      height: 0.15rem;
+      background-color: #fcc800;
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    a:hover::after,
+    a:focus::after {
+      opacity: 1;
+      transform: translate3d(0, 0.2em, 0);
+    }
+
+    li a::after {
+      opacity: 1;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    li a:hover::after,
+    li a:focus::after {
+      transform: scale(1);
+    }
   }
 }
