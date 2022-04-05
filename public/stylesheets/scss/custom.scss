@@ -1271,21 +1271,36 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   }
 }
 .swiper-button-next {
-  content: '';
+  content: "";
   background-image: url("/images/icons/next.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   &::after {
-    content: '';
+    content: "";
   }
 }
 
 .swiper-button-prev {
-  content: '';
+  content: "";
   background-image: url("/images/icons/back.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   &::after {
     display: none;
+  }
+}
+
+#contactLoop {
+  position: relative;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+  }
+
+  video {
+    border-radius: 10px;
   }
 }
