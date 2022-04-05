@@ -979,17 +979,17 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   content: '';
   background-image: url("/images/icons/next.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   &::after {
-    display: none;
+    content: '';
   }
 }
 
-.swiper-button-next {
+.swiper-button-prev {
   content: '';
-  background-image: url("/images/icons/next.svg");
+  background-image: url("/images/icons/back.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   &::after {
     display: none;
   }

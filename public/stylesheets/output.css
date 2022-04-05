@@ -1228,6 +1228,10 @@ select {
   margin-top: 1.25rem;
 }
 
+.mt-\[3\.5rem\] {
+  margin-top: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -2704,6 +2708,10 @@ select {
 
   .md\:mb-1 {
     margin-bottom: 0.25rem;
+  }
+
+  .md\:mt-28 {
+    margin-top: 7rem;
   }
 
   .md\:block {
