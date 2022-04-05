@@ -1245,6 +1245,10 @@ select {
   margin-bottom: 1.75rem;
 }
 
+.mt-\[3\.5rem\] {
+  margin-top: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1607,6 +1611,10 @@ select {
 
 .max-w-\[240px\] {
   max-width: 240px;
+}
+
+.max-w-\[370px\] {
+  max-width: 370px;
 }
 
 .translate-y-\[190px\] {
