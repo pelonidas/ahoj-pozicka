@@ -2720,8 +2720,32 @@ select {
     margin-bottom: 0.25rem;
   }
 
+  .md\:mt-\[-570px\] {
+    margin-top: -570px;
+  }
+
+  .md\:mt-\[0\] {
+    margin-top: 0;
+  }
+
+  .md\:mb-\[640px\] {
+    margin-bottom: 640px;
+  }
+
+  .md\:mb-\[0\] {
+    margin-bottom: 0;
+  }
+
+  .md\:mt-\[2\.5rem\] {
+    margin-top: 2.5rem;
+  }
+
   .md\:block {
     display: block;
+  }
+
+  .md\:inline-block {
+    display: inline-block;
   }
 
   .md\:inline {
@@ -2786,6 +2810,14 @@ select {
 
   .md\:h-\[1060px\] {
     height: 1060px;
+  }
+
+  .md\:h-\[52px\] {
+    height: 52px;
+  }
+
+  .md\:h-\[84px\] {
+    height: 84px;
   }
 
   .md\:max-h-\[940px\] {
@@ -2960,6 +2992,22 @@ select {
     max-width: 100px;
   }
 
+  .md\:max-w-\[unset\] {
+    max-width: unset;
+  }
+
+  .md\:max-w-\[\] {
+    max-width: ;
+  }
+
+  .md\:max-w-\[460px\] {
+    max-width: 460px;
+  }
+
+  .md\:max-w-\[226px\] {
+    max-width: 226px;
+  }
+
   .md\:translate-y-1\/2 {
     --tw-translate-y: 50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2972,6 +3020,16 @@ select {
 
   .md\:translate-x-0 {
     --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-y-\[602px\] {
+    --tw-translate-y: 602px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-y-\[0\] {
+    --tw-translate-y: 0;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -3121,6 +3179,16 @@ select {
   .md\:py-\[2\.5rem\] {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:px-\[3\.5rem\] {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .md\:py-\[4\.5rem\] {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
   }
 
   .md\:pb-32 {
@@ -3278,6 +3346,22 @@ select {
     font-size: 0.875rem;
   }
 
+  .md\:text-\[34px\] {
+    font-size: 34px;
+  }
+
+  .md\:text-\[24px\] {
+    font-size: 24px;
+  }
+
+  .md\:text-\[28px\] {
+    font-size: 28px;
+  }
+
+  .md\:text-\[14px\] {
+    font-size: 14px;
+  }
+
   .md\:leading-normal {
     line-height: 1.5;
   }
@@ -3304,6 +3388,10 @@ select {
 
   .md\:leading-none {
     line-height: 1;
+  }
+
+  .md\:leading-\[32px\] {
+    line-height: 32px;
   }
 
   .md\:hover\:border-2:hover {

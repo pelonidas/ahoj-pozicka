@@ -906,3 +906,68 @@ nav {
     z-index: -1;
   }
 }
+
+@media screen and (min-width: 768px) {
+  #heroCtaButton {
+    position: relative;
+
+    &::before {
+      content: url("/images/hero-cta-bg.svg");
+      position: absolute;
+      left: 0;
+      bottom: -17px;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover::before {
+      width: 120%;
+    }
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  #calculator {
+    margin-right: 90px;
+    position: relative;
+
+    &::before {
+      content: url("/images/desktop-hero-calculatorbg-left.svg");
+      position: absolute;
+      left: -210px;
+      bottom: 320px;
+      z-index: -1;
+    }
+
+    &::after {
+      content: url("/images/desktop-hero-calculatorbg-right.svg");
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      z-index: -1;
+    }
+  }
+}
+
+input[type="range"].styled-slider.slider-progress::-moz-range-track {
+  border-radius: 20px;
+}
+
+#money_input, #year_input {
+  font-size: 24px;
+  padding-bottom: 6px;
+
+  &::placeholder {
+    font-size: 24px;
+  }
+}
+
+.calc-new-span {
+  font-size: 16px;
+  color: #223146;
+  margin-bottom: 1rem;
+  display: block;
+  margin-top: -10px;
+}
