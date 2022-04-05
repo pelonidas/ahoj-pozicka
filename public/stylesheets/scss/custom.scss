@@ -1,5 +1,5 @@
 :root {
-  --swiper-theme-color: #ED4036;
+  --swiper-theme-color: #ed4036;
 }
 
 html,
@@ -859,14 +859,14 @@ nav {
     z-index: -2;
 
     bottom: -4rem;
-    left: -17px;
-    right: -17px;
+    left: -378px;
+    right: -378px;
     top: 0;
     border-radius: 10px;
   }
 
   &::after {
-    content: url("/images/mobile/mobile-contactform-bg.svg");
+    // content: url("/images/mobile/mobile-contactform-bg.svg");
     position: absolute;
     bottom: -40px;
     left: 50%;
@@ -1166,22 +1166,34 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     }
   }
 
-  #contactFormWrapper {
+  #contactFormContainer {
     position: relative;
-
-    display: flex;
-
     &::after {
       position: absolute;
       content: url("/images/contact-form-bg-right.svg");
-      right: -240px;
+      right: 0;
       left: unset;
       bottom: unset;
       transform: translateY(-50%);
       top: 50%;
     }
 
-    input, textarea {
+    &::before {
+      content: url("/images/contact-form-bg-left.svg");
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  #contactFormWrapper {
+    position: relative;
+
+    display: flex;
+
+    input,
+    textarea {
       font-size: 20px;
 
       &::placeholder {
@@ -1195,3 +1207,66 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #contactFormContainer {
+    position: relative;
+
+    &::before {
+      content: url("/images/mobile/mobile-contactform-bg-left.svg");
+      position: absolute;
+      left: -20px;
+      top: 80px;
+    }
+
+    &::after {
+      content: url("/images/mobile/mobile-contactform-bg-right.svg");
+      position: absolute;
+      right: -20px;
+      top: 80px;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #topNavBar {
+    a {
+      position: relative;
+    }
+
+    li {
+      &:hover {
+        border: none;
+      }
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      height: 0.15rem;
+      background-color: #fcc800;
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    a:hover::after,
+    a:focus::after {
+      opacity: 1;
+      transform: translate3d(0, 0.2em, 0);
+    }
+
+    li a::after {
+      opacity: 1;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    li a:hover::after,
+    li a:focus::after {
+      transform: scale(1);
+    }
+  }
+}

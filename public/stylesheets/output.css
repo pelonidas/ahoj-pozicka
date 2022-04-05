@@ -3419,6 +3419,10 @@ select {
     padding-top: 94px;
   }
 
+  .md\:pt-\[5rem\] {
+    padding-top: 5rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
