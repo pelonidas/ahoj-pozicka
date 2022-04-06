@@ -1,37 +1,250 @@
 <% layout('./layouts/boilerplate') %>
 
-<section class="pt-[3.5rem] md:pt-20 text-white bg-secondary">
+<section id="refinancovanieBgHeroTwo" class="pt-[3.5rem] md:pb-[17rem] md:pt-20 text-white bg-secondary">
     <div class="md:grid grid-cols-2 w-full max-w-[92%] lg:max-w-[1620px] mx-auto">
         <div class="mt-auto">
-            <h1 class="text-[2.125rem] md:text-5xl leading-tight">
-                Uzatvorte <span class="text-primary font-bold">bestpôžičku rýchlo a jednoducho online</span> a splňte si vaše
+            <h1
+                class="text-[2.25rem] md:text-[4rem] leading-[42px] md:leading-[72px] md:text-5xl font-normal md:max-w-[782px] md:w-full">
+                Uzatvorte <span class="text-primary font-bold">bestpôžičku rýchlo a jednoducho online</span> a splňte si
+                vaše
                 želanie!
             </h1>
-            <h2 class="text-[1.5rem] md:text-2xl my-[2rem] md:my-5 leading-tight md:leading-normal">Jednoduchá cesta k peniazom</h2>
-            <p class="md:w-1/2 text-[0.9rem] md:text-sm mb-2 font-light">
+            <h2
+                class="font-normal text-[1.5rem] max-w-[220px] md:max-w-[100%] md:text-[2.5rem] md:leading-[2.75rem] my-[2rem] md:my-5 leading-tight">
+                Jednoduchá cesta k peniazom</h2>
+            <p
+                class="md:w-full md:max-w-[469px] text-[1rem] leaing-[20px] md:text-[1.25rem] md:leading-[26px] mb-2 font-light">
                 V bestpôžičke môžete požiadať o <span class="font-bold">pôžičky v rozmedzí od 400 do 20 000 EUR.</span>
             </p>
-            <a href="" class="text-sm hidden md:block">Zistiť viac</a>
+            <a href="#ref-top-log" id="dofinancovanieHeroCta"
+                class="text-sm md:text-[1.25rem] md:leading-[43px] hidden md:block">Zistiť viac</a>
         </div>
         <div>
-            <div class="flex flex-col">
-                <div class="flex md:pt-9">
+            <div id="heroBg" class="flex flex-col mt-[3.5rem] md:mt-0 pb-[15rem] md:pb-0">
+                <div class="flex md:pt-9 relative justify-end">
                     <div class="mb:auto md:mt-auto w-full md:max-w-[270px]">
-                        <h4 class="text-2xl">Adrián Kudláč</h4>
-                        <span class="text-sm">
-                            Zodpovený za poskytovanie <span class="text-primary">dofinancovania hypoték</span>
+                        <h4 class="text-2xl md:text-[36px] md:leading-[40px]">Adrián Kudláč</h4>
+                        <span class="text-sm md:text-[18px] md:leading-[24px]">
+                            Zodpovený za poskytovanie <span class="text-primary block">dofinancovania hypoték</span>
                         </span>
                     </div>
-                    <div id="dofinancovanie-hero-img" class=" w-full max-w-[41%]">
-                        <img src="/images/adrian-bg-y.png" alt="" class=" ">
+                    <div id="dofinancovanie-hero-img" class="absolute md:static">
+                        <img src="/images/adrian-bg-y.png" alt="" class="hidden md:block md:w-full md:max-w-[400px]">
+                        <img src="/images/mobile/dofinancovanie-hero-img.png" alt="" class="block md:hidden">
                     </div>
 
                 </div>
             </div>
         </div>
+        <div id="ctaWrapper" class="block md:hidden">
+            <a href="#home-card-section" class="text-sm">
+                Zistiť viac
+                <img src="/images/mobile/mobile-hero-cta-arrow.svg" alt="">
+            </a>
+        </div>
     </div>
+
 </section>
-<div id="ref-top-long" class="bg-secondary hidden md:block"></div>
+<div class="hidden md:block w-full z-10 md:-translate-y-1/2">
+    <div id="ReviewsWrapper" class="ReviewsWrapper">
+        <div id="ReviewsWrappered"></div>
+        <div class="review">
+            <div class="pb-8">
+                <div class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min">
+                    <div class="flex py-4 pl-5 items-center">
+                        <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                        <div class="ml-5">
+                            <img src="/images/star-rating.svg" alt="" class="w-[8rem]">
+                            <h5 class="text-sm">Maria Illescas</h5>
+                        </div>
+                    </div>
+                    <div class="pl-5 pb-5">
+                        <hr>
+                        <div class="w-4/5">
+                            <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas
+                                varius
+                                tortor
+                                nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum
+                                aliquam
+                                hendrerit
+                                molestie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review">
+            <div class="pb-8">
+                <div class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min">
+                    <div class="flex py-4 pl-5 items-center">
+                        <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                        <div class="ml-5">
+                            <img src="/images/star-rating.svg" alt="" class="w-[8rem]">
+                            <h5 class="text-sm">Maria Illescas</h5>
+                        </div>
+                    </div>
+                    <div class="pl-5 pb-5">
+                        <hr>
+                        <div class="w-4/5">
+                            <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas
+                                varius
+                                tortor
+                                nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum
+                                aliquam
+                                hendrerit
+                                molestie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review">
+            <div class="pb-8">
+                <div class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min">
+                    <div class="flex py-4 pl-5 items-center">
+                        <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                        <div class="ml-5">
+                            <img src="/images/star-rating.svg" alt="" class="w-[8rem]">
+                            <h5 class="text-sm">Maria Illescas</h5>
+                        </div>
+                    </div>
+                    <div class="pl-5 pb-5">
+                        <hr>
+                        <div class="w-4/5">
+                            <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas
+                                varius
+                                tortor
+                                nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum
+                                aliquam
+                                hendrerit
+                                molestie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review">
+            <div class="pb-8">
+                <div class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min">
+                    <div class="flex py-4 pl-5 items-center">
+                        <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                        <div class="ml-5">
+                            <img src="/images/star-rating.svg" alt="" class="w-[8rem]">
+                            <h5 class="text-sm">Maria Illescas</h5>
+                        </div>
+                    </div>
+                    <div class="pl-5 pb-5">
+                        <hr>
+                        <div class="w-4/5">
+                            <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas
+                                varius
+                                tortor
+                                nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum
+                                aliquam
+                                hendrerit
+                                molestie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review">
+            <div class="pb-8">
+                <div class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min">
+                    <div class="flex py-4 pl-5 items-center">
+                        <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                        <div class="ml-5">
+                            <img src="/images/star-rating.svg" alt="" class="w-[8rem]">
+                            <h5 class="text-sm">Maria Illescas</h5>
+                        </div>
+                    </div>
+                    <div class="pl-5 pb-5">
+                        <hr>
+                        <div class="w-4/5">
+                            <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas
+                                varius
+                                tortor
+                                nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum
+                                aliquam
+                                hendrerit
+                                molestie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review">
+            <div class="pb-8">
+                <div class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min">
+                    <div class="flex py-4 pl-5 items-center">
+                        <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                        <div class="ml-5">
+                            <img src="/images/star-rating.svg" alt="" class="w-[8rem]">
+                            <h5 class="text-sm">Maria Illescas</h5>
+                        </div>
+                    </div>
+                    <div class="pl-5 pb-5">
+                        <hr>
+                        <div class="w-4/5">
+                            <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas
+                                varius
+                                tortor
+                                nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum
+                                aliquam
+                                hendrerit
+                                molestie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review">
+            <div class="pb-8">
+                <div class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min">
+                    <div class="flex py-4 pl-5 items-center">
+                        <img src="/images/prof-pic-home.svg" alt="" class="w-12">
+                        <div class="ml-5">
+                            <img src="/images/star-rating.svg" alt="" class="w-[8rem]">
+                            <h5 class="text-sm">Maria Illescas</h5>
+                        </div>
+                    </div>
+                    <div class="pl-5 pb-5">
+                        <hr>
+                        <div class="w-4/5">
+                            <p class="text-xs mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas
+                                varius
+                                tortor
+                                nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum
+                                aliquam
+                                hendrerit
+                                molestie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-[2rem] md:hidden">
+    <%- include('./partials/swiper-section') %>
+</div>
+
+<!-- <div id="ref-top-long" class="bg-secondary hidden md:block"></div> -->
 <div class="mt-28">
     <%- include('./partials/offer') %>
 </div>
@@ -39,50 +252,53 @@
 
 <%- include('./partials/benefits') %>
 <div class="mb-28">
-    <%- include('./partials/calcAd2') %>
+    <%- include('./partials/calcAd') %>
 </div>
 <%- include('./partials/products') %>
 
 <%- include('./partials/reviews') %>
 
-<%- include('./partials/calcAd2') %>
+<%- include('./partials/calcAd') %>
 
 <%- include('./partials/faq') %>
 
 <section id="dofinancovanie-form" class="flex">
-    <div id="form-left"></div>
-    <div id="form-content" class="container flex justify-between items-center">
-        <div class="w-1/2 flex relative">
+    <div id="form-left" class="hidden md:block"></div>
+    <div id="form-content" class="container flex justify-between items-center flex-col">
+        <div class="w-full mb-[13rem] md:w-1/2 flex relative z-22">
             <div>
-                <h2 class="text-5xl w-2/3 mb-12">Požiadajte o ponuku</h2>
-                <h3 class="text-3xl mb-3">Adrián Kudláč</h3>
-                <p class="w-1/2">Zodpovený za poskytovanie <span class="text-dRed">dofinancovania hypoték</span></p>
+                <h2 class="text-[2.5rem] text-center leading-[2.75rem] w-full md:w-2/3 mb-12">Požiadajte o ponuku</h2>
+                <h3 class="text-[1.75rem] mb-3">Adrián Kudláč</h3>
+                <p class="w-full md:w-1/2 text-[18px]">Zodpovený za poskytovanie <span
+                        class="text-dRed block">dofinancovania hypoték</span></p>
                 <div class="flex items-center mt-3">
                     <img src="/images/contact-call.svg" alt="" class="w-8">
-                    <span class="ml-5 text-xl">+421 918 709 028</span>
+                    <span class="ml-5 text-[1.5rem]">+421 918 709 028</span>
                 </div>
             </div>
             <div>
-                <img src="/images/adrian.png" alt="" class="md:w-[14rem] absolute bottom-0 md:right-16">
+                <img src="/images/adrian.png" alt="" class="md:w-[14rem] md:right-16 hidden md:block">
+                <img src="/images/mobile/mobile-form-img.svg" alt=""
+                    class="block md:hidden absolute right-[-40px] bottom-[-160px] z-20">
             </div>
         </div>
-        <div class="w-1/2 bg-white drop-shadow-lg rounded-l-lg flex items-center" id="contact-form">
-            <div class="w-full px-10 py-16">
+        <div class="w-full md:w-1/2 bg-white drop-shadow-lg rounded-l-lg flex items-center dofinancovanie-form"
+            id="contact-form">
+            <div class="w-full p-[2.5rem]">
                 <form action="/form" method="post">
                     <div class="mb-7">
                         <label for="name">Meno a priezvisko</label>
-                        <input type="text" id="name" placeholder="Juraj Testulič"
-                               class="input-default" name="name">
+                        <input type="text" id="name" placeholder="Juraj Testulič" class="input-default" name="name">
                     </div>
                     <div class="mb-7">
                         <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="juraj.testulic@gmail.com"
-                               class="input-default" name="email">
+                        <input type="text" id="email" placeholder="juraj.testulic@gmail.com" class="input-default"
+                            name="email">
                     </div>
                     <div class="mb-7">
                         <label for="phoneNumber">Telefónne číslo</label>
-                        <input type="text" id="phoneNumber" placeholder="0901 234 567"
-                               class="input-default" name="phoneNumber">
+                        <input type="text" id="phoneNumber" placeholder="0901 234 567" class="input-default"
+                            name="phoneNumber">
                     </div>
                     <div class="mb-7 ">
                         <label for="interest">Mam zaujem o:</label>
@@ -92,11 +308,11 @@
                     </div>
                     <div class="mb-12">
                         <label for="message">Sprava</label>
-                        <textarea name="message" id="message" class="input-default"
-                                  placeholder="Dobrý deň,"></textarea>
+                        <textarea name="message" id="message" class="input-default" placeholder="Dobrý deň,"></textarea>
                     </div>
                     <div class="flex justify-center">
-                        <button class="bg-dRed text-white rounded-lg w-[251px] h-[54px] flex items-center justify-center font-bold text-[20px]">
+                        <button
+                            class="bg-dRed text-white rounded-lg w-[251px] h-[54px] flex items-center justify-center font-bold text-[20px]">
                             <span>Odoslať</span>
                         </button>
                     </div>
@@ -104,6 +320,5 @@
             </div>
         </div>
     </div>
-    <div id="form-right"></div>
+    <div id="form-right" class="hidden md:block"></div>
 </section>
-
