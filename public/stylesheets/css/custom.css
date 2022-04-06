@@ -559,7 +559,7 @@ nav ul li:hover {
   transition: background-image 0.2s ease-in-out;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .active {
     position: fixed;
     top: 0;
