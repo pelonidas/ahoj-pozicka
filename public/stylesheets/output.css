@@ -940,6 +940,10 @@ select {
   order: -9999;
 }
 
+.order-last {
+  order: 9999;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -1588,6 +1592,10 @@ select {
   max-width: 175px;
 }
 
+.max-w-\[270px\] {
+  max-width: 270px;
+}
+
 .translate-y-1\/2 {
   --tw-translate-y: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2099,6 +2107,10 @@ select {
   padding-bottom: 9rem;
 }
 
+.pt-\[2\.5rem\] {
+  padding-top: 2.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2579,6 +2591,10 @@ select {
     order: 2;
   }
 
+  .md\:order-first {
+    order: -9999;
+  }
+
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -2805,6 +2821,10 @@ select {
     margin-bottom: 0.25rem;
   }
 
+  .md\:mt-\[3rem\] {
+    margin-top: 3rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2883,6 +2903,10 @@ select {
 
   .md\:h-\[760px\] {
     height: 760px;
+  }
+
+  .md\:h-\[45px\] {
+    height: 45px;
   }
 
   .md\:max-h-\[940px\] {
@@ -2975,6 +2999,10 @@ select {
 
   .md\:w-\[400px\] {
     width: 400px;
+  }
+
+  .md\:w-\[192px\] {
+    width: 192px;
   }
 
   .md\:max-w-\[1000px\] {
@@ -3156,6 +3184,10 @@ select {
     border-radius: 10px;
   }
 
+  .md\:rounded-none {
+    border-radius: 0px;
+  }
+
   .md\:border-0 {
     border-width: 0px;
   }
@@ -3166,6 +3198,10 @@ select {
 
   .md\:border-t-0 {
     border-top-width: 0px;
+  }
+
+  .md\:bg-transparent {
+    background-color: transparent;
   }
 
   .md\:bg-\[url\(\'\/images\/centrala-mapa\/map\.png\'\)\] {
@@ -3436,6 +3472,10 @@ select {
     font-size: 0.875rem;
   }
 
+  .md\:text-\[1\.125rem\] {
+    font-size: 1.125rem;
+  }
+
   .md\:leading-normal {
     line-height: 1.5;
   }
@@ -3478,6 +3518,11 @@ select {
 
   .md\:leading-\[30px\] {
     line-height: 30px;
+  }
+
+  .md\:text-secondary {
+    --tw-text-opacity: 1;
+    color: rgb(34 49 70 / var(--tw-text-opacity));
   }
 
   .md\:hover\:border-2:hover {
