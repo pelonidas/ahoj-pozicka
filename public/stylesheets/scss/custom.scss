@@ -385,7 +385,33 @@ nav {
 //  left: -13rem;
 //  bottom: 15rem;
 //}
+@media screen and (min-width: 768px){
+  #contact-hero-image {
+    position: relative;
+    z-index: 2;
+    &::after {
+      width: 700px;
+      position: absolute;
+      right: 0;
+      top: -6.5rem;
+      z-index: -1;
+      content: url("/images/kontakt-kontaktujte/hero-lg.svg");
+    }
+  }
 
+  #contact-hero-text {
+    position: relative;
+    z-index: 2;
+    &::after {
+      width: 550px;
+      position: absolute;
+      left: 0;
+      bottom: -8rem;
+      z-index: -1;
+      content: url("/images/kontakt-kontaktujte/hero-sm.svg");
+    }
+  }
+}
 .calculator-gray-bg {
   height: 100%;
   background-image: url("/images/gray-top-home.svg");
@@ -683,7 +709,7 @@ nav {
     &::after {
       position: absolute;
       width: 370px;
-      bottom: 2rem;
+      bottom: -5.5rem;
       left: 0;
       right: 0;
       margin: 0 auto;
