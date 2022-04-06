@@ -166,12 +166,13 @@
     let sections = document.querySelectorAll('.section')
 
     for (const container of containers) {
+        container.classList.add('cursor-pointer')
         let isPressed = false
         let i = container.querySelector('i')
         let button = container.querySelector('.btn')
         let section = container.querySelector('.section')
 
-        button.addEventListener('click', () => {
+        container.addEventListener('click', () => {
             section.classList.toggle('hidden');
             isPressed = !isPressed;
         })
@@ -185,9 +186,6 @@
                 }
                 removeClass(i, 'fa-plus')
                 addClass(i, 'fa-angle-down')
-                // removeClass(i, 'fa-plus')
-                // addClass(i, 'fa-angle-down')
-                // i.classList.add('text-primary')
 
             })
             container.addEventListener('mouseleave', () => {
@@ -198,17 +196,6 @@
                 } else {
                     addClass(i, 'fa-minus')
                 }
-
-                // console.log(isPressed)
-                // i.classList.remove('fa-angle-down')
-                // if (isPressed){
-                //     addClass(i, 'fa-minus')
-                // } else {
-                //     removeClass(i, 'fa-minus')
-                //     addClass(i, 'fa-plus')
-                // }
-                //
-                // i.classList.remove('text-primary')
             })
 
 

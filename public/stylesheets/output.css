@@ -964,6 +964,10 @@ select {
   order: -9999;
 }
 
+.order-last {
+  order: 9999;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -1055,6 +1059,11 @@ select {
 .my-\[4\.5rem\] {
   margin-top: 4.5rem;
   margin-bottom: 4.5rem;
+}
+
+.my-\[1\.5rem\] {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .mb-7 {
@@ -1653,6 +1662,18 @@ select {
   max-width: 370px;
 }
 
+.max-w-\[270px\] {
+  max-width: 270px;
+}
+
+.max-w-\[350px\] {
+  max-width: 350px;
+}
+
+.max-w-\[210px\] {
+  max-width: 210px;
+}
+
 .translate-y-\[190px\] {
   --tw-translate-y: 190px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2185,6 +2206,14 @@ select {
   padding-bottom: 20rem;
 }
 
+.pb-\[9rem\] {
+  padding-bottom: 9rem;
+}
+
+.pt-\[2\.5rem\] {
+  padding-top: 2.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2410,6 +2439,18 @@ select {
 
 .leading-\[2\.75rem\] {
   line-height: 2.75rem;
+}
+
+.leading-\[20px\] {
+  line-height: 20px;
+}
+
+.leading-\[24px\] {
+  line-height: 24px;
+}
+
+.leading-\[32px\] {
+  line-height: 32px;
 }
 
 .text-white {
@@ -2668,6 +2709,10 @@ select {
 
   .md\:order-2 {
     order: 2;
+  }
+
+  .md\:order-first {
+    order: -9999;
   }
 
   .md\:col-span-1 {
@@ -2954,6 +2999,10 @@ select {
 
   .md\:mr-\[4rem\] {
     margin-right: 4rem;
+  }
+
+  .md\:mt-\[3rem\] {
+    margin-top: 3rem;
   }
 
   .md\:block {
@@ -3346,6 +3395,10 @@ select {
     border-radius: 10px;
   }
 
+  .md\:rounded-none {
+    border-radius: 0px;
+  }
+
   .md\:border-0 {
     border-width: 0px;
   }
@@ -3361,6 +3414,10 @@ select {
   .md\:bg-gray-400 {
     --tw-bg-opacity: 1;
     background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+  }
+
+  .md\:bg-transparent {
+    background-color: transparent;
   }
 
   .md\:bg-\[url\(\'\/images\/centrala-mapa\/map\.png\'\)\] {
@@ -3651,6 +3708,10 @@ select {
     font-size: 36px;
   }
 
+  .md\:text-\[1\.125rem\] {
+    font-size: 1.125rem;
+  }
+
   .md\:leading-normal {
     line-height: 1.5;
   }
@@ -3719,6 +3780,11 @@ select {
     line-height: 24px;
   }
 
+  .md\:text-secondary {
+    --tw-text-opacity: 1;
+    color: rgb(34 49 70 / var(--tw-text-opacity));
+  }
+
   .md\:hover\:border-2:hover {
     border-width: 2px;
   }
@@ -3733,6 +3799,11 @@ select {
   .lg\:my-28 {
     margin-top: 7rem;
     margin-bottom: 7rem;
+  }
+
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .lg\:ml-\[5rem\] {
@@ -3803,6 +3874,14 @@ select {
     display: block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-\[650px\] {
     height: 650px;
   }
@@ -3853,6 +3932,11 @@ select {
 
   .lg\:max-w-\[320px\] {
     max-width: 320px;
+  }
+
+  .lg\:translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:flex-row {
