@@ -1240,18 +1240,18 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   display: none;
 }
 
-#contactLoop {
+#videoTriggerCentrala, #videoTriggerKontakt {
   position: relative;
   cursor: pointer;
 }
 
-#contactLoop svg {
+#videoTriggerCentrala svg, #videoTriggerKontakt svg {
   position: absolute;
   bottom: -15px;
   left: -15px;
 }
 
-#contactLoop video {
+#videoTriggerCentrala video, #videoTriggerKontakt video {
   border-radius: 10px;
 }
 
@@ -1378,5 +1378,49 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.video-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.video-popup.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video-popup .video-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.video-popup .video-container::after {
+  padding-top: 56.25%;
+  display: block;
+  content: "";
+}
+
+.video-popup .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=custom.css.map */
