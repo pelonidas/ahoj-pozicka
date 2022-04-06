@@ -2,30 +2,47 @@
     <div class="flex flex-col md:flex-row md:justify-between">
         <div class="flex justify-between items-center z-40">
             <a href="/"><img src="/images/result.svg" alt="" class="w-[5rem] inline-block md:inline" id="logo"></a>
-            <button class="md:hidden nav-hamburger"><i class="fa-solid fa-bars text-white fa-2x"></i></button>
+            <!-- <button class="md:hidden nav-hamburger"><i class="fa-solid fa-bars text-white fa-2x"></i></button> -->
+            <button id="hamburgerAnim" class="hamburger md:hidden nav-hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
-        <div class="md:flex transition ease-in-out duration-200 my-auto nav-content h-full bg-secondary active z-10 translate-x-full md:translate-x-0 items-end">
+        <div
+            class="md:flex transition ease-in-out duration-200 my-auto nav-content h-full bg-secondary active z-10 translate-x-full md:translate-x-0 items-end">
             <div id="mobile-nav-wrapper" class=" flex flex-col md:flex-row h-full">
-                <ul id="topNavBar" class="text-white flex flex-col items-center justify-center md:flex-row text-md mt-auto w-full max-w-[230px] md:max-w-full mx-auto md:mx-0">
-                    <li class="hover:border-b border-primary mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium"><a href="/">Pôžičky</a></li>
-                    <li class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary"><a href="/refinancovanie">Refinancovanie</a></li>
-                    <li class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary"><a href="/centrala">Centrála</a></li>
-                    <li class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary"><a href="/dofinancovanie">Dofinancovanie hypoték</a>
+                <ul id="topNavBar"
+                    class="text-white flex flex-col items-center justify-center md:flex-row text-md mt-auto w-full max-w-[230px] md:max-w-full mx-auto md:mx-0">
+                    <li
+                        class="hover:border-b border-primary mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium">
+                        <a href="/">Pôžičky</a></li>
+                    <li
+                        class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary">
+                        <a href="/refinancovanie">Refinancovanie</a></li>
+                    <li
+                        class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary">
+                        <a href="/centrala">Centrála</a></li>
+                    <li
+                        class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary">
+                        <a href="/dofinancovanie">Dofinancovanie hypoték</a>
                     </li>
-                    <li class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary"><a href="/about">O best pôžičke</a></li>
-                    <li class="lg:ml-8 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary"><a href="/contact">Kontakt</a></li>
+                    <li
+                        class="lg:ml-8 mb-6 md:mb-0 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary">
+                        <a href="/about">O best pôžičke</a></li>
+                    <li
+                        class="lg:ml-8 text-center md:text-left text-[1.5rem] md:text-[1.25rem] font-medium hover:border-b border-primary">
+                        <a href="/contact">Kontakt</a></li>
                 </ul>
                 <a href="/#calculator" id="pozicat-button"
-                   class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[20px] mx-auto md:mx-0 md:hidden my-[3.5rem]">
+                    class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[20px] mx-auto md:mx-0 md:hidden my-[3.5rem]">
                     <span>Chcem si požičať</span>
                 </a>
             </div>
         </div>
         <a href="/#calculator"
-           class="bg-dRed text-white rounded-lg h-[54px] w-[251px] md:flex justify-center items-center font-bold text-[20px] hidden">
+            class="bg-dRed text-white rounded-lg h-[54px] w-[251px] md:flex justify-center items-center font-bold text-[20px] hidden">
             <span>Chcem si požičať</span>
         </a>
     </div>
 </nav>
-
-
