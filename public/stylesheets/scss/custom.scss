@@ -676,7 +676,26 @@ nav {
   }
 }
 
+@media screen and (max-width: 768px){
+  #contact-hero {
+    position: relative;
+    z-index: 2;
+    &::after {
+      position: absolute;
+      width: 370px;
+      bottom: 3rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: -1;
+      content: url("/images/kontakt-kontaktujte/mobile-hero-bg.svg");
+    }
+  }
+}
+
+
 @media (max-width: 1024px) {
+
   .active {
     position: fixed;
     top: 0;
@@ -1436,3 +1455,4 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     height: 100%;
   }
 }
+

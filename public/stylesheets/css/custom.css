@@ -559,6 +559,22 @@ nav ul li:hover {
   transition: background-image 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+  #contact-hero {
+    position: relative;
+    z-index: 2;
+  }
+  #contact-hero::after {
+    position: absolute;
+    width: 370px;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    content: url("/images/kontakt-kontaktujte/mobile-hero-bg.svg");
+  }
+}
 @media (max-width: 1024px) {
   .active {
     position: fixed;

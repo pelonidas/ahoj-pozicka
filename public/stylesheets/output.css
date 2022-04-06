@@ -2095,6 +2095,10 @@ select {
   padding-left: 2rem;
 }
 
+.pb-\[9rem\] {
+  padding-bottom: 9rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2302,6 +2306,14 @@ select {
   line-height: 27px;
 }
 
+.leading-\[42px\] {
+  line-height: 42px;
+}
+
+.leading-\[20px\] {
+  line-height: 20px;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2415,6 +2427,21 @@ select {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.after\:absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.after\:ml-\[2rem\]::after {
+  content: var(--tw-content);
+  margin-left: 2rem;
+}
+
+.after\:bg-\[url\(\'\/images\/icons\/call\.svg\'\)\]::after {
+  content: var(--tw-content);
+  background-image: url('/images/icons/call.svg');
 }
 
 .hover\:transition-default:hover {
