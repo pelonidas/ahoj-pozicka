@@ -484,6 +484,50 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+
+  #contact-form-wrapper {
+    position: relative;
+    &::after {
+      width: 100%;
+      max-width: 1920px;
+      content: url("/images/kontakt-kontaktujte/hero-after-bg.svg");
+      position: absolute;
+      z-index: -1;
+      margin: 0 auto;
+      top: -19rem;
+      left: 0;
+      right: 0;
+    }
+  }
+  #contact-form-wrapper-child {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -15rem;
+      content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg");
+      z-index: -1;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -16.5rem;
+      content: url("/images/kontakt-kontaktujte/contact-form-left-bg.svg");
+      z-index: -1;
+    }
+  }
+
+  #contact-form-img-wrapper {
+    position: relative;
+    &::after {
+      content: url("/images/kontakt-kontaktujte/contact-form-md-bg.svg");
+      position: absolute;
+      top: -6rem;
+      right: -5rem;
+      z-index: -1;
+    }
+  }
+
   #calculator-section {
     position: relative;
     z-index: 1;
@@ -854,7 +898,10 @@ nav {
     &::after {
       content: unset;
     }
+
+
   }
+
 }
 
 #calc-ad {
