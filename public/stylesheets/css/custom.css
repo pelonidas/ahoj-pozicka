@@ -1578,7 +1578,7 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     transform: translateX(-50%);
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   #hamburgerAnim {
     display: none !important;
   }
