@@ -1625,6 +1625,10 @@ select {
   max-width: 175px;
 }
 
+.max-w-\[310px\] {
+  max-width: 310px;
+}
+
 .translate-y-1\/2 {
   --tw-translate-y: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2846,6 +2850,10 @@ select {
     margin-right: 5rem;
   }
 
+  .md\:ml-\[3\.5rem\] {
+    margin-left: 3.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3152,6 +3160,30 @@ select {
 
   .md\:max-w-\[325px\] {
     max-width: 325px;
+  }
+
+  .md\:max-w-\[350px\] {
+    max-width: 350px;
+  }
+
+  .md\:max-w-\[320px\] {
+    max-width: 320px;
+  }
+
+  .md\:max-w-\[640px\] {
+    max-width: 640px;
+  }
+
+  .md\:max-w-\[310px\] {
+    max-width: 310px;
+  }
+
+  .md\:max-w-\[210px\] {
+    max-width: 210px;
+  }
+
+  .md\:max-w-\[300px\] {
+    max-width: 300px;
   }
 
   .md\:-translate-y-1\/2 {
@@ -3599,6 +3631,10 @@ select {
 
   .md\:leading-\[47px\] {
     line-height: 47px;
+  }
+
+  .md\:leading-\[38px\] {
+    line-height: 38px;
   }
 
   .md\:text-secondary {

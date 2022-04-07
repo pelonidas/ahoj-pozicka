@@ -484,7 +484,20 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
-
+  #contact-hero {
+    position: relative;
+    &::after {
+      content: url("/images/kontakt-kontaktujte/hero-after-bg.svg");
+      position: absolute;
+      bottom: -28rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: -1;
+      width: 100%;
+      max-width: 1920px;
+    }
+  }
   #contact-form-wrapper {
     position: relative;
     &::before {
@@ -522,22 +535,6 @@ nav {
       z-index: -1;
     }
   }
-
-  //#contact-form-img-wrapper {
-  //  position: relative;
-  //  &::before {
-  //    content: "";
-  //    background: #1d3047;
-  //    position: absolute;
-  //    z-index: -2;
-  //
-  //    bottom: -4rem;
-  //    left: 0;
-  //    right: -50px;
-  //    top: 0;
-  //    border-radius: 10px;
-  //  }
-  //}
 
   #calculator-section {
     position: relative;
@@ -776,16 +773,19 @@ nav {
   #contact-hero-parent {
     position: relative;
     z-index: 1;
-    &::after {
-      width: 100%;
-      max-width: 370px;
-      position: absolute;
-      bottom: -5.75rem;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      content: url("/images/kontakt-kontaktujte/mobile-hero-parent-bg.svg");
-    }
+    //&::after {
+    //  width: 100%;
+    //  max-width: 370px;
+    //  position: absolute;
+    //  bottom: -5.75rem;
+    //  left: 0;
+    //  right: 0;
+    //  margin: 0 auto;
+    //  content: url("/images/kontakt-kontaktujte/mobile-hero-parent-bg.svg");
+    //}
+    //&::before {
+    //
+    //}
   }
 
   #contact-person {
@@ -895,6 +895,31 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+
+  #personal-wrapper {
+    position: relative;
+    &::before {
+      height: 660px;
+      content: url("/images/personal/personal-left-bg.svg");
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: 0;
+      top: 0;
+
+    }
+    &::after {
+      height: 660px;
+      content: url("/images/personal/personal-right-bg.svg");
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 0;
+      top: 0;
+
+    }
+  }
+
   #benefits-section {
     position: relative;
 
