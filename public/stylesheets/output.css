@@ -3835,6 +3835,10 @@ select {
     padding-bottom: 3.5rem;
   }
 
+  .lg\:pt-\[4\.75rem\] {
+    padding-top: 4.75rem;
+  }
+
   .lg\:text-left {
     text-align: left;
   }
