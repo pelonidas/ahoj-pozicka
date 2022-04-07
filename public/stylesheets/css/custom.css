@@ -241,14 +241,6 @@ nav ul li:hover {
   width: 90%;
 }
 
-#benefits-section-dark {
-  background-image: url("/images/benefitsDark-bg.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom 1rem;
-  position: relative;
-}
-
 .card-bg {
   background-image: url("/images/card-bg.svg");
   background-size: 5rem;
@@ -772,6 +764,14 @@ nav ul li:hover {
 }
 
 @media screen and (min-width: 768px) {
+  #benefits-section-dark {
+    background-image: url("/images/benefitsDark-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom 1rem;
+    position: relative;
+  }
+
   #about-who {
     position: relative;
   }
@@ -1055,6 +1055,58 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
 }
 
 @media screen and (max-width: 768px) {
+  #about-images {
+    background: url("/images/aboutUs/hero-mobile-bg.svg") no-repeat bottom;
+  }
+
+  #ad-cards-wrapper {
+    position: relative;
+    z-index: 4;
+  }
+  #ad-cards-wrapper::after {
+    height: 100%;
+    width: 140px;
+    content: url("/images/aboutUs/ad-cards-mobile-bg.svg");
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  #ad-cards-wrapper::before {
+    height: 100%;
+    width: 140px;
+    content: url("/images/aboutUs/ad-cards-mobile-bg2.svg");
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  #benefits-section-dark {
+    position: relative;
+    z-index: 4;
+  }
+  #benefits-section-dark::before {
+    height: 84%;
+    width: 140px;
+    content: "";
+    background: url("/images/benefits/benefits-dark-bg-left.svg") no-repeat center bottom;
+    bottom: 0;
+    left: -1rem;
+    position: absolute;
+    z-index: -1;
+  }
+  #benefits-section-dark::after {
+    height: 84%;
+    width: 140px;
+    content: "";
+    background: url("/images/benefits/benefits-dark-bg-right.svg") no-repeat center bottom;
+    bottom: 0;
+    right: -1rem;
+    position: absolute;
+    z-index: -1;
+  }
+
   #money_input,
 #year_input {
     font-size: 24px;

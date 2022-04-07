@@ -241,7 +241,6 @@ nav {
 //about
 
 
-
 //#about-who {
 //  margin-top: 7rem;
 //  height: 100%;
@@ -302,14 +301,7 @@ nav {
 
 // calcAd2
 
-#benefits-section-dark {
-  background-image: url("/images/benefitsDark-bg.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom 1rem;
-  position: relative;
 
-}
 
 .card-bg {
   background-image: url("/images/card-bg.svg");
@@ -382,10 +374,11 @@ nav {
 //  left: -13rem;
 //  bottom: 15rem;
 //}
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   #contact-hero-image {
     position: relative;
     z-index: 2;
+
     &::after {
       width: 700px;
       position: absolute;
@@ -399,6 +392,7 @@ nav {
   #contact-hero-text {
     position: relative;
     z-index: 2;
+
     &::after {
       width: 550px;
       position: absolute;
@@ -409,6 +403,7 @@ nav {
     }
   }
 }
+
 .calculator-gray-bg {
   height: 100%;
   background-image: url("/images/gray-top-home.svg");
@@ -465,6 +460,7 @@ nav {
     right: 0;
   }
 }
+
 .calendar {
   background: url("/images/calendar.svg") no-repeat scroll center left 7px;
   padding-left: 30px;
@@ -473,6 +469,7 @@ nav {
 #calculator-section {
   z-index: 1;
 }
+
 #centrala-location {
   background-image: url("/images/mobile/map.svg");
   background-repeat: no-repeat;
@@ -492,6 +489,7 @@ nav {
 
   #contact-hero {
     position: relative;
+
     &::after {
       content: url("/images/kontakt-kontaktujte/hero-after-bg.svg");
       position: absolute;
@@ -506,6 +504,7 @@ nav {
   }
   #contact-form-wrapper {
     position: relative;
+
     &::before {
       content: "";
       background: #1d3047;
@@ -520,6 +519,7 @@ nav {
   }
   #contact-form-wrapper-child {
     position: relative;
+
     &::after {
       position: absolute;
       height: 660px;
@@ -530,6 +530,7 @@ nav {
       content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg");
       z-index: -1;
     }
+
     &::before {
       position: absolute;
       height: 660px;
@@ -751,19 +752,22 @@ nav {
     }
   }
 }
+
 .custom-stroke {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%2322314642' stroke-width='4' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
   border-radius: 10px;
+
   &:hover {
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23FCC800FF' stroke-width='4' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
     transition: background-image 0.2s ease-in-out;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   #contact-hero {
     position: relative;
     z-index: 2;
+
     &::after {
       position: absolute;
       width: 370px;
@@ -779,6 +783,7 @@ nav {
   #contact-hero-parent {
     position: relative;
     z-index: 1;
+
     &::after {
       width: 100%;
       max-width: 370px;
@@ -789,6 +794,7 @@ nav {
       margin: 0 auto;
       content: url("/images/kontakt-kontaktujte/mobile-hero-parent-bg.svg");
     }
+
     &::before {
 
     }
@@ -797,12 +803,14 @@ nav {
   #contact-person {
     position: relative;
     z-index: 1;
+
     &::before {
       position: absolute;
       left: -2rem;
       bottom: 0;
       content: url("/images/kontakt-kontaktujte/person-bg.svg");
     }
+
     &::after {
       position: absolute;
       right: -2rem;
@@ -902,9 +910,17 @@ nav {
 
 @media screen and (min-width: 768px) {
 
+  #benefits-section-dark {
+    background-image: url("/images/benefitsDark-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom 1rem;
+    position: relative;
 
+  }
   #about-who {
     position: relative;
+
     &::after {
       position: absolute;
       top: 0;
@@ -914,6 +930,7 @@ nav {
   }
   #about-what {
     position: relative;
+
     &::after {
       position: absolute;
       bottom: 0;
@@ -925,7 +942,8 @@ nav {
   #about-top {
     position: relative;
     z-index: 2;
-    &::after{
+
+    &::after {
       width: 100%;
       max-width: 1920px;
       content: url("/images/about-top-bg.svg");
@@ -940,6 +958,7 @@ nav {
 
   #personal-wrapper {
     position: relative;
+
     &::before {
       height: 660px;
       content: url("/images/personal/personal-left-bg.svg");
@@ -950,6 +969,7 @@ nav {
       top: 0;
 
     }
+
     &::after {
       height: 660px;
       content: url("/images/personal/personal-right-bg.svg");
@@ -1091,6 +1111,7 @@ nav {
 
 .swiper-arrows {
   display: flex;
+
   div {
     position: static;
 
@@ -1153,6 +1174,7 @@ nav {
     background: #ffffff;
   }
 }
+
 #faq-header {
   position: relative;
 
@@ -1215,6 +1237,61 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 }
 
 @media screen and (max-width: 768px) {
+  #about-images {
+    background: url("/images/aboutUs/hero-mobile-bg.svg") no-repeat bottom;
+  }
+
+  #ad-cards-wrapper {
+    position: relative;
+    z-index: 4;
+
+    &::after {
+      height: 100%;
+      width: 140px;
+      content: url("/images/aboutUs/ad-cards-mobile-bg.svg");
+      top: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::before {
+      height: 100%;
+      width: 140px;
+      content: url("/images/aboutUs/ad-cards-mobile-bg2.svg");
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  #benefits-section-dark {
+    position: relative;
+    z-index: 4;
+
+    &::before {
+      height: 84%;
+      width: 140px;
+      content: "";
+      background: url("/images/benefits/benefits-dark-bg-left.svg") no-repeat center bottom;
+      bottom: 0;
+      left: -1rem;
+      position: absolute;
+      z-index: -1;
+    }
+    &::after {
+      height: 84%;
+      width: 140px;
+      content: '';
+      background: url("/images/benefits/benefits-dark-bg-right.svg") no-repeat center bottom;
+      bottom: 0;
+      right: -1rem;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
   #money_input,
   #year_input {
     font-size: 24px;
@@ -1368,6 +1445,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 
   #contactFormContainer {
     position: relative;
+
     &::after {
       position: absolute;
       content: url("/images/contact-form-bg-right.svg");
@@ -1470,11 +1548,13 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     }
   }
 }
+
 .swiper-button-next {
   content: "";
   background-image: url("/images/icons/next.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
+
   &::after {
     content: "";
   }
@@ -1485,6 +1565,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   background-image: url("/images/icons/back.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
+
   &::after {
     display: none;
   }
@@ -1522,12 +1603,15 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   margin: 0;
   overflow: visible;
 }
+
 .hamburger:hover {
   opacity: 0.7;
 }
+
 .hamburger.is-active:hover {
   opacity: 0.7;
 }
+
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
@@ -1546,6 +1630,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   top: 50%;
   margin-top: -2px;
 }
+
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
@@ -1558,14 +1643,17 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
+
 .hamburger-inner::before,
 .hamburger-inner::after {
   content: "";
   display: block;
 }
+
 .hamburger-inner::before {
   top: -10px;
 }
+
 .hamburger-inner::after {
   bottom: -10px;
 }
@@ -1574,12 +1662,14 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   transition-duration: 0.075s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+
 .hamburger--squeeze .hamburger-inner::before {
   transition: top 0.075s 0.12s ease, opacity 0.075s ease;
 }
+
 .hamburger--squeeze .hamburger-inner::after {
   transition: bottom 0.075s 0.12s ease,
-    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger--squeeze.is-active .hamburger-inner {
@@ -1587,16 +1677,18 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   transition-delay: 0.12s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
 .hamburger--squeeze.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
   transition: top 0.075s ease, opacity 0.075s 0.12s ease;
 }
+
 .hamburger--squeeze.is-active .hamburger-inner::after {
   bottom: 0;
   transform: rotate(-90deg);
   transition: bottom 0.075s ease,
-    transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 //video popup {
@@ -1703,13 +1795,12 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
       left: 50%;
       transform: translateX(-50%);
       top: -150px;
-      z-index: -1
-      ;
+      z-index: -1;
     }
   }
 }
 
-@media screen and ( min-width: 768px ) {
+@media screen and (min-width: 768px) {
 
   #dofinancovanieHeroCta {
     position: relative;
@@ -1741,9 +1832,9 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
       transform: translateX(-50%);
     }
   }
-} 
+}
 
-@media screen and ( min-width: 1280px ) {
+@media screen and (min-width: 1280px) {
   #hamburgerAnim {
     display: none !important;
   }
