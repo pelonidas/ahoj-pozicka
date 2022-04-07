@@ -2122,6 +2122,10 @@ select {
   padding-left: 2rem;
 }
 
+.pb-\[6\.5rem\] {
+  padding-bottom: 6.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2818,6 +2822,14 @@ select {
     margin-bottom: 0.25rem;
   }
 
+  .md\:mr-\[5\.5rem\] {
+    margin-right: 5.5rem;
+  }
+
+  .md\:mt-\[14rem\] {
+    margin-top: 14rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2896,6 +2908,10 @@ select {
 
   .md\:h-\[760px\] {
     height: 760px;
+  }
+
+  .md\:h-\[900px\] {
+    height: 900px;
   }
 
   .md\:max-h-\[940px\] {
@@ -3104,6 +3120,14 @@ select {
 
   .md\:max-w-\[100px\] {
     max-width: 100px;
+  }
+
+  .md\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
+  .md\:max-w-\[585px\] {
+    max-width: 585px;
   }
 
   .md\:-translate-y-1\/2 {
