@@ -264,51 +264,53 @@
 
 <section id="dofinancovanie-form" class="flex">
     <div id="form-left" class="hidden md:block"></div>
-    <div id="form-content" class="container flex justify-between items-center flex-col">
+    <div id="form-content" class="container flex justify-between items-center flex-col md:flex-row">
         <div class="w-full mb-[13rem] md:w-1/2 flex relative z-22">
             <div>
-                <h2 class="text-[2.5rem] text-center leading-[2.75rem] w-full md:w-2/3 mb-12">Požiadajte o ponuku</h2>
-                <h3 class="text-[1.75rem] mb-3">Adrián Kudláč</h3>
-                <p class="w-full md:w-1/2 text-[18px]">Zodpovený za poskytovanie <span
+                <h2 class="text-[2.5rem] text-center leading-[2.75rem] w-full md:w-full md:max-w-[434px] mb-12 md:text-[65px] md:leading-[72px] md:text-left">Požiadajte o ponuku</h2>
+                <h3 class="text-[1.75rem] mb-3 md:text-[42px] md:leading-[47px]">Adrián Kudláč</h3>
+                <p class="w-full md:w-full md:max-w-[325px] text-[18px] md:text-[22px] md:leading-[28px] md:mt-[1rem] md:mb-[1rem]">Zodpovený za poskytovanie <span
                         class="text-dRed block">dofinancovania hypoték</span></p>
                 <div class="flex items-center mt-3">
                     <img src="/images/contact-call.svg" alt="" class="w-8">
-                    <span class="ml-5 text-[1.5rem]">+421 918 709 028</span>
+                    <span class="ml-5 text-[1.5rem] md:text-[28px] md:leading-[32px]">+421 918 709 028</span>
                 </div>
             </div>
             <div>
-                <img src="/images/adrian.png" alt="" class="md:w-[14rem] md:right-16 hidden md:block">
-                <img src="/images/mobile/mobile-form-img.svg" alt=""
-                    class="block md:hidden absolute right-[-40px] bottom-[-160px] z-20">
+                <!-- <img src="/images/adrian.png" alt="" class="md:w-[14rem] md:right-16 hidden md:block"> -->
+                <img src="/images/mobile-form-img.png" alt=""
+                    class="hidden md:block absolute right-[100px] top-[-30px] z-20">
+                <img src="/images/mobile/mobile-form-img.png" alt=""
+                    class="md:hidden absolute right-[-40px] bottom-[-160px] z-20">
             </div>
         </div>
-        <div class="w-full md:w-1/2 bg-white drop-shadow-lg rounded-l-lg flex items-center dofinancovanie-form"
+        <div class="w-full md:w-full md:max-w-[665px] bg-white drop-shadow-[9px_10px_50px_rgba(0,0,0,0.20)] rounded-l-lg flex items-center dofinancovanie-form"
             id="contact-form">
-            <div class="w-full p-[2.5rem]">
+            <div class="w-full p-[2.5rem] md:px-[3.5rem] md:py-[4rem]">
                 <form action="/form" method="post">
                     <div class="mb-7">
-                        <label for="name">Meno a priezvisko</label>
-                        <input type="text" id="name" placeholder="Juraj Testulič" class="input-default" name="name">
+                        <label class="md:text-[20px] md:leading-[23px] md:mb-[0.5rem] md:inline-block" for="name">Meno a priezvisko</label>
+                        <input type="text" id="name" placeholder="Juraj Testulič" class="input-default md:h-[52px] md:text-[20px] md:leading-[23px]" name="name">
                     </div>
                     <div class="mb-7">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="juraj.testulic@gmail.com" class="input-default"
+                        <label class="md:text-[20px] md:leading-[23px] md:mb-[0.5rem] md:inline-block" for="email">Email</label>
+                        <input type="text" id="email" placeholder="juraj.testulic@gmail.com" class="input-default md:h-[52px] md:text-[20px] md:leading-[23px]"
                             name="email">
                     </div>
                     <div class="mb-7">
-                        <label for="phoneNumber">Telefónne číslo</label>
-                        <input type="text" id="phoneNumber" placeholder="0901 234 567" class="input-default"
+                        <label class="md:text-[20px] md:leading-[23px] md:mb-[0.5rem] md:inline-block" for="phoneNumber">Telefónne číslo</label>
+                        <input type="text" id="phoneNumber" placeholder="0901 234 567" class="input-default md:h-[52px] md:text-[20px] md:leading-[23px]"
                             name="phoneNumber">
                     </div>
                     <div class="mb-7 ">
-                        <label for="interest">Mam zaujem o:</label>
-                        <select name="interest" id="interest" class="input-default bg-none" disabled>
+                        <label class="md:text-[20px] md:leading-[23px] md:mb-[0.5rem] md:inline-block" for="interest">Mam zaujem o:</label>
+                        <select name="interest" id="interest" class="input-default md:h-[52px] md:text-[20px] md:leading-[23px] bg-none" disabled>
                             <option value="option">Dofinancovanie Hypotéky</option>
                         </select>
                     </div>
                     <div class="mb-12">
-                        <label for="message">Sprava</label>
-                        <textarea name="message" id="message" class="input-default" placeholder="Dobrý deň,"></textarea>
+                        <label class="md:text-[20px] md:leading-[23px] md:mb-[0.5rem] md:inline-block" for="message">Sprava</label>
+                        <textarea name="message" id="message" class="input-default md:text-[20px] md:leading-[23px]" rows="3" placeholder="Dobrý deň,"></textarea>
                     </div>
                     <div class="flex justify-center">
                         <button

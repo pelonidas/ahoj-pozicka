@@ -932,6 +932,18 @@ select {
   left: 3rem;
 }
 
+.right-\[100px\] {
+  right: 100px;
+}
+
+.top-\[-160px\] {
+  top: -160px;
+}
+
+.top-\[-30px\] {
+  top: -30px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -2034,6 +2046,11 @@ select {
   padding-right: 0.75rem;
 }
 
+.px-\[3\.5rem\] {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -2662,6 +2679,16 @@ select {
     margin-bottom: 7rem;
   }
 
+  .md\:my-\[1rem\] {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .md\:my-\[1\.5rem\] {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   .md\:mr-16 {
     margin-right: 4rem;
   }
@@ -2828,6 +2855,14 @@ select {
 
   .md\:mt-\[14rem\] {
     margin-top: 14rem;
+  }
+
+  .md\:mt-\[1rem\] {
+    margin-top: 1rem;
+  }
+
+  .md\:mb-\[1rem\] {
+    margin-bottom: 1rem;
   }
 
   .md\:block {
@@ -3130,6 +3165,22 @@ select {
     max-width: 585px;
   }
 
+  .md\:max-w-\[\] {
+    max-width: ;
+  }
+
+  .md\:max-w-\[434px\] {
+    max-width: 434px;
+  }
+
+  .md\:max-w-\[434\] {
+    max-width: 434;
+  }
+
+  .md\:max-w-\[325px\] {
+    max-width: 325px;
+  }
+
   .md\:-translate-y-1\/2 {
     --tw-translate-y: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3303,6 +3354,16 @@ select {
   .md\:py-\[2\.5rem\] {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:px-\[2\.5rem\] {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:py-\[4rem\] {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .md\:pb-32 {
@@ -3504,6 +3565,18 @@ select {
     font-size: 0.875rem;
   }
 
+  .md\:text-\[\10D 2px\] {
+    font-size: č2px;
+  }
+
+  .md\:text-\[42px\] {
+    font-size: 42px;
+  }
+
+  .md\:text-\[22px\] {
+    font-size: 22px;
+  }
+
   .md\:leading-normal {
     line-height: 1.5;
   }
@@ -3566,6 +3639,10 @@ select {
 
   .md\:leading-\[30px\] {
     line-height: 30px;
+  }
+
+  .md\:leading-\[47px\] {
+    line-height: 47px;
   }
 
   .md\:text-secondary {

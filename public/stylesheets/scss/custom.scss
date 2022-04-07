@@ -1620,3 +1620,9 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     }
   }
 } 
+
+@media screen and ( min-width: 1280px ) {
+  #hamburgerAnim {
+    display: none !important;
+  }
+}
