@@ -402,16 +402,16 @@ nav ul li:hover {
   #contact-form-wrapper {
     position: relative;
   }
-  #contact-form-wrapper::after {
-    width: 100%;
-    max-width: 1920px;
-    content: url("/images/kontakt-kontaktujte/hero-after-bg.svg");
+  #contact-form-wrapper::before {
+    content: "";
+    background: #1d3047;
     position: absolute;
-    z-index: -1;
-    margin: 0 auto;
-    top: -19rem;
+    z-index: -2;
+    bottom: 0;
     left: 0;
-    right: 0;
+    right: 48%;
+    top: 0;
+    border-radius: 0 10px 10px 0;
   }
 
   #contact-form-wrapper-child {
@@ -419,27 +419,22 @@ nav ul li:hover {
   }
   #contact-form-wrapper-child::after {
     position: absolute;
+    height: 660px;
+    bottom: 0;
     top: 0;
-    right: -15rem;
+    right: 0;
+    margin: auto 0;
     content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg");
     z-index: -1;
   }
   #contact-form-wrapper-child::before {
     position: absolute;
+    height: 660px;
+    margin: auto 0;
     top: 0;
-    left: -16.5rem;
+    bottom: 0;
+    left: 0;
     content: url("/images/kontakt-kontaktujte/contact-form-left-bg.svg");
-    z-index: -1;
-  }
-
-  #contact-form-img-wrapper {
-    position: relative;
-  }
-  #contact-form-img-wrapper::after {
-    content: url("/images/kontakt-kontaktujte/contact-form-md-bg.svg");
-    position: absolute;
-    top: -6rem;
-    right: -5rem;
     z-index: -1;
   }
 
