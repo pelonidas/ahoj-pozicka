@@ -211,13 +211,6 @@ nav ul li:hover {
   background-position: -1rem center;
 }
 
-#about-top {
-  background-image: url("/images/about-top-bg.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
-}
-
 #step-1-r {
   background-image: url("/images/step1-bg.svg");
   background-size: contain;
@@ -253,6 +246,7 @@ nav ul li:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom 1rem;
+  position: relative;
 }
 
 .card-bg {
@@ -399,6 +393,14 @@ nav ul li:hover {
 }
 
 @media screen and (min-width: 768px) {
+  #ad-cards-wrapper {
+    height: 170px;
+    position: relative;
+    background-image: url("/images/personal/desktop-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   #contact-hero {
     position: relative;
   }
@@ -770,6 +772,42 @@ nav ul li:hover {
 }
 
 @media screen and (min-width: 768px) {
+  #about-who {
+    position: relative;
+  }
+  #about-who::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: url("/images/about-info/right-bg.svg");
+  }
+
+  #about-what {
+    position: relative;
+  }
+  #about-what::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: url("/images/about-info/left-bg.svg");
+  }
+
+  #about-top {
+    position: relative;
+    z-index: 2;
+  }
+  #about-top::after {
+    width: 100%;
+    max-width: 1920px;
+    content: url("/images/about-top-bg.svg");
+    position: absolute;
+    bottom: -14rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+  }
+
   #personal-wrapper {
     position: relative;
   }
@@ -822,10 +860,6 @@ nav ul li:hover {
   position: absolute;
   top: 0;
   right: 0;
-}
-
-#home-about {
-  padding-top: 17rem;
 }
 
 #aboutusBg {

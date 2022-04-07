@@ -240,12 +240,7 @@ nav {
 
 //about
 
-#about-top {
-  background-image: url("/images/about-top-bg.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
-}
+
 
 //#about-who {
 //  margin-top: 7rem;
@@ -312,6 +307,8 @@ nav {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom 1rem;
+  position: relative;
+
 }
 
 .card-bg {
@@ -484,6 +481,15 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+
+  #ad-cards-wrapper {
+    height: 170px;
+    position: relative;
+    background-image: url("/images/personal/desktop-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   #contact-hero {
     position: relative;
     &::after {
@@ -896,6 +902,42 @@ nav {
 
 @media screen and (min-width: 768px) {
 
+
+  #about-who {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: url("/images/about-info/right-bg.svg");
+    }
+  }
+  #about-what {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: url("/images/about-info/left-bg.svg");
+    }
+  }
+
+  #about-top {
+    position: relative;
+    z-index: 2;
+    &::after{
+      width: 100%;
+      max-width: 1920px;
+      content: url("/images/about-top-bg.svg");
+      position: absolute;
+      bottom: -14rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: -1;
+    }
+  }
+
   #personal-wrapper {
     position: relative;
     &::before {
@@ -960,9 +1002,6 @@ nav {
   }
 }
 
-#home-about {
-  padding-top: 17rem;
-}
 
 #aboutusBg {
   position: relative;
