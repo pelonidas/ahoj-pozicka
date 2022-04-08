@@ -676,23 +676,7 @@ nav {
       background-position: center 5rem;
     }
 
-    #centrala-hero-text {
-      position: relative;
-      z-index: 2;
 
-      &::after {
-        z-index: -1;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        content: "";
-        height: 40%;
-        width: 100%;
-        background-image: url("/images/centrala-home-bg1.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
-    }
 
     #centrala-location {
       background-image: url("/images/map.svg");
@@ -909,6 +893,25 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+
+
+  #centrala-hero-text {
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      bottom: -8rem;
+      content: "";
+      height: 100%;
+      width: 100%;
+      max-width: 570px;
+      background: url("/images/centrala-home-bg1.svg") no-repeat center bottom;
+
+    }
+  }
 
   #benefits-section-dark {
     background-image: url("/images/benefitsDark-bg.svg");
@@ -1315,6 +1318,21 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 }
 
 @media screen and (min-width: 768px) {
+  #videoTriggerCentrala {
+    position: relative;
+    z-index: 3;
+    &::before {
+      position: absolute;
+      top: -5rem;
+      right: 0;
+      content: url("/images/kontakt-kontaktujte/hero-lg.svg");
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      max-width: 700px;
+    }
+  }
+
   #offerContentWrapper {
     display: flex;
     flex-direction: column;
