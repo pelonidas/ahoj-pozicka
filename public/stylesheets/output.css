@@ -1053,6 +1053,16 @@ select {
   margin-bottom: 4.5rem;
 }
 
+.my-\[6\.5rem\] {
+  margin-top: 6.5rem;
+  margin-bottom: 6.5rem;
+}
+
+.my-\[6rem\] {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mb-\[4\.5rem\] {
   margin-bottom: 4.5rem;
 }
@@ -1265,6 +1275,30 @@ select {
   margin-top: 1.25rem;
 }
 
+.mt-\[6rem\] {
+  margin-top: 6rem;
+}
+
+.mb-\[2\.5rem\] {
+  margin-bottom: 2.5rem;
+}
+
+.mb-\[10rem\] {
+  margin-bottom: 10rem;
+}
+
+.mt-\[3rem\] {
+  margin-top: 3rem;
+}
+
+.mr-\[0\.5rem\] {
+  margin-right: 0.5rem;
+}
+
+.mr-\[1rem\] {
+  margin-right: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -1369,6 +1403,10 @@ select {
 
 .h-\[250px\] {
   height: 250px;
+}
+
+.h-\[26px\] {
+  height: 26px;
 }
 
 .max-h-\[170px\] {
@@ -1633,6 +1671,14 @@ select {
   max-width: 175px;
 }
 
+.max-w-\[225px\] {
+  max-width: 225px;
+}
+
+.max-w-\[26px\] {
+  max-width: 26px;
+}
+
 .translate-y-1\/2 {
   --tw-translate-y: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1660,6 +1706,11 @@ select {
 
 .translate-y-\[602px\] {
   --tw-translate-y: 602px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[20\%\] {
+  --tw-translate-y: 20%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1749,6 +1800,10 @@ select {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.overflow-visible {
+  overflow: visible;
 }
 
 .overflow-y-auto {
@@ -2050,6 +2105,11 @@ select {
   padding-right: 0.75rem;
 }
 
+.py-\[4rem\] {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -2140,6 +2200,14 @@ select {
 
 .pl-\[2rem\] {
   padding-left: 2rem;
+}
+
+.pb-\[6rem\] {
+  padding-bottom: 6rem;
+}
+
+.pb-\[9rem\] {
+  padding-bottom: 9rem;
 }
 
 .text-left {
@@ -2357,6 +2425,10 @@ select {
 
 .leading-\[32px\] {
   line-height: 32px;
+}
+
+.leading-\[23px\] {
+  line-height: 23px;
 }
 
 .text-white {
@@ -2645,6 +2717,10 @@ select {
     margin: 5.5rem;
   }
 
+  .md\:m-auto {
+    margin: auto;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -2698,6 +2774,11 @@ select {
   .md\:my-\[1\.5rem\] {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  .md\:my-28 {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
   }
 
   .md\:mb-0 {
@@ -2892,6 +2973,14 @@ select {
     margin-right: 1rem;
   }
 
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:mr-6 {
+    margin-right: 1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2982,6 +3071,14 @@ select {
 
   .md\:h-\[500px\] {
     height: 500px;
+  }
+
+  .md\:h-\[650px\] {
+    height: 650px;
+  }
+
+  .md\:h-\[400px\] {
+    height: 400px;
   }
 
   .md\:max-h-\[940px\] {
@@ -3230,6 +3327,22 @@ select {
 
   .md\:max-w-\[415px\] {
     max-width: 415px;
+  }
+
+  .md\:max-w-\[1620px\] {
+    max-width: 1620px;
+  }
+
+  .md\:max-w-\[1920px\] {
+    max-width: 1920px;
+  }
+
+  .md\:max-w-\[840px\] {
+    max-width: 840px;
+  }
+
+  .md\:max-w-\[45px\] {
+    max-width: 45px;
   }
 
   .md\:-translate-y-1\/2 {
@@ -3489,6 +3602,10 @@ select {
     padding-bottom: 6.5rem;
   }
 
+  .md\:pl-\[4rem\] {
+    padding-left: 4rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -3691,6 +3808,11 @@ select {
   .md\:text-secondary {
     --tw-text-opacity: 1;
     color: rgb(34 49 70 / var(--tw-text-opacity));
+  }
+
+  .md\:drop-shadow-\[9px_10px_50px_rgba\(0\2c 0\2c 0\2c 0\.20\)\] {
+    --tw-drop-shadow: drop-shadow(9px 10px 50px rgba(0,0,0,0.20));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
   .md\:hover\:border-2:hover {

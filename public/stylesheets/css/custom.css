@@ -1127,6 +1127,23 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
 }
 
 @media screen and (min-width: 768px) {
+  #kontaktujte-nas-wrapper {
+    position: relative;
+    z-index: 3;
+  }
+  #kontaktujte-nas-wrapper::before {
+    position: absolute;
+    height: 265px;
+    width: 100%;
+    max-width: 1920px;
+    content: url("/images/centrala/contact-us-bg.svg");
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
   #videoTriggerCentrala {
     position: relative;
     z-index: 3;
@@ -1282,6 +1299,41 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   }
 }
 @media screen and (max-width: 768px) {
+  #centrala-gallery-wrapper {
+    position: relative;
+    z-index: 2;
+  }
+  #centrala-gallery-wrapper::after {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    content: url("/images/centrala/centrala-gallery-mobile-bg-top.svg");
+    height: 100%;
+    width: 100%;
+    max-width: 370px;
+  }
+
+  #centrala-hero-wrapper {
+    position: relative;
+    z-index: 2;
+  }
+  #centrala-hero-wrapper::after {
+    position: absolute;
+    content: "";
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 370px;
+    height: 100%;
+    background: url("/images/kontakt-kontaktujte/mobile-hero-bg.svg") no-repeat center bottom;
+    z-index: -1;
+  }
+
   #contactFormContainer {
     position: relative;
   }

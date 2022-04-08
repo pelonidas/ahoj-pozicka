@@ -1,19 +1,19 @@
 <% layout('./layouts/boilerplate') %>
 <div class="video-popup"></div>
-<section class="bg-secondary text-white md:h-[900px] md:flex md:pb-[6.5rem]">
-    <div class="w-full max-w-[92%] lg:max-w-[1620px] md:my-auto mx-auto flex flex-col md:grid grid-cols-5 md:h-[500px]">
+<section class="bg-secondary text-white md:h-[900px] md:flex md:pb-[6.5rem]" id="centrala-hero-wrapper">
+    <div class="w-full max-w-[92%] md:max-w-[1620px] md:my-auto mx-auto flex flex-col md:grid grid-cols-5 md:h-[500px]">
         <div class="col-span-2" id="centrala-hero-text">
-            <div class="w-full md:max-w-[415px]" >
-                <h4 class="text-[1.25rem] md:text-[1.75rem] md:leading-[26px] font-light">Sídlime v <span class="text-primary">lokalite:</span>
+            <div class="w-full md:max-w-[415px] my-[6rem] md:my-0">
+                <h4 class="text-[1.25rem] md:text-[1.75rem] leading-[23px] md:leading-[26px] font-light">Sídlime v <span class="text-primary">lokalite:</span>
                 </h4>
-                <h2 class="text-[2.3rem] md:text-[4rem] md:leading-[72px] md:my-[1.5rem]">Finančný dom <span
+                <h2 class="text-[2.3rem] md:text-[4rem] leading-[42px] md:leading-[72px] my-[2rem] md:my-[1.5rem]">Finančný dom <span
                             class="text-primary font-bold">Košice</span></h2>
-                <p class="text-[1rem] md:text-[1.25rem] font-light leading-tight md:leading-[26px]">Ak preferujete osobný kontakt, pre Vás
+                <p class="text-[1rem] md:text-[1.25rem] font-light leading-[20px] md:leading-[26px]">Ak preferujete osobný kontakt, pre Vás
                     všetkých je tu naša centrála v
                     Košiciach.</p>
             </div>
         </div>
-        <div class="w-full col-span-3">
+        <div class="w-full col-span-3 pb-[9rem] md:pb-0">
             <div id="videoTriggerCentrala" class="relative md:max-w-[1000px]">
                 <!-- <img src="/images/centrala-top-img.png" alt="" class="md:max-w-[89%] ml-auto mr-[10%]"> -->
                 <video playsinline="" autoplay="" muted="" loop=""
@@ -57,58 +57,86 @@
         </div>
     </div>
 </section>
-<section class="container mb-[3.5rem] lg:my-28 flex flex-col lg:flex-row border lg:justify-between">
-    <div class="flex flex-col lg:max-w-[325px] lg:justify-center lg:ml-[5rem] my-[2.5rem] lg:mb-0">
-        <h2 class="text-center md:text-left text-[2.5rem] lg:text-[4rem] font-medium">Centrála</h2>
-        <p class="text-[1.125rem] text-center md:text-left font-text lg:leading-[28px] lg:text-[1.25rem] mr-5">
-            Nadštandardná forma starostlivosti. Náš tím expertov je vám k dispozícii <span class="font-bold">v pracovné dni od 8:00 do 17:00.</span>
-            Poskytneme Vám kompletný servis od žiadosti o pôžičku až po jej schválenie. Čo je pre nás dôležité? Spokojný
-            zákazníci!
-        </p>
-    </div>
-    <img src="/images/centrala-gallery/img1.png" alt="" class="mb-[2rem] lg:mb-0">
-    <img src="/images/centrala-gallery/img2.png" alt="">
-</section>
-<section class="w-full lg:max-w-[1920px] h-[520px] lg:h-[650px] bg-[url('/images/centrala-mapa/map-mobile.png')] md:bg-[url('/images/centrala-mapa/map.png')] mx-auto flex">
-    <div class="bg-white rounded-[10px] w-full max-w-[380px] lg:max-w-[840px] h-[390px] lg:h-[400px] m-auto lg:mr-[5rem] flex flex-col justify-around md:justify-center lg:pl-[4rem] py-[2.5rem] md:py-0">
+<div id="centrala-gallery-wrapper">
+    <section class="container mb-[3.5rem] md:my-28 flex flex-col md:flex-row md:justify-between mt-[3.5rem] md:mt-0" >
+        <div class="flex flex-col md:max-w-[325px] md:justify-center md:ml-[5rem] mb-[2.5rem] md:mb-0">
+            <h2 class="text-center md:text-left text-[2.5rem] leading-[44px] mt-[6rem] md:mt-0 md:text-[4rem] font-medium mb-[1.5rem] md:mb-0">Centrála</h2>
+            <p class="text-[1.125rem] text-center md:text-left font-text md:leading-[28px] md:text-[1.25rem] mr-5">
+                Nadštandardná forma starostlivosti. Náš tím expertov je vám k dispozícii <span class="font-bold">v pracovné dni od 8:00 do 17:00.</span>
+                Poskytneme Vám kompletný servis od žiadosti o pôžičku až po jej schválenie. Čo je pre nás dôležité? Spokojný
+                zákazníci!
+            </p>
+        </div>
+        <img src="/images/centrala-gallery/img1.png" alt="" class="mb-[2rem] md:mb-0">
+        <img src="/images/centrala-gallery/img2.png" alt="">
+        <div class="swiper hidden md:block">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+</div>
+<!--background: #FFFFFF;
+box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.20);
+border-radius: 10px;-->
+<section class="w-full md:max-w-[1920px] h-[520px] md:h-[650px] bg-[url('/images/centrala-mapa/map-mobile.png')] md:bg-[url('/images/centrala-mapa/map.png')] mx-auto flex mb-[10rem] md:mb-0">
+    <div class="bg-white rounded-[10px] w-full max-w-[380px] md:max-w-[840px] h-[390px] md:h-[400px] mt-auto mx-auto md:m-auto md:mr-[5rem] flex flex-col justify-around md:justify-center md:pl-[4rem] py-[2.5rem] md:py-0 translate-y-[20%] md:translate-y-0 drop-shadow-[9px_10px_50px_rgba(0,0,0,0.20)]">
         <div>
-            <h2 class="text-center lg:text-left text-[2.5rem] lg:text-[4rem] font-medium leading-[44px] lg:leading-[72px] mb-4 md:mb-0">Navštívte nás</h2>
-            <h3 class="text-center lg:text-left text-[1.5rem] lg:text-[2.5rem] lg:leading-[44px] lg:mb-10">Pre viac informácií</h3>
+            <h2 class="text-center md:text-left text-[2.5rem] md:text-[4rem] font-medium leading-[44px] md:leading-[72px] mb-4 md:mb-0">Navštívte nás</h2>
+            <h3 class="text-center md:text-left text-[1.5rem] md:text-[2.5rem] md:leading-[44px] md:mb-10">Pre viac informácií</h3>
         </div>
         <div>
-            <div class="w-full max-w-[335px] lg:max-w-full mx-auto md:mx-0 flex font-bold lg:text-[1.5rem] mb-4 lg:mb-6">
+            <div class="w-full max-w-[335px] md:max-w-full mx-auto md:mx-0 flex font-bold md:text-[1.5rem] mb-4 md:mb-6">
                 <img src="/images/icons/location.svg" alt="">
-                <span class="ml-5 text-[1rem] lg:text-[1.5rem]">Fejova 1, 040 01 Košice</span>
+                <span class="ml-5 text-[1rem] md:text-[1.5rem]">Fejova 1, 040 01 Košice</span>
             </div>
-            <div class="w-full max-w-[335px] lg:max-w-full mx-auto md:mx-0 flex font-bold lg:text-[1.5rem]">
+            <div class="w-full max-w-[335px] md:max-w-full mx-auto md:mx-0 flex font-bold md:text-[1.5rem]">
                 <img src="/images/icons/clock.svg" alt="">
-                <span class="ml-5 text-[1rem] lg:text-[1.5rem]">Pondelok - Piatok, 8:00 - 17:00</span>
+                <span class="ml-5 text-[1rem] md:text-[1.5rem]">Pondelok - Piatok, 8:00 - 17:00</span>
             </div>
         </div>
         <img src="/images/centrala-mapa/map-card-bg.svg" alt="" class="w-full max-w-[290px] md:hidden mx-auto">
     </div>
 </section>
 <%- include('./partials/personal') %>
-<section class="container flex lg:justify-between border lg:px-[5rem] bg-white rounded-[10px] lg:py-[4rem] lg:my-28 lg:drop-shadow-[9px_10px_50px_rgba(0,0,0,0.20)]">
-    <div class="w-full lg:max-w-[400px] my-auto">
-        <h2 class="lg:text-[4rem] lg:leading-[72px]">Kontaktujte nás</h2>
-        <p class="lg:text-[1.5rem]">V pracovné dni od 8:00 do 17:00</p>
+<section class="border" id="kontaktujte-nas-wrapper">
+    <div class="container flex flex-col md:flex-row md:justify-between border md:px-[5rem] bg-white rounded-[10px] py-[4rem] md:my-28 md:drop-shadow-[9px_10px_50px_rgba(0,0,0,0.20)] w-full max-w-[380px] md:max-w-full">
+        <div class="w-full md:max-w-[400px] my-auto">
+            <h2 class="text-[2.5rem] md:text-[4rem] leading-[44px] md:leading-[72px] w-full max-w-[335px] md:max-w-full mx-auto md:mx-0 mb-[1rem] md:mb-0">Kontaktujte nás</h2>
+            <p class="leading-[27px] text-[1.5rem] w-full max-w-[225px] md:max-w-full mx-auto md:mx-0">V pracovné dni od 8:00 do 17:00</p>
+        </div>
+        <div class="w-full max-w-[290px] md:max-w-[400px] mt-[3rem] md:mt-0 mx-auto md:mx-0 md:my-auto">
+            <div class="flex mb-4 h-[26px] md:h-full">
+                <img src="/images/icons/call.svg" alt=""  class="w-full max-w-[26px] md:max-w-[45px] mr-[1rem] md:mr-6">
+                <h5 class="font-bold text-[1.25rem] md:text-[1.75rem]">+421 918 709 028</h5>
+            </div>
+            <div class="flex mb-4 h-[26px] md:h-full">
+                <img src="/images/icons/mail.svg" alt="" class="w-full max-w-[26px] md:max-w-[45px] mr-[1rem] md:mr-6">
+                <h5 class="font-bold text-[1.25rem] md:text-[1.75rem]">info@bestpozicky.sk</h5>
+            </div>
+            <div class="flex h-[26px] md:h-full">
+                <img src="/images/icons/location.svg" alt="" class="w-full max-w-[26px] md:max-w-[45px] mr-[1rem] md:mr-6">
+                <h5 class="font-bold text-[1.25rem] md:text-[1.75rem]">Fejova 1, 040 01 Košice</h5>
+            </div>
+            <img src="/images/centrala/centrala-kontaktujte-mobile-bg.svg" alt="" class="w-full md:hidden mt-[3rem]">
+        </div>
+        <img src="/images/centrala-contact/bg.svg" alt="" class="w-full max-w-[165px] hidden md:block">
+
     </div>
-    <div class="w-full lg:max-w-[400px] my-auto">
-        <div class="flex lg:mb-4">
-            <img src="/images/icons/call.svg" alt=""  class="w-full max-w-[45px] lg:mr-6">
-            <h5 class="font-bold lg:text-[1.75rem]">+421 918 709 028</h5>
-        </div>
-        <div class="flex lg:mb-4">
-            <img src="/images/icons/mail.svg" alt="" class="w-full max-w-[45px] lg:mr-6">
-            <h5 class="font-bold lg:text-[1.75rem]">info@bestpozicky.sk</h5>
-        </div>
-        <div class="flex">
-            <img src="/images/icons/location.svg" alt="" class="w-full max-w-[45px] lg:mr-6">
-            <h5 class="font-bold lg:text-[1.75rem]">Fejova 1, 040 01 Košice</h5>
-        </div>
-    </div>
-    <img src="/images/centrala-contact/bg.svg" alt="" class="w-full max-w-[165px]">
+
 </section>
 <!--background: #FFFFFF;
 box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.20);
