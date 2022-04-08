@@ -1801,6 +1801,17 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 }
 
 @media screen and (min-width: 768px) {
+  #refinancovanieBgHeroTwo {
+    position: relative;
+    z-index: 3;
+    &::before {
+      position: absolute;
+      content: url("/images/dofinancovanie/dofinancovanie-bg.svg");
+      top: 9rem;
+      right: 0;
+      z-index: -1;
+    }
+  }
 
   #dofinancovanieHeroCta {
     position: relative;
