@@ -6,3 +6,46 @@
 .ui.selection.dropdown:hover{
     border-color: #FCC800;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    position:static;
+    z-index:10;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 0 1rem;
+}
+.swiper-pagination {
+    position: static;
+
+}
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    width: auto;
+}
+
+.swiper-button-next {
+    margin: auto 1rem;
+    height: 22px;
+    content: "";
+    background-image: url("/images/icons/next.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev {
+    margin: auto 1rem;
+    height: 22px;
+    content: "";
+    background-image: url("/images/icons/back.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+.swiper-button-prev::after {
+    display: none;
+}

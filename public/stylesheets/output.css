@@ -1286,6 +1286,14 @@ select {
   margin-top: 1.25rem;
 }
 
+.mt-\[30rem\] {
+  margin-top: 30rem;
+}
+
+.mt-\[20rem\] {
+  margin-top: 20rem;
+}
+
 .block {
   display: block;
 }
@@ -1398,6 +1406,10 @@ select {
 
 .h-\[250px\] {
   height: 250px;
+}
+
+.h-\[30px\] {
+  height: 30px;
 }
 
 .max-h-\[170px\] {
@@ -1929,6 +1941,11 @@ select {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(252 200 0 / var(--tw-bg-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/images\/centrala-mapa\/map-mobile\.png\'\)\] {
