@@ -75,9 +75,26 @@
                     <small class="text-xs text-dRed"></small>
                 </div>
                 <div class="mb-6">
+<!--                    <label for="job" class="label-default">Tvoje pracovné zaradenie</label>-->
+<!--                    <select name="job" id="job"-->
+<!--                            class="w-full border-2 border-secondary rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md">-->
+<!--                        <option value="employee">Zamestnanec</option>-->
+<!--                        <option value="state-employee">Štátny zamestnanec</option>-->
+<!--                        <option value="foreign-employee">Zamestnanec v zahraničí</option>-->
+<!--                        <option value="self-employed">Živnostník / S.R.O.</option>-->
+<!--                        <option value="without-ico">Živnostník bez IČO</option>-->
+<!--                        <option value="tender-self">Opatrovateľ/ka - živnostník - v členskej krajine EÚ</option>-->
+<!--                        <option value="tender">Opatrovateľka</option>-->
+<!--                        <option value="senior">Starobný dôchodca</option>-->
+<!--                        <option value="retired-senior">Výsluhový dôchodca</option>-->
+<!--                        <option value="invalid-senior">Invalidný dôchodca</option>-->
+<!--                        <option value="student">Študent</option>-->
+<!--                        <option value="maternity">Osoba na materskej dovolenke</option>-->
+<!--                        <option value="home-person">Osoba v domácnosti</option>-->
+<!--                        <option value="unemployed">Nezamestnaný</option>-->
+<!--                    </select>-->
                     <label for="job" class="label-default">Tvoje pracovné zaradenie</label>
-                    <select name="job" id="job"
-                            class="w-full border-2 border-secondary rounded-lg focus:border-primary focus:ring-0 focus:drop-shadow-md">
+                    <select class="ui search dropdown w-full" name="job" id="job">
                         <option value="employee">Zamestnanec</option>
                         <option value="state-employee">Štátny zamestnanec</option>
                         <option value="foreign-employee">Zamestnanec v zahraničí</option>
@@ -137,3 +154,10 @@
         </div>
     </div>
 </section>
+<script>
+    $('.ui.dropdown').dropdown()
+    let test = document.querySelector('.ui')
+    test.addEventListener('click', () => {
+        test.classList.remove('upward')
+    })
+</script>

@@ -39,6 +39,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(session(sessionObject))
 
+app.get('/test', (req, res) => {
+    res.render('test')
+})
+
 // Home route
 app.get('/', (req, res) => {
     res.render('home', {title: "Pozicky", isRefinancovanie: false})

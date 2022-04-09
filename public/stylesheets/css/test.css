@@ -1,0 +1,8 @@
+.ui.selection.dropdown {
+    border: 2px solid #223146;
+    border-radius: 10px;
+    font-family: Comfortaa, sans-serif;
+}
+.ui.selection.dropdown:hover{
+    border-color: #FCC800;
+}
