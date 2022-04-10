@@ -16,7 +16,9 @@
     "ejs-mate": "^3.0.0",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
-    "nodemailer": "^6.7.2"
+    "nodemailer": "^6.7.2",
+    "semantic-ui-dropdown": "^2.4.1",
+    "semantic-ui-transition": "^2.3.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.23"

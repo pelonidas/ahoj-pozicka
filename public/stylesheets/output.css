@@ -1206,6 +1206,10 @@ select {
   margin-top: -50%;
 }
 
+.mt-\[20rem\] {
+  margin-top: 20rem;
+}
+
 .mt-\[12\%\] {
   margin-top: 12%;
 }
@@ -1286,14 +1290,6 @@ select {
   margin-top: 1.25rem;
 }
 
-.mt-\[30rem\] {
-  margin-top: 30rem;
-}
-
-.mt-\[20rem\] {
-  margin-top: 20rem;
-}
-
 .block {
   display: block;
 }
@@ -1348,12 +1344,16 @@ select {
   height: 54px;
 }
 
-.h-screen {
-  height: 100vh;
+.h-\[30px\] {
+  height: 30px;
 }
 
 .h-\[20rem\] {
   height: 20rem;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .h-\[13\.75rem\] {
@@ -1406,10 +1406,6 @@ select {
 
 .h-\[250px\] {
   height: 250px;
-}
-
-.h-\[30px\] {
-  height: 30px;
 }
 
 .max-h-\[170px\] {
@@ -1628,6 +1624,10 @@ select {
 
 .max-w-\[20px\] {
   max-width: 20px;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .max-w-\[85\%\] {
@@ -1934,6 +1934,11 @@ select {
   background-color: rgb(237 64 54 / var(--tw-bg-opacity));
 }
 
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1941,11 +1946,6 @@ select {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(252 200 0 / var(--tw-bg-opacity));
-}
-
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/images\/centrala-mapa\/map-mobile\.png\'\)\] {
@@ -3057,6 +3057,10 @@ select {
 
   .md\:h-\[760px\] {
     height: 760px;
+  }
+
+  .md\:h-\[800px\] {
+    height: 800px;
   }
 
   .md\:max-h-\[940px\] {

@@ -5,7 +5,6 @@ const nodemailer = require('nodemailer')
 const ExpressError = require('./utils/ExpressError')
 let session = require('express-session')
 const {checkData} = require('./public/javascripts/handleJob')
-const {flatten} = require("express/lib/utils");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -36,6 +35,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true}))
 //Serving static files
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'node_modules/semantic-ui-dropdown')))
+app.use(express.static(path.join(__dirname, 'node_modules/semantic-ui-transition')))
 
 app.use(session(sessionObject))
 

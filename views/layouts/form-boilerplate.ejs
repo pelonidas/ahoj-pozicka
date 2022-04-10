@@ -15,15 +15,15 @@
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
-<!--    <script src="/virtual-select-master/dist/virtual-select.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+
     <script src="https://kit.fontawesome.com/849a1df6c9.js" crossorigin="anonymous"></script>
-<!--    <link type="text/css" href="/virtual-select-master/dist/virtual-select.min.css">-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/dropdown.min.css">
+    <link rel="stylesheet" href="/transition.min.css">
     <link rel="stylesheet" href="/stylesheets/css/custom.css">
     <link rel="stylesheet" href="/stylesheets/output.css">
     <link rel="stylesheet" href="/stylesheets/css/test.css">
+
 </head>
 <body class="font-body h-screen bg-secondary flex flex-col">
 <header class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto pt-[1.5rem] md:pt-16">
@@ -34,7 +34,7 @@
                 <img src="/images/icons/call-incoming.svg" alt="" class="w-full max-w-[20px]">
             </div>
         </div>
-        <ul class="text-white flex mx-auto md:justify-between text-md w-full max-w-[80%] md:max-w-[30%] md:max-w-full my-[2rem] md:my-0">
+        <ul class="text-white flex mx-auto md:justify-between text-md w-full max-w-[300px] md:max-w-[30%] md:max-w-full my-[2rem] md:my-0">
             <% if (step === 4) { %>
                 <li class="border-b-2 border-primary md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]">Krok 1.</li>
                 <li class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]">Krok 2.</li>
@@ -70,7 +70,10 @@
 </div>
 
 
-<script type="" src="/javascripts/validator.js"></script>
+<script src="/transition.min.js"></script>
+<script src="/dropdown.min.js"></script>
+<script src="/javascripts/customDropdown.js"></script>
+<script src="/javascripts/validator.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="/javascripts/flatpickr.js"></script>
 <script src="/javascripts/formBottomNav.js"></script>
