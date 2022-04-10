@@ -20,8 +20,8 @@
                     </div>
                 </div>
                 <hr class="my-12">
-                <div class="mb-6 flex md:items-center">
-                    <div class="fileInputContainer">
+                <div class="mb-6 flex md:items-center fileInputContainer">
+                    <div>
                         <label for="frontObciansky"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
                         <span class="flex m-auto items-center">
@@ -32,9 +32,9 @@
                             </span>
                         </span>
                         </label>
-                        <input type="file" id="frontObciansky" class="hidden">
+                        <input type="file" id="frontObciansky" class="hidden file-input">
                     </div>
-                    <img src="#" id="predna-strana" alt="" class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary">
+                    <img src="#" alt="" class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary input-img">
                     <div class="vl md:mx-[2rem]"></div>
                     <div class="flex flex-col w-full md:max-w-[205px]">
                         <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Predna strana Občiansky
@@ -42,7 +42,10 @@
                         <span class="font-bold md:text-[0.875rem] text-secondary/70 md:leading-[15px]">(max 5MB)</span>
                     </div>
                 </div>
-                <div class="mb-6 flex md:items-center">
+
+
+
+                <div class="mb-6 flex md:items-center fileInputContainer">
                     <div>
                         <label for="backObciansky"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
@@ -56,6 +59,7 @@
                         </label>
                         <input type="file" id="backObciansky" class="hidden">
                     </div>
+                    <img src="#" alt="" class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary input-img">
                     <div class="vl md:mx-[2rem]"></div>
                     <div class="flex flex-col w-full md:max-w-[205px]">
                         <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Zadna strana Občiansky
@@ -63,6 +67,7 @@
                         <span class="font-bold md:text-[0.875rem] text-secondary/70 md:leading-[15px]">(max 5MB)</span>
                     </div>
                 </div>
+
                 <div class="mb-8 flex md:items-center">
                     <div>
                         <label for="doklady"
@@ -103,20 +108,32 @@
     </div>
 </section>
 <script>
+    const inputImages = document.querySelectorAll('.input-img')
     const fileInputContainers = document.querySelectorAll('.fileInputContainer')
-    const imgPredna = document.querySelector('#predna-strana')
-    const inputPredna = document.querySelector('#frontObciansky');
-    let isAdded = false;
-    inputPredna.onchange = evt => {
-        const [file] = inputPredna.files
-        if (file) {
-            imgPredna.src = URL.createObjectURL(file)
-            imgPredna.classList.toggle('hidden')
-            for (const fileInputContainer of fileInputContainers) {
-                fileInputContainer.classList.add('hidden')
-            }
-        isAdded = !isAdded;
-        }
+    const fileInputs = document.querySelectorAll('.file-input')
 
+    let isAdded = false;
+
+    for (const fileInput of fileInputs) {
+        fileInput.onchange = evt => {
+            const [file] = fileInput.files
+            if (file) {
+                for (const fileInputContainer of fileInputContainers) {
+                    const images = fileInputContainer.querySelectorAll('.input-img')
+                    const child = fileInputContainer.firstElementChild;
+                    for (const image of images) {
+                        image.src = URL.createObjectURL(file)
+                        image.classList.toggle('hidden')
+                    }
+                    child.classList.add('hidden')
+                }
+                // for (const fileInputContainer of fileInputContainers) {
+                //     // fileInputContainer.classList.add('hidden')
+                //     const fileInputContainerChild = fileInputContainer.firstElementChild;
+                //     fileInputContainerChild.classList.add('hidden')
+                // }
+                isAdded = !isAdded;
+            }
+        }
     }
 </script>
