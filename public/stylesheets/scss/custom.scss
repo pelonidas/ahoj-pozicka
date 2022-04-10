@@ -240,7 +240,6 @@ nav {
 
 //about
 
-
 //#about-who {
 //  margin-top: 7rem;
 //  height: 100%;
@@ -300,8 +299,6 @@ nav {
 }
 
 // calcAd2
-
-
 
 .card-bg {
   background-image: url("/images/card-bg.svg");
@@ -478,7 +475,6 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
-
   #ad-cards-wrapper {
     height: 170px;
     position: relative;
@@ -676,8 +672,6 @@ nav {
       background-position: center 5rem;
     }
 
-
-
     #centrala-location {
       background-image: url("/images/map.svg");
       background-repeat: no-repeat;
@@ -780,7 +774,6 @@ nav {
     }
 
     &::before {
-
     }
   }
 
@@ -802,12 +795,9 @@ nav {
       content: url("/images/kontakt-kontaktujte/person-bg.svg");
     }
   }
-
 }
 
-
 @media (max-width: 1024px) {
-
   .active {
     position: fixed;
     top: 0;
@@ -893,8 +883,6 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
-
-
   #centrala-hero-text {
     position: relative;
     z-index: 2;
@@ -909,7 +897,6 @@ nav {
       width: 100%;
       max-width: 570px;
       background: url("/images/centrala-home-bg1.svg") no-repeat center bottom;
-
     }
   }
 
@@ -919,7 +906,6 @@ nav {
     background-repeat: no-repeat;
     background-position: center bottom 1rem;
     position: relative;
-
   }
   #about-who {
     position: relative;
@@ -970,7 +956,6 @@ nav {
       left: 0;
       bottom: 0;
       top: 0;
-
     }
 
     &::after {
@@ -981,7 +966,6 @@ nav {
       right: 0;
       bottom: 0;
       top: 0;
-
     }
   }
 
@@ -999,10 +983,7 @@ nav {
     &::after {
       content: unset;
     }
-
-
   }
-
 }
 
 #calc-ad {
@@ -1024,7 +1005,6 @@ nav {
     right: 0;
   }
 }
-
 
 #aboutusBg {
   position: relative;
@@ -1277,7 +1257,8 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
       height: 84%;
       width: 140px;
       content: "";
-      background: url("/images/benefits/benefits-dark-bg-left.svg") no-repeat center bottom;
+      background: url("/images/benefits/benefits-dark-bg-left.svg") no-repeat
+        center bottom;
       bottom: 0;
       left: -1rem;
       position: absolute;
@@ -1286,8 +1267,9 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     &::after {
       height: 84%;
       width: 140px;
-      content: '';
-      background: url("/images/benefits/benefits-dark-bg-right.svg") no-repeat center bottom;
+      content: "";
+      background: url("/images/benefits/benefits-dark-bg-right.svg") no-repeat
+        center bottom;
       bottom: 0;
       right: -1rem;
       position: absolute;
@@ -1522,8 +1504,8 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 
 @media screen and (max-width: 768px) {
   #kontaktujte-nas-wrapper {
-    background: url("/images/centrala/centrala0kontaktujte-mobile-wrapper-bg.svg") no-repeat center center;
-
+    background: url("/images/centrala/centrala0kontaktujte-mobile-wrapper-bg.svg")
+      no-repeat center center;
   }
 
   #centrala-gallery-wrapper {
@@ -1548,7 +1530,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     z-index: 2;
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       bottom: 4rem;
       left: 0;
       right: 0;
@@ -1556,11 +1538,11 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
       width: 100%;
       max-width: 370px;
       height: 100%;
-      background: url("/images/kontakt-kontaktujte/mobile-hero-bg.svg") no-repeat center bottom;
+      background: url("/images/kontakt-kontaktujte/mobile-hero-bg.svg")
+        no-repeat center bottom;
       z-index: -1;
     }
   }
-
 
   #contactFormContainer {
     position: relative;
@@ -1624,8 +1606,6 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     }
   }
 }
-
-
 
 #videoTriggerCentrala,
 #videoTriggerKontakt {
@@ -1725,7 +1705,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 
 .hamburger--squeeze .hamburger-inner::after {
   transition: bottom 0.075s 0.12s ease,
-  transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger--squeeze.is-active .hamburger-inner {
@@ -1744,7 +1724,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   bottom: 0;
   transform: rotate(-90deg);
   transition: bottom 0.075s ease,
-  transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 //video popup {
@@ -1797,7 +1777,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     position: relative;
 
     &::before {
-      content: url('/images/mobile/dofinancovanie-hero-bg.svg');
+      content: url("/images/mobile/dofinancovanie-hero-bg.svg");
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -1835,8 +1815,8 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     }
 
     &::before {
-      content: '';
-      background: #1E3148;
+      content: "";
+      background: #1e3148;
       position: absolute;
       z-index: -1;
       top: -170px;
@@ -1846,7 +1826,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     }
 
     &::after {
-      content: url('/images/mobile/mobile-dofinancovanie-form-bg.svg.svg');
+      content: url("/images/mobile/mobile-dofinancovanie-form-bg.svg.svg");
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -1873,7 +1853,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     position: relative;
 
     &::after {
-      content: url('/images/mobile/dofinancovanie-hover-arrow.svg');
+      content: url("/images/mobile/dofinancovanie-hover-arrow.svg");
 
       position: absolute;
       bottom: -30px;
@@ -1892,7 +1872,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     position: relative;
 
     &::after {
-      content: url('/images/dofinancovanieBg.svg');
+      content: url("/images/dofinancovanieBg.svg");
       position: absolute;
       bottom: -260px;
       left: 50%;
@@ -1904,5 +1884,209 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 @media screen and (min-width: 1024px) {
   #hamburgerAnim {
     display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .chcem-si-pozicat-button {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    span {
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+
+      &:hover {
+        transform: translateX(-10px);
+      }
+    }
+
+    &:hover {
+      box-shadow: 6px 6px 11px 0 rgba(237, 64, 54, 0.4);
+    }
+
+    &::after {
+      content: url("/images/chcem-si-pozicat-arrow.svg");
+      position: absolute;
+      top: 50%;
+      transform: translate(-10px, -50%);
+      right: 1rem;
+      display: flex;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      z-index: 1;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .big-pozicat-button {
+    position: relative;
+
+    span {
+      transition: all 0.2s ease-in-out;
+      display: inline-block;
+
+      &::after {
+        content: url("/images/big-form-button-pozicat.svg");
+        position: absolute;
+        top: 50%;
+        transform: translate(-20px, -50%);
+        right: -5rem;
+        display: flex;
+        display: flex;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        z-index: 1;
+      }
+    }
+
+    &:hover span {
+      transform: translateX(-10px);
+    }
+
+    &:hover span::after {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .yellow-vypocitat-button {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 6px 6px 11px 0 rgba(252, 200, 0, 0.42);
+    }
+
+    span {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &::after {
+      content: url('/images/arrow-yellow-button.svg');
+      position: absolute;
+        top: 50%;
+        transform: translate(-10px, -50%);
+        right: 2rem;
+        display: flex;
+        display: flex;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        z-index: 1;
+    }
+
+    &:hover span {
+      transform: translateX(-10px);
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .yellow-border-button {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #FCC800;
+      color: #223146;
+    }
+  }
+
+  .form-send-button {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    span {
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+
+      &:hover {
+        transform: translateX(-10px);
+      }
+    }
+
+    &:hover {
+      box-shadow: 6px 6px 11px 0 rgba(237, 64, 54, 0.4);
+    }
+
+    &::after {
+      content: url("/images/form-send-icon.svg");
+      position: absolute;
+      top: 50%;
+      transform: translate(-10px, -50%);
+      right: 3rem;
+      display: flex;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      z-index: 1;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .centrala-button {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    span {
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+
+      &:hover {
+        transform: translateX(-10px);
+      }
+    }
+
+    &:hover {
+      box-shadow: 6px 6px 11px 0 rgba(237, 64, 54, 0.4);
+      background-color: #ED4036;
+      color: #fff;
+    }
+
+    &::after {
+      content: url("/images/form-send-icon.svg");
+      position: absolute;
+      top: 50%;
+      transform: translate(-10px, -50%);
+      right: 1rem;
+      display: flex;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      z-index: 1;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
   }
 }
