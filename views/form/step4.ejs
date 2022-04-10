@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <hr class="my-12">
-                <div class="mb-6 flex md:items-center fileInputContainer">
+                <div class="mb-6 flex md:items-center front-container">
                     <div>
                         <label for="frontObciansky"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
@@ -32,9 +32,9 @@
                             </span>
                         </span>
                         </label>
-                        <input type="file" id="frontObciansky" class="hidden file-input">
+                        <input type="file" id="frontObciansky" class="hidden">
                     </div>
-                    <img src="#" alt="" class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary input-img">
+                    <img src="#" alt="" class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary front-img">
                     <div class="vl md:mx-[2rem]"></div>
                     <div class="flex flex-col w-full md:max-w-[205px]">
                         <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Predna strana Občiansky
@@ -45,7 +45,7 @@
 
 
 
-                <div class="mb-6 flex md:items-center fileInputContainer">
+                <div class="mb-6 flex md:items-center">
                     <div>
                         <label for="backObciansky"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
@@ -108,32 +108,25 @@
     </div>
 </section>
 <script>
-    const inputImages = document.querySelectorAll('.input-img')
-    const fileInputContainers = document.querySelectorAll('.fileInputContainer')
-    const fileInputs = document.querySelectorAll('.file-input')
+    const frontInput = document.querySelector('#frontObciansky');
+    const frontContainer = document.querySelector('.front-container');
+    const frontImage = document.querySelector('.front-img')
 
     let isAdded = false;
 
-    for (const fileInput of fileInputs) {
-        fileInput.onchange = evt => {
-            const [file] = fileInput.files
+
+
+    let handleFileInput = (fileInput, container, image) => {
+        fileInput.onchange = () => {
+            const [file] = fileInput.files;
             if (file) {
-                for (const fileInputContainer of fileInputContainers) {
-                    const images = fileInputContainer.querySelectorAll('.input-img')
-                    const child = fileInputContainer.firstElementChild;
-                    for (const image of images) {
-                        image.src = URL.createObjectURL(file)
-                        image.classList.toggle('hidden')
-                    }
-                    child.classList.add('hidden')
-                }
-                // for (const fileInputContainer of fileInputContainers) {
-                //     // fileInputContainer.classList.add('hidden')
-                //     const fileInputContainerChild = fileInputContainer.firstElementChild;
-                //     fileInputContainerChild.classList.add('hidden')
-                // }
-                isAdded = !isAdded;
+                const containerChild = container.firstElementChild;
+
+                image.src = URL.createObjectURL(file);
+                image.classList.toggle('hidden');
+                containerChild.classList.add('hidden')
             }
         }
     }
+    handleFileInput(frontInput, frontContainer, frontImage)
 </script>
