@@ -1646,5 +1646,12 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     display: none !important;
   }
 }
+.test .trash {
+  visibility: hidden;
+}
+
+.test:hover .trash {
+  visibility: visible;
+}
 
 /*# sourceMappingURL=custom.css.map */

@@ -907,6 +907,10 @@ select {
   border-color: rgb(34 49 70 / 0.5);
 }
 
+.visible {
+  visibility: visible;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -945,6 +949,30 @@ select {
 
 .left-12 {
   left: 3rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.top-\[50\%\] {
+  top: 50%;
+}
+
+.left-\[50\%\] {
+  left: 50%;
 }
 
 .z-40 {
@@ -1414,6 +1442,10 @@ select {
   height: 250px;
 }
 
+.h-\[23px\] {
+  height: 23px;
+}
+
 .max-h-\[170px\] {
   max-height: 170px;
 }
@@ -1550,6 +1582,10 @@ select {
 
 .w-\[55\%\] {
   width: 55%;
+}
+
+.w-\[19px\] {
+  width: 19px;
 }
 
 .max-w-\[25px\] {
@@ -1716,6 +1752,11 @@ select {
 
 .translate-y-\[602px\] {
   --tw-translate-y: 602px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2553,6 +2594,14 @@ select {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:visible:hover {
+  visibility: visible;
+}
+
+.hover\:invisible:hover {
+  visibility: hidden;
 }
 
 .hover\:rounded-lg:hover {

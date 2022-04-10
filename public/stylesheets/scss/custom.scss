@@ -1906,3 +1906,16 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     display: none !important;
   }
 }
+.test {
+
+  .trash {
+    visibility: hidden;
+    //transition:  visibility ease-in-out 200ms;
+  }
+}
+
+.test:hover {
+  .trash {
+    visibility: visible;
+  }
+}
