@@ -20,8 +20,11 @@
                     </div>
                 </div>
                 <hr class="my-12">
-                <div class="mb-6 flex md:items-center fileInputContainer">
-                    <div>
+
+
+
+                <div class="mb-6 flex md:items-center front-container">
+                    <div class="">
                         <label for="frontObciansky"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
                         <span class="flex m-auto items-center">
@@ -32,9 +35,15 @@
                             </span>
                         </span>
                         </label>
-                        <input type="file" id="frontObciansky" class="hidden file-input">
+                        <input type="file" id="frontObciansky" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
                     </div>
-                    <img src="#" alt="" class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary input-img">
+                    <div class="img-container test relative overflow-hidden">
+                        <img src="#" alt=""
+                             class="w-full md:max-w-[160px] hidden rounded-[10px]  front-img absolute top-[50%] -translate-y-1/2">
+                        <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">
+                            <img src="/images/icons/trash.svg" alt="" class="">
+                        </div>
+                    </div>
                     <div class="vl md:mx-[2rem]"></div>
                     <div class="flex flex-col w-full md:max-w-[205px]">
                         <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Predna strana Občiansky
@@ -43,9 +52,7 @@
                     </div>
                 </div>
 
-
-
-                <div class="mb-6 flex md:items-center fileInputContainer">
+                <div class="mb-6 flex md:items-center back-container">
                     <div>
                         <label for="backObciansky"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
@@ -57,9 +64,15 @@
                             </span>
                         </span>
                         </label>
-                        <input type="file" id="backObciansky" class="hidden">
+                        <input type="file" id="backObciansky" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
                     </div>
-                    <img src="#" alt="" class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary input-img">
+                    <div class="img-container test relative overflow-hidden">
+                        <img src="#" alt=""
+                             class="w-full md:max-w-[160px] hidden rounded-[10px]  back-img absolute top-[50%] -translate-y-1/2">
+                        <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">
+                            <img src="/images/icons/trash.svg" alt="" class="">
+                        </div>
+                    </div>
                     <div class="vl md:mx-[2rem]"></div>
                     <div class="flex flex-col w-full md:max-w-[205px]">
                         <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Zadna strana Občiansky
@@ -68,7 +81,8 @@
                     </div>
                 </div>
 
-                <div class="mb-8 flex md:items-center">
+
+                <div class="mb-8 flex md:items-center doklady-container">
                     <div>
                         <label for="doklady"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
@@ -80,7 +94,14 @@
                             </span>
                         </span>
                         </label>
-                        <input type="file" id="doklady" class="hidden">
+                        <input type="file" id="doklady" class="hidden" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                    </div>
+                    <div class="img-container test relative overflow-hidden">
+                        <img src="#" alt=""
+                             class="w-full md:max-w-[160px] hidden rounded-[10px] doklady-img absolute top-[50%] -translate-y-1/2">
+                        <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">
+                            <img src="/images/icons/trash.svg" alt="" class="">
+                        </div>
                     </div>
                     <div class="vl md:mx-[2rem]"></div>
                     <div class="flex flex-col w-full md:max-w-[220px]">
@@ -108,32 +129,68 @@
     </div>
 </section>
 <script>
-    const inputImages = document.querySelectorAll('.input-img')
-    const fileInputContainers = document.querySelectorAll('.fileInputContainer')
-    const fileInputs = document.querySelectorAll('.file-input')
+    const frontInput = document.querySelector('#frontObciansky');
+    const frontContainer = document.querySelector('.front-container');
+    const frontImage = document.querySelector('.front-img')
 
-    let isAdded = false;
+    const backInput = document.querySelector('#backObciansky');
+    const backContainer = document.querySelector('.back-container');
+    const backImage = document.querySelector('.back-img')
 
-    for (const fileInput of fileInputs) {
-        fileInput.onchange = evt => {
-            const [file] = fileInput.files
+    const dokladyInput = document.querySelector('#doklady')
+    const dokladyContainer = document.querySelector('.doklady-container')
+    const dokladyImage = document.querySelector('.doklady-img')
+
+
+    const removeFileFromFileList = (fileInput, index) => {
+        const dt = new DataTransfer()
+        const {files} = fileInput
+
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i]
+            if (index !== i)
+                dt.items.add(file) // here you exclude the file. thus removing it.
+        }
+
+        fileInput.files = dt.files // Assign the updates list
+    }
+
+    let handleFileInput = (fileInput, container, image) => {
+        fileInput.onchange = () => {
+            const [file] = fileInput.files;
+
             if (file) {
-                for (const fileInputContainer of fileInputContainers) {
-                    const images = fileInputContainer.querySelectorAll('.input-img')
-                    const child = fileInputContainer.firstElementChild;
-                    for (const image of images) {
-                        image.src = URL.createObjectURL(file)
-                        image.classList.toggle('hidden')
+                if (file.size < 5_000_000) {
+                    const containerChild = container.firstElementChild;
+                    const imgContainer = container.querySelector('.img-container');
+                    // w-[160px] h-[90px]  border-2 border-secondary
+                    imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
+                    image.src = URL.createObjectURL(file);
+                    image.classList.toggle('hidden');
+                    containerChild.classList.add('hidden')
+                    const icons = container.querySelectorAll('.trash')
+                    for (const icon of icons) {
+                        icon.classList.remove('hidden')
+                        icon.addEventListener('click', () => {
+                            imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
+                            removeFileFromFileList(fileInput, 0)
+                            image.src = '';
+                            image.classList.add('hidden')
+                            containerChild.classList.remove('hidden')
+                            icon.classList.add('hidden')
+                        })
                     }
-                    child.classList.add('hidden')
                 }
-                // for (const fileInputContainer of fileInputContainers) {
-                //     // fileInputContainer.classList.add('hidden')
-                //     const fileInputContainerChild = fileInputContainer.firstElementChild;
-                //     fileInputContainerChild.classList.add('hidden')
-                // }
-                isAdded = !isAdded;
             }
         }
     }
+
+    let handleMultipleInput = (fileInput, container, image) => {
+
+    }
+
+
+    handleFileInput(frontInput, frontContainer, frontImage)
+    handleFileInput(backInput, backContainer, backImage)
+    handleFileInput(dokladyInput, dokladyContainer, dokladyImage)
 </script>

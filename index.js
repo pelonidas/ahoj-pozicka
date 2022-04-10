@@ -243,18 +243,18 @@ app.post('/form', async (req, res) => {
     }
 
     let transporter = nodemailer.createTransport({
-        host: "mail.websupport.sk",
-        port: 587,
+        host: "smtp.m1.websupport.sk",
+        port: 465,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'test02@mail.dpmarketing.sk', // generated ethereal user
-            pass: 'Yo9u#q%hv9', // generated ethereal password
+            user: 'test@dpmg.dev', // generated ethereal user
+            pass: 'Lx4:Vd@JB4', // generated ethereal password
         },
     });
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"Test Person" <test01@mail.dpmarketing.sk>', // sender address
+        from: '"Test Person" <test@dpmg.dev>', // sender address
         to: `test02@mail.dpmarketing.sk, `, // list of receivers
         subject: "Udaje", // Subject line
         text: "Hello world?", // plain text body

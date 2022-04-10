@@ -947,6 +947,26 @@ select {
   left: 3rem;
 }
 
+.top-\[50\%\] {
+  top: 50%;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1414,6 +1434,10 @@ select {
   height: 250px;
 }
 
+.h-\[23px\] {
+  height: 23px;
+}
+
 .max-h-\[170px\] {
   max-height: 170px;
 }
@@ -1550,6 +1574,10 @@ select {
 
 .w-\[55\%\] {
   width: 55%;
+}
+
+.w-\[19px\] {
+  width: 19px;
 }
 
 .max-w-\[92\%\] {
@@ -1719,6 +1747,11 @@ select {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1805,6 +1838,10 @@ select {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-y-auto {
