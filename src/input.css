@@ -49,4 +49,7 @@
     .custom-radio {
         @apply border-2 border-secondary bg-white text-secondary focus:outline-none focus:ring-0;
     }
+    .vl {
+        @apply h-[65px] border-l border-secondary/50 ;
+    }
 }
