@@ -37,9 +37,9 @@
                         </label>
                         <input type="file" id="frontObciansky" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
                     </div>
-                    <div class="test relative">
+                    <div class="img-container test relative overflow-hidden">
                         <img src="#" alt=""
-                             class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary front-img">
+                             class="w-full md:max-w-[160px] hidden rounded-[10px]  front-img absolute top-[50%] -translate-y-1/2">
                         <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">
                             <img src="/images/icons/trash.svg" alt="" class="">
                         </div>
@@ -68,9 +68,16 @@
                         </label>
                         <input type="file" id="backObciansky" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
                     </div>
-                    <div class="test relative">
+<!--                    <div class="test relative">-->
+<!--                        <img src="#" alt=""-->
+<!--                             class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary back-img">-->
+<!--                        <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">-->
+<!--                            <img src="/images/icons/trash.svg" alt="" class="">-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="img-container test relative overflow-hidden">
                         <img src="#" alt=""
-                             class="w-full md:max-w-[160px] hidden border-2 rounded-[10px] border-secondary back-img">
+                             class="w-full md:max-w-[160px] hidden rounded-[10px]  back-img absolute top-[50%] -translate-y-1/2">
                         <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">
                             <img src="/images/icons/trash.svg" alt="" class="">
                         </div>
@@ -153,9 +160,11 @@
             const [file] = fileInput.files;
 
             if (file) {
-                if (file.size < 500_000) {
+                if (file.size < 5_000_000) {
                     const containerChild = container.firstElementChild;
-
+                    const imgContainer = container.querySelector('.img-container');
+                    // w-[160px] h-[90px]  border-2 border-secondary
+                    imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
                     image.src = URL.createObjectURL(file);
                     image.classList.toggle('hidden');
                     containerChild.classList.add('hidden')
@@ -163,6 +172,7 @@
                     for (const icon of icons) {
                         icon.classList.remove('hidden')
                         icon.addEventListener('click', () => {
+                            imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
                             removeFileFromFileList(fileInput, 0)
                             image.src = '';
                             image.classList.add('hidden')
