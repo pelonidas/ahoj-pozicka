@@ -151,8 +151,8 @@
                     removeFileFromFileList(fileInput, 0)
                     console.log(fileInput.files)
                     image.src = '';
-                    image.classList.toggle('hidden')
-                    containerChild.classList.toggle('hidden')
+                    image.classList.add('hidden')
+                    containerChild.classList.remove('hidden')
                     icon.classList.add('hidden')
                 })
 
@@ -161,6 +161,6 @@
             }
         }
     }
-    handleFileInput(frontInput, frontContainer, frontImage, 0)
+    handleFileInput(frontInput, frontContainer, frontImage)
     handleFileInput(backInput, backContainer, backImage)
 </script>
