@@ -1840,12 +1840,7 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     margin-right: 5.5rem;
   }
 }
-<<<<<<< HEAD
-
 @media screen and (min-width: 768px) and (max-width: 1800px) {
-=======
-@media screen and (min-width: 768px) and (max-width: 1700px) {
->>>>>>> refs/remotes/origin/master
   .main-navbar {
     margin: 0 2rem;
   }
@@ -1989,14 +1984,10 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     margin: 0 2rem;
   }
 }
-
-<<<<<<< HEAD
 @media screen and (min-width: 768px) {
   #ReviewsWrapper .review > div > div {
     height: 189px;
   }
 }
+
 /*# sourceMappingURL=custom.css.map */
-=======
-/*# sourceMappingURL=custom.css.map */
->>>>>>> refs/remotes/origin/master
