@@ -1462,6 +1462,14 @@ select {
   height: 250px;
 }
 
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-\[470px\] {
+  height: 470px;
+}
+
 .max-h-\[170px\] {
   max-height: 170px;
 }
