@@ -207,36 +207,38 @@
         })
 
         fileInput.addEventListener('change', () => {
-            if (files && files.length <= 3) {
+            if (files) {
                 filesArray = Array.from(files)
-                console.log(filesArray)
-                if (files.length < 3) {
-                    additionalInputContainer.classList.add('order-2')
-                    additionalInputContainer.classList.remove('hidden')
-                }
-                console.log('success')
-                const containerChild = container.firstElementChild;
-                const imgContainer = container.querySelector('.img-container');
-                imgContainer.classList.remove('hidden')
-                imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                image.src = URL.createObjectURL(files[files.length -1]);
-                image.classList.toggle('hidden');
-                containerChild.classList.add('hidden')
-                const icons = container.querySelectorAll('.trash')
-                for (const icon of icons) {
-                    icon.classList.remove('hidden')
-                    icon.addEventListener('click', () => {
-                        imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                        image.src = '';
-                        image.classList.add('hidden')
-                        imgContainer.classList.add('hidden')
-                        additionalInputContainer.classList.toggle('hidden')
-                        containerChild.classList.remove('hidden')
-                        icon.classList.add('hidden')
-                        fileInput.value = '';
-                        filesArray = []
-                        console.log(filesArray)
-                    })
+                if (filesArray.length <= 3) {
+                    console.log(filesArray)
+                    if (filesArray.length < 3) {
+                        additionalInputContainer.classList.add('order-2')
+                        additionalInputContainer.classList.remove('hidden')
+                    }
+                    console.log('success')
+                    const containerChild = container.firstElementChild;
+                    const imgContainer = container.querySelector('.img-container');
+                    imgContainer.classList.remove('hidden')
+                    imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
+                    image.src = URL.createObjectURL(files[files.length -1]);
+                    image.classList.toggle('hidden');
+                    containerChild.classList.add('hidden')
+                    const icons = container.querySelectorAll('.trash')
+                    for (const icon of icons) {
+                        icon.classList.remove('hidden')
+                        icon.addEventListener('click', () => {
+                            imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
+                            image.src = '';
+                            image.classList.add('hidden')
+                            imgContainer.classList.add('hidden')
+                            additionalInputContainer.classList.toggle('hidden')
+                            containerChild.classList.remove('hidden')
+                            icon.classList.add('hidden')
+                            fileInput.value = '';
+                            filesArray = []
+                            console.log(filesArray)
+                        })
+                    }
                 }
             }
         })
