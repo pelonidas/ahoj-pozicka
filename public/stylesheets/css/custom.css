@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --swiper-theme-color: #ed4036;
 }
@@ -1355,7 +1356,12 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     z-index: -1;
   }
 }
+<<<<<<< HEAD
+
+@media screen and (min-width: 1280px) {
+=======
 @media screen and (min-width: 768px) {
+>>>>>>> refs/remotes/origin/master
   #topNavBar a {
     position: relative;
   }
@@ -1748,7 +1754,7 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     transition: all 0.2s ease-in-out;
   }
   .yellow-border-button:hover {
-    background: #FCC800;
+    background: #fcc800;
     color: #223146;
   }
 
@@ -1804,8 +1810,14 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     transform: translateX(-10px);
   }
   .centrala-button:hover {
+<<<<<<< HEAD
+    -webkit-box-shadow: 6px 6px 11px 0 rgba(237, 64, 54, 0.4);
+            box-shadow: 6px 6px 11px 0 rgba(237, 64, 54, 0.4);
+    background-color: #ed4036;
+=======
     box-shadow: 6px 6px 11px 0 rgba(237, 64, 54, 0.4);
     background-color: #ED4036;
+>>>>>>> refs/remotes/origin/master
     color: #fff;
   }
   .centrala-button::after {
@@ -1825,4 +1837,121 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   }
 }
 
+<<<<<<< HEAD
+@media screen and (min-width: 768px) {
+  #homeAdCards {
+    background: #223146;
+  }
+  #homeAdCards #ad-cards-wrapper {
+    margin: 0;
+    padding: 2rem 0;
+    background: none;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .video-hero-contact-container {
+    margin-right: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1700px) {
+  .main-navbar {
+    margin: 0 2rem;
+  }
+  .calc-wrapper-main {
+    margin: 0 2rem;
+    width: unset;
+  }
+  #home-card-section::before {
+    content: unset;
+  }
+  #home-card-section::after {
+    content: unset;
+  }
+  #calc-ad {
+    margin: 0 2rem;
+    width: unset;
+  }
+  #home-about > div::before {
+    content: url("/images/aboutus-bg.svg");
+    content: unset;
+  }
+  #home-about > div::after {
+    content: url("/images/aboutus-bg.svg");
+    content: unset;
+  }
+  #reviewsWrapper::before {
+    content: unset;
+  }
+  #contactFormContainer::before {
+    content: unset;
+  }
+  #contactFormContainer::after {
+    content: unset;
+  }
+  #productsWrapper::after {
+    content: unset;
+  }
+  #refinancovanieBgHeroTwo > div {
+    margin: 0 2rem;
+    width: unset;
+  }
+  #dofinancovanie-form #form-right {
+    display: none;
+  }
+  #dofinancovanie-form #form-left {
+    display: none;
+  }
+  #form-content {
+    margin: 0 2rem;
+  }
+  #about-top {
+    margin: 0 2rem;
+    width: unset;
+  }
+  #about-who::after {
+    content: unset;
+  }
+  #about-what::after {
+    content: unset;
+  }
+  #contact-hero::after {
+    /* content: url("/images/kontakt-kontaktujte/hero-after-bg.svg"); */
+    content: unset;
+  }
+  #contact-form-wrapper-child::after {
+    /* content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg"); */
+    content: unsä;
+  }
+  #contact-hero-text::after {
+    content: unset;
+  }
+  #contact-hero-image::after {
+    content: unset;
+  }
+  #personal-wrapper::after {
+    content: unset;
+  }
+  #personal-wrapper::before {
+    content: unset;
+  }
+  #contact-hero {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  #centrala-hero-wrapper {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  #centrala-hero-text::after {
+    background: unset;
+  }
+  #videoTriggerCentrala::before {
+    content: unset;
+  }
+}
 /*# sourceMappingURL=custom.css.map */
+=======
+/*# sourceMappingURL=custom.css.map */
+>>>>>>> refs/remotes/origin/master
