@@ -2075,7 +2075,6 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     margin-right: 5.5rem;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1800px) {
   .main-navbar {
     margin: 0 2rem;
@@ -2196,7 +2195,6 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     margin: 0 2rem;
   }
 }
-
 @media screen and (min-width: 768px) {
   #ReviewsWrapper .review > div > div {
     height: 189px;

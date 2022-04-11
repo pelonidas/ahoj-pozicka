@@ -102,7 +102,7 @@
                         </label>
                         <input type="file" id="additionalFile" class="hidden additional-input">
                     </div>
-                    <div class="img-container test relative overflow-hidden">
+                    <div class="img-container test relative overflow-hidden hidden">
                         <img src="#" alt=""
                              class="w-full md:max-w-[160px] hidden rounded-[10px] doklady-img absolute top-[50%] -translate-y-1/2">
                         <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">
@@ -194,49 +194,32 @@
     let handleMultipleInput = (fileInput, container, image) => {
         const additionalInputContainer = container.querySelector('.additional-input-container')
         const additionalInput = container.querySelector('.additional-input')
-        let data = [];
-        let files = Array.from(fileInput.files)
+
+        let files = fileInput.files;
+        let filesArray = []
         let [additionalFile] = additionalInput.files
 
-        additionalInput.onchange = () => {
-            if (data.length < 3 ) {
-                if (additionalFile) {
-                    // console.log(additionalFiles)
-                    data.push(additionalFile)
-                    console.log(data)
-                    if (data.length === 3) {
-                        additionalInputContainer.classList.toggle('hidden')
-                    }
-                }
+        additionalInput.addEventListener('change', () => {
+            if (additionalFile) {
+                filesArray.push(additionalFile)
+                console.log(filesArray)
             }
-        }
+        })
 
-        fileInput.onchange = () => {
-            // const additionalInput = container.querySelector('.additional-input');
-            // if (additionalInput) {
-            //     let filesArray = Array.from(files)
-            //     if (additionalInput.files) {
-            //         filesArray.push(Array.from(additionalInput.files));
-            //         console.log(filesArray)
-            //     }
-            //     console.log(filesArray)
-            // }
-            if (files) {
-                console.log(files)
-                data.push(...Array.from(files))
-                // console.log(data.length)
-                // console.log(data)
-                if (data.length < 3 || files.length < 3) {
-                    additionalInputContainer.classList.toggle('hidden')
+        fileInput.addEventListener('change', () => {
+            if (files && files.length <= 3) {
+                filesArray = Array.from(files)
+                console.log(filesArray)
+                if (files.length < 3) {
                     additionalInputContainer.classList.add('order-2')
-                } else {
-                    additionalInputContainer.classList.add('hidden')
+                    additionalInputContainer.classList.remove('hidden')
                 }
+                console.log('success')
                 const containerChild = container.firstElementChild;
                 const imgContainer = container.querySelector('.img-container');
-
+                imgContainer.classList.remove('hidden')
                 imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                image.src = URL.createObjectURL(data[0])
+                image.src = URL.createObjectURL(files[files.length -1]);
                 image.classList.toggle('hidden');
                 containerChild.classList.add('hidden')
                 const icons = container.querySelectorAll('.trash')
@@ -244,21 +227,20 @@
                     icon.classList.remove('hidden')
                     icon.addEventListener('click', () => {
                         imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                        removeFileFromFileList(additionalInput, 0)
-                        fileInput.value = null
-                        data = []
-
                         image.src = '';
                         image.classList.add('hidden')
+                        imgContainer.classList.add('hidden')
+                        additionalInputContainer.classList.toggle('hidden')
                         containerChild.classList.remove('hidden')
                         icon.classList.add('hidden')
-                        additionalInputContainer.classList.add('hidden')
-
+                        fileInput.value = '';
+                        filesArray = []
+                        console.log(filesArray)
                     })
                 }
             }
+        })
 
-        }
     }
 
 
