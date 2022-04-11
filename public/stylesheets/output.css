@@ -3129,6 +3129,12 @@ select {
     height: 760px;
   }
 
+  .md\:h-min {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+
   .md\:max-h-\[940px\] {
     max-height: 940px;
   }
