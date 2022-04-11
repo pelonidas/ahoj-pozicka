@@ -2142,7 +2142,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   }
   #contact-form-wrapper-child::after {
     /* content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg"); */
-    content: unsä;
+    content: unset;
   }
   #contact-hero-text::after {
     content: unset;

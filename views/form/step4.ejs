@@ -1,30 +1,36 @@
 <% layout('./layouts/form-boilerplate') %>
-<section class="mt-auto form-container pb-[4.5rem] lg:py-[9rem]">
+<section class="mt-auto form-container md:h-[1200px] lg:h-[1440px] pb-[4.5rem] md:pb-0">
+    <div class="md:w-1/5 form-label md:hidden">
+        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span
+                    class="text-primary font-medium">menej než 4min</span></p>
+        <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
+            <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
+            <img src="/images/clock.svg" alt="" class="w-5 mx-2">
+            <p class="text-primary leading-none">2min</p>
+        </div>
+    </div>
     <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary">
-        <div class="bg-white p-6 md:p-12 rounded-lg">
+        <div class="bg-white px-6 pt-6 pb-[4.5rem] md:p-12 rounded-lg ">
             <form action="/form/step-4" method="post">
-                <div class="flex items-center mb-8">
-                    <img src="/images/step4-id.svg" alt="">
-                    <h3 class="ml-4 text-[1.25rem] md:text-xl font-bold leading-tight">Občiansky preukaz z prednej aj
+                <div class="flex items-center mb-[2rem] w-full md:max-w-[470px]">
+                    <img src="/images/step4-id.svg" alt="" class="w-full max-w-[60px] md:w-min md:h-[72px]">
+                    <h3 class="ml-4 md:ml-6 text-[20px] md:text-[24px] leading-[23px] md:leading-[27px] font-bold">Občiansky preukaz z prednej aj
                         zadnej strany</h3>
                 </div>
-                <div class="flex items-center">
-                    <img src="/images/step4-doc.svg" alt="">
-                    <div class="flex flex-col items-start ml-4">
-                        <h3 class="text-[1.25rem] font-bold md:text-xl">Doklad o príjme</h3>
-                        <p class="text-[0.8rem] md:text-xs text-secondary/50">
+                <div class="flex border-b-2 border-secondary/15 pb-[3rem] mb-[3rem]">
+                    <img src="/images/step4-doc.svg" alt="" class="w-full max-w-[60px] h-min md:h-[72px] md:w-min">
+                    <div class="flex flex-col items-start ml-4 md:ml-6 w-full md:max-w-[390px]">
+                        <h3 class="text-[20px] font-bold md:text-[24px] leading-[23px] md:leading-[27px] mb-[0.5rem]">Doklad o príjme</h3>
+                        <p class="text-[14px] md:text-[16px] text-secondary/50 leading-[16px] md:leading-[18px]">
                             Ak dostávate výplatu na účet, stačí mi snímka obrazovky vášho internet bankingu. Inak
                             potrebujem
                             posledné 3 výplatné pásky a výpis z účtu za posledný mesiac.
                         </p>
                     </div>
                 </div>
-                <hr class="my-12">
 
-
-
-                <div class="mb-6 flex md:items-center front-container">
-                    <div class="">
+                <div class="mb-[2rem] md:mb-6 flex flex-col md:flex-row md:items-center front-container">
+                    <div class="order-last md:order-first">
                         <label for="frontObciansky"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
                         <span class="flex m-auto items-center">
@@ -35,25 +41,26 @@
                             </span>
                         </span>
                         </label>
-                        <input type="file" id="frontObciansky" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+                        <input type="file" id="frontObciansky" class="hidden " accept=".pdf,.jpg,.jpeg,.png">
                     </div>
-                    <div class="img-container test relative overflow-hidden img-upload-wrapper">
+<!--                    dal som prec img-upload-wrapper-->
+                    <div class="img-container test relative overflow-hidden ">
                         <img src="#" alt=""
                              class="w-full md:max-w-[160px] hidden rounded-[10px]  front-img absolute top-[50%] -translate-y-1/2">
                         <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">
                             <img src="/images/icons/trash.svg" alt="" class="">
                         </div>
                     </div>
-                    <div class="vl md:mx-[2rem]"></div>
-                    <div class="flex flex-col w-full md:max-w-[205px]">
-                        <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Predna strana Občiansky
+                    <div class="vl md:mx-[2rem] hidden md:block"></div>
+                    <div class="flex flex-col w-full max-w-[205px] mb-[1rem] md:mb-0">
+                        <h4 class="text-[1.25rem] font-bold leading-[23px] md:mb-[0.2rem]">Predna strana Občiansky
                             preukaz</h4>
                         <span class="font-bold md:text-[0.875rem] text-secondary/70 md:leading-[15px]">(max 5MB)</span>
                     </div>
                 </div>
 
-                <div class="mb-6 flex md:items-center back-container">
-                    <div>
+                <div class="mb-[2rem] md:mb-6 flex flex-col md:flex-row md:items-center back-container">
+                    <div class="order-last md:order-first">
                         <label for="backObciansky"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
                         <span class="flex m-auto items-center">
@@ -66,24 +73,24 @@
                         </label>
                         <input type="file" id="backObciansky" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
                     </div>
-                    <div class="img-container test relative overflow-hidden img-upload-wrapper">
+                    <!--                    dal som prec img-upload-wrapper robilo to nejaky zlty dead space-->
+                    <div class="img-container test relative overflow-hidden">
                         <img src="#" alt=""
                              class="w-full md:max-w-[160px] hidden rounded-[10px]  back-img absolute top-[50%] -translate-y-1/2">
                         <div class="absolute bottom-0 top-0 left-0 right-0 m-auto text-center h-[23px] w-[19px] trash transition ease-in-out duration-200">
                             <img src="/images/icons/trash.svg" alt="" class="">
                         </div>
                     </div>
-                    <div class="vl md:mx-[2rem]"></div>
-                    <div class="flex flex-col w-full md:max-w-[205px]">
+                    <div class="vl md:mx-[2rem] hidden md:block"></div>
+                    <div class="flex flex-col w-full md:max-w-[205px] mb-[1rem] md:mb-0">
                         <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Zadna strana Občiansky
                             preukaz</h4>
                         <span class="font-bold md:text-[0.875rem] text-secondary/70 md:leading-[15px]">(max 5MB)</span>
                     </div>
                 </div>
 
-
-                <div class="mb-8 flex md:items-center doklady-container">
-                    <div class="order-1">
+                <div class="mb-8 flex flex-col md:flex-row md:items-center doklady-container">
+                    <div class="order-last md:order-1">
                         <label for="doklady"
                                class=" flex cursor-pointer h-[90px] w-[160px] rounded-[10px] custom-stroke">
                         <span class="flex m-auto items-center">
@@ -97,10 +104,12 @@
                         <input type="file" id="doklady" class="hidden" accept=".pdf,.jpg,.jpeg,.png" multiple>
                     </div>
                     <div class="ml-[1.5rem] additional-input-container hidden">
-                        <label for="additionalFile" class="flex w-full h-[88px] w-[64px] custom-stroke items-center justify-center">
+                        <label for="additionalFile"
+                               class="flex w-full h-[88px] w-[64px] custom-stroke items-center justify-center">
                             <img src="/images/icons/rounded-plus.svg" alt="" class="w-full max-w-[25px] ">
                         </label>
-                        <input type="file" id="additionalFile" class="hidden additional-input">
+                        <input type="file" id="additionalFile" class="hidden additional-input"
+                               accept=".pdf,.jpg,.jpeg,.png">
                     </div>
                     <div class="img-container test relative overflow-hidden hidden">
                         <img src="#" alt=""
@@ -109,13 +118,16 @@
                             <img src="/images/icons/trash.svg" alt="" class="">
                         </div>
                     </div>
-                    <div class="vl md:mx-[2rem] order-3"></div>
-                    <div class="flex flex-col w-full md:max-w-[220px] order-4">
-                        <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Doklady o príjme 0/3</h4>
+                    <div class="vl md:mx-[2rem] order-3 hidden md:block"></div>
+                    <div class="flex flex-col w-full md:max-w-[220px] order-4 mb-[1rem] md:mb-0">
+                        <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Doklady o príjme <span
+                                    class="count">0</span>/3</h4>
                         <span class="font-bold md:text-[0.875rem] text-secondary/70 md:leading-[15px]">(1 súbor max 2MB)</span>
                     </div>
                 </div>
-                <button class="border-2 border-dRed rounded-lg py-1.5 px-7">Odoslať na posúdenie</button>
+                <button class="mx-auto border-2 border-dRed rounded-[10px] w-full max-w-[275px] md:max-w-[300px] h-[50px] md:h-[54px] text-[18px] md:text-[20px] text-secondary/50 flex items-center justify-center md:mx-0">
+                    <span>Odoslať na posúdenie</span>
+                </button>
             </form>
         </div>
         <div class="translate-y-[560px] md:translate-y-0 bottom-nav bottom-nav-fixed bottom-nav-container md:h-[45rem]">
@@ -130,9 +142,91 @@
                     </div>
                 </div>
             </div>
-
+            <div class="h-[560px] md:h-full bg-secondary">
+                <div class="overflow-y-auto pt-[1.5rem] md:pt-0 w-full max-w-[80%] md:max-w-full h-[490px] md:h-min mx-auto border-t md:border-0 border-white/20 flex flex-col">
+                    <h2 class="form-heading1 ">Máš záujem o</h2>
+                    <div class="w-full md:max-w-[420px] mb-[1.5rem] md:mb-[2rem]">
+                    <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">pôžičku na <span
+                                class="text-primary"><%= formData.calcData.money %>
+                        €</span></span>
+                        <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">s dobou splácania <span
+                                    class="text-primary"><%= formData.calcData.years %>roky</span></span>
+                        <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">a mesačnou splátkou <span
+                                    class="text-primary"><%= formData.calcData.interest %>€</span></span>
+                    </div>
+                    <h3 class="text-[2rem] md:text-[2.5rem] mb-4">Osobné údaje</h3>
+                    <div class="md:text-[1.25rem] ">
+                        <div class="mb-2 flex items-center">
+                            <i class="fa-solid fa-minus mr-2 md:mr-3"></i>
+                            <div>
+                                Volám sa <span
+                                        class="text-primary"> <%= formData.contact.fName %>
+                                    <%= formData.contact.lName %></span>
+                            </div>
+                        </div>
+                        <div class="mb-2 flex items-center">
+                            <i class="fa-solid fa-minus mr-2 md:mr-3"></i>
+                            <div>
+                                Moje rodné číslo je <span
+                                        class="text-primary"><%= formData.contact.bNumber %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mb-2 flex w-full md:max-w-[330px]">
+                            <i class="fa-solid fa-minus pt-1 mr-2 md:mr-3"></i>
+                            <div class="md:leading-[31px]">
+                                Číslo môjho občianskeho preukazu je <span
+                                        class="text-primary"><%= formData.contact.id %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex md:leading-[31px] w-full md:max-w-[495px] mb-[1.5rem] md:mb-[2rem]">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
+                            <div>
+                                Možno ma kontaktovať na čísle <span
+                                        class="text-primary"><%= formData.contact.phoneNum %>
+                                </span>, alebo emailom
+                                <span class="text-primary"><%= formData.contact.email %></span>
+                            </div>
+                        </div>
+                        <h3 class="text-[2rem] md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
+                        <div class="flex md:mb-2">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
+                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[315px]">
+                                Som zamestnaný v <span
+                                        class="text-primary"><%= formData.companyData.companyName %>
+                                </span>
+                                IČO: <span class="text-primary"><%= formData.companyData.ico %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex md:mb-2">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
+                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[340px]">
+                                Zamestnaný som na <span
+                                        class="text-primary">dobu <%= formData.companyData.period %></span>
+                                od <span class="text-primary"><%= formData.companyData.from %>
+                                </span>
+                                do <span class="text-primary"><%= formData.companyData.till %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex md:mb-2">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
+                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[480px]">
+                                Môj čistý mesačný príjem za 1.mesiac je <span
+                                        class="text-primary"><%= formData.companyData.firstMonth %>€</span>,
+                                za 2.mesiac je <span
+                                        class="text-primary"><%= formData.companyData.secondMonth %>€</span>, za
+                                3.mesiac je <span class="text-primary"><%= formData.companyData.thirdMonth %>€</span>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 </section>
 <script>
     const frontInput = document.querySelector('#frontObciansky');
@@ -147,6 +241,7 @@
     const dokladyContainer = document.querySelector('.doklady-container')
     const dokladyImage = document.querySelector('.doklady-img')
 
+    const count = document.querySelector('.count');
 
     const removeFileFromFileList = (fileInput, index) => {
         const dt = new DataTransfer()
@@ -203,7 +298,11 @@
             if (additionalFile) {
                 filesArray.push(additionalFile)
                 console.log(filesArray)
+                if (filesArray.length === 3) {
+                    additionalInputContainer.classList.add('hidden')
+                }
             }
+            count.innerText = filesArray.length
         })
 
         fileInput.addEventListener('change', () => {
@@ -220,7 +319,7 @@
                     const imgContainer = container.querySelector('.img-container');
                     imgContainer.classList.remove('hidden')
                     imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                    image.src = URL.createObjectURL(files[files.length -1]);
+                    image.src = URL.createObjectURL(files[files.length - 1]);
                     image.classList.toggle('hidden');
                     containerChild.classList.add('hidden')
                     const icons = container.querySelectorAll('.trash')
@@ -231,7 +330,7 @@
                             image.src = '';
                             image.classList.add('hidden')
                             imgContainer.classList.add('hidden')
-                            additionalInputContainer.classList.toggle('hidden')
+                            additionalInputContainer.classList.add('hidden')
                             containerChild.classList.remove('hidden')
                             icon.classList.add('hidden')
                             fileInput.value = '';
@@ -240,6 +339,7 @@
                         })
                     }
                 }
+                count.innerText = filesArray.length
             }
         })
 
