@@ -27,7 +27,7 @@
 </head>
 <body class="font-body h-screen bg-secondary flex flex-col">
 <header class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto pt-[1.5rem] md:pt-16">
-    <nav class="flex flex-col md:flex-row md:items-center">
+    <nav id="topFormNav" class="flex flex-col md:flex-row md:items-center">
         <div class="flex justify-between items-center">
             <a href="/"><img src="/images/result.svg" alt="" class="w-[80px] md:w-28"></a>
             <div class="h-[46px] w-[46px] rounded-[8px] border-2 border-primary md:hidden flex items-center justify-center">
@@ -65,7 +65,7 @@
         </div>
     </nav>
 </header>
-<div class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto my-auto">
+<div class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto my-auto form-wrapper">
     <%- body %>
 </div>
 

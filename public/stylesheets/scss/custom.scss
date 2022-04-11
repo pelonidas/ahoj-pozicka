@@ -2230,3 +2230,27 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     content: unset;
   }
 }
+
+.img-upload-wrapper {
+  border: 2px solid #FCC800;
+  cursor: pointer;
+
+  div {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover div {
+    opacity: 1;
+  }
+}
+
+@media screen and ( min-width: 1024px ) and ( max-width: 1700px ) {
+  #topFormNav {
+    margin: 0 2rem;
+  }
+
+  .form-wrapper {
+    margin: 0 2rem;
+  }
+}
