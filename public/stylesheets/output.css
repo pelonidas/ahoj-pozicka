@@ -967,6 +967,10 @@ select {
   right: 0px;
 }
 
+.left-\[6rem\] {
+  left: 6rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1460,6 +1464,10 @@ select {
 
 .h-\[88px\] {
   height: 88px;
+}
+
+.h-\[470px\] {
+  height: 470px;
 }
 
 .max-h-\[170px\] {
