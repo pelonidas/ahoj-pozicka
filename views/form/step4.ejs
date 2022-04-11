@@ -316,7 +316,6 @@
 
             if (file) {
                 if (file.size < 5_000_000) {
-
                     // w-[160px] h-[90px]  border-2 border-secondary
                     imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
                     image.src = URL.createObjectURL(file);
@@ -391,6 +390,7 @@
                             fileInput.value = '';
                             filesArray = []
                             console.log(filesArray)
+                            count.innerText = '0'
                         })
                     }
                 }
