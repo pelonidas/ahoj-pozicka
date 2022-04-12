@@ -168,6 +168,7 @@
     let sections = document.querySelectorAll('.section')
 
     for (const container of containers) {
+        container.classList.add('custom-shadow-10')
         container.classList.add('cursor-pointer')
         let isPressed = false
         let i = container.querySelector('i')
