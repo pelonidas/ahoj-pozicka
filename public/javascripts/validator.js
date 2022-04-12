@@ -17,7 +17,10 @@ const numOnly = document.querySelectorAll('.num-only')
 //forms
 const forms = document.querySelectorAll('form')
 
+
 let allLetters = /^[A-Za-z]+$/;
+
+
 
 
 for (const form of forms) {
