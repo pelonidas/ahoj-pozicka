@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --swiper-theme-color: #ed4036;
 }
@@ -1137,6 +1136,7 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     z-index: 3;
   }
   #kontaktujte-nas-wrapper::before {
+    z-index: -1;
     position: absolute;
     height: 265px;
     width: 100%;
@@ -1736,7 +1736,6 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     transform: translate(-10px, -50%);
     right: 2rem;
     display: flex;
-    display: flex;
     opacity: 0;
     transition: all 0.2s ease-in-out;
     z-index: 1;
@@ -1930,7 +1929,7 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
 
   #contact-form-wrapper-child::after {
     /* content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg"); */
-    content: unsä;
+    content: unset;
   }
 
   #contact-hero-text::after {
@@ -1992,6 +1991,17 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   #ReviewsWrapper .review > div > div {
     height: 189px;
   }
+}
+.custom-shadow-10 {
+  box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.custom-shadow-20 {
+  box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-shadow-15 {
+  box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
 /*# sourceMappingURL=custom.css.map */
