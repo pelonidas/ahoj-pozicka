@@ -3026,24 +3026,12 @@ select {
     margin-bottom: 0.25rem;
   }
 
-  .md\:mr-\[1re\] {
-    margin-right: 1re;
-  }
-
-  .md\:mr-\[1rem\] {
-    margin-right: 1rem;
-  }
-
-  .md\:mr-\[0\.5rem\] {
-    margin-right: 0.5rem;
+  .md\:ml-\[0\.25rem\] {
+    margin-left: 0.25rem;
   }
 
   .md\:mr-\[0\.25rem\] {
     margin-right: 0.25rem;
-  }
-
-  .md\:ml-\[0\.25rem\] {
-    margin-left: 0.25rem;
   }
 
   .md\:block {
@@ -3130,6 +3118,10 @@ select {
 
   .md\:h-\[72px\] {
     height: 72px;
+  }
+
+  .md\:h-\[280px\] {
+    height: 280px;
   }
 
   .md\:h-\[64px\] {
