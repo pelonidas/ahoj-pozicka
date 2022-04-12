@@ -169,12 +169,15 @@ let handleMultipleInput = (fileInput, container, image, additionalInput, additio
 
 if (inputForm) {
     inputForm.addEventListener('submit', (e) => {
-        console.log(count.innerText)
-        if (count.innerText !== '3') {
+        let [file1] = frontInput.files;
+        let [file2] = backInput.files;
+
+        if (count.innerText !== '3' || !file1 || !file2) {
             e.preventDefault()
         }
     })
 }
+
 
 if (frontInput) {
     handleFileInput(frontInput, frontContainer, frontImage)
