@@ -2332,3 +2332,6 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 //      transform: translate(0, -50%);
 //    }
 //  }
+.ios-min-height {
+    min-height:  -webkit-fill-available;
+}

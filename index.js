@@ -217,58 +217,60 @@ app.post('/form/step-1', async (req, res) => {
 })
 
 app.post('/form', async (req, res) => {
-    const data = req.body
-    console.log(data)
-    let output = ""
-    if (data.interest) {
-        output = `
-            <h3>Contact simple form</h3>
-            <ul>
-                  <li>Meno a priezvisko <b>${data.name}</b></li>
-                  <li>Telefonne cislo: <b>${data.phoneNumber}</b></li>
-                  <li>Email: <b>${data.email}</b></li>
-                  <li>Sprava: <b>${data.message}</b></li>
-                  <li>Mam zaujem o: ${data.interest}</li>
-            </ul>
-        `;
-    } else {
-        output = `
-        <h3>Contact simple form</h3>
-            <ul>
-                  <li>Meno a priezvisko <b>${data.name}</b></li>
-                  <li>Telefonne cislo: <b>${data.phoneNumber}</b></li>
-                  <li>Email: <b>${data.email}</b></li>
-                  <li>Sprava: <b>${data.message}</b></li>
-            </ul>
-        `
-    }
-
-    let transporter = nodemailer.createTransport({
-        host: "smtp.m1.websupport.sk",
-        port: 465,
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: 'test@dpmg.dev', // generated ethereal user
-            pass: 'Lx4:Vd@JB4', // generated ethereal password
-        },
-    });
-
-    // send mail with defined transport object
-    let info = await transporter.sendMail({
-        from: '"Test Person" <test@dpmg.dev>', // sender address
-        to: `test02@mail.dpmarketing.sk, `, // list of receivers
-        subject: "Udaje", // Subject line
-        text: "Hello world?", // plain text body
-        html: output, // html body
-    });
-
-    console.log("Message sent: %s", info.messageId);
-    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-    // Preview only available when sending through an Ethereal account
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info))
-    res.redirect('/form/dakujeme')
+    // const data = req.body
+    // console.log(data)
+    // let output = ""
+    // if (data.interest) {
+    //     output = `
+    //         <h3>Contact simple form</h3>
+    //         <ul>
+    //               <li>Meno a priezvisko <b>${data.name}</b></li>
+    //               <li>Telefonne cislo: <b>${data.phoneNumber}</b></li>
+    //               <li>Email: <b>${data.email}</b></li>
+    //               <li>Sprava: <b>${data.message}</b></li>
+    //               <li>Mam zaujem o: ${data.interest}</li>
+    //         </ul>
+    //     `;
+    // } else {
+    //     output = `
+    //     <h3>Contact simple form</h3>
+    //         <ul>
+    //               <li>Meno a priezvisko <b>${data.name}</b></li>
+    //               <li>Telefonne cislo: <b>${data.phoneNumber}</b></li>
+    //               <li>Email: <b>${data.email}</b></li>
+    //               <li>Sprava: <b>${data.message}</b></li>
+    //         </ul>
+    //     `
+    // }
+    //
+    // let transporter = nodemailer.createTransport({
+    //     host: "smtp.m1.websupport.sk",
+    //     port: 465,
+    //     secure: false, // true for 465, false for other ports
+    //     auth: {
+    //         user: 'test@dpmg.dev', // generated ethereal user
+    //         pass: 'Lx4:Vd@JB4', // generated ethereal password
+    //     },
+    // });
+    //
+    // // send mail with defined transport object
+    // let info = await transporter.sendMail({
+    //     from: '"Test Person" <test@dpmg.dev>', // sender address
+    //     to: `test02@mail.dpmarketing.sk, `, // list of receivers
+    //     subject: "Udaje", // Subject line
+    //     text: "Hello world?", // plain text body
+    //     html: output, // html body
+    // });
+    //
+    // console.log("Message sent: %s", info.messageId);
+    // // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+    //
+    // // Preview only available when sending through an Ethereal account
+    // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info))
+    // res.redirect('/form/dakujeme')
+    res.send('okay')
 })
+
 app.post('/calc', (req, res) => {
     console.log(req.body)
     formData.calcData = req.body
