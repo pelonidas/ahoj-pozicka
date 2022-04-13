@@ -2008,9 +2008,8 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   color: #43BD12;
 }
 
-.opacity-trans {
-  opacity: 0;
-  transition: opacity ease-in-out 200ms;
+.default-transition {
+  transition: all 200ms ease-in-out;
 }
 
 /*# sourceMappingURL=custom.css.map */

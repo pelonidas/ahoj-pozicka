@@ -1261,19 +1261,18 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
       height: 84%;
       width: 140px;
       content: "";
-      background: url("/images/benefits/benefits-dark-bg-left.svg") no-repeat
-        center bottom;
+      background: url("/images/benefits/benefits-dark-bg-left.svg") no-repeat center bottom;
       bottom: 0;
       left: -1rem;
       position: absolute;
       z-index: -1;
     }
+
     &::after {
       height: 84%;
       width: 140px;
       content: "";
-      background: url("/images/benefits/benefits-dark-bg-right.svg") no-repeat
-        center bottom;
+      background: url("/images/benefits/benefits-dark-bg-right.svg") no-repeat center bottom;
       bottom: 0;
       right: -1rem;
       position: absolute;
@@ -1307,6 +1306,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   #kontaktujte-nas-wrapper {
     position: relative;
     z-index: 3;
+
     &::before {
       z-index: -1;
       position: absolute;
@@ -1325,6 +1325,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   #videoTriggerCentrala {
     position: relative;
     z-index: 3;
+
     &::before {
       position: absolute;
       top: -5rem;
@@ -1509,13 +1510,13 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 
 @media screen and (max-width: 768px) {
   #kontaktujte-nas-wrapper {
-    background: url("/images/centrala/centrala0kontaktujte-mobile-wrapper-bg.svg")
-      no-repeat center center;
+    background: url("/images/centrala/centrala0kontaktujte-mobile-wrapper-bg.svg") no-repeat center center;
   }
 
   #centrala-gallery-wrapper {
     position: relative;
     z-index: 2;
+
     &::after {
       z-index: -1;
       top: 0;
@@ -1533,6 +1534,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   #centrala-hero-wrapper {
     position: relative;
     z-index: 2;
+
     &::after {
       position: absolute;
       content: "";
@@ -1543,8 +1545,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
       width: 100%;
       max-width: 370px;
       height: 100%;
-      background: url("/images/kontakt-kontaktujte/mobile-hero-bg.svg")
-        no-repeat center bottom;
+      background: url("/images/kontakt-kontaktujte/mobile-hero-bg.svg") no-repeat center bottom;
       z-index: -1;
     }
   }
@@ -1710,7 +1711,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 
 .hamburger--squeeze .hamburger-inner::after {
   transition: bottom 0.075s 0.12s ease,
-    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger--squeeze.is-active .hamburger-inner {
@@ -1729,7 +1730,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   bottom: 0;
   transform: rotate(-90deg);
   transition: bottom 0.075s ease,
-    transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 //video popup {
@@ -1845,6 +1846,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   #refinancovanieBgHeroTwo {
     position: relative;
     z-index: 3;
+
     &::before {
       position: absolute;
       content: url("/images/dofinancovanie/dofinancovanie-bg.svg");
@@ -2249,7 +2251,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   }
 }
 
-@media screen and ( min-width: 1024px ) and ( max-width: 1700px ) {
+@media screen and (min-width: 1024px) and (max-width: 1700px) {
   #topFormNav {
     margin: 0 2rem;
   }
@@ -2259,7 +2261,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   }
 }
 
-@media screen and ( min-width: 768px ) {
+@media screen and (min-width: 768px) {
   #ReviewsWrapper {
     .review {
       & > div > div {
@@ -2268,6 +2270,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     }
   }
 }
+
 //background: #FFFFFF;
 //box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.15);
 //border-radius: 10px;
@@ -2280,19 +2283,52 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 //background: #FCC800;
 //background: #000000;
 .custom-shadow-10 {
-  box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.10);
+  box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.10);
 }
+
 .custom-shadow-20 {
-  box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.20);
+  box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.20);
 }
+
 .custom-shadow-15 {
-  box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.15);
+  box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.15);
 }
+
 .text-success-green {
   color: #43BD12;
 }
 
-.opacity-trans {
-  opacity: 0;
-  transition: opacity ease-in-out 200ms;
+.default-transition {
+  transition: all 200ms ease-in-out;
 }
+
+//.big-pozicat-button {
+//    position: relative;
+//
+//    span {
+//      transition: all 0.2s ease-in-out;
+//      display: inline-block;
+//
+//      &::after {
+//        content: url("/images/big-form-button-pozicat.svg");
+//        position: absolute;
+//        top: 50%;
+//        transform: translate(-20px, -50%);
+//        right: -5rem;
+//        display: flex;
+//        display: flex;
+//        opacity: 0;
+//        transition: all 0.2s ease-in-out;
+//        z-index: 1;
+//      }
+//    }
+//
+//    &:hover span {
+//      transform: translateX(-10px);
+//    }
+//
+//    &:hover span::after {
+//      opacity: 1;
+//      transform: translate(0, -50%);
+//    }
+//  }

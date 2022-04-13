@@ -6,7 +6,7 @@
 const checkboxes = document.querySelectorAll('.checkbox-check')
 const checkboxContainers = document.querySelectorAll('.checkbox-container')
 let isChecked = false;
-
+let allInputs = document.querySelectorAll('input[type=text]')
 
 const submitButtons = document.querySelectorAll('.submit-button');
 const postContainer = document.querySelector('#post-container');
@@ -22,9 +22,10 @@ let allLetters = /^[A-Za-z]+$/;
 
 
 for (const form of forms) {
+    let isEmpty = true
     form.addEventListener('submit', (e) => {
         for (const input of inputs) {
-            let validatedInput = validateInput(input)
+            let validatedInput = validateInput(input, isEmpty)
             if (!validatedInput) {
                 e.preventDefault()
             }
@@ -36,14 +37,10 @@ for (const form of forms) {
             validateCheckbox(checkboxContainer)
         }
     })
-}
-
-for (const form of forms) {
     form.addEventListener('input', () => {
-        checkInputs(inputs)
+        checkInputs(inputs, isEmpty)
     })
 }
-
 
 for (const checkboxContainer of checkboxContainers) {
     const checkbox = checkboxContainer.querySelector('.checkbox-check');
@@ -77,13 +74,15 @@ const validateCheckbox = (checkbox) => {
     }
 }
 
-const validateInput = (input) => {
+const validateInput = (input, isEmpty) => {
     const inputValue = input.value.trim();
     if (!inputValue) {
         setErrorFor(input)
+        isEmpty = true
         return false
     } else {
         setSuccessFor(input)
+        isEmpty = false
         return true
     }
 }
@@ -142,22 +141,26 @@ for (const numOnlyElement of numOnly) {
     });
 }
 
-let checkInputs = (inputs) => {
+let checkInputs = (inputs, isEmpty) => {
     for (const input of inputs) {
-        let test = 0;
-        if (!input.value && input.classList.contains('validate')) {
-            test++;
-        }
+        isEmpty = !input.value && input.classList.contains('validate');
+
         console.log(test)
         for (const submitButton of submitButtons) {
-            if (test === 1) {
+            if (isEmpty) {
                 submitButton.classList.remove('bg-dRed', 'text-white')
                 submitButton.classList.add('border-2', 'text-black/50')
-            }
-            if (test === 0) {
+            } else {
                 submitButton.classList.remove('border-2', 'text-black/50')
                 submitButton.classList.add('bg-dRed', 'text-white')
             }
         }
     }
 }
+let addClassToAllInputs = (className) => {
+    for (const input of allInputs) {
+        input.classList.add(className)
+    }
+}
+
+addClassToAllInputs('default-transition')
