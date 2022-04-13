@@ -2332,6 +2332,8 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 //      transform: translate(0, -50%);
 //    }
 //  }
-.ios-min-height {
+@media screen and (max-width: 1280px){
+  .ios-min-height {
     min-height:  -webkit-fill-available;
+  }
 }
