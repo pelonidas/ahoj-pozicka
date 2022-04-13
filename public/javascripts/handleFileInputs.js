@@ -30,82 +30,85 @@ const removeFileFromFileList = (fileInput, index) => {
     fileInput.files = dt.files // Assign the updates list
 }
 
-let handleFileInput = (fileInput, container, image) => {
-    const containerChild = container.firstElementChild;
-    const imgContainer = container.querySelector('.img-container');
+const setupDropAreaEnv = (container, handleFiles) => {
     let dropArea = container.firstElementChild;
-    // Prevent default drag behaviors
+
     ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         dropArea.addEventListener(eventName, preventDefaults, false)
         document.body.addEventListener(eventName, preventDefaults, false)
     })
+
     ;['dragenter', 'dragover'].forEach(eventName => {
         dropArea.addEventListener(eventName, highlight, false)
     })
+
     ;['dragleave', 'drop'].forEach(eventName => {
         dropArea.addEventListener(eventName, unhighlight, false)
     })
+
     dropArea.addEventListener('drop', handleDrop, false)
 
-    function preventDefaults (e) {
+    function preventDefaults(e) {
         e.preventDefault()
         e.stopPropagation()
     }
-    function highlight(e) {
+
+    function highlight() {
         dropArea.classList.add('highlight')
     }
-    function unhighlight(e) {
+
+    function unhighlight() {
         dropArea.classList.remove('highlight')
     }
+
     function handleDrop(e) {
-        var dt = e.dataTransfer
-        var files = dt.files
+        let dt = e.dataTransfer
+        let files = dt.files
 
         handleFiles(files)
     }
+}
+
+const setupSingleInputContainer = (container, image, file, fileInput) => {
+    const imgContainer = container.querySelector('.img-container');
+    const containerChild = container.firstElementChild;
+    const icons = container.querySelectorAll('.trash')
+
+    imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
+
+    image.src = URL.createObjectURL(file);
+    image.classList.toggle('hidden');
+
+    containerChild.classList.add('hidden')
+
+    for (const icon of icons) {
+        icon.classList.remove('hidden')
+        icon.addEventListener('click', () => {
+            imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
+            removeFileFromFileList(fileInput, 0)
+            image.src = '';
+            image.classList.add('hidden')
+            containerChild.classList.remove('hidden')
+            icon.classList.add('hidden')
+        })
+    }
+}
+
+let handleFileInput = (fileInput, container, image) => {
+    // Setup drag and drop functions
+    setupDropAreaEnv(container, handleFiles)
+    //drag and drop file handling function
     function handleFiles(files) {
         files = [...files]
-        console.log(files)
-        imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-        image.src = URL.createObjectURL(files[0]);
-        image.classList.toggle('hidden');
-        containerChild.classList.add('hidden')
-        const icons = container.querySelectorAll('.trash')
-        for (const icon of icons) {
-            icon.classList.remove('hidden')
-            icon.addEventListener('click', () => {
-                imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                removeFileFromFileList(fileInput, 0)
-                image.src = '';
-                image.classList.add('hidden')
-                containerChild.classList.remove('hidden')
-                icon.classList.add('hidden')
-            })
-        }
-    }
 
+        setupSingleInputContainer(container, image, files[0], fileInput)
+    }
 
     fileInput.onchange = () => {
         const [file] = fileInput.files;
         if (file) {
             if (file.size < 5_000_000) {
-                // w-[160px] h-[90px]  border-2 border-secondary
-                imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                image.src = URL.createObjectURL(file);
-                image.classList.toggle('hidden');
-                containerChild.classList.add('hidden')
-                const icons = container.querySelectorAll('.trash')
-                for (const icon of icons) {
-                    icon.classList.remove('hidden')
-                    icon.addEventListener('click', () => {
-                        imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                        removeFileFromFileList(fileInput, 0)
-                        image.src = '';
-                        image.classList.add('hidden')
-                        containerChild.classList.remove('hidden')
-                        icon.classList.add('hidden')
-                    })
-                }
+                setupSingleInputContainer(container, image, file, fileInput)
             }
         }
     }
@@ -167,6 +170,7 @@ let handleMultipleInput = (fileInput, container, image, additionalInput, additio
 
 }
 
+//form validation
 if (inputForm) {
     inputForm.addEventListener('submit', (e) => {
         let [file1] = frontInput.files;
@@ -178,7 +182,7 @@ if (inputForm) {
     })
 }
 
-
+//making sure the script is triggered on /step-4
 if (frontInput) {
     handleFileInput(frontInput, frontContainer, frontImage)
     handleFileInput(backInput, backContainer, backImage)
