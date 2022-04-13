@@ -21,37 +21,14 @@ const forms = document.querySelectorAll('form')
 let allLetters = /^[A-Za-z]+$/;
 
 
-
-
 for (const form of forms) {
-    form.addEventListener('input', () => {
-        let isEmpty = false;
-        for (const input of inputs) {
-            if (!input.value && input.classList.contains('validate')) {
-                isEmpty = true;
-            }
-        }
-        for (const submitButton of submitButtons) {
-            if (!isEmpty) {
-                submitButton.classList.remove('border-2', 'text-black/50')
-                submitButton.classList.add('bg-dRed', 'text-white')
-                submitButton.disabled = false
-            } else {
-                submitButton.classList.remove('bg-dRed', 'text-white')
-                submitButton.classList.add('border-2', 'text-black/50')
-                submitButton.disabled = true
-            }
-        }
-
-    })
     form.addEventListener('submit', (e) => {
         for (const input of inputs) {
             let validatedInput = validateInput(input)
-            if (!validatedInput ){
+            if (!validatedInput) {
                 e.preventDefault()
             }
         }
-
         for (const checkboxContainer of checkboxContainers) {
             if (!isChecked && checkboxContainer.classList.contains('checkbox-validate')) {
                 e.preventDefault()
@@ -60,6 +37,14 @@ for (const form of forms) {
         }
     })
 }
+
+for (const form of forms) {
+    form.addEventListener('input', () => {
+        checkInputs(inputs)
+    })
+}
+
+
 for (const checkboxContainer of checkboxContainers) {
     const checkbox = checkboxContainer.querySelector('.checkbox-check');
     checkboxContainer.addEventListener('click', () => {
@@ -77,7 +62,6 @@ for (const checkboxContainer of checkboxContainers) {
 }
 
 const validateCheckbox = (checkbox) => {
-    console.log(checkbox.classList.contains('checkbox-validate'))
     let sibling = checkbox.nextElementSibling;
     if (checkbox.classList.contains('checkbox-validate')) {
         if (!isChecked) {
@@ -95,23 +79,8 @@ const validateCheckbox = (checkbox) => {
 
 const validateInput = (input) => {
     const inputValue = input.value.trim();
-
-    //TODO refactor this shit
     if (!inputValue) {
-        input.className = ''
-        input.classList.add('border-2', 'border-dRed', 'hover:border-primary', 'w-full', 'rounded-lg', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md');
-        const parentInput = input.parentElement;
-        const icon = parentInput.querySelector('i');
-
-        icon.classList.remove('fa-check', 'text-transparent')
-        icon.classList.add('fa-xmark', 'text-dRed')
-
-        const div = parentInput.parentElement
-        div.classList.remove('mb-6')
-        div.classList.add('mb-3')
-
-        const small = div.querySelector('small')
-        small.innerText = "Pole je povinné."
+        setErrorFor(input)
         return false
     } else {
         setSuccessFor(input)
@@ -119,26 +88,35 @@ const validateInput = (input) => {
     }
 }
 
-// const setErrorFor = (input, msg = "Pole je povinné.") => {
-//
-// }
+const setErrorFor = (input, msg = "Pole je povinné.") => {
+    input.className = ''
+    input.classList.add('border-2', 'border-dRed', 'hover:border-primary', 'w-full', 'rounded-[10px]', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md', 'validate');
+    const parentInput = input.parentElement;
+    const icon = parentInput.querySelector('i');
 
-const setSuccessFor = (input) => {
-    input.className = ""
-    input.classList.add('border-2', 'border-secondary', 'hover:border-primary', 'w-full', 'rounded-lg', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md')
-    const parent = input.parentElement
-    const icon = parent.querySelector('i')
-    icon.classList.remove('fa-xmark', 'text-transparent', 'text-dRed')
-    icon.classList.add( 'fa-check', 'text-green-400')
+    icon.classList.remove('fa-check', 'text-transparent', 'text-success-green')
+    icon.classList.add('fa-xmark', 'text-dRed')
 
-
-    const div = parent.parentElement
+    const div = parentInput.parentElement
     div.classList.remove('mb-6')
     div.classList.add('mb-3')
 
     const small = div.querySelector('small')
-    small.innerText = " "
+    small.innerText = msg
+}
 
+const setSuccessFor = (input) => {
+    input.className = ""
+    input.classList.add('border-2', 'border-secondary', 'hover:border-primary', 'w-full', 'rounded-[10px]', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md', 'validate')
+    const parent = input.parentElement
+    const icon = parent.querySelector('i')
+    icon.classList.remove('fa-xmark', 'text-transparent', 'text-dRed')
+    icon.classList.add('fa-check', 'text-success-green')
+    const div = parent.parentElement
+    div.classList.remove('mb-6')
+    div.classList.add('mb-3')
+    const small = div.querySelector('small')
+    small.innerText = " "
 }
 
 function setInputFilter(textbox, inputFilter) {
@@ -162,4 +140,24 @@ for (const numOnlyElement of numOnly) {
     setInputFilter(numOnlyElement, function (value) {
         return /^-?\d*$/.test(value);
     });
+}
+
+let checkInputs = (inputs) => {
+    for (const input of inputs) {
+        let test = 0;
+        if (!input.value && input.classList.contains('validate')) {
+            test++;
+        }
+        console.log(test)
+        for (const submitButton of submitButtons) {
+            if (test === 1) {
+                submitButton.classList.remove('bg-dRed', 'text-white')
+                submitButton.classList.add('border-2', 'text-black/50')
+            }
+            if (test === 0) {
+                submitButton.classList.remove('border-2', 'text-black/50')
+                submitButton.classList.add('bg-dRed', 'text-white')
+            }
+        }
+    }
 }

@@ -992,10 +992,6 @@ select {
   order: 4;
 }
 
-.order-2 {
-  order: 2;
-}
-
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -2934,8 +2930,12 @@ select {
     margin-left: 1rem;
   }
 
-  .md\:ml-1 {
+  .md\:ml-\[0\.25rem\] {
     margin-left: 0.25rem;
+  }
+
+  .md\:mr-\[0\.25rem\] {
+    margin-right: 0.25rem;
   }
 
   .md\:mb-\[2rem\] {
@@ -3026,14 +3026,6 @@ select {
     margin-bottom: 0.25rem;
   }
 
-  .md\:ml-\[0\.25rem\] {
-    margin-left: 0.25rem;
-  }
-
-  .md\:mr-\[0\.25rem\] {
-    margin-right: 0.25rem;
-  }
-
   .md\:block {
     display: block;
   }
@@ -3118,10 +3110,6 @@ select {
 
   .md\:h-\[72px\] {
     height: 72px;
-  }
-
-  .md\:h-\[280px\] {
-    height: 280px;
   }
 
   .md\:h-\[64px\] {

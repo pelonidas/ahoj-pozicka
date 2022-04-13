@@ -2288,3 +2288,11 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 .custom-shadow-15 {
   box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.15);
 }
+.text-success-green {
+  color: #43BD12;
+}
+
+.opacity-trans {
+  opacity: 0;
+  transition: opacity ease-in-out 200ms;
+}

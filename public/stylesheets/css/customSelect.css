@@ -14,3 +14,10 @@
 .ui.selection.active.dropdown:hover {
     border: 2px solid #1d3047;
 }
+.ui.dropdown .menu > .item:hover {
+    color: #ed4036;
+    background: none;
+}
+.ui.dropdown .menu .selected.item, .ui.dropdown.selected {
+    background: none;
+}

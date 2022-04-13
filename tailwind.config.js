@@ -15,7 +15,6 @@ module.exports = {
                 'secondary': '#223146',
                 'dRed': '#ED4036',
                 'orange': '#F9951E',
-                'green': '#43BD12'
             },
         },
     },
