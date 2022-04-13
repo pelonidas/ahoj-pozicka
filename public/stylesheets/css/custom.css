@@ -2012,8 +2012,10 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   transition: all 200ms ease-in-out;
 }
 
-.ios-min-height {
-  min-height: -webkit-fill-available;
+@media screen and (max-width: 1280px) {
+  .ios-min-height {
+    min-height: -webkit-fill-available;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */
