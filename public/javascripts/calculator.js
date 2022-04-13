@@ -47,11 +47,26 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
 
 function moneySlideHandler(e) {
     money_field.value = e.target.value;
+    // new AutoNumeric('#money_input', { currencySymbol : '$' }, AutoNumeric.options.currencySymbolPlacement.suffix);
+    new AutoNumeric('#money_input', {
+        currencySymbol         : ' €',
+        // digitGroupSeparator    : '\'',
+        decimalPlaces          : 2,
+        currencySymbolPlacement:
+        AutoNumeric.options.currencySymbolPlacement.suffix,
+    });
     doCalc();
 }
 
 function yearSlideHandler(e) {
     year_field.value = e.target.value;
+    new AutoNumeric('#year_input', {
+        currencySymbol         : ' rokov',
+        // digitGroupSeparator    : '\'',
+        decimalPlaces          : 0,
+        currencySymbolPlacement:
+        AutoNumeric.options.currencySymbolPlacement.suffix,
+    });
     doCalc();
 }
 

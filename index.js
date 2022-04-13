@@ -37,6 +37,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'node_modules/semantic-ui-dropdown')))
 app.use(express.static(path.join(__dirname, 'node_modules/semantic-ui-transition')))
+app.use(express.static(path.join(__dirname, 'node_modules/autonumeric')))
 
 app.use(session(sessionObject))
 
