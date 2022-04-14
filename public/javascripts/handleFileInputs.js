@@ -118,24 +118,84 @@ let handleMultipleInput = (fileInput, container, image, additionalInput, additio
     let files = fileInput.files;
     let filesArray = []
 
+    const containerChild = container.firstElementChild;
+    const imgContainer = container.querySelector('.img-container');
+    const icons = container.querySelectorAll('.trash')
+
+    setupDropAreaEnv(container, handleFiles)
+    setupDropAreaEnv(additionalContainer, handleAdditional)
+
+    function handleFiles(files) {
+        files = [...files]
+
+        if (files.length <= 3) {
+            filesArray.push(...files)
+
+            if (filesArray.length < 3) {
+                console.log('test')
+                additionalContainer.classList.add('order-2')
+                additionalContainer.classList.remove('hidden')
+            }
+
+            imgContainer.classList.remove('hidden')
+            imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]', 'order-first')
+
+            image.src = URL.createObjectURL(filesArray[filesArray.length - 1]);
+            image.classList.toggle('hidden');
+
+            containerChild.classList.add('hidden')
+
+            for (const icon of icons) {
+                icon.classList.remove('hidden')
+                icon.addEventListener('click', () => {
+                    imgContainer.classList.remove('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
+                    image.src = '';
+                    image.classList.add('hidden')
+                    imgContainer.classList.add('hidden')
+                    additionalContainer.classList.add('hidden')
+                    containerChild.classList.remove('hidden')
+                    icon.classList.add('hidden')
+                    fileInput.value = '';
+                    filesArray = []
+                    count.innerText = '0'
+                })
+            }
+
+            count.innerText = filesArray.length
+        }
+    }
+
+    function handleAdditional(files) {
+        files = [...files]
+        console.log(files)
+        if (files) {
+            if (files.length < 3) {
+                filesArray.push(...files)
+                if (filesArray.length === 3) {
+                    additionalContainer.classList.add('hidden')
+                }
+            }
+            count.innerText = filesArray.length
+        }
+    }
+
     fileInput.addEventListener('change', () => {
         if (files) {
             filesArray = Array.from(files)
             if (filesArray.length <= 3) {
-                console.log(filesArray)
                 if (filesArray.length < 3) {
                     additionalContainer.classList.add('order-2')
                     additionalContainer.classList.remove('hidden')
                 }
-                console.log('success')
-                const containerChild = container.firstElementChild;
-                const imgContainer = container.querySelector('.img-container');
+
                 imgContainer.classList.remove('hidden')
-                imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
-                image.src = URL.createObjectURL(files[files.length - 1]);
+                imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]', 'order-first')
+
+                image.src = URL.createObjectURL(filesArray[filesArray.length - 1]);
                 image.classList.toggle('hidden');
+
                 containerChild.classList.add('hidden')
-                const icons = container.querySelectorAll('.trash')
+
                 for (const icon of icons) {
                     icon.classList.remove('hidden')
                     icon.addEventListener('click', () => {
@@ -148,12 +208,13 @@ let handleMultipleInput = (fileInput, container, image, additionalInput, additio
                         icon.classList.add('hidden')
                         fileInput.value = '';
                         filesArray = []
-                        console.log(filesArray)
                         count.innerText = '0'
                     })
                 }
+
+                count.innerText = filesArray.length
             }
-            count.innerText = filesArray.length
+
         }
     })
 

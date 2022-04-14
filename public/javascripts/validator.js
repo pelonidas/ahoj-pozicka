@@ -13,30 +13,47 @@ const postContainer = document.querySelector('#post-container');
 
 //inputs
 const inputs = document.querySelectorAll('.validate');
+const calcInputs = document.querySelectorAll('.validate-calculator')
 const numOnly = document.querySelectorAll('.num-only')
 //forms
-const forms = document.querySelectorAll('form')
-
+const forms = document.querySelectorAll('.form')
+const calculatorForm = document.querySelectorAll('.calc-form')
 let allLetters = /^[A-Za-z]+$/;
 
+for (const calculatorFormElement of calculatorForm) {
+    calculatorFormElement.addEventListener('submit', (e) => {
+        if (calcInputs) {
+            for (const calcInput of calcInputs) {
+                let validatedInput = validateInput(calcInput)
+                if (!validatedInput) {
+                    e.preventDefault()
+                }
+            }
+        }
+    })
+}
+
 for (const form of forms) {
-    let isEmpty = true
     form.addEventListener('submit', (e) => {
         for (const input of inputs) {
-            let validatedInput = validateInput(input, isEmpty)
+            let validatedInput = validateInput(input)
+            console.log('hey')
             if (!validatedInput) {
                 e.preventDefault()
             }
         }
-        for (const checkboxContainer of checkboxContainers) {
-            if (!isChecked && checkboxContainer.classList.contains('checkbox-validate')) {
-                e.preventDefault()
+
+        if (checkboxes) {
+            for (const checkboxContainer of checkboxContainers) {
+                if (!isChecked && checkboxContainer.classList.contains('checkbox-validate')) {
+                    e.preventDefault()
+                }
+                validateCheckbox(checkboxContainer)
             }
-            validateCheckbox(checkboxContainer)
         }
     })
     form.addEventListener('input', () => {
-        checkInputs(inputs, isEmpty)
+        checkInputs(inputs)
     })
 }
 
@@ -72,15 +89,13 @@ const validateCheckbox = (checkbox) => {
     }
 }
 
-const validateInput = (input, isEmpty) => {
+const validateInput = (input) => {
     const inputValue = input.value.trim();
     if (!inputValue) {
         setErrorFor(input)
-        isEmpty = true
         return false
     } else {
         setSuccessFor(input)
-        isEmpty = false
         return true
     }
 }
@@ -142,8 +157,6 @@ for (const numOnlyElement of numOnly) {
 let checkInputs = (inputs, isEmpty) => {
     for (const input of inputs) {
         isEmpty = !input.value && input.classList.contains('validate');
-
-        console.log(test)
         for (const submitButton of submitButtons) {
             if (isEmpty) {
                 submitButton.classList.remove('bg-dRed', 'text-white')

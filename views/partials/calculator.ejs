@@ -17,13 +17,13 @@
         <div class="mt-[-570px] translate-y-[602px] mb-[640px] md:translate-y-[0] md:mb-[0] w-full md:max-w-[665px] ml-auto text-secondary md:h-full md:max-h-[940px] z-40 md:mt-[90px]"
             id="calculator">
             <% if (!isRefinancovanie) { %>
-            <form action="/calc" method="post">
+            <form action="/calc" method="post" class="calc-form">
                 <div class="bg-white px-[1.5rem] py-[2.5rem] md:p-12 rounded-lg default-shadow md:px-[3.5rem] md:py-[4.5rem] custom-shadow-20">
                     <div class="mb-8">
                         <h3 class="mb-[1rem] text-[1.5rem] md:text-[34px] font-bold">Koľko si chcete požičať?</h3>
                         <div class="relative">
                             <input type="text" id="money_input" name="money"
-                                class="input-default placeholder-default  md:h-[52px] md:text-[24px]" placeholder="15 000€">
+                                class="input-default placeholder-default  md:h-[52px] md:text-[24px] validate-calculator" placeholder="15 000€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
                         <small class="text-xs text-dRed "></small>
@@ -35,7 +35,7 @@
                         <span class="calc-new-span">Vždy môžete zaplatiť rýchlejšie.</span>
                         <div class="relative">
                             <input type="text" id="year_input" name="years"
-                                class="input-default placeholder-default  md:h-[52px] md:text-[24px]" placeholder="5 rokov">
+                                class="input-default placeholder-default  md:h-[52px] md:text-[24px] validate-calculator" placeholder="5 rokov">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
                         <small class="text-xs text-dRed "></small>
@@ -73,13 +73,13 @@
                 </div>
             </form>
             <% } else { %>
-            <form action="/calc" method="post">
+            <form action="/calc" method="post" class="calc-form">
                 <div class="bg-white px-[1.5rem] py-[2.5rem] md:p-12 rounded-lg default-shadow md:px-[3.5rem] md:py-[4.5rem]">
                     <div class="mb-8">
                         <h3 class="mb-[1rem] text-[1.5rem] md:text-[34px] font-bold">Koľko chcete refinancovať?</h3>
                         <div class="relative">
                             <input type="text" id="money_input" name="money"
-                                class="input-default placeholder-default validate md:h-[52px] md:text-[24px]" placeholder="7 000€">
+                                class="input-default placeholder-default validate-calculator md:h-[52px] md:text-[24px]" placeholder="7 000€">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
                         <small class="text-xs text-dRed "></small>
@@ -93,7 +93,7 @@
                         <span class="calc-new-span">Vždy môžete zaplatiť rýchlejšie.</span>
                         <div class="relative">
                             <input type="text" id="year_input" name="years"
-                                class="input-default placeholder-default validate md:h-[52px] md:text-[24px]" placeholder="5 rokov">
+                                class="input-default placeholder-default validate-calculator md:h-[52px] md:text-[24px]" placeholder="5 rokov">
                             <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                         </div>
                         <small class="text-xs text-dRed "></small>
