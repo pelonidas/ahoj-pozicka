@@ -1328,6 +1328,10 @@ select {
   margin-top: 1.25rem;
 }
 
+.mb-\[0\.2rem\] {
+  margin-bottom: 0.2rem;
+}
+
 .block {
   display: block;
 }
@@ -1608,6 +1612,10 @@ select {
   width: 55%;
 }
 
+.w-\[14px\] {
+  width: 14px;
+}
+
 .max-w-\[92\%\] {
   max-width: 92%;
 }
@@ -1746,6 +1754,10 @@ select {
 
 .max-w-\[175px\] {
   max-width: 175px;
+}
+
+.max-w-\[14px\] {
+  max-width: 14px;
 }
 
 .translate-y-\[20\%\] {

@@ -37,7 +37,6 @@ for (const form of forms) {
     form.addEventListener('submit', (e) => {
         for (const input of inputs) {
             let validatedInput = validateInput(input)
-            console.log('hey')
             if (!validatedInput) {
                 e.preventDefault()
             }
@@ -62,6 +61,15 @@ for (const checkboxContainer of checkboxContainers) {
     checkboxContainer.addEventListener('click', () => {
         isChecked = !isChecked;
         checkbox.classList.toggle('invisible')
+        if (checkbox) {
+            if (isChecked) {
+                checkboxContainer.classList.add('bg-secondary')
+                checkboxContainer.classList.toggle('hover:border-primary')
+            } else {
+                checkboxContainer.classList.toggle('bg-secondary')
+                checkboxContainer.classList.add('hover:border-primary')
+            }
+        }
         if (postContainer) {
             if (isChecked) {
                 postContainer.classList.toggle('hidden')
