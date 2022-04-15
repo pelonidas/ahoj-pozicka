@@ -1,6 +1,6 @@
 //data
 const AutoNumeric = window.autonumeric;
-const numeral = window.numeral
+let numeral = window.numeral
 
 numeral.register('format', 'euro', {
     regexps: {

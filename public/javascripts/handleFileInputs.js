@@ -231,6 +231,11 @@ let handleMultipleInput = (fileInput, container, image, additionalInput, additio
 
 }
 
+function setErrorForFile(container) {
+    let small = container.nextElementSibling;
+    small.classList.toggle('hidden')
+}
+
 //form validation
 if (inputForm) {
     inputForm.addEventListener('submit', (e) => {
@@ -238,6 +243,10 @@ if (inputForm) {
         let [file2] = backInput.files;
 
         if (count.innerText !== '3' || !file1 || !file2) {
+            setErrorForFile(frontContainer)
+            setErrorForFile(backContainer)
+            setErrorForFile(dokladyContainer)
+
             e.preventDefault()
         }
     })
