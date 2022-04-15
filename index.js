@@ -51,7 +51,7 @@ app.get('/', (req, res) => {
 });
 // Refinancovanie route
 app.get('/refinancovanie', (req, res) => {
-    res.render('refinancovanie', {title: "Refinancovanie", isRefinancovanie: true, math})
+    res.render('refinancovanie', {title: "Refinancovanie", isRefinancovanie: true})
 })
 
 app.get('/centrala', (req, res) => {

@@ -1,4 +1,39 @@
 //data
+const AutoNumeric = window.autonumeric;
+const numeral = window.numeral
+
+numeral.register('format', 'euro', {
+    regexps: {
+        format: /(€)/,
+        unformat: /(€)/
+    },
+    format: function(value, format, roundingFunction) {
+        var space = numeral._.includes(format, ' €') ? ' ' : '',
+            output;
+
+
+        // check for space before %
+        format = format.replace(/\s?\€/, '');
+
+        output = numeral._.numberToFormat(value, format, roundingFunction);
+
+        if (numeral._.includes(output, ')')) {
+            output = output.split('');
+
+            output.splice(-1, 0, space + '€');
+
+            output = output.join('');
+        } else {
+            output = output + space + '€';
+        }
+
+        return output;
+    },
+    unformat: function(string) {
+        return numeral._.stringToNumber(string) * 0.01;
+    }
+});
+
 var data = "";
 //sliders
 let money_slide = document.getElementById("money_range"),
@@ -13,6 +48,8 @@ var interest = document.querySelector('#interest');
 
 //outputs
 var mes_sum = document.getElementById("mes_sum");
+
+let test;
 
 const calcMonthlyCost = function (moneyVal, yearVal) {
     let money = Number(moneyVal);
@@ -47,10 +84,13 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
 
 
 function moneySlideHandler(e) {
-
     // money_field.value = e.target.value;
-    money_field.value = window.math.unit(e.target.value, 'eee')
-    // new AutoNumeric('#money_input', { currencySymbol : '$' }, AutoNumeric.options.currencySymbolPlacement.suffix);
+    let string = numeral(e.target.value).format('00,000.00 €')
+    money_field.value = string;
+    // money_field.value = window.math.unit(e.target.value, 'eee')
+    // new window.autonumeric('#money_input', { currencySymbol : '$' }, window.autonumeric.options.currencySymbolPlacement.suffix);
+
+    console.log(string)
 
     doCalc();
 }
@@ -60,10 +100,10 @@ function yearSlideHandler(e) {
 
     doCalc();
 }
-
+let testt;
 function moneyInputHandler(e) {
     let val = e.target.value;
-
+    testt = val
     if (val) {
         if (!isNaN(val)) {
             val = Number(val);
@@ -92,24 +132,15 @@ function yearInputHandler(e) {
 function doCalc(){
     let moneyVal = money_slide.value;
     let yearVal = year_slide.value;
-    // new AutoNumeric(money_field, {
-    //     currencySymbol         : ' €',
-    //     // digitGroupSeparator    : '\'',
-    //     decimalPlaces          : 2,
-    //     currencySymbolPlacement:
-    //     AutoNumeric.options.currencySymbolPlacement.suffix,
-    // });
-    //
-    // new AutoNumeric(year_field, {
-    //     currencySymbol         : ' rokov',
-    //     // digitGroupSeparator    : '\'',
-    //     decimalPlaces          : 0,
-    //     currencySymbolPlacement:
-    //     AutoNumeric.options.currencySymbolPlacement.suffix,
-    // });
+    // test = new AutoNumeric(money_field)
 
     mes_sum.innerHTML = calcMonthlyCost(moneyVal, yearVal);
 }
+
+money_field.addEventListener('focusout', (e) => {
+    console.log(e.target.value)
+    money_field.value = numeral(e.target.value).format('00,000.00 €')
+})
 
 money_field.addEventListener('input', moneyInputHandler);
 year_field.addEventListener('input', yearInputHandler);
