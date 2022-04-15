@@ -1,12 +1,11 @@
 //data
 var data = "";
-
 //sliders
-var money_slide = document.getElementById("money_range"),
+let money_slide = document.getElementById("money_range"),
     year_slide = document.getElementById("year_range");
 
 //text fields
-var money_field = document.getElementById("money_input"),
+let money_field = document.getElementById("money_input"),
     year_field = document.getElementById("year_input");
 
 //hidden
@@ -45,28 +44,20 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
     return monthlyCost + " €";
 }
 
+
+
 function moneySlideHandler(e) {
-    money_field.value = e.target.value;
+
+    // money_field.value = e.target.value;
+    money_field.value = window.math.unit(e.target.value, 'eee')
     // new AutoNumeric('#money_input', { currencySymbol : '$' }, AutoNumeric.options.currencySymbolPlacement.suffix);
-    new AutoNumeric('#money_input', {
-        currencySymbol         : ' €',
-        // digitGroupSeparator    : '\'',
-        decimalPlaces          : 2,
-        currencySymbolPlacement:
-        AutoNumeric.options.currencySymbolPlacement.suffix,
-    });
+
     doCalc();
 }
 
 function yearSlideHandler(e) {
     year_field.value = e.target.value;
-    new AutoNumeric('#year_input', {
-        currencySymbol         : ' rokov',
-        // digitGroupSeparator    : '\'',
-        decimalPlaces          : 0,
-        currencySymbolPlacement:
-        AutoNumeric.options.currencySymbolPlacement.suffix,
-    });
+
     doCalc();
 }
 
@@ -101,6 +92,22 @@ function yearInputHandler(e) {
 function doCalc(){
     let moneyVal = money_slide.value;
     let yearVal = year_slide.value;
+    // new AutoNumeric(money_field, {
+    //     currencySymbol         : ' €',
+    //     // digitGroupSeparator    : '\'',
+    //     decimalPlaces          : 2,
+    //     currencySymbolPlacement:
+    //     AutoNumeric.options.currencySymbolPlacement.suffix,
+    // });
+    //
+    // new AutoNumeric(year_field, {
+    //     currencySymbol         : ' rokov',
+    //     // digitGroupSeparator    : '\'',
+    //     decimalPlaces          : 0,
+    //     currencySymbolPlacement:
+    //     AutoNumeric.options.currencySymbolPlacement.suffix,
+    // });
+
     mes_sum.innerHTML = calcMonthlyCost(moneyVal, yearVal);
 }
 

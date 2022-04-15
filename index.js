@@ -21,7 +21,6 @@ const sessionObject = {
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }
-
 // use ejs-locals for all ejs templates:
 app.engine('ejs', engine);
 
@@ -38,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'node_modules/semantic-ui-dropdown')))
 app.use(express.static(path.join(__dirname, 'node_modules/semantic-ui-transition')))
 app.use(express.static(path.join(__dirname, 'node_modules/autonumeric')))
+app.use(express.static(path.join(__dirname, 'node_modules/mathjs')))
 
 app.use(session(sessionObject))
 
@@ -51,7 +51,7 @@ app.get('/', (req, res) => {
 });
 // Refinancovanie route
 app.get('/refinancovanie', (req, res) => {
-    res.render('refinancovanie', {title: "Refinancovanie", isRefinancovanie: true})
+    res.render('refinancovanie', {title: "Refinancovanie", isRefinancovanie: true, math})
 })
 
 app.get('/centrala', (req, res) => {
