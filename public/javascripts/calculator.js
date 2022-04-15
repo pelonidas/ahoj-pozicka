@@ -84,13 +84,7 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
 
 
 function moneySlideHandler(e) {
-    // money_field.value = e.target.value;
-    let string = numeral(e.target.value).format('00,000.00 €')
-    money_field.value = string;
-    // money_field.value = window.math.unit(e.target.value, 'eee')
-    // new window.autonumeric('#money_input', { currencySymbol : '$' }, window.autonumeric.options.currencySymbolPlacement.suffix);
-
-    console.log(string)
+    money_field.value = numeral(e.target.value).format('00,000.00 €')
 
     doCalc();
 }
@@ -138,7 +132,6 @@ function doCalc(){
 }
 
 money_field.addEventListener('focusout', (e) => {
-    console.log(e.target.value)
     money_field.value = numeral(e.target.value).format('00,000.00 €')
 })
 
