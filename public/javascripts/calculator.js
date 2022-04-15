@@ -34,6 +34,39 @@ numeral.register('format', 'euro', {
     }
 });
 
+numeral.register('format', 'years', {
+    regexps: {
+        format: /(r)/,
+        unformat: /(r)/
+    },
+    format: function(value, format, roundingFunction) {
+        var space = numeral._.includes(format, ' r') ? ' ' : '',
+            output;
+        // check for space before %
+        format = format.replace(/\s?\r/, '');
+
+        output = numeral._.numberToFormat(value, format, roundingFunction);
+
+        if (numeral._.includes(output, ')')) {
+            output = output.split('');
+
+            output.splice(-1, 0, space + 'rokov');
+
+            output = output.join('');
+        } else {
+            output = output + space + 'rokov';
+        }
+
+        return output;
+    },
+    unformat: function(string) {
+        return numeral._.stringToNumber(string) * 0.01;
+    }
+});
+
+// use your custom format
+numeral().format('0%');
+
 var data = "";
 //sliders
 let money_slide = document.getElementById("money_range"),
@@ -90,20 +123,20 @@ function moneySlideHandler(e) {
 }
 
 function yearSlideHandler(e) {
-    year_field.value = e.target.value;
+    year_field.value = numeral(e.target.value).format('(0 r)');
 
     doCalc();
 }
-let testt;
+
 function moneyInputHandler(e) {
-    let val = e.target.value;
-    testt = val
-    if (val) {
-        if (!isNaN(val)) {
-            val = Number(val);
-            val = Math.ceil(val/100)*100;
-            money_slide.value = val;
-            money_slide.style.setProperty('--value', String(val));
+    let moneyValue = e.target.value;
+
+    if (moneyValue) {
+        if (!isNaN(moneyValue)) {
+            moneyValue = Number(moneyValue);
+            moneyValue = Math.ceil(moneyValue/100)*100;
+            money_slide.value = moneyValue;
+            money_slide.style.setProperty('--value', String(moneyValue));
             doCalc();
         }
     }
@@ -133,6 +166,10 @@ function doCalc(){
 
 money_field.addEventListener('focusout', (e) => {
     money_field.value = numeral(e.target.value).format('00,000.00 €')
+})
+
+year_field.addEventListener('focusout', (e) => {
+    year_field.value = numeral(e.target.value).format('(0 r)');
 })
 
 money_field.addEventListener('input', moneyInputHandler);
