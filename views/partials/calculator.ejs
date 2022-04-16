@@ -18,6 +18,7 @@
             id="calculator">
             <% if (!isRefinancovanie) { %>
             <form action="/calc" method="post" class="calc-form">
+                <input type="hidden" name="type" value="pôžičku">
                 <div class="bg-white px-[1.5rem] py-[2.5rem] md:p-12 rounded-lg default-shadow md:px-[3.5rem] md:py-[4.5rem] custom-shadow-20">
                     <div class="mb-8">
                         <h3 class="mb-[1rem] text-[1.5rem] md:text-[34px] font-bold">Koľko si chcete požičať?</h3>
@@ -74,6 +75,7 @@
             </form>
             <% } else { %>
             <form action="/calc" method="post" class="calc-form">
+                <input type="hidden" name="type" value="refinancovanie">
                 <div class="bg-white px-[1.5rem] py-[2.5rem] md:p-12 rounded-lg default-shadow md:px-[3.5rem] md:py-[4.5rem]">
                     <div class="mb-8">
                         <h3 class="mb-[1rem] text-[1.5rem] md:text-[34px] font-bold">Koľko chcete refinancovať?</h3>

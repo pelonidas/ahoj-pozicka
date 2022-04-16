@@ -35,12 +35,12 @@ for (const calculatorFormElement of calculatorForm) {
 
 for (const form of forms) {
     form.addEventListener('submit', (e) => {
-        // for (const input of inputs) {
-        //     let validatedInput = validateInput(input)
-        //     if (!validatedInput) {
-        //         e.preventDefault()
-        //     }
-        // }
+        for (const input of inputs) {
+            let validatedInput = validateInput(input)
+            if (!validatedInput) {
+                e.preventDefault()
+            }
+        }
 
         if (checkboxes) {
             for (const checkboxContainer of checkboxContainers) {

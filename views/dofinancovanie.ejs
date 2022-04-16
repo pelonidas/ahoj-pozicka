@@ -300,8 +300,8 @@
 <%- include('./partials/faq') %>
 
 <section id="dofinancovanie-form" class="flex">
-    <div id="form-left" class="hidden md:block"></div>
-    <div id="form-content" class="container flex justify-between items-center flex-col md:flex-row">
+<!--    <div id="form-left" class="hidden md:block"></div>-->
+    <div id="form-content" class="container flex justify-between items-center flex-col md:flex-row mx-auto">
         <div class="w-full mb-[13rem] md:w-1/2 flex relative z-22">
             <div>
                 <h2 class="text-[2.5rem] text-center leading-[2.75rem] w-full md:w-full md:max-w-[434px] mb-12 md:text-[65px] md:leading-[72px] md:text-left">
@@ -323,7 +323,7 @@
                      class="md:hidden absolute right-[-40px] bottom-[-160px] z-20">
             </div>
         </div>
-        <div class="w-full md:w-full md:max-w-[665px] bg-white drop-shadow-[9px_10px_50px_rgba(0,0,0,0.20)] rounded-l-lg flex items-center dofinancovanie-form"
+        <div class="w-full md:w-full md:max-w-[665px] bg-white custom-shadow-20 rounded-l-lg flex items-center dofinancovanie-form"
              id="contact-form">
             <div class="w-full p-[2.5rem] md:px-[3.5rem] md:py-[4rem]">
                 <form action="/form" method="post" class="form">
@@ -360,10 +360,11 @@
                     <div class="mb-6">
                         <label class="md:text-[20px] md:leading-[23px] md:mb-[0.5rem] md:inline-block" for="interest">Mam
                             zaujem o:</label>
-                        <select name="interest" id="interest"
+                        <select  id="interest"
                                 class="input-default md:h-[52px] md:text-[20px] md:leading-[23px] bg-none" disabled>
                             <option value="option">Dofinancovanie Hypotéky</option>
                         </select>
+                        <input type="hidden" value="Dofinancovanie Hypotéky" name="interest">
                     </div>
                     <div class="mb-12">
                         <label for="message" class="label-default">Správa</label>
@@ -384,5 +385,5 @@
             </div>
         </div>
     </div>
-    <div id="form-right" class="hidden md:block"></div>
+<!--    <div id="form-right" class="hidden md:block"></div>-->
 </section>

@@ -97,6 +97,7 @@ const setupSingleInputContainer = (container, image, file, fileInput) => {
 let handleFileInput = (fileInput, container, image) => {
     // Setup drag and drop functions
     setupDropAreaEnv(container, handleFiles)
+
     //drag and drop file handling function
     function handleFiles(files) {
         files = [...files]
@@ -233,7 +234,20 @@ let handleMultipleInput = (fileInput, container, image, additionalInput, additio
 
 function setErrorForFile(container) {
     let small = container.nextElementSibling;
-    small.classList.toggle('hidden')
+    small.classList.remove('hidden')
+}
+
+function setSuccessForFile(container) {
+    let small = container.nextElementSibling;
+    small.classList.add('hidden')
+}
+
+function validateFileInput(fileInput, container) {
+    if (!fileInput.files.length) {
+        setErrorForFile(container);
+    } else {
+        setSuccessForFile(container)
+    }
 }
 
 //form validation
@@ -243,9 +257,9 @@ if (inputForm) {
         let [file2] = backInput.files;
 
         if (count.innerText !== '3' || !file1 || !file2) {
-            setErrorForFile(frontContainer)
-            setErrorForFile(backContainer)
-            setErrorForFile(dokladyContainer)
+            validateFileInput(frontInput, frontContainer)
+            validateFileInput(backInput, backContainer)
+            validateFileInput(dokladyInput, dokladyContainer)
 
             e.preventDefault()
         }

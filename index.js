@@ -96,8 +96,7 @@ app.get('/form/success', (req, res) => {
 
 app.post('/form/step-2', (req, res) => {
     formData.companyData = req.body
-    req.session.sessionFormData = formData;
-    console.log(formData)
+
     res.redirect('/form/step-3')
 })
 app.post('/form/step-4', async (req, res) => {
@@ -168,11 +167,42 @@ app.post('/form/step-3', (req, res) => {
 })
 
 app.post('/form/step-1', async (req, res) => {
+    let transporter = nodemailer.createTransport({
+        host: "smtp.m1.websupport.sk",
+        port: 465,
+        secure: true, // true for 465, false for other ports
+        auth: {
+            user: 'test@dpmg.dev', // generated ethereal user
+            pass: 'Lx4:Vd@JB4', // generated ethereal password
+        },
+    });
     formData.contact = req.body;
+
     if (formData.job === 'student' || formData.job === 'maternity' || formData.job === 'home-person' || formData.job === 'unemployed') {
         return res.redirect('/form/rejected')
     }
     checkData(formData)
+    let output = `
+          <h3>Údaje z kontaktného formuláru</h3>
+          <ul>
+             <li>Meno: <b>${formData.contact.fName}</b></li>
+             <li>Priezvisko: <b>${formData.contact.lName}</b></li>
+             <li>Rodné číslo: <b>${formData.contact.bNumber}</b></li>
+             <li>Tel. číslo: <b>${formData.contact.phoneNum}</b></li>
+             <li>Číslo OP: <b>${formData.contact.id}</b></li>
+             <li>Email: <b>${formData.contact.email}</b></li>
+             <li>Pracovné zariadenie: <b>${formData.contact.job}</b></li>
+         </ul>
+    `;
+
+    await transporter.sendMail({
+        from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
+        to: `jan.nahalka348@gmail.com, `, // list of receivers
+        subject: "Nová správa z webovej stránky", // Subject line
+        text: "Hello world?", // plain text body
+        html: output, // html body
+    });
+
     // const output = `
     //     <h3>Contact details</h3>
     //     <ul>
@@ -212,68 +242,69 @@ app.post('/form/step-1', async (req, res) => {
     // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
     console.log(formData)
-    req.session.sessionFormData = formData
+
     res.redirect('/form/step-2')
 })
 
 app.post('/form', async (req, res) => {
-    // const data = req.body
-    // console.log(data)
-    // let output = ""
-    // if (data.interest) {
-    //     output = `
-    //         <h3>Contact simple form</h3>
-    //         <ul>
-    //               <li>Meno a priezvisko <b>${data.name}</b></li>
-    //               <li>Telefonne cislo: <b>${data.phoneNumber}</b></li>
-    //               <li>Email: <b>${data.email}</b></li>
-    //               <li>Sprava: <b>${data.message}</b></li>
-    //               <li>Mam zaujem o: ${data.interest}</li>
-    //         </ul>
-    //     `;
-    // } else {
-    //     output = `
-    //     <h3>Contact simple form</h3>
-    //         <ul>
-    //               <li>Meno a priezvisko <b>${data.name}</b></li>
-    //               <li>Telefonne cislo: <b>${data.phoneNumber}</b></li>
-    //               <li>Email: <b>${data.email}</b></li>
-    //               <li>Sprava: <b>${data.message}</b></li>
-    //         </ul>
-    //     `
-    // }
-    //
-    // let transporter = nodemailer.createTransport({
-    //     host: "smtp.m1.websupport.sk",
-    //     port: 465,
-    //     secure: false, // true for 465, false for other ports
-    //     auth: {
-    //         user: 'test@dpmg.dev', // generated ethereal user
-    //         pass: 'Lx4:Vd@JB4', // generated ethereal password
-    //     },
-    // });
-    //
+    let transporter = nodemailer.createTransport({
+        host: "smtp.m1.websupport.sk",
+        port: 465,
+        secure: true, // true for 465, false for other ports
+        auth: {
+            user: 'test@dpmg.dev', // generated ethereal user
+            pass: 'Lx4:Vd@JB4', // generated ethereal password
+        },
+    });
+
+    const data = req.body
+
+    let output;
+
+    if (data.interest) {
+        output = `
+             <h3>Údaje z kontaktného formuláru</h3>
+             <ul>
+                   <li>Meno a priezvisko <b>${data.name}</b></li>
+                   <li>Telefónne číslo: <b>${data.phoneNumber}</b></li>
+                   <li>Email: <b>${data.email}</b></li>
+                   <li>Mám záujem o: <b>${data.interest}</b></li>
+                   <li>Správa: <b>${data.message}</b></li>
+             </ul>
+         `;
+    } else {
+        output = `
+             <h3>Údaje z kontaktného formuláru</h3>
+             <ul>
+                   <li>Meno a priezvisko <b>${data.name}</b></li>
+                   <li>Telefónne číslo: <b>${data.phoneNumber}</b></li>
+                   <li>Email: <b>${data.email}</b></li>
+                   <li>Správa: <b>${data.message}</b></li>
+             </ul>
+         `;
+    }
+
     // // send mail with defined transport object
-    // let info = await transporter.sendMail({
-    //     from: '"Test Person" <test@dpmg.dev>', // sender address
-    //     to: `test02@mail.dpmarketing.sk, `, // list of receivers
-    //     subject: "Udaje", // Subject line
-    //     text: "Hello world?", // plain text body
-    //     html: output, // html body
-    // });
+    await transporter.sendMail({
+        from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
+        to: `jan.nahalka348@gmail.com, `, // list of receivers
+        subject: "Nová správa z webovej stránky", // Subject line
+        text: "Hello world?", // plain text body
+        html: output, // html body
+    });
     //
     // console.log("Message sent: %s", info.messageId);
     // // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
     //
     // // Preview only available when sending through an Ethereal account
     // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info))
-    // res.redirect('/form/dakujeme')
-    res.send('okay')
+    res.redirect('/form/dakujeme')
+    // res.send('okay')
 })
 
 app.post('/calc', (req, res) => {
-    console.log(req.body)
     formData.calcData = req.body
+
     res.redirect('/form/step-1')
 })
 
