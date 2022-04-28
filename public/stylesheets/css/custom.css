@@ -669,7 +669,7 @@ nav ul li:hover {
     content: url("/images/kontakt-kontaktujte/person-bg.svg");
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .active {
     position: fixed;
     top: 0;
@@ -1646,7 +1646,7 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     transform: translateX(-50%);
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   #hamburgerAnim {
     display: none !important;
   }
@@ -1844,10 +1844,6 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1800px) {
-  .main-navbar {
-    margin: 0 2rem;
-  }
-
   .calc-wrapper-main {
     margin: 0 2rem;
     width: unset;
