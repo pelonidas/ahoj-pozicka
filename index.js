@@ -47,27 +47,27 @@ app.get('/test', (req, res) => {
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('home', {title: "Pozicky", isRefinancovanie: false})
+    res.render('home', {title: "Best Pôžička - Jednoducha cesta k peniazom", isRefinancovanie: false})
 });
 // Refinancovanie route
 app.get('/refinancovanie', (req, res) => {
-    res.render('refinancovanie', {title: "Refinancovanie", isRefinancovanie: true})
+    res.render('refinancovanie', {title: "Refinancovanie - Best Pôžička", isRefinancovanie: true})
 })
 
 app.get('/centrala', (req, res) => {
-    res.render('centrala', {title: "Centrala"})
+    res.render('centrala', {title: "Centrála - Best Pôžička"})
 })
 
 app.get('/dofinancovanie', (req, res) => {
-    res.render('dofinancovanie', {title: "Dofinancovanie hypotek"})
+    res.render('dofinancovanie', {title: "Dofinancovanie hypoték - Best Pôžička"})
 })
 
 app.get('/o-best-pozicke', (req, res) => {
-    res.render('about', {title: "O best pozicke"})
+    res.render('about', {title: "O best pôžičke - Best Pôžička"})
 })
 
 app.get('/kontakt', (req, res) => {
-    res.render('contact', {title: "Kontakt"})
+    res.render('contact', {title: "Kontakt - Best Pôžička"})
 })
 
 app.get('/form/rejected', (req, res) => {
