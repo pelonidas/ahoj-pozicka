@@ -1134,7 +1134,7 @@ nav {
   &::before {
     content: url("/images/mobile/reviewsQuote.svg");
     position: absolute;
-
+    z-index: -1;
     top: -60px;
     left: -80px;
     background: #ffffff;
