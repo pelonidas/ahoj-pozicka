@@ -779,6 +779,7 @@ nav {
 
 @media (max-width: 1280px) {
   .active {
+    z-index: 9;
     position: fixed;
     top: 0;
     left: 0;
@@ -2320,4 +2321,7 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
       z-index: -1;
     }
   }
+}
+.nav-active {
+  overflow: hidden;
 }

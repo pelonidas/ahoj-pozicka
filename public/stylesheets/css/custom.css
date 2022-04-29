@@ -647,6 +647,7 @@ nav ul li:hover {
 }
 @media (max-width: 1280px) {
   .active {
+    z-index: 9;
     position: fixed;
     top: 0;
     left: 0;
@@ -2040,6 +2041,9 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
     content: url("/images/kontakt-kontaktujte/contact-form-left-bg.svg");
     z-index: -1;
   }
+}
+.nav-active {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=custom.css.map */
