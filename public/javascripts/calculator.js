@@ -117,7 +117,7 @@ const calcMonthlyCost = function (moneyVal, yearVal) {
 
 
 function moneySlideHandler(e) {
-    money_field.value = numeral(e.target.value).format('00,000.00 €')
+    money_field.value = numeral(e.target.value).format('00,000 €')
 
     doCalc();
 }

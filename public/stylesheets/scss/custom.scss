@@ -560,12 +560,7 @@ nav {
       }
     }
 
-    #calc-ad {
-      background-image: url("/images/calcAd-bg.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right center;
-    }
+
 
     #home-about {
       position: relative;
@@ -2108,10 +2103,6 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     content: unset;
   }
 
-  #calc-ad {
-    margin: 0 2rem;
-    width: unset;
-  }
 
   #home-about > div::before {
     content: url("/images/aboutus-bg.svg");
@@ -2322,6 +2313,16 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
     }
   }
 }
+
 .nav-active {
+  overflow: hidden;
+}
+
+.content-active {
+  max-height: 500px;
+}
+
+.content {
+  transition: all ease-in-out 200ms;
   overflow: hidden;
 }

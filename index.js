@@ -62,11 +62,11 @@ app.get('/dofinancovanie', (req, res) => {
     res.render('dofinancovanie', {title: "Dofinancovanie hypotek"})
 })
 
-app.get('/about', (req, res) => {
+app.get('/o-best-pozicke', (req, res) => {
     res.render('about', {title: "O best pozicke"})
 })
 
-app.get('/contact', (req, res) => {
+app.get('/kontakt', (req, res) => {
     res.render('contact', {title: "Kontakt"})
 })
 

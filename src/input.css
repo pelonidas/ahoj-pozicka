@@ -20,7 +20,7 @@
         @apply transition ease-in-out duration-200;
     }
     .faq-container {
-        @apply flex flex-col bg-white px-5 md:px-0 md:pl-9 md:pr-2 md:h-full py-7 md:py-2 rounded-lg mb-8;
+        @apply flex items-center bg-white px-[2rem] rounded-[10px];
     }
     .placeholder-default {
         @apply placeholder:text-[1rem] placeholder:text-secondary/30 placeholder:font-bold placeholder:leading-none;
