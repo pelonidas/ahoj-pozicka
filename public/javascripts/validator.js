@@ -118,7 +118,7 @@ const setErrorFor = (input, msg = "Pole je povinné.") => {
     icon.classList.add('fa-xmark', 'text-dRed')
 
     const div = parentInput.parentElement
-    div.classList.remove('mb-6')
+    div.classList.remove('mb-[2.25rem]')
     div.classList.add('mb-3')
 
     const small = div.querySelector('small')
@@ -127,14 +127,13 @@ const setErrorFor = (input, msg = "Pole je povinné.") => {
 
 const setSuccessFor = (input) => {
     input.className = ""
-    input.classList.add('border-2', 'border-secondary', 'hover:border-primary', 'w-full', 'rounded-[10px]', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md', 'validate')
+    input.classList.add('border-2', 'border-secondary', 'hover:border-primary', 'w-full', 'rounded-[10px]', 'focus:border-primary', 'focus:ring-0', 'focus:drop-shadow-md', 'validate',)
     const parent = input.parentElement
     const icon = parent.querySelector('i')
     icon.classList.remove('fa-xmark', 'text-transparent', 'text-dRed')
     icon.classList.add('fa-check', 'text-success-green')
     const div = parent.parentElement
-    div.classList.remove('mb-6')
-    div.classList.add('mb-3')
+    div.classList.add('mb-[2.25rem]')
     const small = div.querySelector('small')
     small.innerText = " "
 }
