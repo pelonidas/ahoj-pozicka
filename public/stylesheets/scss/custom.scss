@@ -513,31 +513,7 @@ nav {
       border-radius: 0 10px 10px 0;
     }
   }
-  #contact-form-wrapper-child {
-    position: relative;
 
-    &::after {
-      position: absolute;
-      height: 660px;
-      bottom: 0;
-      top: 0;
-      right: 0;
-      margin: auto 0;
-      content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg");
-      z-index: -1;
-    }
-
-    &::before {
-      position: absolute;
-      height: 660px;
-      margin: auto 0;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      content: url("/images/kontakt-kontaktujte/contact-form-left-bg.svg");
-      z-index: -1;
-    }
-  }
 
   #calculator-section {
     position: relative;
@@ -809,6 +785,8 @@ nav {
     right: 0;
     bottom: 0;
   }
+}
+@media screen and (max-width: 768px){
   .bottom-nav-fixed {
     position: fixed;
     bottom: 0;
@@ -2267,17 +2245,6 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
   }
 }
 
-//background: #FFFFFF;
-//box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.15);
-//border-radius: 10px;
-//font-family: AvenirNext-Medium;
-//font-size: 18px;
-//color: #223146;
-//font-family: Comfortaa-Bold;
-//font-size: 35px;
-//color: #223146;
-//background: #FCC800;
-//background: #000000;
 .custom-shadow-10 {
   box-shadow: 9px 10px 50px 0 rgba(0, 0, 0, 0.10);
 }
@@ -2297,40 +2264,60 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 .default-transition {
   transition: all 200ms ease-in-out;
 }
-
-//.big-pozicat-button {
-//    position: relative;
-//
-//    span {
-//      transition: all 0.2s ease-in-out;
-//      display: inline-block;
-//
-//      &::after {
-//        content: url("/images/big-form-button-pozicat.svg");
-//        position: absolute;
-//        top: 50%;
-//        transform: translate(-20px, -50%);
-//        right: -5rem;
-//        display: flex;
-//        display: flex;
-//        opacity: 0;
-//        transition: all 0.2s ease-in-out;
-//        z-index: 1;
-//      }
-//    }
-//
-//    &:hover span {
-//      transform: translateX(-10px);
-//    }
-//
-//    &:hover span::after {
-//      opacity: 1;
-//      transform: translate(0, -50%);
-//    }
-//  }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1280px) {
   .ios-min-height {
-    min-height:  -webkit-fill-available;
+    min-height: -webkit-fill-available;
   }
 }
 
+@media screen and (min-width: 1800px) {
+  .step2-bg {
+    position: relative;
+    &::after {
+      position: absolute;
+      z-index: 5;
+      content: url("/images/form-bg/step2-bg.svg");
+      width: 100%;
+      max-width: 700px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  #form-index {
+    position: relative;
+    &:after {
+      position: absolute;
+      z-index: 5;
+      content: url("/images/form-bg/index-bg.svg");
+      width: 100%;
+      max-width: 700px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  #contact-form-wrapper-child {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      height: 660px;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      margin: auto 0;
+      content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg");
+      z-index: -1;
+    }
+
+    &::before {
+      position: absolute;
+      height: 660px;
+      margin: auto 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      content: url("/images/kontakt-kontaktujte/contact-form-left-bg.svg");
+      z-index: -1;
+    }
+  }
+}

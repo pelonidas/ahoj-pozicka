@@ -1,4 +1,4 @@
-<section id="step1-body" class="pb-[4.5rem] md:pb-28 form-container">
+<section id="step1-body" class="pb-[4.5rem] md:pb-0 form-container md:my-[7rem]">
     <div class="md:w-1/5">
         <p class="form-label">Vyplnenie údajov vám zaberie <span
                     class="text-primary font-medium">menej než 6min</span></p>
@@ -8,10 +8,10 @@
             <p class="text-primary leading-none">6min</p>
         </div>
     </div>
-    <div class="md:grid md:grid-cols-2 md:gap-24">
-        <div class="bg-white p-6 md:p-12 rounded-lg">
-            <form action="/form/step-2" method="post" class="ring-0 form">
-                <div class="mb-6">
+    <div class="md:grid md:grid-cols-2 md:gap-24 step2-bg">
+        <div class="bg-white p-6 md:p-0 rounded-[10px] md:max-w-[665px] md:h-[950px] md:flex md:items-center md:justify-center">
+            <form action="/form/step-2" method="post" class="ring-0 form md:w-full md:max-w-[550px]">
+                <div class="mb-6 md:mb-[2.25rem]">
                     <label for="companyName" class="label-default">Názov spoločnosti</label>
                     <div class="relative">
                         <input type="text" id="companyName" class="input-default placeholder-default validate"
@@ -20,7 +20,7 @@
                     </div>
                     <small class="text-xs text-dRed "></small>
                 </div>
-                <div class="mb-6">
+                <div class="mb-6 md:mb-[2.25rem]">
                     <label for="ico" class="label-default">IČO</label>
                     <div class="relative">
                         <input type="text" id="ico" class="input-default placeholder-default validate num-only"
@@ -29,7 +29,7 @@
                     </div>
                     <small class="text-xs text-dRed "></small>
                 </div>
-                <div class="mb-6">
+                <div class="mb-6 md:mb-[2.25rem]">
                     <label for="companyStreet" class="label-default">Ulica a popisné číslo</label>
                     <div class="relative">
                         <input type="text" id="companyStreet" class="input-default placeholder-default validate"
@@ -39,7 +39,7 @@
                     <small class="text-xs text-dRed "></small>
                 </div>
                 <div class="grid grid-cols-7 gap-3 md:gap-4">
-                    <div class="mb-6 col-span-4 md:col-span-5">
+                    <div class="mb-6 md:mb-[2.25rem] col-span-4 md:col-span-5">
                         <label for="city" class="label-default">Obec</label>
                         <div class="relative">
                             <input type="text" id="city" name="city" class="input-default placeholder-default validate"
@@ -59,7 +59,7 @@
                         <small class="text-xs text-dRed "></small>
                     </div>
                 </div>
-                <div class="mb-6">
+                <div class="mb-6 md:mb-[2.25rem]">
                     <label for="businessSince" class="label-default">Podnikám od<span
                                 class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
                     <div class="relative">
@@ -75,7 +75,7 @@
 
                 <%- include('other-income.ejs') %>
 
-                <button class="submit-button border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition">
+                <button class="md:mt-[2.5rem] submit-button border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition">
                     <span>Ďalej </span>
                 </button>
             </form>

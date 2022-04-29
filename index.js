@@ -71,7 +71,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/form/rejected', (req, res) => {
-    res.render('form/req-rejected')
+    res.render('form/req-rejected', {formData})
 })
 
 app.get('/form/step-1', (req, res) => {
@@ -178,8 +178,9 @@ app.post('/form/step-1', async (req, res) => {
     });
     formData.contact = req.body;
 
-    if (formData.job === 'student' || formData.job === 'maternity' || formData.job === 'home-person' || formData.job === 'unemployed') {
+    if (formData.contact.job === 'student' || formData.contact.job === 'maternity' || formData.contact.job === 'home-person' || formData.contact.job === 'unemployed') {
         return res.redirect('/form/rejected')
+        // res.send('hi')
     }
     checkData(formData)
     let output = `

@@ -423,30 +423,6 @@ nav ul li:hover {
     border-radius: 0 10px 10px 0;
   }
 
-  #contact-form-wrapper-child {
-    position: relative;
-  }
-  #contact-form-wrapper-child::after {
-    position: absolute;
-    height: 660px;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    margin: auto 0;
-    content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg");
-    z-index: -1;
-  }
-  #contact-form-wrapper-child::before {
-    position: absolute;
-    height: 660px;
-    margin: auto 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    content: url("/images/kontakt-kontaktujte/contact-form-left-bg.svg");
-    z-index: -1;
-  }
-
   #calculator-section {
     position: relative;
     z-index: 1;
@@ -677,7 +653,8 @@ nav ul li:hover {
     right: 0;
     bottom: 0;
   }
-
+}
+@media screen and (max-width: 768px) {
   .bottom-nav-fixed {
     position: fixed;
     bottom: 0;
@@ -2011,6 +1988,57 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
 @media screen and (max-width: 1280px) {
   .ios-min-height {
     min-height: -webkit-fill-available;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .step2-bg {
+    position: relative;
+  }
+  .step2-bg::after {
+    position: absolute;
+    z-index: 5;
+    content: url("/images/form-bg/step2-bg.svg");
+    width: 100%;
+    max-width: 700px;
+    bottom: 0;
+    right: 0;
+  }
+
+  #form-index {
+    position: relative;
+  }
+  #form-index:after {
+    position: absolute;
+    z-index: 5;
+    content: url("/images/form-bg/index-bg.svg");
+    width: 100%;
+    max-width: 700px;
+    bottom: 0;
+    right: 0;
+  }
+
+  #contact-form-wrapper-child {
+    position: relative;
+  }
+  #contact-form-wrapper-child::after {
+    position: absolute;
+    height: 660px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin: auto 0;
+    content: url("/images/kontakt-kontaktujte/contact-form-right-bg.svg");
+    z-index: -1;
+  }
+  #contact-form-wrapper-child::before {
+    position: absolute;
+    height: 660px;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: url("/images/kontakt-kontaktujte/contact-form-left-bg.svg");
+    z-index: -1;
   }
 }
 
