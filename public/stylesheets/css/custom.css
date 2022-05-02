@@ -1091,6 +1091,8 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   }
 }
 #money_input::placeholder,
+#money_input_ref::placeholder,
+#year_input_ref::placeholder,
 #year_input::placeholder {
   font-size: 24px;
 }

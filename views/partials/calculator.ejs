@@ -100,7 +100,7 @@
                         <div class="mb-8">
                             <h3 class="mb-[1rem] text-[1.5rem] md:text-[34px] font-bold">Koľko chcete refinancovať?</h3>
                             <div class="relative">
-                                <input type="text" id="money_input" name="money"
+                                <input type="text" id="money_input_ref" name="money"
                                        class="input-default placeholder-default validate-calculator md:h-[52px] md:text-[24px]"
                                        placeholder="7 000€">
                                 <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
@@ -110,26 +110,26 @@
                             <!--                                   placeholder="15 000€" id="money_input" name="money">-->
                             <input type="range" class="w-full styled-slider slider-progress mt-[1rem]" min="400"
                                    max="20000"
-                                   value="2000" step="100" id="money_range">
+                                   value="2000" step="100" id="money_range_ref">
                         </div>
                         <div class="mb-8">
                             <h3 class="text-[1.5rem] md:text-[34px] font-bold">Na koľko rokov?</h3>
                             <span class="calc-new-span">Vždy môžete zaplatiť rýchlejšie.</span>
                             <div class="relative">
-                                <input type="text" id="year_input" name="years"
+                                <input type="text" id="year_input_ref" name="years"
                                        class="input-default placeholder-default validate-calculator md:h-[52px] md:text-[24px]"
                                        placeholder="5 rokov">
                                 <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                             </div>
                             <small class="text-xs text-dRed "></small>
                             <input type="range" class="w-full styled-slider slider-progress mt-[1rem]" min="1" max="8"
-                                   value="5" id="year_range" step="1">
+                                   value="5" id="year_range_ref" step="1">
                         </div>
                         <hr class="mb-8">
                         <div class="flex justify-between items-center mb-5">
                             <h4 class="max-w-[160px] md:max-w-[226px] text-[1.25rem] md:text-[28px] md:leading-[32px] font-bold">
                                 Odhadovaná mesačná suma</h4>
-                            <h2 class="text-[1.75rem] md:text-[2.5rem] font-bold" id="mes_sum">389€</h2>
+                            <h2 class="text-[1.75rem] md:text-[2.5rem] font-bold" id="mes_sum_ref">389€</h2>
                         </div>
                         <div>
                             <p class="font-bold text-[14px] md:text-[20px] md:mt-[2.5rem]">Vybavte si rýchlu <span
