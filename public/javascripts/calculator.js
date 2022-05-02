@@ -83,7 +83,7 @@ var mes_sum = document.getElementById("mes_sum");
 
 let test;
 
-
+if (!moneySlideRef) {
     const calcMonthlyCost = function (moneyVal, yearVal) {
         let money = Number(moneyVal);
         let years = Number(yearVal);
@@ -186,4 +186,6 @@ let test;
 
     money_slide.addEventListener('input', moneySlideHandler);
     year_slide.addEventListener('input', yearSlideHandler);
+}
+
 
