@@ -10,6 +10,11 @@ let refData = '';
 
 if (moneySlideRef) {
     function handleMaxMinInputs(input, min, max) {
+        input.addEventListener('input', () => {
+            setInputFilter(input, function (value) {
+                return /^-?\d*$/.test(value);
+            })
+        })
         input.addEventListener('change', () => {
             let value = parseInt(input.value);
 
@@ -98,12 +103,28 @@ if (moneySlideRef) {
     }
 
     moneyFieldRef.addEventListener('focusout', (e) => {
-        moneyFieldRef.value = numeral(e.target.value).format('00,000.00 €')
+        if (!moneyFieldRef.value) {
+            moneyFieldRef.value = moneySlideRef.value
+        }
+        moneyFieldRef.value = numeral(e.target.value).format('00,000 €')
     })
 
     yearFieldRef.addEventListener('focusout', (e) => {
+        if (!yearFieldRef.value) {
+            yearFieldRef.value = yearSlideRef.value
+        }
         yearSlideRef.value = numeral(e.target.value).format('(0 r)');
     })
+
+
+    const cleanTextInputs = (textInput) => {
+        textInput.addEventListener('focusin', () => {
+            textInput.value = '';
+        })
+    }
+
+    cleanTextInputs(moneyFieldRef)
+    cleanTextInputs(yearFieldRef)
 
     moneyFieldRef.addEventListener('input', moneyInputHandlerRef);
     yearFieldRef.addEventListener('input', yearInputHandlerRef);

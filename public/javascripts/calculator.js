@@ -194,7 +194,7 @@ if (money_field) {
 
     money_field.addEventListener('focusout', (e) => {
         if (!money_field.value) {
-           money_field.value = money_slide.value.toString()
+           money_field.value = money_slide.value
         }
         money_field.value = numeral(e.target.value).format('00,000 €')
     })
@@ -203,7 +203,9 @@ if (money_field) {
     })
 
     year_field.addEventListener('focusout', (e) => {
-
+        if (!year_field.value) {
+            year_field.value = year_slide.value
+        }
 
         year_field.value = numeral(e.target.value).format('(0 r)');
 
