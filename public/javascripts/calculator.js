@@ -1,12 +1,31 @@
-//data
 let numeral = window.numeral
+
+let money_slide = document.getElementById("money_range"),
+    year_slide = document.getElementById("year_range");
+
+let money_field = document.getElementById("money_input"),
+    year_field = document.getElementById("year_input");
+
+let interest = document.querySelector('#interest');
+
+let mes_sum = document.getElementById("mes_sum");
+
+//refinancovanie vars
+let moneySlideRef = document.querySelector('#money_range_ref'),
+    yearSlideRef = document.querySelector('#year_range_ref'),
+    moneyFieldRef = document.querySelector('#money_input_ref'),
+    yearFieldRef = document.querySelector('#year_input_ref')
+
+let mesSumRef = document.getElementById("mes_sum_ref");
+
+
 
 numeral.register('format', 'euro', {
     regexps: {
         format: /(€)/,
         unformat: /(€)/
     },
-    format: function(value, format, roundingFunction) {
+    format: function (value, format, roundingFunction) {
         var space = numeral._.includes(format, ' €') ? ' ' : '',
             output;
 
@@ -28,7 +47,7 @@ numeral.register('format', 'euro', {
 
         return output;
     },
-    unformat: function(string) {
+    unformat: function (string) {
         return numeral._.stringToNumber(string) * 0.01;
     }
 });
@@ -38,7 +57,7 @@ numeral.register('format', 'years', {
         format: /(r)/,
         unformat: /(r)/
     },
-    format: function(value, format, roundingFunction) {
+    format: function (value, format, roundingFunction) {
         var space = numeral._.includes(format, ' r') ? ' ' : '',
             output;
         // check for space before %
@@ -58,7 +77,7 @@ numeral.register('format', 'years', {
 
         return output;
     },
-    unformat: function(string) {
+    unformat: function (string) {
         return numeral._.stringToNumber(string) * 0.01;
     }
 });
@@ -66,51 +85,49 @@ numeral.register('format', 'years', {
 // use your custom format
 numeral().format('0%');
 
-var data = "";
-//sliders
-let money_slide = document.getElementById("money_range"),
-    year_slide = document.getElementById("year_range");
+let data = "";
 
-//text fields
-let money_field = document.getElementById("money_input"),
-    year_field = document.getElementById("year_input");
 
-//hidden
-var interest = document.querySelector('#interest');
-
-//outputs
-var mes_sum = document.getElementById("mes_sum");
-
+//declaring functions
 function handleMaxMinInputs(input, min, max) {
-    input.addEventListener('input', () => {
-        setInputFilter(input, function (value) {
-            return /^-?\d*$/.test(value);
+    if (input) {
+        input.addEventListener('input', () => {
+            setInputFilter(input, function (value) {
+                return /^-?\d*$/.test(value);
+            })
         })
-    })
-    input.addEventListener('change', () => {
-        let value = parseInt(input.value);
+        input.addEventListener('change', () => {
+            let value = parseInt(input.value);
 
-        if (value < min) input.value = min;
-        if (value > max) input.value = max;
+            if (value < min) input.value = min;
+            if (value > max) input.value = max;
 
-    })
-}
-if (year_field) {
-    handleMaxMinInputs(year_field, 1, 8)
-}
-if (money_field) {
-    handleMaxMinInputs(money_field, 400, 15000)
+        })
+    }
 }
 
+if (year_field) handleMaxMinInputs(year_field, 1, 8)
 
-    const calcMonthlyCost = function (moneyVal, yearVal) {
+if (money_field) handleMaxMinInputs(money_field, 400, 15_000)
+
+if (yearFieldRef) handleMaxMinInputs(yearFieldRef, 1, 8)
+
+if (moneyFieldRef) handleMaxMinInputs(moneyFieldRef, 400, 20_000)
+
+const calcMonthlyCost = function (moneyVal, yearVal, moneySlider, yearSlider) {
         let money = Number(moneyVal);
         let years = Number(yearVal);
 
-        let moneyMax = Number(money_slide.max);
-        let moneyMin = Number(money_slide.min);
-        let yearMax = Number(year_slide.max);
-        let yearMin = Number(year_slide.min);
+        // let moneyMax = Number(money_slide.max);
+        // let moneyMin = Number(money_slide.min);
+        // let yearMax = Number(year_slide.max);
+        // let yearMin = Number(year_slide.min);
+
+        let moneyMax = Number(moneySlider.max)
+        let moneyMin = Number(moneySlider.min)
+
+        let yearMax = Number(yearSlider.max)
+        let yearMin = Number(yearSlider.min)
 
         if (isNaN(money) || isNaN(years)) {
             return "";
@@ -142,83 +159,129 @@ if (money_field) {
         interest.value = data;
 
         return monthlyCost + " €";
-    }
 
-    function moneySlideHandler(e) {
-        money_field.value = numeral(e.target.value).format('00,000 €')
+}
 
-        doCalc();
-    }
+function doCalc(moneySlider, yearsSlider, sumLabel) {
+    let moneyVal = moneySlider.value;
+    let yearVal = yearsSlider.value;
 
-    function yearSlideHandler(e) {
-        year_field.value = numeral(e.target.value).format('(0 r)');
+    sumLabel.innerHTML = calcMonthlyCost(moneyVal, yearVal, moneySlider, yearsSlider);
+}
 
-        doCalc();
-    }
-
-    function moneyInputHandler(e) {
+function handleMoneyTextField(textInput, moneySlider, yearSlider, sumLabel) {
+    textInput.addEventListener('input', (e) => {
         let moneyValue = e.target.value;
 
         if (moneyValue) {
             if (!isNaN(moneyValue)) {
                 moneyValue = Number(moneyValue);
-                moneyValue = Math.ceil(moneyValue/100)*100;
-                money_slide.value = moneyValue;
-                money_slide.style.setProperty('--value', String(moneyValue));
-                doCalc();
+                moneyValue = Math.ceil(moneyValue / 100) * 100;
+                moneySlider.value = moneyValue;
+                moneySlider.style.setProperty('--value', String(moneyValue));
+                doCalc(moneySlider, yearSlider, sumLabel);
             }
         }
-    }
+    })
+}
 
-    function yearInputHandler(e) {
-        let val = e.target.value;
+function handleTextInputFocusOut(textField, slider, format) {
+    textField.addEventListener('focusout', (e) => {
+        if (!textField.value) {
+            textField.value = slider.value;
+        }
+        textField.value = numeral(e.target.value).format(format)
+    })
+}
 
-        if (val) {
-            if (!isNaN(val)) {
-                val = Number(val);
-                val = Math.ceil(val);
-                year_slide.value = val;
-                year_slide.style.setProperty('--value', String(val));
-                doCalc();
-            }
+function handleTextInputFocusIn(textField) {
+    textField.addEventListener('focusin', () => {
+        textField.value = '';
+    })
+}
+
+// if (money_field) money_field.addEventListener('focusout', (e) => {
+//     if (!money_field.value) {
+//         money_field.value = money_slide.value
+//     }
+//     money_field.value = numeral(e.target.value).format('00,000 €')
+// })
+
+const moneyFormat = '00,000 €'
+const yearFormat = '0 r'
+
+if (money_field) handleTextInputFocusOut(money_field, money_slide, moneyFormat)
+
+if (year_field) handleTextInputFocusOut(year_field, year_slide, yearFormat)
+
+if (moneyFieldRef) handleTextInputFocusOut(moneyFieldRef, moneySlideRef, moneyFormat)
+
+if (yearFieldRef) handleTextInputFocusOut(yearFieldRef, yearSlideRef, yearFormat)
+
+if (money_field) handleTextInputFocusIn(money_field)
+
+if (year_field) handleTextInputFocusIn(year_field)
+
+if (yearFieldRef) handleTextInputFocusIn(yearFieldRef)
+
+if (money_field) handleMoneyTextField(money_field, money_slide, year_slide, mes_sum)
+
+if (moneyFieldRef) handleMoneyTextField(moneyFieldRef, moneySlideRef, yearSlideRef, mesSumRef)
+
+if (moneyFieldRef) handleTextInputFocusIn(moneyFieldRef)
+
+if (year_field) year_field.addEventListener('input', (e) => {
+    let val = e.target.value;
+
+    if (val) {
+        if (!isNaN(val)) {
+            val = Number(val);
+            val = Math.ceil(val);
+            year_slide.value = val;
+            year_slide.style.setProperty('--value', String(val));
+            doCalc(money_slide, year_slide, mes_sum);
         }
     }
+});
 
-    function doCalc(){
-        let moneyVal = money_slide.value;
-        let yearVal = year_slide.value;
-        // test = new AutoNumeric(money_field)
+if (money_slide) money_slide.addEventListener('input', (e) => {
+    money_field.value = numeral(e.target.value).format('00,000 €')
 
-        mes_sum.innerHTML = calcMonthlyCost(moneyVal, yearVal);
+    doCalc(money_slide, year_slide, mes_sum);
+});
+
+if (year_slide) year_slide.addEventListener('input', (e) => {
+    year_field.value = numeral(e.target.value).format('(0 r)');
+
+    doCalc(money_slide, year_slide, mes_sum);
+});
+
+if (yearFieldRef) yearFieldRef.addEventListener('input', (e) => {
+    let val = e.target.value
+
+    if (val) {
+        if (!isNaN(val)) {
+            val = Number(val);
+            val = Math.ceil(val);
+            yearSlideRef.value = val;
+            yearSlideRef.style.setProperty('--value', String(val));
+            doCalc(moneySlideRef, yearSlideRef, mesSumRef);
+        }
     }
+})
 
-    money_field.addEventListener('focusout', (e) => {
-        if (!money_field.value) {
-           money_field.value = money_slide.value
-        }
-        money_field.value = numeral(e.target.value).format('00,000 €')
-    })
-    money_field.addEventListener('focusin', () => {
-        money_field.value = ''
-    })
+if (moneySlideRef) moneySlideRef.addEventListener('input', (e) => {
+    moneyFieldRef.value = numeral(e.target.value).format('00,000 €')
 
-    year_field.addEventListener('focusout', (e) => {
-        if (!year_field.value) {
-            year_field.value = year_slide.value
-        }
+    doCalc(moneySlideRef, yearSlideRef, mesSumRef)
+})
 
-        year_field.value = numeral(e.target.value).format('(0 r)');
+if (yearSlideRef) yearSlideRef.addEventListener('input', (e) => {
+    yearFieldRef.value = numeral(e.target.value).format('(0 r)');
 
-    })
-    year_field.addEventListener('focusin', () => {
-        year_field.value = ''
-    })
+    doCalc(moneySlideRef, yearSlideRef, mesSumRef)
+})
 
-    money_field.addEventListener('input', moneyInputHandler);
-    year_field.addEventListener('input', yearInputHandler);
-
-    money_slide.addEventListener('input', moneySlideHandler);
-    year_slide.addEventListener('input', yearSlideHandler);
 
 
 

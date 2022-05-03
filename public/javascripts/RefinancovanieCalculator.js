@@ -1,10 +1,10 @@
 // Refinancovanie inputs
-let moneySlideRef = document.querySelector('#money_range_ref'),
-    yearSlideRef = document.querySelector('#year_range_ref'),
-    moneyFieldRef = document.querySelector('#money_input_ref'),
-    yearFieldRef = document.querySelector('#year_input_ref')
-
-let mesSumRef = document.getElementById("mes_sum_ref");
+// let moneySlideRef = document.querySelector('#money_range_ref'),
+//     yearSlideRef = document.querySelector('#year_range_ref'),
+//     moneyFieldRef = document.querySelector('#money_input_ref'),
+//     yearFieldRef = document.querySelector('#year_input_ref')
+//
+// let mesSumRef = document.getElementById("mes_sum_ref");
 
 let refData = '';
 
@@ -22,8 +22,7 @@ if (moneySlideRef) {
             if (value > max) input.value = max;
         })
     }
-    handleMaxMinInputs(moneyFieldRef, 400, 20_000)
-    handleMaxMinInputs(yearFieldRef, 1, 8)
+
     const calcMonthlyCostRef = function (moneyVal, yearVal) {
         let money = Number(moneyVal);
         let years = Number(yearVal);
