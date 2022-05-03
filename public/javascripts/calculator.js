@@ -82,11 +82,17 @@ var interest = document.querySelector('#interest');
 var mes_sum = document.getElementById("mes_sum");
 
 function handleMaxMinInputs(input, min, max) {
+    input.addEventListener('input', () => {
+        setInputFilter(input, function (value) {
+            return /^-?\d*$/.test(value);
+        })
+    })
     input.addEventListener('change', () => {
         let value = parseInt(input.value);
 
         if (value < min) input.value = min;
         if (value > max) input.value = max;
+
     })
 }
 if (year_field) {
@@ -187,11 +193,23 @@ if (money_field) {
     }
 
     money_field.addEventListener('focusout', (e) => {
-        money_field.value = numeral(e.target.value).format('00,000.00 €')
+        if (!money_field.value) {
+           money_field.value = money_slide.value.toString()
+        }
+        money_field.value = numeral(e.target.value).format('00,000 €')
+    })
+    money_field.addEventListener('focusin', () => {
+        money_field.value = ''
     })
 
     year_field.addEventListener('focusout', (e) => {
+
+
         year_field.value = numeral(e.target.value).format('(0 r)');
+
+    })
+    year_field.addEventListener('focusin', () => {
+        year_field.value = ''
     })
 
     money_field.addEventListener('input', moneyInputHandler);
