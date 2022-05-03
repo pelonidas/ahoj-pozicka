@@ -81,9 +81,22 @@ var interest = document.querySelector('#interest');
 //outputs
 var mes_sum = document.getElementById("mes_sum");
 
-let test;
+function handleMaxMinInputs(input, min, max) {
+    input.addEventListener('change', () => {
+        let value = parseInt(input.value);
 
-if (!moneySlideRef) {
+        if (value < min) input.value = min;
+        if (value > max) input.value = max;
+    })
+}
+if (year_field) {
+    handleMaxMinInputs(year_field, 1, 8)
+}
+if (money_field) {
+    handleMaxMinInputs(money_field, 400, 15000)
+}
+
+
     const calcMonthlyCost = function (moneyVal, yearVal) {
         let money = Number(moneyVal);
         let years = Number(yearVal);
@@ -186,6 +199,7 @@ if (!moneySlideRef) {
 
     money_slide.addEventListener('input', moneySlideHandler);
     year_slide.addEventListener('input', yearSlideHandler);
-}
+
+
 
 
