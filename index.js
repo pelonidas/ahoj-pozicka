@@ -167,42 +167,42 @@ app.post('/form/step-3', (req, res) => {
 })
 
 app.post('/form/step-1', async (req, res) => {
-    let transporter = nodemailer.createTransport({
-        host: "smtp.m1.websupport.sk",
-        port: 465,
-        secure: true, // true for 465, false for other ports
-        auth: {
-            user: 'test@dpmg.dev', // generated ethereal user
-            pass: 'Lx4:Vd@JB4', // generated ethereal password
-        },
-    });
+    // let transporter = nodemailer.createTransport({
+    //     host: "smtp.m1.websupport.sk",
+    //     port: 465,
+    //     secure: true, // true for 465, false for other ports
+    //     auth: {
+    //         user: 'test@dpmg.dev', // generated ethereal user
+    //         pass: 'Lx4:Vd@JB4', // generated ethereal password
+    //     },
+    // });
     formData.contact = req.body;
-
+    //
     if (formData.contact.job === 'student' || formData.contact.job === 'maternity' || formData.contact.job === 'home-person' || formData.contact.job === 'unemployed') {
         return res.redirect('/form/rejected')
         // res.send('hi')
     }
     checkData(formData)
-    let output = `
-          <h3>Údaje z kontaktného formuláru</h3>
-          <ul>
-             <li>Meno: <b>${formData.contact.fName}</b></li>
-             <li>Priezvisko: <b>${formData.contact.lName}</b></li>
-             <li>Rodné číslo: <b>${formData.contact.bNumber}</b></li>
-             <li>Tel. číslo: <b>${formData.contact.phoneNum}</b></li>
-             <li>Číslo OP: <b>${formData.contact.id}</b></li>
-             <li>Email: <b>${formData.contact.email}</b></li>
-             <li>Pracovné zariadenie: <b>${formData.contact.job}</b></li>
-         </ul>
-    `;
-
-    await transporter.sendMail({
-        from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
-        to: `jan.nahalka348@gmail.com, `, // list of receivers
-        subject: "Nová správa z webovej stránky", // Subject line
-        text: "Hello world?", // plain text body
-        html: output, // html body
-    });
+    // let output = `
+    //       <h3>Údaje z kontaktného formuláru</h3>
+    //       <ul>
+    //          <li>Meno: <b>${formData.contact.fName}</b></li>
+    //          <li>Priezvisko: <b>${formData.contact.lName}</b></li>
+    //          <li>Rodné číslo: <b>${formData.contact.bNumber}</b></li>
+    //          <li>Tel. číslo: <b>${formData.contact.phoneNum}</b></li>
+    //          <li>Číslo OP: <b>${formData.contact.id}</b></li>
+    //          <li>Email: <b>${formData.contact.email}</b></li>
+    //          <li>Pracovné zariadenie: <b>${formData.contact.job}</b></li>
+    //      </ul>
+    // `;
+    //
+    // await transporter.sendMail({
+    //     from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
+    //     to: `jan.nahalka348@gmail.com, `, // list of receivers
+    //     subject: "Nová správa z webovej stránky", // Subject line
+    //     text: "Hello world?", // plain text body
+    //     html: output, // html body
+    // });
 
     // const output = `
     //     <h3>Contact details</h3>

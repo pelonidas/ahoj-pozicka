@@ -46,10 +46,11 @@
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label for="living" class="label-default">Typ bývania</label>
+                    <label for="living" class="label-default">Typ bývania<span
+                                class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label></label>
                     <select class="ui search dropdown w-full" name="job" id="living">
-                        <option value="rent">Najom</option>
-                        <option value="house">Dom</option>
+                        <option value="ownHouse">Vlastný byt/dom</option>
+                        <option value="cooperativeRent">Dom</option>
                         <option value="flat">Byt</option>
                     </select>
                 </div>
@@ -66,7 +67,8 @@
                 <div class="hidden mb-12" id="post-container">
                     <h4 class="text-[1.375rem] md:text-xl mb-2 md:mb-4 font-bold">Kde ti budeme posielať poštu?</h4>
                     <div class="mb-6">
-                        <label for="postStreet" class="label-default">Ulica a popisné číslo</label>
+                        <label for="postStreet" class="label-default">Ulica a popisné číslo<span
+                                    class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label></label>
                         <div class="relative">
                             <input type="text" id="postStreet" class="input-default placeholder-default"
                                    placeholder="Štúrová 226" name="postStreet">
@@ -76,7 +78,8 @@
                     </div>
                     <div class="grid grid-cols-7 gap-4">
                         <div class=" col-span-4 md:col-span-5">
-                            <label for="postCity" class="label-default">Obec</label>
+                            <label for="postCity" class="label-default">Obec <span
+                                        class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label></label>
                             <div class="relative">
                                 <input type="text" id="postCity" name="postCity"
                                        class="input-default placeholder-default"

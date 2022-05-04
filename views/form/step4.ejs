@@ -1,5 +1,5 @@
 <% layout('./layouts/form-boilerplate') %>
-<section class="mt-auto form-container md:h-[1200px] lg:h-[1440px] pb-[4.5rem] md:pb-0">
+<section class="mt-auto form-container lg:h-[1440px] pb-[4.5rem] md:pb-0">
     <div class="md:w-1/5 form-label md:hidden">
         <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span
                     class="text-primary font-medium">menej než 4min</span></p>
@@ -43,7 +43,7 @@
                             </span>
                         </span>
                             </label>
-                            <input type="file" id="frontObciansky" class="hidden " accept=".pdf,.jpg,.jpeg,.png">
+                            <input type="file" id="frontObciansky" class="hidden file-input" accept=".pdf,.jpg,.jpeg,.png">
                         </div>
                         <div class="img-container test relative overflow-hidden ">
                             <img src="#" alt=""
@@ -75,7 +75,7 @@
                             </span>
                         </span>
                             </label>
-                            <input type="file" id="backObciansky" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+                            <input type="file" id="backObciansky" class="hidden file-input" accept=".pdf,.jpg,.jpeg,.png">
                         </div>
                         <!--                    dal som prec img-upload-wrapper robilo to nejaky zlty dead space-->
                         <div class="img-container test relative overflow-hidden">
@@ -135,107 +135,13 @@
                 </div>
                 <small class="text-xs text-dRed hidden">Pole je povinné</small>
 
-                <button class="md:mt-[2.5rem] mx-auto border-2 border-dRed rounded-[10px] w-full max-w-[275px] md:max-w-[300px] h-[50px] md:h-[54px] text-[18px] md:text-[20px] text-secondary/50 flex items-center justify-center md:mx-0 mt-5">
+                <button id="step4-button" class="md:mt-[2.5rem] mx-auto border-2 border-dRed rounded-[10px] w-full max-w-[275px] md:max-w-[300px] h-[50px] md:h-[54px] text-[18px] md:text-[20px] text-secondary/50 flex items-center justify-center md:mx-0 mt-5">
                     <span>Odoslať na posúdenie</span>
                 </button>
             </form>
         </div>
         <!--        paste here-->
-        <div class="translate-y-[560px] md:translate-y-0 bottom-nav bottom-nav-fixed bottom-nav-container md:h-[45rem]">
-            <div class="md:hidden buttonContainer">
-                <div class="bg-transparent">
-                    <img src="/images/icons/mobile-up.svg" alt=""
-                         class="w-full max-w-[59px] mx-auto cursor-pointer translate-y-[70%] bottom-nav-button">
-                </div>
-                <div class="flex flex-col h-[54px] rounded-t-[10px] bg-secondary">
-                    <div class="m-auto z-40">
-                        <span class="font-light leading-[17px] text-[1.125rem]">Tebou vyplnené údaje</span>
-                    </div>
-                </div>
-            </div>
-            <div class="h-[560px] md:h-full bg-secondary">
-                <div class="overflow-y-auto pt-[1.5rem] md:pt-0 w-full max-w-[80%] md:max-w-full h-[490px] md:h-min mx-auto border-t md:border-0 border-white/20 flex flex-col">
-                    <h2 class="form-heading1 ">Máš záujem o</h2>
-                    <div class="w-full md:max-w-[420px] mb-[1.5rem] md:mb-[2rem]">
-                    <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">pôžičku na <span
-                                class="text-primary"><%= formData.calcData.money %>
-                        </span></span>
-                        <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">s dobou splácania <span
-                                    class="text-primary"><%= formData.calcData.years %></span></span>
-                        <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">a mesačnou splátkou <span
-                                    class="text-primary"><%= formData.calcData.interest %> €</span></span>
-                    </div>
-                    <h3 class="text-[2rem] md:text-[2.5rem] mb-4">Osobné údaje</h3>
-                    <div class="md:text-[1.25rem] ">
-                        <div class="mb-2 flex items-center">
-                            <i class="fa-solid fa-minus mr-2 md:mr-3"></i>
-                            <div>
-                                Volám sa <span
-                                        class="text-primary"> <%= formData.contact.fName %>
-                                    <%= formData.contact.lName %></span>
-                            </div>
-                        </div>
-                        <div class="mb-2 flex items-center">
-                            <i class="fa-solid fa-minus mr-2 md:mr-3"></i>
-                            <div>
-                                Moje rodné číslo je <span
-                                        class="text-primary"><%= formData.contact.bNumber %>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="mb-2 flex w-full md:max-w-[330px]">
-                            <i class="fa-solid fa-minus pt-1 mr-2 md:mr-3"></i>
-                            <div class="md:leading-[31px]">
-                                Číslo môjho občianskeho preukazu je <span
-                                        class="text-primary"><%= formData.contact.id %>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex md:leading-[31px] w-full md:max-w-[495px] mb-[1.5rem] md:mb-[2rem]">
-                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
-                            <div>
-                                Možno ma kontaktovať na čísle <span
-                                        class="text-primary"><%= formData.contact.phoneNum %>
-                                </span>, alebo emailom
-                                <span class="text-primary"><%= formData.contact.email %></span>
-                            </div>
-                        </div>
-                        <h3 class="text-[2rem] md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
-                        <div class="flex md:mb-2">
-                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
-                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[315px]">
-                                Som zamestnaný v <span
-                                        class="text-primary"><%= formData.companyData.companyName %>
-                                </span>
-                                IČO: <span class="text-primary"><%= formData.companyData.ico %>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex md:mb-2">
-                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
-                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[340px]">
-                                Zamestnaný som na <span
-                                        class="text-primary">dobu <%= formData.companyData.period %></span>
-                                od <span class="text-primary"><%= formData.companyData.from %>
-                                </span>
-                                do <span class="text-primary"><%= formData.companyData.till %>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex md:mb-2">
-                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
-                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[480px]">
-                                Môj čistý mesačný príjem za 1.mesiac je <span
-                                        class="text-primary"><%= formData.companyData.firstMonth %>€</span>,
-                                za 2.mesiac je <span
-                                        class="text-primary"><%= formData.companyData.secondMonth %>€</span>, za
-                                3.mesiac je <span class="text-primary"><%= formData.companyData.thirdMonth %>€</span>.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </section>
 <script></script>

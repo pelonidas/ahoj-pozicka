@@ -17,6 +17,8 @@ const count = document.querySelector('.count');
 
 const inputForm = document.querySelector('#input-form')
 
+const fileInputs = document.querySelectorAll('.file-input')
+
 const removeFileFromFileList = (fileInput, index) => {
     const dt = new DataTransfer()
     const {files} = fileInput
