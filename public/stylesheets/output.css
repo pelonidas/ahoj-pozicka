@@ -1041,6 +1041,11 @@ select {
   margin-right: 0.5rem;
 }
 
+.my-\[5rem\] {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .mb-\[4\.5rem\] {
   margin-bottom: 4.5rem;
 }
@@ -1295,6 +1300,10 @@ select {
 
 .mt-\[2\.5rexm\] {
   margin-top: 2.5rexm;
+}
+
+.mt-\[3rem\] {
+  margin-top: 3rem;
 }
 
 .block {
@@ -1741,6 +1750,10 @@ select {
   max-width: 100px;
 }
 
+.max-w-\[235px\] {
+  max-width: 235px;
+}
+
 .translate-y-\[20\%\] {
   --tw-translate-y: 20%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2172,6 +2185,11 @@ select {
   padding-bottom: 0.5rem;
 }
 
+.py-\[5rem\] {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -2415,6 +2433,14 @@ select {
 
 .text-\[0\.8rem\] {
   font-size: 0.8rem;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.text-\[35px\] {
+  font-size: 35px;
 }
 
 .font-light {
@@ -3044,6 +3070,10 @@ select {
     margin-bottom: 2.25rem;
   }
 
+  .md\:mb-7 {
+    margin-bottom: 1.75rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3250,6 +3280,10 @@ select {
 
   .md\:w-\[400px\] {
     width: 400px;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
   }
 
   .md\:max-w-\[860px\] {
@@ -3579,6 +3613,11 @@ select {
     background-image: url('/images/centrala-mapa/map.png');
   }
 
+  .md\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
   .md\:p-0 {
     padding: 0px;
   }
@@ -3865,6 +3904,14 @@ select {
 
   .md\:text-\[0\.75rem\] {
     font-size: 0.75rem;
+  }
+
+  .md\:text-\[3\.75rem\] {
+    font-size: 3.75rem;
+  }
+
+  .md\:text-\[1\.2rem\] {
+    font-size: 1.2rem;
   }
 
   .md\:leading-\[72px\] {

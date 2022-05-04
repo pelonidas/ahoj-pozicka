@@ -340,34 +340,6 @@ nav ul li:hover {
   background-position: center right;
 }
 
-#main {
-  background-image: url("/images/dakujeme-gray.svg");
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 75%;
-}
-
-.dakujeme {
-  position: relative;
-  z-index: 3;
-}
-.dakujeme::after {
-  z-index: -1;
-  position: absolute;
-  background-image: url("/images/dakujeme-yellow.svg");
-  background-position: center right;
-  height: 100%;
-  width: 10%;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: auto;
-  margin-bottom: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
 .calendar {
   background: url("/images/calendar.svg") no-repeat scroll center left 7px;
   padding-left: 30px;
@@ -385,6 +357,34 @@ nav ul li:hover {
 }
 
 @media screen and (min-width: 768px) {
+  #main {
+    background-image: url("/images/dakujeme-gray.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 75%;
+  }
+
+  .dakujeme {
+    position: relative;
+    z-index: 3;
+  }
+  .dakujeme::after {
+    z-index: -1;
+    position: absolute;
+    background-image: url("/images/dakujeme-yellow.svg");
+    background-position: center right;
+    height: 100%;
+    width: 10%;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
   #ad-cards-wrapper {
     height: 170px;
     position: relative;
@@ -1804,6 +1804,10 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
   }
 }
 @media screen and (min-width: 768px) {
+  #dakujeme-images {
+    background: none;
+  }
+
   #homeAdCards {
     background: #223146;
   }
@@ -2045,6 +2049,15 @@ input[type=range].styled-slider.slider-progress::-moz-range-track {
 .content {
   transition: all ease-in-out 200ms;
   overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  #dakujeme-images {
+    background: url("/images/dakujeme-mobil-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */
