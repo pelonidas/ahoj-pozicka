@@ -253,20 +253,20 @@ function validateFileInput(fileInput, container) {
 }
 
 //form validation
-if (inputForm) {
-    inputForm.addEventListener('submit', (e) => {
-        let [file1] = frontInput.files;
-        let [file2] = backInput.files;
-
-        if (count.innerText !== '3' || !file1 || !file2) {
-            validateFileInput(frontInput, frontContainer)
-            validateFileInput(backInput, backContainer)
-            validateFileInput(dokladyInput, dokladyContainer)
-
-            e.preventDefault()
-        }
-    })
-}
+// if (inputForm) {
+//     inputForm.addEventListener('submit', (e) => {
+//         let [file1] = frontInput.files;
+//         let [file2] = backInput.files;
+//
+//         if (count.innerText !== '3' || !file1 || !file2) {
+//             validateFileInput(frontInput, frontContainer)
+//             validateFileInput(backInput, backContainer)
+//             validateFileInput(dokladyInput, dokladyContainer)
+//
+//             e.preventDefault()
+//         }
+//     })
+// }
 
 //making sure the script is triggered on /step-4
 if (frontInput) {

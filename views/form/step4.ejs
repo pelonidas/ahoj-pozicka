@@ -1,5 +1,5 @@
 <% layout('./layouts/form-boilerplate') %>
-<section class="mt-auto form-container lg:h-[1440px] pb-[4.5rem] md:pb-0">
+<section class="mt-auto form-container pb-[4.5rem] md:pb-0">
     <div class="md:w-1/5 form-label md:hidden">
         <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span
                     class="text-primary font-medium">menej než 4min</span></p>
@@ -9,9 +9,10 @@
             <p class="text-primary leading-none">2min</p>
         </div>
     </div>
-    <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary md:my-[7rem]">
+    <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary md:my-[5rem]">
         <div class="bg-white p-6 md:px-0 md:py-[4rem] rounded-[10px] w-full md:max-w-[665px] md:flex md:justify-center">
             <form action="/form/step-4" method="post" id="input-form" class="w-full md:max-w-[550px]">
+                <i class="fa-solid fa-arrow-left text-secondary/70 text-[1.5rem] back"></i>
                 <div class="flex items-center mb-[2rem] w-full md:max-w-[470px]">
                     <img src="/images/step4-id.svg" alt="" class="w-full max-w-[60px] md:w-min md:h-[72px]">
                     <h3 class="ml-4 md:ml-6 text-[20px] md:text-[24px] leading-[23px] md:leading-[27px] font-bold">
@@ -30,7 +31,10 @@
                         </p>
                     </div>
                 </div>
+                <h2 class="text-secondary/70 mb-[1rem]">Nahrajte prosím kvalitné a čitateľné obrázky, všetky strany príslušných dokumentov musia byť
+                    nahrané úplne a nie orezané</h2>
                 <div class="mb-[2rem] md:mb-2 flex flex-col md:flex-row md:items-center">
+
                     <div class="flex order-last md:order-first front-container">
                         <div class="order-last md:order-first">
                             <label for="frontObciansky"
@@ -43,7 +47,8 @@
                             </span>
                         </span>
                             </label>
-                            <input type="file" id="frontObciansky" class="hidden file-input" accept=".pdf,.jpg,.jpeg,.png">
+                            <input type="file" id="frontObciansky" class="hidden file-input"
+                                   accept=".pdf,.jpg,.jpeg,.png">
                         </div>
                         <div class="img-container test relative overflow-hidden ">
                             <img src="#" alt=""
@@ -75,7 +80,8 @@
                             </span>
                         </span>
                             </label>
-                            <input type="file" id="backObciansky" class="hidden file-input" accept=".pdf,.jpg,.jpeg,.png">
+                            <input type="file" id="backObciansky" class="hidden file-input"
+                                   accept=".pdf,.jpg,.jpeg,.png">
                         </div>
                         <!--                    dal som prec img-upload-wrapper robilo to nejaky zlty dead space-->
                         <div class="img-container test relative overflow-hidden">
@@ -131,11 +137,14 @@
                         <h4 class="text-[1.25rem] font-bold md:leading-[23px] md:mb-[0.2rem]">Doklady o príjme <span
                                     class="count">0</span>/3</h4>
                         <span class="font-bold md:text-[0.875rem] text-secondary/70 md:leading-[15px]">(1 súbor max 2MB)</span>
+                        <span
+                                class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px]">Nepovinné</span>
                     </div>
                 </div>
                 <small class="text-xs text-dRed hidden">Pole je povinné</small>
 
-                <button id="step4-button" class="md:mt-[2.5rem] mx-auto border-2 border-dRed rounded-[10px] w-full max-w-[275px] md:max-w-[300px] h-[50px] md:h-[54px] text-[18px] md:text-[20px] text-secondary/50 flex items-center justify-center md:mx-0 mt-5">
+                <button id="step4-button"
+                        class="md:mt-[2.5rem] mx-auto border-2 border-dRed hover:bg-dRed transition-default hover:text-white rounded-[10px] w-full max-w-[275px] md:max-w-[300px] h-[50px] md:h-[54px] text-[18px] md:text-[20px] text-secondary/50 flex items-center justify-center md:mx-0 mt-5">
                     <span>Odoslať na posúdenie</span>
                 </button>
             </form>

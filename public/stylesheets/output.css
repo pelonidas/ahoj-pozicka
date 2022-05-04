@@ -1293,6 +1293,10 @@ select {
   margin-top: 2.5rem;
 }
 
+.mt-\[2\.5rexm\] {
+  margin-top: 2.5rexm;
+}
+
 .block {
   display: block;
 }
@@ -2833,6 +2837,11 @@ select {
   .md\:mx-\[0\] {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .md\:my-\[5rem\] {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   .md\:mb-0 {
