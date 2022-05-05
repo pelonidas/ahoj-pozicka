@@ -48,8 +48,11 @@
                     <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
                     <div>
                         Možno ma kontaktovať na čísle <span
-                                class="text-primary"><%= formData.contact.phoneNum %></span>, alebo emailom
-                        <span class="text-primary"><%= formData.contact.email %> </span>
+                                class="text-primary"><%= formData.contact.phoneNum %></span>
+                        <%if(formData.contact.email){ %>
+                            , alebo emailom
+                            <span class="text-primary"><%= formData.contact.email %> </span>
+                        <%}%>
                     </div>
                 </div>
                 <h3 class="text-[2rem] md:text-[2.5rem] mb-[0.5rem] md:leading-[44px]">Finančné údaje</h3>

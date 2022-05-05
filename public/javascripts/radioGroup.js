@@ -9,11 +9,13 @@ const unspecificRadio = document.querySelector('#unspecific-radio')
 
 let isRadio1Clicked = false;
 let isRadio2Clicked = false
+const period = document.querySelector('#period')
 
 if (specificRadio) {
     const unspecificIcon = unspecificRadio.querySelector('img')
     const specificIcon = specificRadio.querySelector('img')
     specificRadio.addEventListener('click', () => {
+        period.value = 'určitú'
         isRadio2Clicked = false
         isRadio1Clicked = true
         if (isRadio1Clicked) {
@@ -28,7 +30,7 @@ if (specificRadio) {
     unspecificRadio.addEventListener('click', () => {
         isRadio2Clicked = true
         isRadio1Clicked = false
-
+        period.value = 'neurčitú'
         if (isRadio2Clicked) {
             unspecificIcon.classList.remove('hidden')
             specificIcon.classList.add('hidden')

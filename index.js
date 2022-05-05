@@ -91,6 +91,10 @@ app.get('/form/step-4', (req, res) => {
     res.render('form/step4', {step: 4, formData})
 })
 
+app.get('/form/step-5', (req, res) => {
+    res.render('form/step5', {step: 5, formData})
+})
+
 app.get('/form/success', (req, res) => {
     res.render('form/form-success')
 })
@@ -160,12 +164,18 @@ app.post('/form/step-4', async (req, res) => {
     //
     // // Preview only available when sending through an Ethereal account
     // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    res.redirect('/form/success')
+    res.redirect('/form/step-5')
 })
 app.post('/form/step-3', (req, res) => {
     formData.customerData = req.body
     console.log(formData)
     res.redirect('/form/step-4')
+})
+
+app.post('/form/step-5', (req, res) => {
+    formData.bankData = req.body
+    console.log(formData)
+    res.redirect('/form/dakujeme')
 })
 
 app.post('/form/step-1', async (req, res) => {

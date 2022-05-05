@@ -10,10 +10,14 @@
             <p class="text-primary leading-none">8min</p>
         </div>
     </div>
-    <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary md:mb-0 md:h-[910px]" id="form-index">
-        <div class="bg-white p-6 md:p-0 rounded-[10px] w-full md:max-w-[665px] md:flex md:justify-center md:items-center">
+    <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary md:mb-0" id="form-index">
+        <div class="bg-white p-6 md:p-0 rounded-[10px] md:py-[4rem] w-full md:max-w-[665px] md:flex md:justify-center md:items-center relative">
             <form action="/form/step-1" method="post" class="form w-full md:max-w-[550px]">
-                <i class="fa-solid fa-arrow-left text-secondary/70 text-[1.5rem] mb-[1rem] back"></i>
+                <div class="absolute top-[1.5rem] left-[3.5rem] flex items-center back">
+                    <i class="fa-solid fa-arrow-left text-secondary/70 text-[1.25rem]"></i>
+                    <span class="text-secondary/70 text-[1rem] ml-[0.5rem]">Späť</span>
+                </div>
+
                 <div class="grid grid-cols-2 md:gap-6">
                     <div class="mb-6 col-span-2 md:col-span-1">
                         <label for="f-name" class="label-default">Meno</label>
