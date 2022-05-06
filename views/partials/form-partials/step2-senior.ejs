@@ -9,17 +9,14 @@
         </div>
     </div>
     <div class="md:grid md:grid-cols-2 md:gap-24 step2-bg">
-        <div class="bg-white px-6 py-[3rem] md:px-0 md:py-[4rem] rounded-lg h-min w-full md:max-w-[665px] md:flex md:justify-center relative">
-            <form action="/form/step-2" method="post" class="form w-full md:max-w-[550px]">
-                <div class="absolute top-[1rem] right-[1rem] md:top-[1.5rem] md:left-[3.5rem] flex items-center back">
-                    <i class="fa-solid fa-arrow-left text-secondary/70 text-[1.25rem]"></i>
-                    <span class="text-secondary/70 text-[1rem] ml-[0.5rem]">Späť</span>
-                </div>
+        <div class="bg-white px-6 py-[3rem] md:px-0 md:py-[4rem] rounded-lg h-min w-full md:max-w-[665px] md:flex md:justify-center">
+            <form action="/form/step-2" method="post" class="form w-full md:max-w-[550px] relative">
+                <%- include('./back-arrow') %>
                 <%- include('last-three-months.ejs') %>
 
                 <%- include('other-income.ejs') %>
 
-                <button class="mt-[2.5rexm] submit-button border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition">
+                <button class="md:ml-[6rem] mt-[2.5rexm] submit-button border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition">
                     <span>Ďalej </span>
                 </button>
             </form>

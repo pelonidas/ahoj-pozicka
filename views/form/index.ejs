@@ -11,13 +11,9 @@
         </div>
     </div>
     <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary md:mb-0" id="form-index">
-        <div class="bg-white px-6 py-[3rem] md:p-0 rounded-[10px] md:py-[4rem] w-full md:max-w-[665px] md:flex md:justify-center md:items-center relative">
-            <form action="/form/step-1" method="post" class="form w-full md:max-w-[550px]">
-                <div class="absolute top-[1rem] right-[1rem] md:top-[1.5rem] md:left-[3.5rem] flex items-center back">
-                    <i class="fa-solid fa-arrow-left text-secondary/70 text-[1.25rem]"></i>
-                    <span class="text-secondary/70 text-[1rem] ml-[0.5rem]">Späť</span>
-                </div>
-
+        <div class="bg-white px-6 py-[3rem] md:p-0 rounded-[10px] md:py-[4rem] w-full md:max-w-[665px] md:flex md:justify-center md:items-center">
+            <form action="/form/step-1" method="post" class="form w-full md:max-w-[550px] relative">
+                <%- include('../partials/form-partials/back-arrow') %>
                 <div class="grid grid-cols-2 md:gap-6">
                     <div class="mb-6 col-span-2 md:col-span-1">
                         <label for="f-name" class="label-default">Meno</label>
@@ -109,7 +105,7 @@
                         formulári</span>
                     </div>
                 </div>
-                <button class="submit-button border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition">
+                <button class="md:ml-[6rem] submit-button border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition">
                     <span>Ďalej </span>
                 </button>
             </form>

@@ -12,10 +12,7 @@
     <div class="flex flex-col md:grid grid-cols-2 md:gap-24 text-secondary md:my-[5rem]">
         <div class="bg-white px-6 py-[3rem] md:px-0 md:py-[4rem] rounded-[10px] w-full md:max-w-[665px] md:flex md:justify-center">
             <form action="/form/step-4" method="post" id="input-form" class="w-full md:max-w-[550px] relative">
-                <div class="absolute top-[1rem] right-[1rem] md:top-[1.5rem] md:left-[3.5rem] flex items-center back">
-                    <i class="fa-solid fa-arrow-left text-secondary/70 text-[1.25rem]"></i>
-                    <span class="text-secondary/70 text-[1rem] ml-[0.5rem]">Späť</span>
-                </div>
+                <%- include('../partials/form-partials/back-arrow') %>
                 <div class="flex items-center mb-[2rem] w-full md:max-w-[470px]">
                     <img src="/images/step4-id.svg" alt="" class="w-full max-w-[60px] md:w-min md:h-[72px]">
                     <h3 class="ml-4 md:ml-6 text-[20px] md:text-[24px] leading-[23px] md:leading-[27px] font-bold">
@@ -149,8 +146,8 @@
                 <small class="text-xs text-dRed hidden">Pole je povinné</small>
 
                 <button id="step4-button"
-                        class="md:mt-[2.5rem] mx-auto border-2 border-dRed hover:bg-dRed transition-default hover:text-white rounded-[10px] w-full max-w-[275px] md:max-w-[300px] h-[50px] md:h-[54px] text-[18px] md:text-[20px] text-secondary/50 flex items-center justify-center md:mx-0 mt-5">
-                    <span>Odoslať na posúdenie</span>
+                        class="mt-[2rem] md:ml-[6rem] hover:bg-dRed hover:text-white transition-default border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition">
+                    <span>Ďalej</span>
                 </button>
             </form>
         </div>
