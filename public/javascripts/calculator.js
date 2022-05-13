@@ -10,6 +10,17 @@ let interest = document.querySelector('#interest');
 
 let mes_sum = document.getElementById("mes_sum");
 
+const exampleSum = document.querySelector('#exampleSum');
+const examplePercentage = document.querySelector('#examplePercentage')
+const exampleMonthly = document.querySelector('#exampleMonthly');
+const exampleLength = document.querySelector('#exampleLength');
+const exampleFinal = document.querySelector('#exampleFinal');
+
+const exampleSum2 = document.querySelector('#exampleSum2');
+const examplePercentage2 = document.querySelector('#examplePercentage2')
+const exampleMonthly2 = document.querySelector('#exampleMonthly2')
+const exampleLength2 = document.querySelector('#exampleLength2')
+const exampleFinal2 = document.querySelector('#exampleFinal2');
 //refinancovanie vars
 let moneySlideRef = document.querySelector('#money_range_ref'),
     yearSlideRef = document.querySelector('#year_range_ref'),
@@ -17,7 +28,11 @@ let moneySlideRef = document.querySelector('#money_range_ref'),
     yearFieldRef = document.querySelector('#year_input_ref')
 
 let mesSumRef = document.getElementById("mes_sum_ref");
-
+let sum;
+let monthly;
+let cost;
+let years;
+let years2;
 
 
 numeral.register('format', 'euro', {
@@ -145,19 +160,21 @@ const calcMonthlyCost = function (moneyVal, yearVal, moneySlider, yearSlider) {
 
         if (years === 1) {
             monthlyCost = money * ((0.3632 / 12) / (1 - Math.pow((1 / (1 + (0.3632 / 12))), years * 12)));
+            monthly = '36,32'
         }
         if (years >= 2 && years <= 5) {
             monthlyCost = money * ((0.1794 / 12) / (1 - Math.pow((1 / (1 + (0.1794 / 12))), years * 12)));
+            monthly = '17,94'
         }
         if (years > 5 && years <= 8) {
             monthlyCost = money * ((0.1656 / 12) / (1 - Math.pow((1 / (1 + (0.1656 / 12))), years * 12)));
+            monthly = '16,56'
         }
-
         monthlyCost = monthlyCost.toFixed(2);
 
         data = `${monthlyCost}`;
         interest.value = data;
-
+        cost = monthlyCost;
         return monthlyCost + " €";
 
 }
@@ -232,7 +249,6 @@ if (moneyFieldRef) handleTextInputFocusIn(moneyFieldRef)
 
 if (year_field) year_field.addEventListener('input', (e) => {
     let val = e.target.value;
-
     if (val) {
         if (!isNaN(val)) {
             val = Number(val);
@@ -245,14 +261,14 @@ if (year_field) year_field.addEventListener('input', (e) => {
 });
 
 if (money_slide) money_slide.addEventListener('input', (e) => {
+    sum = money_field.value
     money_field.value = numeral(e.target.value).format('00,000 €')
-
     doCalc(money_slide, year_slide, mes_sum);
 });
 
 if (year_slide) year_slide.addEventListener('input', (e) => {
     year_field.value = numeral(e.target.value).format('(0 r)');
-
+    years = e.target.value
     doCalc(money_slide, year_slide, mes_sum);
 });
 
@@ -278,9 +294,56 @@ if (moneySlideRef) moneySlideRef.addEventListener('input', (e) => {
 
 if (yearSlideRef) yearSlideRef.addEventListener('input', (e) => {
     yearFieldRef.value = numeral(e.target.value).format('(0 r)');
-
+    years2 = e.target.value
     doCalc(moneySlideRef, yearSlideRef, mesSumRef)
 })
+
+if (money_slide) {
+    function handlePriklad() {
+        let final;
+        let newSum;
+        let newMonthly;
+        money_slide.addEventListener('change', () => {
+            exampleSum.innerHTML = money_field.value
+            exampleMonthly.innerHTML = cost;
+        })
+        year_slide.addEventListener('change', () => {
+            examplePercentage.innerHTML = monthly
+            exampleMonthly.innerHTML = cost;
+            exampleLength.innerHTML = (years * 12).toString()
+            newSum = money_field.value.replace(/[^0-9.]/g, '')
+            newMonthly = monthly.replace(',', '.')
+            // exampleFinal.innerHTML = final
+            final = ((years * 12) * cost).toFixed(2);
+            exampleFinal.innerHTML = final
+
+        })
+    }
+    handlePriklad()
+}
+if (moneyFieldRef) {
+    function handlePriklad2() {
+        let final;
+        let newSum;
+        let newMonthly;
+        moneySlideRef.addEventListener('change', () => {
+            console.log(cost)
+            exampleSum2.innerHTML = moneyFieldRef.value;
+            exampleMonthly2.innerHTML = cost
+        })
+        yearSlideRef.addEventListener('change', () => {
+            console.log(years2)
+            examplePercentage2.innerHTML = monthly
+            exampleMonthly2.innerHTML = cost
+            exampleLength2.innerHTML = (years2 * 12).toString()
+            newSum = moneyFieldRef.value.replace(/[^0-9.]/g, '')
+            newMonthly = monthly.replace(',', '.')
+            final = ((years2 * 12) * cost).toFixed(2);
+            exampleFinal2.innerHTML = final
+        })
+    }
+    handlePriklad2()
+}
 
 
 

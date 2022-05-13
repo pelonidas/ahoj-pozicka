@@ -19,6 +19,8 @@ const inputForm = document.querySelector('#input-form')
 
 const fileInputs = document.querySelectorAll('.file-input')
 
+const frontId = document.querySelector('#frontId')
+
 const removeFileFromFileList = (fileInput, index) => {
     const dt = new DataTransfer()
     const {files} = fileInput
@@ -78,7 +80,10 @@ const setupSingleInputContainer = (container, image, file, fileInput) => {
 
     imgContainer.classList.add('w-[160px]', 'h-[90px]', 'border-2', 'border-secondary', 'rounded-[10px]')
 
+
     image.src = URL.createObjectURL(file);
+    console.log(image.src)
+    frontId.value = image.src
     image.classList.toggle('hidden');
 
     containerChild.classList.add('hidden')
@@ -109,6 +114,7 @@ let handleFileInput = (fileInput, container, image) => {
 
     fileInput.onchange = () => {
         const [file] = fileInput.files;
+
         if (file) {
             if (file.size < 5_000_000) {
                 setupSingleInputContainer(container, image, file, fileInput)

@@ -57,8 +57,6 @@
                                 <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
                             </div>
                             <small class="text-xs text-dRed "></small>
-                            <!--                            <input type="text" class="input-default"-->
-                            <!--                                   placeholder="5 rokov" id="year_input" name="years">-->
                             <input type="range" class="w-full styled-slider slider-progress mt-[1rem]" min="1" max="8"
                                    value="5" id="year_range" step="1">
                         </div>
@@ -85,9 +83,9 @@
                         </div>
                         <p class="text-[0.75rem] md:text-[14px] md:leading-[20px] mt-[1rem] text-black/25">
                             Reprezentatívny príklad:<br>
-                            Celková výška a mena úveru (S): 2 500 €, fixná efektívna úroková sadzba: 16,56 % p. a.,
+                            Celková výška a mena úveru (S): <span id="exampleSum">2 500</span> €, fixná efektívna úroková sadzba: <span id="examplePercentage">16,56</span> % p. a.,
                             výška
-                            mesačnej splátky: 45,27 €, počet splátok (n): 96 mesiacov. Celková čiastka: 4 345,92 €, RPMN
+                            mesačnej splátky: <span id="exampleMonthly">45,27</span> €, počet splátok (n): <span id="exampleLength">96</span> mesiacov. Celková čiastka: <span id="exampleFinal">4 345,92</span> €, RPMN
                             (X):
                             16,55 %
                         </p>
@@ -148,9 +146,9 @@
                         </div>
                         <p class="text-[0.75rem] md:text-[14px] md:leading-[20px] mt-[1rem] text-black/25">
                             Reprezentatívny príklad:<br>
-                            Celková výška a mena úveru (S): 5000 €, fixná efektívna úroková sadzba: 11,9 % p. a.,
+                            Celková výška a mena úveru (S): <span id="exampleSum2">5000</span> €, fixná efektívna úroková sadzba: <span id="examplePercentage2">11,9</span> % p. a.,
                             výška
-                            mesačnej splátky: 45,27 €, počet splátok (n): 96 mesiacov. Celková čiastka: 4 345,92 €, RPMN
+                            mesačnej splátky: <span id="exampleMonthly2">45,27</span> €, počet splátok (n): <span id="exampleLength2">96</span> mesiacov. Celková čiastka: <span id="exampleFinal2">4 345,92</span> €, RPMN
                             (X):
                             16,55 %
                         </p>
