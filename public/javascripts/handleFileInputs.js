@@ -36,44 +36,44 @@ const removeFileFromFileList = (fileInput, index) => {
     fileInput.files = dt.files // Assign the updates list
 }
 
-const setupDropAreaEnv = (container, handleFiles) => {
-    let dropArea = container.firstElementChild;
-
-    ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, preventDefaults, false)
-        document.body.addEventListener(eventName, preventDefaults, false)
-    })
-
-    ;['dragenter', 'dragover'].forEach(eventName => {
-        dropArea.addEventListener(eventName, highlight, false)
-    })
-
-    ;['dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, unhighlight, false)
-    })
-
-    dropArea.addEventListener('drop', handleDrop, false)
-
-    function preventDefaults(e) {
-        e.preventDefault()
-        e.stopPropagation()
-    }
-
-    function highlight() {
-        dropArea.classList.add('highlight')
-    }
-
-    function unhighlight() {
-        dropArea.classList.remove('highlight')
-    }
-
-    function handleDrop(e) {
-        let dt = e.dataTransfer
-        let files = dt.files
-        handleFiles(files)
-
-    }
-}
+// const setupDropAreaEnv = (container, handleFiles) => {
+//     let dropArea = container.firstElementChild;
+//
+//     ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+//         dropArea.addEventListener(eventName, preventDefaults, false)
+//         document.body.addEventListener(eventName, preventDefaults, false)
+//     })
+//
+//     ;['dragenter', 'dragover'].forEach(eventName => {
+//         dropArea.addEventListener(eventName, highlight, false)
+//     })
+//
+//     ;['dragleave', 'drop'].forEach(eventName => {
+//         dropArea.addEventListener(eventName, unhighlight, false)
+//     })
+//
+//     dropArea.addEventListener('drop', handleDrop, false)
+//
+//     function preventDefaults(e) {
+//         e.preventDefault()
+//         e.stopPropagation()
+//     }
+//
+//     function highlight() {
+//         dropArea.classList.add('highlight')
+//     }
+//
+//     function unhighlight() {
+//         dropArea.classList.remove('highlight')
+//     }
+//
+//     function handleDrop(e) {
+//         let dt = e.dataTransfer
+//         let files = dt.files
+//         handleFiles(files)
+//
+//     }
+// }
 
 const setupSingleInputContainer = (container, image, file, fileInput) => {
     const imgContainer = container.querySelector('.img-container');
@@ -104,14 +104,14 @@ const setupSingleInputContainer = (container, image, file, fileInput) => {
 
 let handleFileInput = (fileInput, container, image) => {
     // Setup drag and drop functions
-    setupDropAreaEnv(container, handleFiles)
+    // setupDropAreaEnv(container, handleFiles)
 
     //drag and drop file handling function
-    function handleFiles(files) {
-        files = [...files]
-        setupSingleInputContainer(container, image, files[0], fileInput)
-
-    }
+    // function handleFiles(files) {
+    //     files = [...files]
+    //     setupSingleInputContainer(container, image, files[0], fileInput)
+    //
+    // }
 
     fileInput.onchange = () => {
         const [file] = fileInput.files;
