@@ -20,6 +20,8 @@ const inputForm = document.querySelector('#input-form')
 const fileInputs = document.querySelectorAll('.file-input')
 
 const frontId = document.querySelector('#frontId')
+const backId = document.querySelector('#backId')
+
 
 const removeFileFromFileList = (fileInput, index) => {
     const dt = new DataTransfer()
@@ -68,8 +70,8 @@ const setupDropAreaEnv = (container, handleFiles) => {
     function handleDrop(e) {
         let dt = e.dataTransfer
         let files = dt.files
-
         handleFiles(files)
+
     }
 }
 
@@ -82,8 +84,7 @@ const setupSingleInputContainer = (container, image, file, fileInput) => {
 
 
     image.src = URL.createObjectURL(file);
-    console.log(image.src)
-    frontId.value = image.src
+
     image.classList.toggle('hidden');
 
     containerChild.classList.add('hidden')
@@ -108,8 +109,8 @@ let handleFileInput = (fileInput, container, image) => {
     //drag and drop file handling function
     function handleFiles(files) {
         files = [...files]
-
         setupSingleInputContainer(container, image, files[0], fileInput)
+
     }
 
     fileInput.onchange = () => {
@@ -258,6 +259,8 @@ function validateFileInput(fileInput, container) {
     }
 }
 
+
+
 //form validation
 // if (inputForm) {
 //     inputForm.addEventListener('submit', (e) => {
@@ -278,5 +281,12 @@ function validateFileInput(fileInput, container) {
 if (frontInput) {
     handleFileInput(frontInput, frontContainer, frontImage)
     handleFileInput(backInput, backContainer, backImage)
-    handleMultipleInput(dokladyInput, dokladyContainer, dokladyImage, additionalInput, additionalInputContainer)
+    // frontInput.addEventListener('change', () => {
+    //     frontId.value = frontImage.src.
+    // })
+    //
+    // backInput.addEventListener('change', () => {
+    //     backId.value = backImage.src
+    // })
+    // handleMultipleInput(dokladyInput, dokladyContainer, dokladyImage, additionalInput, additionalInputContainer)
 }

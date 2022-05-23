@@ -1,10 +1,21 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const engine = require('ejs-mate');
 const nodemailer = require('nodemailer')
 const ExpressError = require('./utils/ExpressError')
 let session = require('express-session')
-const {checkData} = require('./public/javascripts/handleJob')
+const {checkData, checkHousing} = require('./public/javascripts/handleJob')
+const multer = require('multer')
+const storageEngine = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads')
+    }, filename: (req, file, cb) => {
+        cb(null, file.originalname)
+    },
+})
+const uploadHandler = multer({storage: storageEngine})
+const directory = path.join(__dirname, '/uploads');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -38,12 +49,9 @@ app.use(express.static(path.join(__dirname, 'node_modules/semantic-ui-dropdown')
 app.use(express.static(path.join(__dirname, 'node_modules/semantic-ui-transition')))
 app.use(express.static(path.join(__dirname, 'node_modules/autonumeric')))
 app.use(express.static(path.join(__dirname, 'node_modules/mathjs')))
+app.use('/uploads', express.static('uploads'));
 
 app.use(session(sessionObject))
-
-app.get('/test', (req, res) => {
-    res.render('test')
-})
 
 // Home route
 app.get('/', (req, res) => {
@@ -91,7 +99,8 @@ app.get('/form/step-4', (req, res) => {
     res.render('form/step4', {step: 4, formData})
 })
 
-app.get('/form/step-5', (req, res) => {
+app.get('/form/step-5', async (req, res) => {
+    console.log(formData)
     res.render('form/step5', {step: 5, formData})
 })
 
@@ -104,79 +113,98 @@ app.post('/form/step-2', (req, res) => {
 
     res.redirect('/form/step-3')
 })
-app.post('/form/step-4', async (req, res) => {
-    // const output = `
-    //     <h3>Contact details</h3>
-    //     <ul>
-    //         <li>Name: <b>${formData.contact.fName}</b></li>
-    //         <li>Surname: <b>${formData.contact.lName}</b></li>
-    //         <li>Rodne cislo: <b>${formData.contact.bNumber}</b></li>
-    //         <li>Telefonne cislo: <b>${formData.contact.phoneNum}</b></li>
-    //         <li>Číslo občianského preukazu: <b>${formData.contact.id}</b></li>
-    //         <li>Email: <b>${formData.email}</b></li>
-    //         <li>Tvoje pracovné zaradenie: <b>${formData.contact.job}</b></li>
-    //     </ul>
-    //     <h3>Company data</h3>
-    //     <ul>
-    //         <li>Company name: ${formData.companyData.companyName}</li>
-    //         <li>ICO: ${formData.companyData.ico}</li>
-    //         <li>Company city: ${formData.companyData.city}</li>
-    //         <li>PSC: ${formData.companyData.psc}</li>
-    //
-    //         <ul>
-    //         Last three months:
-    //            <li>${formData.companyData.january}</li>
-    //            <li>${formData.companyData.february}</li>
-    //            <li>${formData.companyData.march}</li>
-    //         </ul>
-    //     </ul>
-    //     <h3>Person data</h3>
-    //     <ul>
-    //         <li>Ulica: ${formData.customerData.street}</li>
-    //         <li>Obec: ${formData.customerData.cityCustomer}</li>
-    //         <li>PSC: ${formData.customerData.pscCustomer}</li>
-    //         <li>Typ byvania: ${formData.customerData.living}</li>
-    //         <li>Rodne priezvisko mamy: ${formData.customerData.motherSurname}</li>
-    //     </ul>
-    // `;
-    //
-    // let transporter = nodemailer.createTransport({
-    //     host: "mail.websupport.sk",
-    //     port: 587,
-    //     secure: false, // true for 465, false for other ports
-    //     auth: {
-    //         user: 'test01@mail.dpmarketing.sk', // generated ethereal user
-    //         pass: 'Webtestemail123!', // generated ethereal password
-    //     },
-    // });
-    //
-    // // send mail with defined transport object
-    // let info = await transporter.sendMail({
-    //     from: '"Test Person" <test01@mail.dpmarketing.sk>', // sender address
-    //     to: `test01@mail.dpmarketing.sk, `, // list of receivers
-    //     subject: "Personal info", // Subject line
-    //     text: "Hello world?", // plain text body
-    //     html: output, // html body
-    // });
-    //
-    // console.log("Message sent: %s", info.messageId);
-    // // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-    //
-    // // Preview only available when sending through an Ethereal account
-    // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    formData.attachments = req.body
-    console.log(formData.attachments)
-    res.redirect('/form/step-5')
+app.post('/form/step-4', uploadHandler.fields([
+    {name: 'frontId', maxCount: 1},
+    {name: 'backId', maxCount: 1},
+]), (req, res) => {
+
+    formData.attachments = req.files
+    console.log(formData.attachments.frontId[0])
+    return res.redirect('/form/step-5')
 })
 app.post('/form/step-3', (req, res) => {
     formData.customerData = req.body
+    checkHousing(formData)
     console.log(formData)
     res.redirect('/form/step-4')
 })
 
-app.post('/form/step-5', (req, res) => {
+app.post('/form/step-5', async (req, res) => {
     formData.bankData = req.body
-    console.log(formData)
+    const output = `
+     <h3>Údaje z kontaktného formuláru</h3>
+             <ul>
+                   <li>Záujem o: <b></b>, na <b></b> a mesačnou splátkou <b></b></li>
+                   <li>Meno a priezvisko <b>${formData.contact.fName}</b> <b>${formData.contact.lName}</b></li>
+                   <li>Telefónne číslo: <b>${formData.contact.phoneNum}</b></li>
+                   <li>Email: <b>${formData.contact.email}</b></li>
+                   <li>Pracovné zaradenie: <b>${formData.contact.job}</b></li>
+                   <li>Číslo OP: <b>${formData.contact.id}</b></li>
+                   <li>Názov spločnosti alebo IČO: <b>${formData.companyData.companyName}</b></li>
+                   <li>Obec: <b>${formData.companyData.city}</b></li>
+                   <li>Zamestanine na dobu: <b>${formData.companyData.period}</b></li>
+                   <li>Od do: <b>${formData.companyData.from}</b>-<b>${formData.companyData.till}</b></li>
+                   <li>Vedľajšie príjmy príjmy: <b>${formData.companyData.sideIncome}</b></li>
+             </ul>
+     <h3>Trvalý pobyt</h3>
+             <ul>
+                   <li>Ulica a popisné číslo: ${formData.customerData.personStreet}</li>
+                   <li>Obec: <b>${formData.customerData.cityCustomer}</b></li>
+                   <li>PSČ: <b>${formData.customerData.pscCustomer}</b></li>
+                   <li>Typ bývania: <b>${formData.customerData.housing}</b></li>
+                   <li>Poštu chcem dostávať na: <b>${formData.customerData.postStreet}</b>, <b>${formData.customerData.postCity}</b>, <b>${formData.customerData.postPsc}</b></li>
+             </ul>
+     <h3>Rodné priezvisko matky</h3>
+             <ul>
+                   <li>Rodné priezvisko matky: <b>${formData.customerData.motherSurname}</b></li> 
+            </ul>
+     <h3>Účet</h3>
+             <ul>
+                    <li>IBAN: </li>
+                    <li>Názov banky:</li>
+                    <li>Predčíslie účtu:</li>
+                    <li>Číslo účtu:</li>
+                    <li>Spôsob splácania: </li>
+             </ul>
+`
+    let transporter = nodemailer.createTransport({
+        host: "smtp.m1.websupport.sk",
+        port: 465,
+        secure: true, // true for 465, false for other ports
+        auth: {
+            user: 'test@dpmg.dev', // generated ethereal user
+            pass: 'Lx4:Vd@JB4', // generated ethereal password
+        },
+    });
+
+    await transporter.sendMail({
+        from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
+        to: `jan.nahalka348@gmail.com, `, // list of receivers
+        subject: "Nová správa z webovej stránky", // Subject line
+        text: "Hello world?", // plain text body
+        html: output,
+        attachments: [
+            {
+                filename: formData.attachments.frontId[0].filename,
+                path: __dirname + '/' + formData.attachments.frontId[0].path,
+            },
+            {
+                filename: formData.attachments.backId[0].filename,
+                path: __dirname + '/' + formData.attachments.backId[0].path,
+            }
+        ]// html body
+    });
+
+    fs.readdir(directory, (err, files) => {
+        if (err) throw err;
+
+        for (const file of files) {
+            fs.unlink(path.join(directory, file), err => {
+                if (err) throw err;
+            });
+        }
+    });
+
     res.redirect('/form/success')
 })
 

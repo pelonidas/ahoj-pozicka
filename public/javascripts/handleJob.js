@@ -31,3 +31,17 @@ module.exports.checkData = (formData) => {
     }
 }
 
+module.exports.checkHousing = (formData) => {
+    if (formData.customerData.housing === "house"){
+        formData.customerData.housing = "Vlastný byt/dom"
+    }
+    if (formData.customerData.housing === "cooperative-house"){
+        formData.customerData.housing = "Družstvený byt"
+    }
+    if (formData.customerData.housing === "rent"){
+        formData.customerData.housing = "Nájomné bývanie"
+    }
+    if (formData.customerData.housing === "parents"){
+        formData.customerData.housing = "Bývanie u rodičov/u detí"
+    }
+}
