@@ -139,6 +139,7 @@ app.post('/form/step-5', async (req, res) => {
                    <li>Telefónne číslo: <b>${formData.contact.phoneNum}</b></li>
                    <li>Email: <b>${formData.contact.email}</b></li>
                    <li>Pracovné zaradenie: <b>${formData.contact.job}</b></li>
+                   <li>Rodné číslo: <b>${formData.contact.bNumber}</b></li>
                    <li>Číslo OP: <b>${formData.contact.id}</b></li>
                    <li>Názov spločnosti alebo IČO: <b>${formData.companyData.companyName}</b></li>
                    <li>Obec: <b>${formData.companyData.city}</b></li>
@@ -179,7 +180,7 @@ app.post('/form/step-5', async (req, res) => {
 
     await transporter.sendMail({
         from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
-        to: `jan.nahalka348@gmail.com, `, // list of receivers
+        to: `banik.anton@gmail.com`, // list of receivers
         subject: "Nová správa z webovej stránky", // Subject line
         text: "Hello world?", // plain text body
         html: output,
@@ -209,82 +210,41 @@ app.post('/form/step-5', async (req, res) => {
 })
 
 app.post('/form/step-1', async (req, res) => {
-    // let transporter = nodemailer.createTransport({
-    //     host: "smtp.m1.websupport.sk",
-    //     port: 465,
-    //     secure: true, // true for 465, false for other ports
-    //     auth: {
-    //         user: 'test@dpmg.dev', // generated ethereal user
-    //         pass: 'Lx4:Vd@JB4', // generated ethereal password
-    //     },
-    // });
     formData.contact = req.body;
-    //
     if (formData.contact.job === 'student' || formData.contact.job === 'maternity' || formData.contact.job === 'home-person' || formData.contact.job === 'unemployed') {
         return res.redirect('/form/rejected')
-        // res.send('hi')
     }
     checkData(formData)
-    // let output = `
-    //       <h3>Údaje z kontaktného formuláru</h3>
-    //       <ul>
-    //          <li>Meno: <b>${formData.contact.fName}</b></li>
-    //          <li>Priezvisko: <b>${formData.contact.lName}</b></li>
-    //          <li>Rodné číslo: <b>${formData.contact.bNumber}</b></li>
-    //          <li>Tel. číslo: <b>${formData.contact.phoneNum}</b></li>
-    //          <li>Číslo OP: <b>${formData.contact.id}</b></li>
-    //          <li>Email: <b>${formData.contact.email}</b></li>
-    //          <li>Pracovné zariadenie: <b>${formData.contact.job}</b></li>
-    //      </ul>
-    // `;
-    //
-    // await transporter.sendMail({
-    //     from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
-    //     to: `jan.nahalka348@gmail.com, `, // list of receivers
-    //     subject: "Nová správa z webovej stránky", // Subject line
-    //     text: "Hello world?", // plain text body
-    //     html: output, // html body
-    // });
+    let output = `
+          <h3>Údaje z kontaktného formuláru</h3>
+             <ul>
+                   <li>Záujem o: <b></b>, na <b></b> a mesačnou splátkou <b></b></li>
+                   <li>Meno a priezvisko <b>${formData.contact.fName}</b> <b>${formData.contact.lName}</b></li>
+                   <li>Telefónne číslo: <b>${formData.contact.phoneNum}</b></li>
+                   <li>Email: <b>${formData.contact.email}</b></li>
+                   <li>Pracovné zaradenie: <b>${formData.contact.job}</b></li>
+                   <li>Rodné číslo: <b>${formData.contact.bNumber}</b></li>
+                   <li>Číslo OP: <b>${formData.contact.id}</b></li>
+             </ul>
+    `;
 
-    // const output = `
-    //     <h3>Contact details</h3>
-    //     <ul>
-    //         <li>Name: <b>${formData.fName}</b></li>
-    //         <li>Surname: <b>${formData.lName}</b></li>
-    //         <li>Rodne cislo: <b>${formData.bNumber}</b></li>
-    //         <li>Telefonne cislo: <b>${formData.phoneNum}</b></li>
-    //         <li>Číslo občianského preukazu: <b>${formData.id}</b></li>
-    //         <li>Email: <b>${formData.email}</b></li>
-    //         <li>Tvoje pracovné zaradenie: <b>${formData.job}</b></li>
-    //     </ul>
-    // `;
-    //
-    // let transporter = nodemailer.createTransport({
-    //     host: "mail.websupport.sk",
-    //     port: 587,
-    //     secure: false, // true for 465, false for other ports
-    //     auth: {
-    //         user: 'test02@mail.dpmarketing.sk', // generated ethereal user
-    //         pass: 'Yo9u#q%hv9', // generated ethereal password
-    //     },
-    // });
-    //
-    // // send mail with defined transport object
-    // let info = await transporter.sendMail({
-    //     from: '"Test Person" <test02@mail.dpmarketing.sk>', // sender address
-    //     to: `test02@mail.dpmarketing.sk, `, // list of receivers
-    //     subject: "Personal info", // Subject line
-    //     text: "Hello world?", // plain text body
-    //     html: output, // html body
-    // });
-    //
-    // console.log("Message sent: %s", info.messageId);
-    // // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-    //
-    // // Preview only available when sending through an Ethereal account
-    // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    let transporter = nodemailer.createTransport({
+        host: "smtp.m1.websupport.sk",
+        port: 465,
+        secure: true, // true for 465, false for other ports
+        auth: {
+            user: 'test@dpmg.dev', // generated ethereal user
+            pass: 'Lx4:Vd@JB4', // generated ethereal password
+        },
+    });
 
-    console.log(formData)
+    await transporter.sendMail({
+        from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
+        to: `banik.anton@gmail.com`, // list of receivers
+        subject: "Nová správa z webovej stránky", // Subject line
+        text: "Hello world?", // plain text body
+        html: output, // html body
+    });
 
     res.redirect('/form/step-2')
 })
@@ -330,19 +290,12 @@ app.post('/form', async (req, res) => {
     // // send mail with defined transport object
     await transporter.sendMail({
         from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
-        to: `jan.nahalka348@gmail.com, `, // list of receivers
+        to: `banik.anton@gmail.com`, // list of receivers
         subject: "Nová správa z webovej stránky", // Subject line
         text: "Hello world?", // plain text body
         html: output, // html body
     });
-    //
-    // console.log("Message sent: %s", info.messageId);
-    // // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-    //
-    // // Preview only available when sending through an Ethereal account
-    // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info))
     res.redirect('/form/dakujeme')
-    // res.send('okay')
 })
 
 app.post('/calc', (req, res) => {
@@ -354,11 +307,6 @@ app.post('/calc', (req, res) => {
 app.get('/form/dakujeme', (req, res) => {
     res.render('form/form-dakujeme')
 })
-// Handling undefined routes
-// app.all('*', (req, res, next) => {
-//     next(new ExpressError("Page not found", 404))
-// })
-
 // Listening to a port
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
