@@ -91,7 +91,6 @@ app.get('/form/step-2', (req, res) => {
 })
 
 app.get('/form/step-3', (req, res) => {
-    console.log(formData)
     res.render('form/step3', {step: 3, formData})
 })
 
@@ -100,7 +99,6 @@ app.get('/form/step-4', (req, res) => {
 })
 
 app.get('/form/step-5', async (req, res) => {
-    console.log(formData)
     res.render('form/step5', {step: 5, formData})
 })
 
@@ -125,7 +123,7 @@ app.post('/form/step-4', uploadHandler.fields([
 app.post('/form/step-3', (req, res) => {
     formData.customerData = req.body
     checkHousing(formData)
-    console.log(formData)
+
     res.redirect('/form/step-4')
 })
 
