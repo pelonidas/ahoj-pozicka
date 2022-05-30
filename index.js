@@ -14,6 +14,9 @@ const storageEngine = multer.diskStorage({
         cb(null, file.originalname)
     },
 })
+
+
+
 const uploadHandler = multer({storage: storageEngine})
 const directory = path.join(__dirname, '/uploads');
 
@@ -35,7 +38,10 @@ const sessionObject = {
 // use ejs-locals for all ejs templates:
 app.engine('ejs', engine);
 
-
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*')
+    next();
+})
 //Setting view engine to .ejs
 app.set('view engine', 'ejs');
 // Defying a views path
