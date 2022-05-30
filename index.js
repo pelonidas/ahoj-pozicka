@@ -240,7 +240,7 @@ app.post('/form/step-1', async (req, res) => {
 
     await transporter.sendMail({
         from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
-        to: `banik.anton@gmail.com`, // list of receivers
+        to: `jan.nahalka348@gmail.com`, // list of receivers
         subject: "Nová správa z webovej stránky", // Subject line
         text: "Hello world?", // plain text body
         html: output, // html body
@@ -286,11 +286,11 @@ app.post('/form', async (req, res) => {
              </ul>
          `;
     }
-
+    //banik.anton@gmail.com
     // // send mail with defined transport object
     await transporter.sendMail({
         from: '"Best Pôžičky" <test@dpmg.dev>', // sender address
-        to: `banik.anton@gmail.com`, // list of receivers
+        to: `jan.nahalka348@gmail.com`, // list of receivers
         subject: "Nová správa z webovej stránky", // Subject line
         text: "Hello world?", // plain text body
         html: output, // html body
